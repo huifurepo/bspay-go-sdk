@@ -6,9 +6,11 @@
 - config -- 商户配置
 - ut -- 接口调用/参数赋值演示demo
 
-## SDK 接入说明
-1. 直接将BsPaySdk(SDK核心包)源码放入项目中即可
-2. 或者编译源码后在go.mod中引用(推荐使用第一种, 方便结合自身业务进行二次开发)
+## SDK 接入说明 
+以下两种方式任选其一
+1. 直接在go.mod中引用(require github.com/huifurepo/bspay-go-sdk [version])
+2. 直接下载源码文件, 将BsPaySdk(SDK核心包)源码放入项目中
+
 
 ## SDK 使用说明
     接口命名直接根据接口URL来命名, 方便用户使用, 需要使用某接口时, 可直接使用接口中文名, 或接口URL(驼峰格式)进行搜索, 找到对应的struct, demo等
