@@ -2,9 +2,9 @@ package main
 
 import (
 	"bytes"
-	"dgGoSDK/BsPaySdk"
 	"encoding/json"
 	"fmt"
+	"github.com/huifurepo/bspay-go-sdk/BsPaySdk"
 	"net/http"
 	"path/filepath"
 	"reflect"
