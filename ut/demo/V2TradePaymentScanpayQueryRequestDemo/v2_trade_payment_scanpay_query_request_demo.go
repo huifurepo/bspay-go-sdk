@@ -1,0 +1,61 @@
+/**
+ * 交易查询接口 - 示例
+ *
+ * @Author sdk-generator
+ * @Description 汇付天下
+ */
+package V2TradePaymentScanpayQueryRequestDemo
+
+import (
+    "encoding/json"
+	"fmt"
+	"github.com/huifurepo/bspay-go-sdk/BsPaySdk"
+	"github.com/huifurepo/bspay-go-sdk/ut/tool"
+)
+
+func V2TradePaymentScanpayQueryRequestDemo() {
+    // 1. 数据初始化
+	dgSDK, _ := BsPaySdk.NewBsPay(true, "./config/config.json")
+
+    // 2.组装请求参数
+    dgReq := BsPaySdk.V2TradePaymentScanpayQueryRequest{
+        // 原机构请求日期
+        OrgReqDate:"20221107",
+        // 商户号
+        HuifuId:"6666000108854952",
+        // 商户订单号线下POS、扫码机具发起的交易需要提供；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：22577563652260773965&lt;/font&gt;
+        MerOrdId:"",
+        // 交易返回的全局流水号org_hf_seq_id，org_req_seq_id，out_trans_id，party_order_id四选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：00290TOP1GR210919004230P853ac13262200000&lt;/font&gt;
+        // OrgHfSeqId:"test",
+        // 原机构请求流水号org_hf_seq_id，org_req_seq_id，out_trans_id，party_order_id四选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：202110210012100005&lt;/font&gt;
+        OrgReqSeqId:"",
+        // 用户账单上的交易订单号org_hf_seq_id，org_req_seq_id，out_trans_id，party_order_id四选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：092021091922001451301445517582&lt;/font&gt;；参见[用户账单说明](https://paas.huifu.com/partners/api/#/czsm/api_czsm_yhzd)
+        OutTransId:"2022110722001473401435491529",
+        // 用户账单上的商户订单号org_hf_seq_id，org_req_seq_id，out_trans_id，party_order_id四选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：03232109190255105603561&lt;/font&gt;；参见[用户账单说明](https://paas.huifu.com/partners/api/#/czsm/api_czsm_yhzd)
+        PartyOrderId:"",
+    }
+    // 设置非必填字段
+	dgReq.ExtendInfos = getExtendInfos()
+
+    fmt.Println("请求时间:", tool.GetCurrentTime())
+	respStr, _ := json.Marshal(dgReq)
+    fmt.Println("请求数据:", string(respStr))
+
+    // 3. 发起API调用
+    resp, err := dgSDK.V2TradePaymentScanpayQueryRequest(dgReq)
+  	if err != nil {
+		fmt.Println("请求异常:", err)
+	}
+
+	fmt.Println("返回数据:", resp)
+}
+
+/**
+ * 非必填字段
+ */
+func getExtendInfos() map[string]interface{} {
+    // 设置非必填字段
+    extendInfoMap := make(map[string]interface{})
+    return extendInfoMap
+}
+
