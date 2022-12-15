@@ -8,7 +8,7 @@
 
 ## SDK 接入说明 
 以下两种方式任选其一
-1. 直接在go.mod中引用(require github.com/huifurepo/bspay-go-sdk [version])
+1. 直接在go.mod中引用(require github.com/huifurepo/bspay-go-sdk/BsPaySdk [version])
 2. 直接下载源码文件, 将BsPaySdk(SDK核心包)源码放入项目中
 
 
