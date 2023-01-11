@@ -27,10 +27,6 @@ func V2MerchantSplitConfigRequestDemo() {
         HuifuId:"6666000105582434",
         // 分账规则来源
         RuleOrigin:"02",
-        // 分账是否支持撤销交易
-        RepealFlag:"Y",
-        // 分账是否支持退货交易
-        RefundFlag:"Y",
         // 分账开关
         DivFlag:"Y",
         // 最大分账比例

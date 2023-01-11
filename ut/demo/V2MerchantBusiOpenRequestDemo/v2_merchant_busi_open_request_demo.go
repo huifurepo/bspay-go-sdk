@@ -134,6 +134,8 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["online_pay_fee_conf_list"] = getOnlinePayFeeConfList()
     // 银行大额转账对象
     // extendInfoMap["bank_big_amt_pay_config"] = getBankBigAmtPayConfig()
+    // 微信直连配置对象
+    // extendInfoMap["wx_zl_conf"] = getWxZlConf()
     return extendInfoMap
 }
 
@@ -145,8 +147,8 @@ func getWxConfList() string {
     dto["fee_rate"] = "0.38"
     // 费率规则号
     dto["fee_rule_id"] = "758"
-    // 商户经营类目
-    dto["mcc"] = "111"
+    // ~~商户经营类目~~
+    // dto["~~mcc~~"] = ""
     // 子渠道号
     dto["pay_channel_id"] = "JP00001"
     // 申请服务
@@ -295,6 +297,17 @@ func getUnionConfList() string {
     return string(dtoByte)
 }
 
+func getWxZlConf() string {
+    dto := make(map[string]interface{})
+    // 微信子商户号
+    // dto["sub_mch_id"] = "test"
+    // 配置集合
+    // dto["wx_zl_pay_conf_list"] = getWxZlPayConfList()
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
 func getOnlinePayFeeConfList() string {
     dto := make(map[string]interface{})
     // 业务类型
@@ -349,6 +362,21 @@ func getBankBigAmtPayConfig() string {
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
+}
+
+func getWxZlPayConfList() interface{} {
+    dto := make(map[string]interface{})
+    // 申请服务
+    // dto["service_code"] = "test"
+    // 功能服务appid
+    // dto["sub_app_id"] = "test"
+    // 功能开关
+    // dto["switch_state"] = "test"
+    // 功能费率(%)
+    // dto["fee_rate"] = "test"
+
+    dtoList := [1]interface{}{dto}
+    return dtoList
 }
 
 func getHbFqFeeConfig() string {

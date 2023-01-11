@@ -15,6 +15,26 @@ const BASE_API_TEST_URL_V2 = "https://spin-test.cloudpnr.com"
 // 以下为接口uri
 
 /**
+ * 子账户开通配置
+ */
+const V2_MERCHANT_SETTLE_CONFIG = "/v2/merchant/settle/config"
+
+/**
+ * 修改子账户配置
+ */
+const V2_MERCHANT_SETTLE_MODIFY = "/v2/merchant/settle/modify"
+
+/**
+ * 批量交易状态查询
+ */
+const V2_TRADE_TRANSSTAT_QUERY = "/v2/trade/transstat/query"
+
+/**
+ * 网银支付接口
+ */
+const V2_TRADE_ONLINEPAYMENT_BANKING_FRONTPAY = "/v2/trade/onlinepayment/banking/frontpay"
+
+/**
  * 微信支付宝预授权完成撤销
  */
 const V2_TRADE_PAYMENT_PREAUTHPAYCANCEL_REFUND = "/v2/trade/payment/preauthpaycancel/refund"

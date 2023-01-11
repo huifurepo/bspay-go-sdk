@@ -1,10 +1,10 @@
 /**
- * 快捷支付申请 - 示例
+ * 网银支付接口 - 示例
  *
  * @Author sdk-generator
  * @Description 汇付天下
  */
-package V2TradeOnlinepaymentQuickpayApplyRequestDemo
+package V2TradeOnlinepaymentBankingFrontpayRequestDemo
 
 import (
     "encoding/json"
@@ -13,32 +13,30 @@ import (
 	"github.com/huifurepo/bspay-go-sdk/ut/tool"
 )
 
-func V2TradeOnlinepaymentQuickpayApplyRequestDemo() {
+func V2TradeOnlinepaymentBankingFrontpayRequestDemo() {
     // 1. 数据初始化
 	dgSDK, _ := BsPaySdk.NewBsPay(true, "./config/config.json")
 
     // 2.组装请求参数
-    dgReq := BsPaySdk.V2TradeOnlinepaymentQuickpayApplyRequest{
-        // 请求日期
-        ReqDate:tool.GetCurrentDate(),
+    dgReq := BsPaySdk.V2TradeOnlinepaymentBankingFrontpayRequest{
         // 请求流水号
         ReqSeqId:tool.GetReqSeqId(),
+        // 请求日期
+        ReqDate:tool.GetCurrentDate(),
         // 商户号
-        HuifuId:"6666000119640000",
+        HuifuId:"6666000108854952",
         // 订单金额
-        TransAmt:"1980.00",
-        // 绑卡id
-        CardBindId:"10032850000",
-        // 异步通知地址
-        NotifyUrl:"http://tianyi.demo.test.cn/core/extend/BsPaySdk/notify_quick.php",
-        // 用户客户号
-        UserHuifuId:"6666000121370000",
+        TransAmt:"0.02",
+        // 商品描述
+        GoodsDesc:"网银支付下单",
+        // 网联扩展数据
+        ExtendPayData:getExtendPayData(),
+        // 设备信息
+        TerminalDeviceData:getTerminalDeviceData(),
         // 安全信息
         RiskCheckData:getRiskCheckData(),
-        // 设备数据
-        TerminalDeviceData:getTerminalDeviceData(),
-        // 银行扩展字段
-        ExtendPayData:getExtendPayData(),
+        // 异步通知地址
+        NotifyUrl:"http://www.chinapnr.com",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -48,7 +46,7 @@ func V2TradeOnlinepaymentQuickpayApplyRequestDemo() {
     fmt.Println("请求数据:", string(respStr))
 
     // 3. 发起API调用
-    resp, err := dgSDK.V2TradeOnlinepaymentQuickpayApplyRequest(dgReq)
+    resp, err := dgSDK.V2TradeOnlinepaymentBankingFrontpayRequest(dgReq)
   	if err != nil {
 		fmt.Println("请求异常:", err)
 	}
@@ -62,55 +60,49 @@ func V2TradeOnlinepaymentQuickpayApplyRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
+    // 收款用户客户号
+    extendInfoMap["user_huifu_id"] = ""
+    // 收款汇付账户号
+    extendInfoMap["acct_id"] = ""
     // 订单类型
-    // extendInfoMap["order_type"] = ""
-    // 备注
-    // extendInfoMap["remark"] = ""
+    extendInfoMap["order_type"] = "P"
+    // 卡类型
+    extendInfoMap["card_type"] = "D"
     // 订单失效时间
-    // extendInfoMap["time_expire"] = ""
-    // 营销补贴信息
-    // extendInfoMap["combinedpay_data"] = getCombinedpayData()
+    extendInfoMap["time_expire"] = ""
+    // 网关支付类型
+    extendInfoMap["gate_type"] = "01"
+    // 付款方银行编号
+    extendInfoMap["bank_id"] = ""
+    // 延时标记
+    extendInfoMap["delay_acct_flag"] = "N"
     // 分账对象
     // extendInfoMap["acct_split_bunch"] = getAcctSplitBunchRucan()
-    // 是否延迟交易
-    // extendInfoMap["delay_acct_flag"] = ""
+    // 备注
+    extendInfoMap["remark"] = "网银支付接口"
+    // 页面跳转地址
+    extendInfoMap["front_url"] = "http://www.chinapnr.com"
     return extendInfoMap
-}
-
-func getCombinedpayData() string {
-    dto := make(map[string]interface{})
-    // 补贴方汇付编号
-    // dto["huifu_id"] = "test"
-    // 补贴方类型
-    // dto["user_type"] = "test"
-    // 补贴方账户号
-    // dto["acct_id"] = "test"
-    // 补贴金额
-    // dto["amount"] = "test"
-
-    dtoList := [1]interface{}{dto}
-    dtoByte, _ := json.Marshal(dtoList)
-    return string(dtoByte)
 }
 
 func getTerminalDeviceData() string {
     dto := make(map[string]interface{})
-    // 交易设备ip
-    dto["device_ip"] = "106.33.180.238"
-    // 设备类型
+    // 交易设备类型
     dto["device_type"] = "1"
-    // 交易设备gps
-    // dto["device_gps"] = ""
-    // 交易设备iccid
-    // dto["device_icc_id"] = ""
-    // 交易设备imei
-    // dto["device_imei"] = ""
-    // 交易设备imsi
-    // dto["device_imsi"] = ""
-    // 交易设备mac
+    // 交易设备IP
+    dto["device_ip"] = "127.0.0.1"
+    // 交易设备MAC
     // dto["device_mac"] = ""
-    // 交易设备wifimac
+    // 交易终端设备IMEI
+    // dto["device_imei"] = ""
+    // 交易设备IMSI
+    // dto["device_imsi"] = ""
+    // 交易设备ICCID
+    // dto["device_icc_id"] = ""
+    // 交易设备WIFIMAC
     // dto["device_wifi_mac"] = ""
+    // 交易设备GPS
+    // dto["device_gps"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
@@ -119,13 +111,13 @@ func getTerminalDeviceData() string {
 func getRiskCheckData() string {
     dto := make(map[string]interface{})
     // ip地址
-    dto["ip_addr"] = "106.33.180.238"
+    dto["ip_addr"] = "1"
     // 基站地址
     // dto["base_atation"] = ""
     // 纬度
-    // dto["latitude"] = ""
+    dto["latitude"] = "3"
     // 经度
-    // dto["longitude"] = ""
+    dto["longitude"] = "4"
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
@@ -137,7 +129,7 @@ func getAcctInfos() interface{} {
     // dto["div_amt"] = ""
     // 被分账方ID
     // dto["huifu_id"] = ""
-    // 账户号
+    // 被分账户号
     // dto["acct_id"] = ""
 
     dtoList := [1]interface{}{dto}
@@ -146,12 +138,12 @@ func getAcctInfos() interface{} {
 
 func getExtendPayData() string {
     dto := make(map[string]interface{})
-    // 业务种类
-    // dto["biz_tp"] = "test"
     // 商品简称
-    // dto["goods_short_name"] = "test"
+    dto["goods_short_name"] = "011111"
     // 网关支付受理渠道
-    dto["gw_chnnl_tp"] = "99"
+    dto["gw_chnnl_tp"] = "01"
+    // 业务种类
+    dto["biz_tp"] = "123451"
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
@@ -159,7 +151,7 @@ func getExtendPayData() string {
 
 func getAcctSplitBunchRucan() string {
     dto := make(map[string]interface{})
-    // 分账信息列表
+    // 分账明细
     // dto["acct_infos"] = getAcctInfos()
 
     dtoByte, _ := json.Marshal(dto)

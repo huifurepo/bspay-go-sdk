@@ -4,10 +4,11 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"github.com/huifurepo/bspay-go-sdk/BsPaySdk"
 	"net/http"
 	"path/filepath"
 	"reflect"
+
+	"github.com/huifurepo/bspay-go-sdk/BsPaySdk"
 )
 
 type FuncCollection map[string]reflect.Value
@@ -45,15 +46,31 @@ func GoSDKHandler(w http.ResponseWriter, r *http.Request) {
 	buf.ReadFrom(r.Body)
 	bodyData := buf.String()
 	fmt.Println("bodyData:", bodyData)
+	// 取出extendInfos对象,放入bodyData
+	bodyMap := make(map[string]interface{})
+	json.Unmarshal([]byte(bodyData), &bodyMap)
+	extendInfos := bodyMap["extendInfos"]
+	delete(bodyMap, "extendInfos")
+
+	if extendInfos != nil {
+		extendMap := extendInfos.(map[string]interface{})
+		for k, v := range extendMap {
+			bodyMap[k] = v
+		}
+	}
+
+	newBodyByte, _ := json.Marshal(bodyMap)
+	newBodyData := string(newBodyByte)
+	fmt.Println("newBodyData:", newBodyData)
 
 	var rfv []reflect.Value
 	var err error
 	method := queryVal.Get("method")
 	if method == "V2SupplementaryPictureRequest" {
 		filePath, _ := filepath.Abs("./IMG_4955.JPG")
-		rfv, err = CallFunc(sdk1, "Str"+method, bodyData, filePath)
+		rfv, err = CallFunc(sdk1, "Str"+method, newBodyData, filePath)
 	} else {
-		rfv, err = CallFunc(sdk1, "Str"+method, bodyData)
+		rfv, err = CallFunc(sdk1, "Str"+method, newBodyData)
 	}
 	if err != nil {
 		fmt.Fprintf(w, "%s", err)

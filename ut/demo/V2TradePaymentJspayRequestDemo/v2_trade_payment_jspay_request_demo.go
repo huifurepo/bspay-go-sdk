@@ -90,6 +90,8 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["notify_url"] = "http://www.baidu.com"
     // 备注
     extendInfoMap["remark"] = "string"
+    // 账户号
+    // extendInfoMap["acct_id"] = ""
     return extendInfoMap
 }
 
@@ -167,6 +169,8 @@ func getAcctInfosRucan() interface{} {
     // dto["div_amt"] = "test"
     // 被分账方ID
     // dto["huifu_id"] = "test"
+    // 账户号
+    // dto["acct_id"] = ""
 
     dtoList := [1]interface{}{dto}
     return dtoList
@@ -332,6 +336,8 @@ func getExtendParams() interface{} {
     dto["parking_id"] = "123wsx"
     // 系统商编号
     dto["sys_service_provider_id"] = "1111111"
+    // 信用卡分期资产方式
+    // dto["fq_channels"] = ""
 
     return dto;
 }

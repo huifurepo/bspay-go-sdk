@@ -1,10 +1,10 @@
 /**
- * 网银付款银行账户查询 - 示例
+ * 查询投诉协商历史 - 示例
  *
  * @Author sdk-generator
  * @Description 汇付天下
  */
-package V2TradeOnlinepaymentBankpayPayerqueryRequestDemo
+package V2MerchantComplaintHistoryQueryRequestDemo
 
 import (
     "encoding/json"
@@ -13,22 +13,20 @@ import (
 	"github.com/huifurepo/bspay-go-sdk/ut/tool"
 )
 
-func V2TradeOnlinepaymentBankpayPayerqueryRequestDemo() {
+func V2MerchantComplaintHistoryQueryRequestDemo() {
     // 1. 数据初始化
 	dgSDK, _ := BsPaySdk.NewBsPay(true, "./config/config.json")
 
     // 2.组装请求参数
-    dgReq := BsPaySdk.V2TradeOnlinepaymentBankpayPayerqueryRequest{
-        // 请求日期
-        ReqDate:tool.GetCurrentDate(),
+    dgReq := BsPaySdk.V2MerchantComplaintHistoryQueryRequest{
         // 请求流水号
         ReqSeqId:tool.GetReqSeqId(),
-        // 商户号
-        HuifuId:"6666000003100615",
-        // 原交易请求日期
-        OrgReqDate:"20221104",
-        // 原交易请求流水号
-        OrgReqSeqId:"6246684562803777",
+        // 请求时间
+        ReqDate:tool.GetCurrentDate(),
+        // 投诉单号
+        ComplaintId:"200000020221019110032287912",
+        // 微信商户号
+        MchId:"1507920721",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -38,7 +36,7 @@ func V2TradeOnlinepaymentBankpayPayerqueryRequestDemo() {
     fmt.Println("请求数据:", string(respStr))
 
     // 3. 发起API调用
-    resp, err := dgSDK.V2TradeOnlinepaymentBankpayPayerqueryRequest(dgReq)
+    resp, err := dgSDK.V2MerchantComplaintHistoryQueryRequest(dgReq)
   	if err != nil {
 		fmt.Println("请求异常:", err)
 	}
@@ -52,10 +50,10 @@ func V2TradeOnlinepaymentBankpayPayerqueryRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
-    // 原交易汇付全局流水号
-    extendInfoMap["org_hf_seq_id"] = ""
-    // 商户备注
-    extendInfoMap["remark"] = "remark123"
+    // 分页开始位置
+    extendInfoMap["offset"] = "10"
+    // 分页大小
+    extendInfoMap["limit"] = "1"
     return extendInfoMap
 }
 

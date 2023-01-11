@@ -13,8 +13,6 @@ type V2MerchantSplitConfigRequest struct {
     ReqDate string `json:"req_date" structs:"req_date"` // 请求时间
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 商户汇付Id
     RuleOrigin string `json:"rule_origin" structs:"rule_origin"` // 分账规则来源
-    RepealFlag string `json:"repeal_flag" structs:"repeal_flag"` // 分账是否支持撤销交易
-    RefundFlag string `json:"refund_flag" structs:"refund_flag"` // 分账是否支持退货交易
     DivFlag string `json:"div_flag" structs:"div_flag"` // 分账开关
     ApplyRatio string `json:"apply_ratio" structs:"apply_ratio"` // 最大分账比例
     StartType string `json:"start_type" structs:"start_type"` // 生效类型

@@ -105,8 +105,8 @@ func getWxConfList() string {
     // dto["pay_scene"] = "test"
     // 手续费（%）
     // dto["fee_rate"] = "test"
-    // 商户经营类目
-    // dto["mcc"] = ""
+    // ~~商户经营类目~~
+    // dto["~~mcc~~"] = ""
     // 子渠道号
     // dto["pay_channel_id"] = ""
     // 费率规则id

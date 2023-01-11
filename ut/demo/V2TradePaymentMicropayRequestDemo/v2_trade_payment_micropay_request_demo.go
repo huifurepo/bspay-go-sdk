@@ -86,6 +86,8 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["notify_url"] = "http://www.baidu.com"
     // 交易备注
     extendInfoMap["remark"] = ""
+    // 账户号
+    // extendInfoMap["acct_id"] = ""
     return extendInfoMap
 }
 
@@ -149,6 +151,8 @@ func getAcctInfosRucan() interface{} {
     // dto["div_amt"] = "test"
     // 被分账方ID
     // dto["huifu_id"] = "test"
+    // 账户号
+    // dto["acct_id"] = ""
 
     dtoList := [1]interface{}{dto}
     return dtoList

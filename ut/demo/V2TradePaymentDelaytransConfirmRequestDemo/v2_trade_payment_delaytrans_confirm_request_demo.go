@@ -62,6 +62,8 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["pay_type"] = ""
     // 备注
     extendInfoMap["remark"] = "remark123"
+    // 原交易商户订单号
+    // extendInfoMap["org_mer_ord_id"] = ""
     return extendInfoMap
 }
 
