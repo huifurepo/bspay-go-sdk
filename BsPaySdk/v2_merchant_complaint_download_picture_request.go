@@ -1,5 +1,5 @@
 /**
- * 图片下载
+ * 投诉图片下载
  *
  * @Author sdk-generator
  * @Description 汇付天下

@@ -1,10 +1,10 @@
 /**
- * 投诉图片下载 - 示例
+ * DM取现额度查询 - 示例
  *
  * @Author sdk-generator
  * @Description 汇付天下
  */
-package V2MerchantComplaintDownloadPictureRequestDemo
+package V2TradeSettlementEnchashmentDmamtQueryRequestDemo
 
 import (
     "encoding/json"
@@ -13,20 +13,14 @@ import (
 	"github.com/huifurepo/bspay-go-sdk/ut/tool"
 )
 
-func V2MerchantComplaintDownloadPictureRequestDemo() {
+func V2TradeSettlementEnchashmentDmamtQueryRequestDemo() {
     // 1. 数据初始化
 	dgSDK, _ := BsPaySdk.NewBsPay(true, "./config/config.json")
 
     // 2.组装请求参数
-    dgReq := BsPaySdk.V2MerchantComplaintDownloadPictureRequest{
-        // 请求流水号
-        ReqSeqId:tool.GetReqSeqId(),
-        // 请求时间
-        ReqDate:tool.GetCurrentDate(),
-        // 下载图片的url
-        MediaUrl:"https://api.mch.weixin.qq.com/v3/merchant-service/images/ChsyMDAwMDAwMjAyMjEwMTkyMjAwMzI0MjEzODUYACCN78OaBigBMAE4AQ%3D%3D",
-        // 微信商户号
-        MchId:"1502074861",
+    dgReq := BsPaySdk.V2TradeSettlementEnchashmentDmamtQueryRequest{
+        // 商户号
+        HuifuId:"6666000021291985",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -36,7 +30,7 @@ func V2MerchantComplaintDownloadPictureRequestDemo() {
     fmt.Println("请求数据:", string(respStr))
 
     // 3. 发起API调用
-    resp, err := dgSDK.V2MerchantComplaintDownloadPictureRequest(dgReq)
+    resp, err := dgSDK.V2TradeSettlementEnchashmentDmamtQueryRequest(dgReq)
   	if err != nil {
 		fmt.Println("请求异常:", err)
 	}
@@ -50,6 +44,8 @@ func V2MerchantComplaintDownloadPictureRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
+    // 账户号
+    extendInfoMap["acct_id"] = "F00598600"
     return extendInfoMap
 }
 

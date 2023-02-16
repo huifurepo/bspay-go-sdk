@@ -80,21 +80,21 @@ func getAcctInfosRucan() interface{} {
     return dtoList
 }
 
+func getAcctSplitBunchRucan() string {
+    dto := make(map[string]interface{})
+    // 分账明细
+    dto["acct_infos"] = getAcctInfosRucan()
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
 func getMiniappDataRucan() string {
     dto := make(map[string]interface{})
     // 应用ID
     dto["seq_id"] = "系统应用ID"
     // 私有信息
     // dto["private_info"] = ""
-
-    dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
-}
-
-func getAcctSplitBunchRucan() string {
-    dto := make(map[string]interface{})
-    // 分账明细
-    dto["acct_infos"] = getAcctInfosRucan()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

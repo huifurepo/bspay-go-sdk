@@ -95,58 +95,6 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getPayeeInfo() interface{} {
-    dto := make(map[string]interface{})
-    // 商户类别
-    // dto["mer_cat_code"] = ""
-    // 二级商户代码
-    // dto["sub_id"] = ""
-    // 二级商户名称
-    // dto["sub_name"] = ""
-    // 终端号
-    // dto["term_id"] = ""
-
-    return dto;
-}
-
-func getGoodsDetail() interface{} {
-    dto := make(map[string]interface{})
-    // 商品的编号
-    dto["goods_id"] = "12312321"
-    // 商品名称(元)
-    dto["goods_name"] = "阿里"
-    // 商品单价
-    dto["price"] = "0.01"
-    // 商品数量
-    dto["quantity"] = "20"
-    // 商品描述信息
-    dto["body"] = ""
-    // 商品类目树
-    dto["categories_tree"] = "string"
-    // 商品类目
-    dto["goods_category"] = ""
-    // 商品的展示地址
-    dto["show_url"] = ""
-
-    dtoList := [1]interface{}{dto}
-    return dtoList
-}
-
-func getStoreInfo() interface{} {
-    dto := make(map[string]interface{})
-    // 门店id
-    // dto["id"] = ""
-    // 门店名称
-    // dto["name"] = ""
-    // 门店行政区划码
-    // dto["area_code"] = ""
-    // 门店详细地址
-    // dto["address"] = ""
-
-    dtoList := [1]interface{}{dto}
-    return dtoList
-}
-
 func getCombinedpayData() string {
     dto := make(map[string]interface{})
     // 补贴方汇付编号
@@ -163,17 +111,19 @@ func getCombinedpayData() string {
     return string(dtoByte)
 }
 
-func getAcctInfosRucan() interface{} {
+func getRiskCheckData() string {
     dto := make(map[string]interface{})
-    // 分账金额
-    // dto["div_amt"] = "test"
-    // 被分账方ID
-    // dto["huifu_id"] = "test"
-    // 账户号
-    // dto["acct_id"] = ""
+    // ip地址
+    dto["ip_addr"] = "180.167.105.130"
+    // 基站地址
+    dto["base_station"] = "192.168.1.1"
+    // 纬度
+    dto["latitude"] = "33.3"
+    // 经度
+    dto["longitude"] = "33.3"
 
-    dtoList := [1]interface{}{dto}
-    return dtoList
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
 }
 
 func getTerminalDeviceData() string {
@@ -219,6 +169,19 @@ func getTerminalDeviceData() string {
     return string(dtoByte)
 }
 
+func getAcctInfosRucan() interface{} {
+    dto := make(map[string]interface{})
+    // 分账金额
+    // dto["div_amt"] = "test"
+    // 被分账方ID
+    // dto["huifu_id"] = "test"
+    // 账户号
+    // dto["acct_id"] = ""
+
+    dtoList := [1]interface{}{dto}
+    return dtoList
+}
+
 func getAcctSplitBunch() string {
     dto := make(map[string]interface{})
     // 分账明细
@@ -228,57 +191,48 @@ func getAcctSplitBunch() string {
     return string(dtoByte)
 }
 
-func getRiskCheckData() string {
+func getGoodsDetailWxRucan() interface{} {
     dto := make(map[string]interface{})
-    // ip地址
-    dto["ip_addr"] = "180.167.105.130"
-    // 基站地址
-    dto["base_station"] = "192.168.1.1"
-    // 纬度
-    dto["latitude"] = "33.3"
-    // 经度
-    dto["longitude"] = "33.3"
+    // 商品编码
+    // dto["goods_id"] = ""
+    // 商品名称
+    // dto["goods_name"] = ""
+    // 商品单价(元)
+    // dto["price"] = ""
+    // 商品数量
+    // dto["quantity"] = ""
+    // 微信侧商品编码
+    // dto["wxpay_goods_id"] = ""
 
-    dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
+    dtoList := [1]interface{}{dto}
+    return dtoList
 }
 
-func getUnionpayData() string {
+func getDetail() interface{} {
     dto := make(map[string]interface{})
-    // 收款方附加数据
-    // dto["acq_addn_data"] = ""
-    // 地区信息
-    // dto["area_info"] = ""
-    // 持卡人ip
-    // dto["customer_ip"] = ""
-    // 前台通知地址
-    // dto["front_url"] = ""
-    // 订单描述
-    // dto["order_desc"] = ""
-    // 收款方附言
-    // dto["payee_comments"] = ""
-    // 收款方信息
-    // dto["payee_info"] = getPayeeInfo()
-    // 银联分配的服务商机构标识码
-    // dto["pnr_ins_id_cd"] = ""
-    // 请求方自定义域
-    // dto["req_reserved"] = ""
-    // 终端信息
-    // dto["term_info"] = ""
-    // 云闪付用户标识
-    // dto["user_id"] = ""
+    // 单品列表
+    // dto["goods_detail"] = getGoodsDetailWxRucan()
+    // 订单原价(元)
+    // dto["cost_price"] = ""
+    // 商品小票ID
+    // dto["receipt_id"] = ""
 
-    dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
+    return dto;
 }
 
-func getDcData() string {
+func getStoreInfo() interface{} {
     dto := make(map[string]interface{})
-    // 数字货币银行编号
-    // dto["digital_bank_no"] = ""
+    // 门店id
+    // dto["id"] = ""
+    // 门店名称
+    // dto["name"] = ""
+    // 门店行政区划码
+    // dto["area_code"] = ""
+    // 门店详细地址
+    // dto["address"] = ""
 
-    dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
+    dtoList := [1]interface{}{dto}
+    return dtoList
 }
 
 func getSceneInfo() interface{} {
@@ -342,6 +296,29 @@ func getExtendParams() interface{} {
     return dto;
 }
 
+func getGoodsDetail() interface{} {
+    dto := make(map[string]interface{})
+    // 商品的编号
+    dto["goods_id"] = "12312321"
+    // 商品名称(元)
+    dto["goods_name"] = "阿里"
+    // 商品单价
+    dto["price"] = "0.01"
+    // 商品数量
+    dto["quantity"] = "20"
+    // 商品描述信息
+    dto["body"] = ""
+    // 商品类目树
+    dto["categories_tree"] = "string"
+    // 商品类目
+    dto["goods_category"] = ""
+    // 商品的展示地址
+    dto["show_url"] = ""
+
+    dtoList := [1]interface{}{dto}
+    return dtoList
+}
+
 func getAlipayData() string {
     dto := make(map[string]interface{})
     // 买家的支付宝唯一用户号
@@ -369,32 +346,55 @@ func getAlipayData() string {
     return string(dtoByte)
 }
 
-func getDetail() interface{} {
+func getPayeeInfo() interface{} {
     dto := make(map[string]interface{})
-    // 单品列表
-    // dto["goods_detail"] = getGoodsDetailWxRucan()
-    // 订单原价(元)
-    // dto["cost_price"] = ""
-    // 商品小票ID
-    // dto["receipt_id"] = ""
+    // 商户类别
+    // dto["mer_cat_code"] = ""
+    // 二级商户代码
+    // dto["sub_id"] = ""
+    // 二级商户名称
+    // dto["sub_name"] = ""
+    // 终端号
+    // dto["term_id"] = ""
 
     return dto;
 }
 
-func getGoodsDetailWxRucan() interface{} {
+func getUnionpayData() string {
     dto := make(map[string]interface{})
-    // 商品编码
-    // dto["goods_id"] = ""
-    // 商品名称
-    // dto["goods_name"] = ""
-    // 商品单价(元)
-    // dto["price"] = ""
-    // 商品数量
-    // dto["quantity"] = ""
-    // 微信侧商品编码
-    // dto["wxpay_goods_id"] = ""
+    // 收款方附加数据
+    // dto["acq_addn_data"] = ""
+    // 地区信息
+    // dto["area_info"] = ""
+    // 持卡人ip
+    // dto["customer_ip"] = ""
+    // 前台通知地址
+    // dto["front_url"] = ""
+    // 订单描述
+    // dto["order_desc"] = ""
+    // 收款方附言
+    // dto["payee_comments"] = ""
+    // 收款方信息
+    // dto["payee_info"] = getPayeeInfo()
+    // 银联分配的服务商机构标识码
+    // dto["pnr_ins_id_cd"] = ""
+    // 请求方自定义域
+    // dto["req_reserved"] = ""
+    // 终端信息
+    // dto["term_info"] = ""
+    // 云闪付用户标识
+    // dto["user_id"] = ""
 
-    dtoList := [1]interface{}{dto}
-    return dtoList
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getDcData() string {
+    dto := make(map[string]interface{})
+    // 数字货币银行编号
+    // dto["digital_bank_no"] = ""
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
 }
 

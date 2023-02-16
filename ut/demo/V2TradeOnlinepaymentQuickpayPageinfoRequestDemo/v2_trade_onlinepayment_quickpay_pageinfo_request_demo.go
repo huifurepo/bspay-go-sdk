@@ -72,7 +72,31 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["acct_split_bunch"] = getAcctSplitBunchRucan()
     // 页面跳转地址
     extendInfoMap["front_url"] = "http://www.chinapnr.com"
+    // 延时标记
+    // extendInfoMap["delay_acct_flag"] = ""
     return extendInfoMap
+}
+
+func getAcctInfos() interface{} {
+    dto := make(map[string]interface{})
+    // 被分账对象ID
+    // dto["huifu_id"] = "test"
+    // 分账金额
+    // dto["div_amt"] = "test"
+    // 账户号
+    // dto["acct_id"] = ""
+
+    dtoList := [1]interface{}{dto}
+    return dtoList
+}
+
+func getAcctSplitBunchRucan() string {
+    dto := make(map[string]interface{})
+    // 分账明细
+    // dto["acct_infos"] = getAcctInfos()
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
 }
 
 func getTerminalDeviceData() string {
@@ -98,34 +122,6 @@ func getTerminalDeviceData() string {
     return string(dtoByte)
 }
 
-func getRiskCheckData() string {
-    dto := make(map[string]interface{})
-    // ip地址
-    dto["ip_addr"] = "127.0.0.1"
-    // 基站地址
-    // dto["base_atation"] = ""
-    // 纬度
-    // dto["latitude"] = ""
-    // 经度
-    // dto["longitude"] = ""
-
-    dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
-}
-
-func getAcctInfos() interface{} {
-    dto := make(map[string]interface{})
-    // 被分账对象ID
-    // dto["huifu_id"] = "test"
-    // 分账金额
-    // dto["div_amt"] = "test"
-    // 账户号
-    // dto["acct_id"] = ""
-
-    dtoList := [1]interface{}{dto}
-    return dtoList
-}
-
 func getExtendPayData() string {
     dto := make(map[string]interface{})
     // 网关支付受理渠道
@@ -139,10 +135,16 @@ func getExtendPayData() string {
     return string(dtoByte)
 }
 
-func getAcctSplitBunchRucan() string {
+func getRiskCheckData() string {
     dto := make(map[string]interface{})
-    // 分账明细
-    // dto["acct_infos"] = getAcctInfos()
+    // ip地址
+    dto["ip_addr"] = "127.0.0.1"
+    // 基站地址
+    // dto["base_atation"] = ""
+    // 纬度
+    // dto["latitude"] = ""
+    // 经度
+    // dto["longitude"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

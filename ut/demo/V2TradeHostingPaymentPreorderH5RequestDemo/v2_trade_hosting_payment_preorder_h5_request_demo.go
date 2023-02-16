@@ -73,7 +73,7 @@ func getAcctInfosRucan() interface{} {
     dto := make(map[string]interface{})
     // 分账金额
     dto["div_amt"] = "0.08"
-    // 补分账方ID
+    // 被分账方ID
     dto["huifu_id"] = "6666000111546360"
 
     dtoList := [1]interface{}{dto}

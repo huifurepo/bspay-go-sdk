@@ -83,7 +83,8 @@ func GoSDKHandler(w http.ResponseWriter, r *http.Request) {
 	if rfv[1].Interface() != nil {
 		fmt.Fprintf(w, "%s", rfv[1].Interface())
 	} else {
-		fmt.Fprintf(w, "%s", string(resp))
+		re, _ := json.Marshal(string(resp))
+		fmt.Fprintf(w, "%s", re)
 	}
 }
 

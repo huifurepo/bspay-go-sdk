@@ -85,6 +85,19 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
+func getExtendPayData() string {
+    dto := make(map[string]interface{})
+    // 商品简称
+    dto["goods_short_name"] = "011111"
+    // 网关支付受理渠道
+    dto["gw_chnnl_tp"] = "01"
+    // 业务种类
+    dto["biz_tp"] = "123451"
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
 func getTerminalDeviceData() string {
     dto := make(map[string]interface{})
     // 交易设备类型
@@ -108,21 +121,6 @@ func getTerminalDeviceData() string {
     return string(dtoByte)
 }
 
-func getRiskCheckData() string {
-    dto := make(map[string]interface{})
-    // ip地址
-    dto["ip_addr"] = "1"
-    // 基站地址
-    // dto["base_atation"] = ""
-    // 纬度
-    dto["latitude"] = "3"
-    // 经度
-    dto["longitude"] = "4"
-
-    dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
-}
-
 func getAcctInfos() interface{} {
     dto := make(map[string]interface{})
     // 分账金额
@@ -136,23 +134,25 @@ func getAcctInfos() interface{} {
     return dtoList
 }
 
-func getExtendPayData() string {
+func getAcctSplitBunchRucan() string {
     dto := make(map[string]interface{})
-    // 商品简称
-    dto["goods_short_name"] = "011111"
-    // 网关支付受理渠道
-    dto["gw_chnnl_tp"] = "01"
-    // 业务种类
-    dto["biz_tp"] = "123451"
+    // 分账明细
+    // dto["acct_infos"] = getAcctInfos()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
-func getAcctSplitBunchRucan() string {
+func getRiskCheckData() string {
     dto := make(map[string]interface{})
-    // 分账明细
-    // dto["acct_infos"] = getAcctInfos()
+    // ip地址
+    dto["ip_addr"] = "1"
+    // 基站地址
+    // dto["base_atation"] = ""
+    // 纬度
+    dto["latitude"] = "3"
+    // 经度
+    dto["longitude"] = "4"
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

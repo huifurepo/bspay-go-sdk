@@ -161,39 +161,6 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getSettleConfig() string {
-    dto := make(map[string]interface{})
-    // 结算周期
-    dto["settle_cycle"] = "D1"
-    // 结算手续费外扣商户号填写承担手续费的汇付商户号；当out_settle_flag&#x3D;1时必填，否则非必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000123123123&lt;/font&gt;
-    dto["out_settle_huifuid"] = ""
-    // 起结金额
-    dto["min_amt"] = "1.00"
-    // 留存金额
-    dto["remained_amt"] = "2.00"
-    // 结算摘要
-    dto["settle_abstract"] = "abstract"
-    // 手续费外扣标记
-    dto["out_settle_flag"] = "2"
-    // 结算手续费外扣账户类型
-    dto["out_settle_acct_type"] = ""
-    // 节假日结算手续费率（%）
-    dto["fixed_ratio"] = "5.00"
-    // 结算方式
-    dto["settle_pattern"] = ""
-    // 结算批次号
-    dto["settle_batch_no"] = ""
-    // 是否优先到账
-    dto["is_priority_receipt"] = ""
-    // 自定义结算处理时间
-    dto["settle_time"] = ""
-    // 节假日结算手续费固定金额（元）
-    // dto["constant_amt"] = ""
-
-    dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
-}
-
 func getCardInfo() string {
     dto := make(map[string]interface{})
     // 结算账户类型
@@ -229,6 +196,59 @@ func getCardInfo() string {
     return string(dtoByte)
 }
 
+func getCashConfig() string {
+    dto := make(map[string]interface{})
+    // 取现固定手续费（元）fix_amt与fee_rate至少填写一项，单位元，需保留小数点后两位，不收费请填写0.00； &lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;
+    dto["fix_amt"] = "1.00"
+    // 取现手续费率（%）fix_amt与fee_rate至少填写一项，单位%，需保留小数点后两位，取值范围[0.00,100.00]，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.05&lt;/font&gt;&lt;br/&gt;注：如果fix_amt与fee_rate都填写了则手续费&#x3D;fix_amt+支付金额*fee_rate
+    dto["fee_rate"] = ""
+    // 取现类型
+    dto["cash_type"] = "D0"
+    // 是否交易手续费外扣
+    // dto["out_fee_flag"] = ""
+    // 手续费承担方
+    // dto["out_fee_huifu_id"] = ""
+    // 交易手续费外扣的账户类型
+    // dto["out_fee_acct_type"] = ""
+
+    dtoList := [1]interface{}{dto}
+    dtoByte, _ := json.Marshal(dtoList)
+    return string(dtoByte)
+}
+
+func getSettleConfig() string {
+    dto := make(map[string]interface{})
+    // 结算周期
+    dto["settle_cycle"] = "D1"
+    // 结算手续费外扣商户号填写承担手续费的汇付商户号；当out_settle_flag&#x3D;1时必填，否则非必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000123123123&lt;/font&gt;
+    dto["out_settle_huifuid"] = ""
+    // 起结金额
+    dto["min_amt"] = "1.00"
+    // 留存金额
+    dto["remained_amt"] = "2.00"
+    // 结算摘要
+    dto["settle_abstract"] = "abstract"
+    // 手续费外扣标记
+    dto["out_settle_flag"] = "2"
+    // 结算手续费外扣账户类型
+    dto["out_settle_acct_type"] = ""
+    // 节假日结算手续费率（%）
+    dto["fixed_ratio"] = "5.00"
+    // 结算方式
+    dto["settle_pattern"] = ""
+    // 结算批次号
+    dto["settle_batch_no"] = ""
+    // 是否优先到账
+    dto["is_priority_receipt"] = ""
+    // 自定义结算处理时间
+    dto["settle_time"] = ""
+    // 节假日结算手续费固定金额（元）
+    // dto["constant_amt"] = ""
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
 func getSignUserInfo() string {
     dto := make(map[string]interface{})
     // 签约人类型
@@ -247,26 +267,6 @@ func getSignUserInfo() string {
     // dto["auth_file_id"] = ""
 
     dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
-}
-
-func getCashConfig() string {
-    dto := make(map[string]interface{})
-    // 取现固定手续费（元）fix_amt与fee_rate至少填写一项，单位元，需保留小数点后两位，不收费请填写0.00； &lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;
-    dto["fix_amt"] = "1.00"
-    // 取现手续费率（%）fix_amt与fee_rate至少填写一项，单位%，需保留小数点后两位，取值范围[0.00,100.00]，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.05&lt;/font&gt;&lt;br/&gt;注：如果fix_amt与fee_rate都填写了则手续费&#x3D;fix_amt+支付金额*fee_rate
-    dto["fee_rate"] = ""
-    // 取现类型
-    dto["cash_type"] = "D0"
-    // 是否交易手续费外扣
-    // dto["out_fee_flag"] = ""
-    // 手续费承担方
-    // dto["out_fee_huifu_id"] = ""
-    // 交易手续费外扣的账户类型
-    // dto["out_fee_acct_type"] = ""
-
-    dtoList := [1]interface{}{dto}
-    dtoByte, _ := json.Marshal(dtoList)
     return string(dtoByte)
 }
 

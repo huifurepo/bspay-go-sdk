@@ -63,15 +63,6 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getAcctSplitBunch() string {
-    dto := make(map[string]interface{})
-    // 分账明细
-    dto["acct_infos"] = getAcctInfos()
-
-    dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
-}
-
 func getAcctInfos() interface{} {
     dto := make(map[string]interface{})
     // 被分账方ID
@@ -83,5 +74,14 @@ func getAcctInfos() interface{} {
 
     dtoList := [1]interface{}{dto}
     return dtoList
+}
+
+func getAcctSplitBunch() string {
+    dto := make(map[string]interface{})
+    // 分账明细
+    dto["acct_infos"] = getAcctInfos()
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
 }
 

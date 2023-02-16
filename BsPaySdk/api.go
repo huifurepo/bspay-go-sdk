@@ -15,6 +15,16 @@ const BASE_API_TEST_URL_V2 = "https://spin-test.cloudpnr.com"
 // 以下为接口uri
 
 /**
+ * 一键绑卡
+ */
+const V2_QUICKBUCKLE_ONEKEY_CARDBIND = "/v2/quickbuckle/onekey/cardbind"
+
+/**
+ * DM取现额度查询
+ */
+const V2_TRADE_SETTLEMENT_ENCHASHMENT_DMAMT_QUERY = "/v2/trade/settlement/enchashment/dmamt/query"
+
+/**
  * 子账户开通配置
  */
 const V2_MERCHANT_SETTLE_CONFIG = "/v2/merchant/settle/config"
@@ -85,7 +95,7 @@ const V2_MERCHANT_COMPLAINT_HISTORY_QUERY = "/v2/merchant/complaint/history/quer
 const V2_MERCHANT_COMPLAINT_LIST_INFO_QUERY = "/v2/merchant/complaint/list/info/query"
 
 /**
- * 图片下载
+ * 投诉图片下载
  */
 const V2_MERCHANT_COMPLAINT_DOWNLOAD_PICTURE = "/v2/merchant/complaint/download/picture"
 

@@ -82,19 +82,12 @@ func getAcctInfosRucan() interface{} {
     return dtoList
 }
 
-func getCombinedpayData() string {
+func getAcctSplitBunchRucan() string {
     dto := make(map[string]interface{})
-    // 补贴方汇付编号
-    // dto["huifu_id"] = "test"
-    // 补贴方类型
-    // dto["user_type"] = "test"
-    // 补贴方账户号
-    // dto["acct_id"] = "test"
-    // 补贴金额
-    // dto["amount"] = "test"
+    // 分账信息列表
+    // dto["acct_infos"] = getAcctInfosRucan()
 
-    dtoList := [1]interface{}{dto}
-    dtoByte, _ := json.Marshal(dtoList)
+    dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
@@ -136,12 +129,19 @@ func getRiskCheckData() string {
     return string(dtoByte)
 }
 
-func getAcctSplitBunchRucan() string {
+func getCombinedpayData() string {
     dto := make(map[string]interface{})
-    // 分账信息列表
-    // dto["acct_infos"] = getAcctInfosRucan()
+    // 补贴方汇付编号
+    // dto["huifu_id"] = "test"
+    // 补贴方类型
+    // dto["user_type"] = "test"
+    // 补贴方账户号
+    // dto["acct_id"] = "test"
+    // 补贴金额
+    // dto["amount"] = "test"
 
-    dtoByte, _ := json.Marshal(dto)
+    dtoList := [1]interface{}{dto}
+    dtoByte, _ := json.Marshal(dtoList)
     return string(dtoByte)
 }
 

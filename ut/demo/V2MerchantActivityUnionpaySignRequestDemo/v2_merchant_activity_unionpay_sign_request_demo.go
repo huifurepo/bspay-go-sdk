@@ -61,22 +61,6 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getEnlistImgMakings() string {
-    dto := make(map[string]interface{})
-    // 活动材料编号
-    dto["makings_id"] = "18"
-    // 活动材料类型
-    dto["makings_type"] = "IMG"
-    // 活动材料名称
-    dto["makings_name"] = "门头照片"
-    // 材料值
-    dto["makings_value"] = "42204258-967e-373c-88d2-1afa4c7bb8ef"
-
-    dtoList := [1]interface{}{dto}
-    dtoByte, _ := json.Marshal(dtoList)
-    return string(dtoByte)
-}
-
 func getEnlistTxtMakings() string {
     dto := make(map[string]interface{})
     // 活动材料编号
@@ -87,6 +71,22 @@ func getEnlistTxtMakings() string {
     dto["makings_name"] = "银联云闪付商户号"
     // 材料值
     dto["makings_value"] = "82339SP5411019L"
+
+    dtoList := [1]interface{}{dto}
+    dtoByte, _ := json.Marshal(dtoList)
+    return string(dtoByte)
+}
+
+func getEnlistImgMakings() string {
+    dto := make(map[string]interface{})
+    // 活动材料编号
+    dto["makings_id"] = "18"
+    // 活动材料类型
+    dto["makings_type"] = "IMG"
+    // 活动材料名称
+    dto["makings_name"] = "门头照片"
+    // 材料值
+    dto["makings_value"] = "42204258-967e-373c-88d2-1afa4c7bb8ef"
 
     dtoList := [1]interface{}{dto}
     dtoByte, _ := json.Marshal(dtoList)

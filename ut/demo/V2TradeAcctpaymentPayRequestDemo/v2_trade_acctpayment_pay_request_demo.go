@@ -92,6 +92,19 @@ func getTerminalDeviceData() string {
     return string(dtoByte)
 }
 
+func getAcctInfos() interface{} {
+    dto := make(map[string]interface{})
+    // 分账金额
+    dto["div_amt"] = "0.01"
+    // 被分账方ID
+    dto["huifu_id"] = "6666000018344461"
+    // 被分账方账户号
+    // dto["acct_id"] = ""
+
+    dtoList := [1]interface{}{dto}
+    return dtoList
+}
+
 func getAcctSplitBunch() string {
     dto := make(map[string]interface{})
     // 分账明细
@@ -118,18 +131,5 @@ func getRiskCheckData() string {
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
-}
-
-func getAcctInfos() interface{} {
-    dto := make(map[string]interface{})
-    // 分账金额
-    dto["div_amt"] = "0.01"
-    // 被分账方ID
-    dto["huifu_id"] = "6666000018344461"
-    // 被分账方账户号
-    // dto["acct_id"] = ""
-
-    dtoList := [1]interface{}{dto}
-    return dtoList
 }
 

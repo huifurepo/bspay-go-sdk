@@ -55,40 +55,6 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getHbFqFeeList() string {
-    dto := make(map[string]interface{})
-    // 商户汇付Id
-    dto["huifu_id"] = "6666000003156435"
-    // 花呗分期状态
-    // dto["hb_fq_status"] = ""
-    // 花呗分期3期开关
-    dto["hb_three_period_switch"] = "Y"
-    // 花呗收单分期3期费率（%）
-    dto["hb_three_acq_period"] = "5"
-    // 花呗分期3期利率（%）
-    dto["hb_three_period"] = "10"
-    // 花呗分期6期开关
-    dto["hb_six_period_switch"] = "Y"
-    // 花呗收单分期6期费率（%）
-    dto["hb_six_acq_period"] = "5"
-    // 花呗分期6期利率（%）
-    dto["hb_six_period"] = "10"
-    // 花呗分期12期开关
-    dto["hb_twelve_period_switch"] = "Y"
-    // 花呗收单分期12期费率（%）
-    dto["hb_twelve_acq_period"] = "15"
-    // 花呗分期12期利率（%）
-    dto["hb_twelve_period"] = "11"
-    // 交易手续费外扣标记
-    dto["out_fee_flag"] = ""
-    // 手续费外扣的汇付商户号
-    dto["out_fee_huifu_id"] = ""
-
-    dtoList := [1]interface{}{dto}
-    dtoByte, _ := json.Marshal(dtoList)
-    return string(dtoByte)
-}
-
 func getBankFqFeeList() interface{} {
     dto := make(map[string]interface{})
     // 银行编号
@@ -132,6 +98,40 @@ func getBankFqList() string {
     dto["bank_fq_fee_list"] = getBankFqFeeList()
     // 贴息模式
     dto["fee_model"] = "1"
+
+    dtoList := [1]interface{}{dto}
+    dtoByte, _ := json.Marshal(dtoList)
+    return string(dtoByte)
+}
+
+func getHbFqFeeList() string {
+    dto := make(map[string]interface{})
+    // 商户汇付Id
+    dto["huifu_id"] = "6666000003156435"
+    // 花呗分期状态
+    // dto["hb_fq_status"] = ""
+    // 花呗分期3期开关
+    dto["hb_three_period_switch"] = "Y"
+    // 花呗收单分期3期费率（%）
+    dto["hb_three_acq_period"] = "5"
+    // 花呗分期3期利率（%）
+    dto["hb_three_period"] = "10"
+    // 花呗分期6期开关
+    dto["hb_six_period_switch"] = "Y"
+    // 花呗收单分期6期费率（%）
+    dto["hb_six_acq_period"] = "5"
+    // 花呗分期6期利率（%）
+    dto["hb_six_period"] = "10"
+    // 花呗分期12期开关
+    dto["hb_twelve_period_switch"] = "Y"
+    // 花呗收单分期12期费率（%）
+    dto["hb_twelve_acq_period"] = "15"
+    // 花呗分期12期利率（%）
+    dto["hb_twelve_period"] = "11"
+    // 交易手续费外扣标记
+    dto["out_fee_flag"] = ""
+    // 手续费外扣的汇付商户号
+    dto["out_fee_huifu_id"] = ""
 
     dtoList := [1]interface{}{dto}
     dtoByte, _ := json.Marshal(dtoList)

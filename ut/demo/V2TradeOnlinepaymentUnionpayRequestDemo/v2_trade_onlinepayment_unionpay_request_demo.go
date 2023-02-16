@@ -75,21 +75,6 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getRiskCheckData() string {
-    dto := make(map[string]interface{})
-    // 基站地址
-    dto["base_station"] = "7"
-    // ip地址
-    // dto["ip_addr"] = ""
-    // 纬度
-    dto["latitude"] = "4"
-    // 经度
-    dto["longitude"] = "3"
-
-    dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
-}
-
 func getAcctInfos() interface{} {
     dto := make(map[string]interface{})
     // 分账金额
@@ -107,6 +92,21 @@ func getAcctSplitBunchRucan() string {
     dto := make(map[string]interface{})
     // 分账明细
     // dto["acct_infos"] = getAcctInfos()
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getRiskCheckData() string {
+    dto := make(map[string]interface{})
+    // 基站地址
+    dto["base_station"] = "7"
+    // ip地址
+    // dto["ip_addr"] = ""
+    // 纬度
+    dto["latitude"] = "4"
+    // 经度
+    dto["longitude"] = "3"
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

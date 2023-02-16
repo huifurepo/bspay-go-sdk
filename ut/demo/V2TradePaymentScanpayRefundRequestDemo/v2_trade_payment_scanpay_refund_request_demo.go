@@ -81,32 +81,18 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getAcctInfosRucan() interface{} {
+func getRiskCheckData() string {
     dto := make(map[string]interface{})
-    // 分账金额
-    // dto["div_amt"] = "test"
-    // 被分账方ID
-    // dto["huifu_id"] = "test"
-    // 垫资金额
-    // dto["part_loan_amt"] = ""
+    // ip地址
+    // dto["ip_addr"] = ""
+    // 基站地址
+    // dto["base_atation"] = ""
+    // 纬度
+    // dto["latitude"] = ""
+    // 经度
+    // dto["longitude"] = ""
 
-    dtoList := [1]interface{}{dto}
-    return dtoList
-}
-
-func getCombinedpayData() string {
-    dto := make(map[string]interface{})
-    // 补贴方汇付编号
-    // dto["huifu_id"] = "test"
-    // 补贴方类型
-    // dto["user_type"] = "test"
-    // 补贴方账户号
-    // dto["acct_id"] = "test"
-    // 补贴金额
-    // dto["amount"] = "test"
-
-    dtoList := [1]interface{}{dto}
-    dtoByte, _ := json.Marshal(dtoList)
+    dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
@@ -133,16 +119,23 @@ func getTerminalDeviceData() string {
     return string(dtoByte)
 }
 
-func getRiskCheckData() string {
+func getAcctInfosRucan() interface{} {
     dto := make(map[string]interface{})
-    // ip地址
-    // dto["ip_addr"] = ""
-    // 基站地址
-    // dto["base_atation"] = ""
-    // 纬度
-    // dto["latitude"] = ""
-    // 经度
-    // dto["longitude"] = ""
+    // 分账金额
+    // dto["div_amt"] = "test"
+    // 被分账方ID
+    // dto["huifu_id"] = "test"
+    // 垫资金额
+    // dto["part_loan_amt"] = ""
+
+    dtoList := [1]interface{}{dto}
+    return dtoList
+}
+
+func getAcctSplitBunchRucan() string {
+    dto := make(map[string]interface{})
+    // 分账信息列表
+    // dto["acct_infos"] = getAcctInfosRucan()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
@@ -157,12 +150,19 @@ func getDigitalCurrencyData() string {
     return string(dtoByte)
 }
 
-func getAcctSplitBunchRucan() string {
+func getCombinedpayData() string {
     dto := make(map[string]interface{})
-    // 分账信息列表
-    // dto["acct_infos"] = getAcctInfosRucan()
+    // 补贴方汇付编号
+    // dto["huifu_id"] = "test"
+    // 补贴方类型
+    // dto["user_type"] = "test"
+    // 补贴方账户号
+    // dto["acct_id"] = "test"
+    // 补贴金额
+    // dto["amount"] = "test"
 
-    dtoByte, _ := json.Marshal(dto)
+    dtoList := [1]interface{}{dto}
+    dtoByte, _ := json.Marshal(dtoList)
     return string(dtoByte)
 }
 

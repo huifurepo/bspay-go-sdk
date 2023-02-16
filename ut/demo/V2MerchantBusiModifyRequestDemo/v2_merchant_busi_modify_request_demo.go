@@ -131,20 +131,43 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getWxConfList() string {
+func getAgreementInfo() string {
     dto := make(map[string]interface{})
-    // 手续费（%）
-    dto["fee_rate"] = "2.15"
-    // 支付场景
-    dto["pay_scene"] = "10"
-    // ~~商户经营类目~~
-    // dto["~~mcc~~"] = ""
-    // 费率规则ID
-    dto["fee_rule_id"] = "765"
-    // 子渠道号
-    dto["pay_channel_id"] = "JP00001"
-    // 申请服务
-    dto["service_codes"] = ""
+    // 协议类型
+    dto["agreement_type"] = "0"
+    // 协议开始日期
+    dto["agree_begin_date"] = "20200325"
+    // 协议结束日期
+    dto["agree_end_date"] = "20400325"
+    // 协议模板号
+    dto["agreement_model"] = "202106070100000380"
+    // 协议模板名称
+    dto["agreement_name"] = "电子协议签约模板"
+    // 协议号
+    dto["agreement_no"] = "202106070100000380"
+    // 签约日期
+    dto["sign_date"] = "20200325"
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getUnionConfList() string {
+    dto := make(map[string]interface{})
+    // 银联二维码1000以上借记卡费率
+    dto["debit_fee_rate_up"] = "6"
+    // 银联二维码1000以下借记卡费率
+    dto["debit_fee_rate_down"] = "2.55"
+    // 银联二维码1000以下贷记卡费率
+    dto["credit_fee_rate_down"] = "1"
+    // 银联二维码1000以上贷记卡费率
+    dto["credit_fee_rate_up"] = "6.566"
+    // 银行业务手续费类型
+    dto["charge_cate_code"] = ""
+    // 银联二维码1000以上借记卡费率封顶值
+    dto["debit_fee_limit_up"] = "641"
+    // 银联二维码1000以下借记卡费率封顶值
+    dto["debit_fee_limit_down"] = "11.3"
 
     dtoList := [1]interface{}{dto}
     dtoByte, _ := json.Marshal(dtoList)
@@ -184,6 +207,44 @@ func getBankCardConf() string {
     return string(dtoByte)
 }
 
+func getAliConfList() string {
+    dto := make(map[string]interface{})
+    // 手续费（%）
+    dto["fee_rate"] = "3.15"
+    // 支付场景
+    dto["pay_scene"] = "1"
+    // 商户经营类目
+    dto["mcc"] = "2016062900190337"
+    // 子渠道号
+    dto["pay_channel_id"] = "10000001"
+    // 拟申请的间联商户等级
+    dto["indirect_level"] = ""
+
+    dtoList := [1]interface{}{dto}
+    dtoByte, _ := json.Marshal(dtoList)
+    return string(dtoByte)
+}
+
+func getWxConfList() string {
+    dto := make(map[string]interface{})
+    // 手续费（%）
+    dto["fee_rate"] = "2.15"
+    // 支付场景
+    dto["pay_scene"] = "10"
+    // ~~商户经营类目~~
+    // dto["~~mcc~~"] = ""
+    // 费率规则ID
+    dto["fee_rule_id"] = "765"
+    // 子渠道号
+    dto["pay_channel_id"] = "JP00001"
+    // 申请服务
+    dto["service_codes"] = ""
+
+    dtoList := [1]interface{}{dto}
+    dtoByte, _ := json.Marshal(dtoList)
+    return string(dtoByte)
+}
+
 func getCombinePayConfig() string {
     dto := make(map[string]interface{})
     // 开通状态
@@ -203,22 +264,20 @@ func getCombinePayConfig() string {
     return string(dtoByte)
 }
 
-func getAgreementInfo() string {
+func getBalancePayConfig() string {
     dto := make(map[string]interface{})
-    // 协议类型
-    dto["agreement_type"] = "0"
-    // 协议开始日期
-    dto["agree_begin_date"] = "20200325"
-    // 协议结束日期
-    dto["agree_end_date"] = "20400325"
-    // 协议模板号
-    dto["agreement_model"] = "202106070100000380"
-    // 协议模板名称
-    dto["agreement_name"] = "电子协议签约模板"
-    // 协议号
-    dto["agreement_no"] = "202106070100000380"
-    // 签约日期
-    dto["sign_date"] = "20200325"
+    // 支付手续费(%)
+    dto["fee_rate"] = "2"
+    // 支付固定手续费(元)
+    dto["fee_fix_amt"] = "1"
+    // 费率开关
+    dto["switch_state"] = "1"
+    // 交易手续费外扣时的账户类型
+    // dto["out_fee_acct_type"] = ""
+    // 交易手续费外扣汇付ID
+    // dto["out_fee_huifuid"] = ""
+    // 是否交易手续费外扣
+    // dto["out_fee_flag"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
@@ -248,39 +307,6 @@ func getOnlineFeeConfList() string {
     return string(dtoByte)
 }
 
-func getUnionConfList() string {
-    dto := make(map[string]interface{})
-    // 银联二维码1000以上借记卡费率
-    dto["debit_fee_rate_up"] = "6"
-    // 银联二维码1000以下借记卡费率
-    dto["debit_fee_rate_down"] = "2.55"
-    // 银联二维码1000以下贷记卡费率
-    dto["credit_fee_rate_down"] = "1"
-    // 银联二维码1000以上贷记卡费率
-    dto["credit_fee_rate_up"] = "6.566"
-    // 银行业务手续费类型
-    dto["charge_cate_code"] = ""
-    // 银联二维码1000以上借记卡费率封顶值
-    dto["debit_fee_limit_up"] = "641"
-    // 银联二维码1000以下借记卡费率封顶值
-    dto["debit_fee_limit_down"] = "11.3"
-
-    dtoList := [1]interface{}{dto}
-    dtoByte, _ := json.Marshal(dtoList)
-    return string(dtoByte)
-}
-
-func getWxZlConf() string {
-    dto := make(map[string]interface{})
-    // 微信子商户号
-    // dto["sub_mch_id"] = "test"
-    // 配置集合
-    // dto["wx_zl_pay_conf_list"] = getWxZlPayConfList()
-
-    dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
-}
-
 func getOnlinePayFeeConfList() string {
     dto := make(map[string]interface{})
     // 业务类型
@@ -294,25 +320,6 @@ func getOnlinePayFeeConfList() string {
 
     dtoList := [1]interface{}{dto}
     dtoByte, _ := json.Marshal(dtoList)
-    return string(dtoByte)
-}
-
-func getBalancePayConfig() string {
-    dto := make(map[string]interface{})
-    // 支付手续费(%)
-    dto["fee_rate"] = "2"
-    // 支付固定手续费(元)
-    dto["fee_fix_amt"] = "1"
-    // 费率开关
-    dto["switch_state"] = "1"
-    // 交易手续费外扣时的账户类型
-    // dto["out_fee_acct_type"] = ""
-    // 交易手续费外扣汇付ID
-    // dto["out_fee_huifuid"] = ""
-    // 是否交易手续费外扣
-    // dto["out_fee_flag"] = ""
-
-    dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
@@ -356,21 +363,14 @@ func getWxZlPayConfList() interface{} {
     return dtoList
 }
 
-func getAliConfList() string {
+func getWxZlConf() string {
     dto := make(map[string]interface{})
-    // 手续费（%）
-    dto["fee_rate"] = "3.15"
-    // 支付场景
-    dto["pay_scene"] = "1"
-    // 商户经营类目
-    dto["mcc"] = "2016062900190337"
-    // 子渠道号
-    dto["pay_channel_id"] = "10000001"
-    // 拟申请的间联商户等级
-    dto["indirect_level"] = ""
+    // 微信子商户号
+    // dto["sub_mch_id"] = "test"
+    // 配置集合
+    // dto["wx_zl_pay_conf_list"] = getWxZlPayConfList()
 
-    dtoList := [1]interface{}{dto}
-    dtoByte, _ := json.Marshal(dtoList)
+    dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 

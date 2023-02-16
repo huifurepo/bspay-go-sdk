@@ -87,6 +87,55 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
+func getCardInfo() string {
+    dto := make(map[string]interface{})
+    // 卡户名
+    dto["card_name"] = "张天德"
+    // 结算账号
+    dto["card_no"] = "4367421217494235081"
+    // 银行所在省
+    dto["prov_id"] = "310000"
+    // 银行所在市
+    dto["area_id"] = "310100"
+    // 持卡人证件类型
+    dto["cert_type"] = "00"
+    // 持卡人证件号码
+    dto["cert_no"] = "321084198912066512"
+    // 持卡人证件有效期类型
+    dto["cert_validity_type"] = "0"
+    // 持卡人证件有效期开始
+    dto["cert_begin_date"] = "20180824"
+    // 持卡人证件有效期截止日期格式yyyyMMdd，以北京时间为准。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20220125&lt;/font&gt;&lt;br/&gt;当cert_validity_type&#x3D;0时必填  &lt;br/&gt;当cert_validity_type&#x3D;1时为空
+    dto["cert_end_date"] = "20380824"
+    // 银行卡绑定手机号
+    dto["mp"] = "13700000214"
+    // 银行编号
+    dto["bank_code"] = "01030000"
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getCashConfig() string {
+    dto := make(map[string]interface{})
+    // 取现类型
+    dto["cash_type"] = "D1"
+    // 取现固定手续费（元）fix_amt与fee_rate至少填写一项，单位元，需保留小数点后两位，不收费请填写0.00； &lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;
+    dto["fix_amt"] = "1.00"
+    // 取现手续费率（%）fix_amt与fee_rate至少填写一项，单位%，需保留小数点后两位，取值范围[0.00,100.00]，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.05&lt;/font&gt;&lt;br/&gt;注：如果fix_amt与fee_rate都填写了则手续费&#x3D;fix_amt+支付金额\*fee_rate
+    dto["fee_rate"] = ""
+    // 是否交易手续费外扣
+    // dto["out_fee_flag"] = ""
+    // 手续费承担方
+    // dto["out_fee_huifu_id"] = ""
+    // 交易手续费外扣的账户类型
+    // dto["out_fee_acct_type"] = ""
+
+    dtoList := [1]interface{}{dto}
+    dtoByte, _ := json.Marshal(dtoList)
+    return string(dtoByte)
+}
+
 func getSettleConfig() string {
     dto := make(map[string]interface{})
     // 结算周期
@@ -127,55 +176,6 @@ func getSettleConfig() string {
     // dto["auth_enturst_pic"] = ""
 
     dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
-}
-
-func getCardInfo() string {
-    dto := make(map[string]interface{})
-    // 卡户名
-    dto["card_name"] = "张天德"
-    // 结算账号
-    dto["card_no"] = "4367421217494235081"
-    // 银行所在省
-    dto["prov_id"] = "310000"
-    // 银行所在市
-    dto["area_id"] = "310100"
-    // 持卡人证件类型
-    dto["cert_type"] = "00"
-    // 持卡人证件号码
-    dto["cert_no"] = "321084198912066512"
-    // 持卡人证件有效期类型
-    dto["cert_validity_type"] = "0"
-    // 持卡人证件有效期开始
-    dto["cert_begin_date"] = "20180824"
-    // 持卡人证件有效期截止日期日期格式：yyyyMMdd，以北京时间为准。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20220125&lt;br/&gt;当cert_validity_type&#x3D;0时必填  &lt;br/&gt;当cert_validity_type&#x3D;1时为空
-    dto["cert_end_date"] = "20380824"
-    // 银行卡绑定手机号
-    dto["mp"] = "13700000214"
-    // 银行编号
-    dto["bank_code"] = "01030000"
-
-    dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
-}
-
-func getCashConfig() string {
-    dto := make(map[string]interface{})
-    // 取现类型
-    dto["cash_type"] = "D1"
-    // 取现固定手续费（元）fix_amt与fee_rate至少填写一项，单位元，需保留小数点后两位，不收费请填写0.00； &lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;
-    dto["fix_amt"] = "1.00"
-    // 取现手续费率（%）fix_amt与fee_rate至少填写一项，单位%，需保留小数点后两位，取值范围[0.00,100.00]，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.05&lt;/font&gt;&lt;br/&gt;注：如果fix_amt与fee_rate都填写了则手续费&#x3D;fix_amt+支付金额*fee_rate
-    dto["fee_rate"] = ""
-    // 是否交易手续费外扣
-    // dto["out_fee_flag"] = ""
-    // 手续费承担方
-    // dto["out_fee_huifu_id"] = ""
-    // 交易手续费外扣的账户类型
-    // dto["out_fee_acct_type"] = ""
-
-    dtoList := [1]interface{}{dto}
-    dtoByte, _ := json.Marshal(dtoList)
     return string(dtoByte)
 }
 

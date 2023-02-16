@@ -81,39 +81,20 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getSettlementInfo() string {
+func getContactInfo() string {
     dto := make(map[string]interface{})
-    // 入驻结算规则ID
-    dto["settlement_id"] = "716"
-    // 所属行业
-    dto["qualification_type"] = "餐饮"
-    // 文件列表
-    dto["file_list"] = getFileList()
-    // 优惠费率活动ID
-    dto["activities_id"] = "20191030111cff5b5e"
-    // 优惠费率活动值
-    dto["activities_rate"] = "0.60"
-
-    dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
-}
-
-func getBankAccountInfo() string {
-    dto := make(map[string]interface{})
-    // 账户类型
-    dto["bank_account_type"] = "BANK_ACCOUNT_TYPE_CORPORATE"
-    // 开户名称
-    dto["account_name"] = "门店名称"
-    // 开户银行
-    dto["account_bank"] = "中国农业银行"
-    // 开户银行省市编码
-    dto["bank_address_code"] = "01030000"
-    // 开户银行联行号1、17家直连银行无需填写，如为其他银行，则开户银行全称（含支行）和开户银行联行号二选一。&lt;br/&gt;2、详细参见[开户银行全称（含支行）对照表](https://pay.weixin.qq.com/wiki/doc/apiv3/terms_definition/chapter1_1_3.shtml#part-6)。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：102100020270&lt;/font&gt;
-    dto["bank_branch_id"] = "102110001296"
-    // 开户银行全称（含支行)1、17家直连银行无需填写，如为其他银行，则开户银行全称（含支行）和 开户银行联行号二选一。&lt;br/&gt;2、需填写银行全称，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：中国工商银行北京海运仓支行&lt;/font&gt;，详细参见[开户银行全称（含支行）对照表](https://pay.weixin.qq.com/wiki/doc/apiv3/terms_definition/chapter1_1_3.shtml#part-6)。
-    dto["bank_name"] = "102110001296"
-    // 银行账号
-    dto["account_number"] = "102110001296"
+    // 超级管理员姓名
+    dto["contact_name"] = "超级管理员姓名7586"
+    // 超级管理员证件号码&lt;font color&#x3D;&quot;green&quot;&gt;示例值：320926198512025834&lt;/font&gt;&lt;br/&gt;1、“超级管理员证件号码”与“超级管理员微信openid”，二选一必填。&lt;br/&gt;2、超级管理员签约时，校验微信号绑定的银行卡实名信息，是否与该证件号码一致。&lt;br/&gt;3、可传身份证、来往内地通行证、来往大陆通行证、护照等证件号码。
+    dto["contact_cert_no"] = "530102198206242725"
+    // 超级管理员微信openid&lt;font color&#x3D;&quot;green&quot;&gt;示例值：oGhiSxIAPtEnPfe9Xo000000A&lt;/font&gt;&lt;br/&gt;1、“超级管理员身份证件号码”与“超级管理员微信openid”，二选一必填。&lt;br/&gt;2、超级管理员签约时，校验微信号是否与该微信openid一致。
+    dto["openid"] = "openid"
+    // 超级管理员手机号
+    dto["contact_mobile_no"] = "13778851762"
+    // 超级管理员电子邮箱
+    dto["contact_email"] = "89007865@qq.com"
+    // 超级管理员证件类型
+    dto["cert_type"] = "00"
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
@@ -158,6 +139,27 @@ func getCertificateInfo() string {
     return string(dtoByte)
 }
 
+func getUboInfo() string {
+    dto := make(map[string]interface{})
+    // 证件类型
+    dto["cert_type"] = "00"
+    // 证件号码
+    dto["cert_no"] = "530102198206242725"
+    // 姓名
+    dto["name"] = "姓名"
+    // 证件有效类型
+    dto["cert_validity_type"] = "1"
+    // 证件有效期开始日期
+    dto["cert_begin_date"] = "20200420"
+    // 文件列表
+    dto["file_list"] = getFileList()
+    // 证件有效期截止日期
+    dto["cert_end_date"] = "20400420"
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
 func getSalesInfo() string {
     dto := make(map[string]interface{})
     // 服务商公众号APPID公众号场景必传(与mp_sub_appid二选一) 。可填写当前服务商商户号已绑定的公众号APPID。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：wx5934540532 &lt;/font&gt;
@@ -193,41 +195,39 @@ func getSalesInfo() string {
     return string(dtoByte)
 }
 
-func getContactInfo() string {
+func getSettlementInfo() string {
     dto := make(map[string]interface{})
-    // 超级管理员姓名
-    dto["contact_name"] = "超级管理员姓名7586"
-    // 超级管理员证件号码&lt;font color&#x3D;&quot;green&quot;&gt;示例值：320926198512025834&lt;/font&gt;&lt;br/&gt;1、“超级管理员证件号码”与“超级管理员微信openid”，二选一必填。&lt;br/&gt;2、超级管理员签约时，校验微信号绑定的银行卡实名信息，是否与该证件号码一致。&lt;br/&gt;3、可传身份证、来往内地通行证、来往大陆通行证、护照等证件号码。
-    dto["contact_cert_no"] = "530102198206242725"
-    // 超级管理员微信openid&lt;font color&#x3D;&quot;green&quot;&gt;示例值：oGhiSxIAPtEnPfe9Xo000000A&lt;/font&gt;&lt;br/&gt;1、“超级管理员身份证件号码”与“超级管理员微信openid”，二选一必填。&lt;br/&gt;2、超级管理员签约时，校验微信号是否与该微信openid一致。
-    dto["openid"] = "openid"
-    // 超级管理员手机号
-    dto["contact_mobile_no"] = "13778851762"
-    // 超级管理员电子邮箱
-    dto["contact_email"] = "89007865@qq.com"
-    // 超级管理员证件类型
-    dto["cert_type"] = "00"
+    // 入驻结算规则ID
+    dto["settlement_id"] = "716"
+    // 所属行业
+    dto["qualification_type"] = "餐饮"
+    // 文件列表
+    dto["file_list"] = getFileList()
+    // 优惠费率活动ID
+    dto["activities_id"] = "20191030111cff5b5e"
+    // 优惠费率活动值
+    dto["activities_rate"] = "0.60"
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
-func getUboInfo() string {
+func getBankAccountInfo() string {
     dto := make(map[string]interface{})
-    // 证件类型
-    dto["cert_type"] = "00"
-    // 证件号码
-    dto["cert_no"] = "530102198206242725"
-    // 姓名
-    dto["name"] = "姓名"
-    // 证件有效类型
-    dto["cert_validity_type"] = "1"
-    // 证件有效期开始日期
-    dto["cert_begin_date"] = "20200420"
-    // 文件列表
-    dto["file_list"] = getFileList()
-    // 证件有效期截止日期
-    dto["cert_end_date"] = "20400420"
+    // 账户类型
+    dto["bank_account_type"] = "BANK_ACCOUNT_TYPE_CORPORATE"
+    // 开户名称
+    dto["account_name"] = "门店名称"
+    // 开户银行
+    dto["account_bank"] = "中国农业银行"
+    // 开户银行省市编码
+    dto["bank_address_code"] = "01030000"
+    // 开户银行联行号1、17家直连银行无需填写，如为其他银行，则开户银行全称（含支行）和开户银行联行号二选一。&lt;br/&gt;2、详细参见[开户银行全称（含支行）对照表](https://pay.weixin.qq.com/wiki/doc/apiv3/terms_definition/chapter1_1_3.shtml#part-6)。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：102100020270&lt;/font&gt;
+    dto["bank_branch_id"] = "102110001296"
+    // 开户银行全称（含支行)1、17家直连银行无需填写，如为其他银行，则开户银行全称（含支行）和 开户银行联行号二选一。&lt;br/&gt;2、需填写银行全称，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：中国工商银行北京海运仓支行&lt;/font&gt;，详细参见[开户银行全称（含支行）对照表](https://pay.weixin.qq.com/wiki/doc/apiv3/terms_definition/chapter1_1_3.shtml#part-6)。
+    dto["bank_name"] = "102110001296"
+    // 银行账号
+    dto["account_number"] = "102110001296"
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

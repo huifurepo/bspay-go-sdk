@@ -81,6 +81,21 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
+func getRiskCheckInfo() string {
+    dto := make(map[string]interface{})
+    // 基站地址
+    dto["base_station"] = "192.168.1.1"
+    // ip地址
+    dto["ip_addr"] = "192.168.1.1"
+    // 纬度
+    dto["latitude"] = "33.3"
+    // 经度
+    dto["longitude"] = "33.3"
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
 func getTerminalDeviceInfo() interface{} {
     dto := make(map[string]interface{})
     // 交易设备GPS
@@ -107,20 +122,5 @@ func getTerminalDeviceInfo() interface{} {
     dto["pnr_dev_id"] = ""
 
     return dto;
-}
-
-func getRiskCheckInfo() string {
-    dto := make(map[string]interface{})
-    // 基站地址
-    dto["base_station"] = "192.168.1.1"
-    // ip地址
-    dto["ip_addr"] = "192.168.1.1"
-    // 纬度
-    dto["latitude"] = "33.3"
-    // 经度
-    dto["longitude"] = "33.3"
-
-    dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
 }
 

@@ -65,20 +65,6 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getFileList() string {
-    dto := make(map[string]interface{})
-    // 文件类型
-    dto["file_type"] = "F02"
-    // 文件jfileID
-    dto["file_id"] = "99e00421-dad7-3334-9538-4f2ad10612d5"
-    // 文件名称
-    dto["file_name"] = "企业营业执照1.jpg"
-
-    dtoList := [1]interface{}{dto}
-    dtoByte, _ := json.Marshal(dtoList)
-    return string(dtoByte)
-}
-
 func getSettleConfig() string {
     dto := make(map[string]interface{})
     // 开通状态
@@ -163,6 +149,20 @@ func getCashConfig() string {
     dto["out_fee_huifu_id"] = "6666000104633228"
     // 交易手续费外扣的账户类型
     dto["out_fee_acct_type"] = "05"
+
+    dtoList := [1]interface{}{dto}
+    dtoByte, _ := json.Marshal(dtoList)
+    return string(dtoByte)
+}
+
+func getFileList() string {
+    dto := make(map[string]interface{})
+    // 文件类型
+    dto["file_type"] = "F02"
+    // 文件jfileID
+    dto["file_id"] = "99e00421-dad7-3334-9538-4f2ad10612d5"
+    // 文件名称
+    dto["file_name"] = "企业营业执照1.jpg"
 
     dtoList := [1]interface{}{dto}
     dtoByte, _ := json.Marshal(dtoList)

@@ -65,6 +65,17 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
+func getAcctInfos() interface{} {
+    dto := make(map[string]interface{})
+    // 退款金额
+    // dto["div_amt"] = "test"
+    // 退款方ID
+    // dto["huifu_id"] = "test"
+
+    dtoList := [1]interface{}{dto}
+    return dtoList
+}
+
 func getAcctSplitBunch() string {
     dto := make(map[string]interface{})
     // 退账明细
@@ -83,16 +94,5 @@ func getRiskCheckData() string {
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
-}
-
-func getAcctInfos() interface{} {
-    dto := make(map[string]interface{})
-    // 退款金额
-    // dto["div_amt"] = "test"
-    // 退款方ID
-    // dto["huifu_id"] = "test"
-
-    dtoList := [1]interface{}{dto}
-    return dtoList
 }
 
