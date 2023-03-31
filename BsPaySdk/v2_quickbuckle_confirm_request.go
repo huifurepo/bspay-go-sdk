@@ -21,8 +21,8 @@ type V2QuickbuckleConfirmRequest struct {
     CertId string `json:"cert_id" structs:"cert_id"` // 银行卡绑定身份证
     CardMp string `json:"card_mp" structs:"card_mp"` // 银行卡绑定手机号
     VerifyCode string `json:"verify_code" structs:"verify_code"` // 验证码
-    VipCode string `json:"vip_code" structs:"vip_code"` // CVV2信用卡代扣专用需要密文传输，使用商户RSA私钥加密(加密前3位，加密后最长2048位），[参见参考文档](https://paas.huifu.com/partners/guide/#/api_jiami_jiemi)；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：Ly+fnExeyPOTzf……rGq0l0NTebfc6XJXZss&#x3D;&lt;/font&gt;
-    Expiration string `json:"expiration" structs:"expiration"` // 卡有效期信用卡代扣专用，格式：MMYY，需要密文传输。&lt;br/&gt;使用商户RSA私钥加密(加密前4位，加密后最长2048位），[参见参考文档](https://paas.huifu.com/partners/guide/#/api_jiami_jiemi)；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：Ly+fnExeyPO……ebfc6XJXZss&#x3D;&lt;/font&gt;
+    VipCode string `json:"vip_code" structs:"vip_code"` // CVV2信用卡代扣专用需要密文传输，使用汇付RSA公钥加密(加密前3位，加密后最长2048位），[参见参考文档](https://paas.huifu.com/partners/guide/#/api_jiami_jiemi)；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：Ly+fnExeyPOTzf……rGq0l0NTebfc6XJXZss&#x3D;&lt;/font&gt;
+    Expiration string `json:"expiration" structs:"expiration"` // 卡有效期信用卡代扣专用，格式：MMYY，需要密文传输。&lt;br/&gt;使用汇付RSA公钥加密(加密前4位，加密后最长2048位），[参见参考文档](https://paas.huifu.com/partners/guide/#/api_jiami_jiemi)；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：Ly+fnExeyPO……ebfc6XJXZss&#x3D;&lt;/font&gt;
     TrxDeviceInf string `json:"trx_device_inf" structs:"trx_device_inf"` // 设备信息域 
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段

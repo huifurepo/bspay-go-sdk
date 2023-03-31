@@ -120,6 +120,14 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["open_licence_no"] = ""
     // 签约人
     // extendInfoMap["sign_user_info"] = getSignUserInfo()
+    // 营业执照图片
+    // extendInfoMap["license_pic"] = ""
+    // 授权委托书
+    // extendInfoMap["auth_enturst_pic"] = ""
+    // 组织机构代码证
+    // extendInfoMap["org_code_pic"] = ""
+    // 税务登记证
+    // extendInfoMap["tax_reg_pic"] = ""
     return extendInfoMap
 }
 
@@ -131,9 +139,9 @@ func getCardInfo() string {
     dto["card_name"] = "上海尼博网络科技有限公司"
     // 结算账号
     dto["card_no"] = "1001265009300682579"
-    // 银行所在省
+    // 银行所在省参考[地区编码](https://paas.huifu.com/partners/api/#/csfl/api_csfl_dqbm)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：310000 &lt;/font&gt;；如修改省市要级联修改&lt;br/&gt;当card_type&#x3D;0时非必填， 当card_type&#x3D;1或2时必填
     dto["prov_id"] = "310000"
-    // 银行所在市
+    // 银行所在市参考[地区编码](https://paas.huifu.com/partners/api/#/csfl/api_csfl_dqbm)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：310100 &lt;/font&gt;；如修改省市要级联修改&lt;br/&gt;当card_type&#x3D;0时非必填， 当card_type&#x3D;1或2时必填
     dto["area_id"] = "310100"
     // 支行联行号参考：[银行支行编码](https://paas.huifu.com/partners/api/#/csfl/api_csfl_yhzhbm) 当card_type&#x3D;0时必填， 当card_type&#x3D;1或2时非必填 &lt;font color&#x3D;&quot;green&quot;&gt;示例值：102290026507&lt;/font&gt;
     dto["branch_code"] = "102290026507"

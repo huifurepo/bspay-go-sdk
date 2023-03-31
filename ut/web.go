@@ -80,11 +80,20 @@ func GoSDKHandler(w http.ResponseWriter, r *http.Request) {
 
 	resp, _ := json.Marshal(rfv[0].Interface())
 	fmt.Println("resp value:", string(resp))
+
 	if rfv[1].Interface() != nil {
 		fmt.Fprintf(w, "%s", rfv[1].Interface())
 	} else {
-		re, _ := json.Marshal(string(resp))
-		fmt.Fprintf(w, "%s", re)
+		re := make(map[string]string)
+		re["responseCode"] = "S"
+
+		resMap := make(map[string]interface{})
+		json.Unmarshal(resp, &resMap)
+		respDataStr, _ := json.Marshal(resMap["data"])
+		re["responseMessage"] = string(respDataStr)
+
+		r, _ := json.Marshal(re)
+		fmt.Fprintf(w, "%s", r)
 	}
 }
 

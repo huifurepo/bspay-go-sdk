@@ -1,10 +1,10 @@
 /**
- * 交易结算对账单查询 - 示例
+ * 汇付入账确认 - 示例
  *
  * @Author sdk-generator
  * @Description 汇付天下
  */
-package V2TradeCheckFilequeryRequestDemo
+package V2TradeOnlinepaymentTransferRemittanceRequestDemo
 
 import (
     "encoding/json"
@@ -13,20 +13,26 @@ import (
 	"github.com/huifurepo/bspay-go-sdk/ut/tool"
 )
 
-func V2TradeCheckFilequeryRequestDemo() {
+func V2TradeOnlinepaymentTransferRemittanceRequestDemo() {
     // 1. 数据初始化
 	dgSDK, _ := BsPaySdk.NewBsPay(true, "./config/config.json")
 
     // 2.组装请求参数
-    dgReq := BsPaySdk.V2TradeCheckFilequeryRequest{
-        // 请求日期
-        ReqDate:tool.GetCurrentDate(),
+    dgReq := BsPaySdk.V2TradeOnlinepaymentTransferRemittanceRequest{
         // 请求流水号
         ReqSeqId:tool.GetReqSeqId(),
-        // 汇付客户Id
-        HuifuId:"6666000108854952",
-        // 文件生成日期
-        FileDate:"20220822",
+        // 请求日期
+        ReqDate:tool.GetCurrentDate(),
+        // 商户号
+        HuifuId:"6666000106521787",
+        // 交易金额
+        TransAmt:"1019.00",
+        // 异步通知地址
+        NotifyUrl:"http://C_TOPAT_NOTIFY",
+        // 原汇款订单号
+        OrgRemittanceOrderId:"20230214170030defaultit656505030",
+        // 商品描述
+        GoodsDesc:"商品描述001",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -36,7 +42,7 @@ func V2TradeCheckFilequeryRequestDemo() {
     fmt.Println("请求数据:", string(respStr))
 
     // 3. 发起API调用
-    resp, err := dgSDK.V2TradeCheckFilequeryRequest(dgReq)
+    resp, err := dgSDK.V2TradeOnlinepaymentTransferRemittanceRequest(dgReq)
   	if err != nil {
 		fmt.Println("请求异常:", err)
 	}
@@ -50,8 +56,8 @@ func V2TradeCheckFilequeryRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
-    // 文件类型
-    extendInfoMap["file_type_query"] = "2"
+    // 备注
+    extendInfoMap["remark"] = "标记123"
     return extendInfoMap
 }
 

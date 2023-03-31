@@ -74,7 +74,7 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["ali_conf_list"] = getAliConfList()
     // 银联小微入驻信息实体
     // extendInfoMap["union_micro_info"] = getUnionMicroInfo()
-    // 银联配置对象
+    // 银联二维码配置
     // extendInfoMap["union_conf_list"] = getUnionConfList()
     // 银行卡业务配置实体
     // extendInfoMap["bank_card_conf"] = getBankCardConf()
@@ -205,9 +205,9 @@ func getCardInfo() string {
     dto := make(map[string]interface{})
     // 结算类型
     // dto["card_type"] = "test"
-    // 银行所在省
+    // 银行所在省参考银行省份编码；参考[地区码](https://paas.huifu.com/partners/api/#/csfl/api_csfl_dqbm)，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：310000&lt;/font&gt;；如修改省市要级联修改&lt;br/&gt;当card_type&#x3D;0时非必填， 当card_type&#x3D;1或2时必填
     // dto["prov_id"] = "test"
-    // 银行所在市
+    // 银行所在市参考省市区编码；参考[地区码](https://paas.huifu.com/partners/api/#/csfl/api_csfl_dqbm)，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：310100 &lt;/font&gt;；如修改省市要级联修改&lt;br/&gt;当card_type&#x3D;0时非必填， 当card_type&#x3D;1或2时必填
     // dto["area_id"] = "test"
     // 结算账户名
     // dto["card_name"] = "test"

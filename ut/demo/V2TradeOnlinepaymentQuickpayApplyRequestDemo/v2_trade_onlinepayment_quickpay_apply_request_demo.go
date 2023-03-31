@@ -74,6 +74,8 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["acct_split_bunch"] = getAcctSplitBunchRucan()
     // 是否延迟交易
     // extendInfoMap["delay_acct_flag"] = ""
+    // 手续费扣款标志
+    // extendInfoMap["fee_flag"] = ""
     return extendInfoMap
 }
 

@@ -96,38 +96,40 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["withhold_flag"] = ""
     // 延迟入账开关
     extendInfoMap["delay_flag"] = "Y"
-    // 银联配置对象
+    // 开通支付宝预授权
+    extendInfoMap["alipay_pre_auth_flag"] = "Y"
+    // 开通微信预授权
+    // extendInfoMap["wechatpay_pre_auth_flag"] = ""
+    // 商户业务类型
+    // extendInfoMap["mer_bus_type"] = ""
+    // 线上费率配置
+    // extendInfoMap["online_fee_conf_list"] = getOnlineFeeConfList()
+    // 支付宝配置对象
+    extendInfoMap["ali_conf_list"] = getAliConfList()
+    // 微信配置对象
+    extendInfoMap["wx_conf_list"] = getWxConfList()
+    // 银联二维码配置对象
     extendInfoMap["union_conf_list"] = getUnionConfList()
     // 银行卡支付配置信息
     extendInfoMap["bank_card_conf"] = getBankCardConf()
-    // 支付宝配置对象
-    extendInfoMap["ali_conf_list"] = getAliConfList()
-    // 开通支付宝预授权
-    extendInfoMap["alipay_pre_auth_flag"] = "Y"
-    // 微信配置对象
-    extendInfoMap["wx_conf_list"] = getWxConfList()
-    // 开通微信预授权
-    // extendInfoMap["wechatpay_pre_auth_flag"] = ""
-    // 营销补贴
-    extendInfoMap["combine_pay_config"] = getCombinePayConfig()
     // 余额支付配置对象
     extendInfoMap["balance_pay_config"] = getBalancePayConfig()
-    // 异步消息接收地址
-    extendInfoMap["async_return_url"] = "[http://www.baidu55.com](http://www.baidu55.com/)"
-    // 业务开通结果异步消息接收地址
-    extendInfoMap["busi_async_return_url"] = ""
-    // 交易异步应答地址
-    extendInfoMap["recon_resp_addr"] = "[http://192.168.85.157:30031/sspm/testVirgo](http://192.168.85.157:30031/sspm/testVirgo)"
-    // 线上费率配置
-    // extendInfoMap["online_fee_conf_list"] = getOnlineFeeConfList()
-    // 商户业务类型
-    // extendInfoMap["mer_bus_type"] = ""
+    // 营销补贴
+    extendInfoMap["combine_pay_config"] = getCombinePayConfig()
     // 线上手续费承担方配置
     // extendInfoMap["online_pay_fee_conf_list"] = getOnlinePayFeeConfList()
     // 银行大额转账对象
     // extendInfoMap["bank_big_amt_pay_config"] = getBankBigAmtPayConfig()
     // 微信直连配置对象
     // extendInfoMap["wx_zl_conf"] = getWxZlConf()
+    // 异步消息接收地址
+    extendInfoMap["async_return_url"] = "[http://www.baidu55.com](http://www.baidu55.com/)"
+    // 业务开通结果异步消息接收地址
+    extendInfoMap["busi_async_return_url"] = ""
+    // 交易异步应答地址
+    extendInfoMap["recon_resp_addr"] = "[http://192.168.85.157:30031/sspm/testVirgo](http://192.168.85.157:30031/sspm/testVirgo)"
+    // 平台收款资金归集配置
+    // extendInfoMap["out_order_funds_config"] = getOutOrderFundsConfig()
     return extendInfoMap
 }
 
@@ -149,6 +151,68 @@ func getAgreementInfo() string {
     dto["sign_date"] = "20200325"
 
     dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getOnlineFeeConfList() string {
+    dto := make(map[string]interface{})
+    // 业务类型
+    // dto["fee_type"] = "test"
+    // 银行编码
+    // dto["bank_id"] = "test"
+    // 借贷标志
+    // dto["dc_flag"] = "test"
+    // 费率状态
+    // dto["stat_flag"] = "test"
+    // 手续费（固定/元）
+    // dto["fix_amt"] = ""
+    // 费率（百分比/%）
+    // dto["fee_rate"] = ""
+    // 银行名称
+    // dto["bank_name"] = ""
+    // 银行中文简称
+    // dto["bank_short_chn"] = ""
+
+    dtoList := [1]interface{}{dto}
+    dtoByte, _ := json.Marshal(dtoList)
+    return string(dtoByte)
+}
+
+func getAliConfList() string {
+    dto := make(map[string]interface{})
+    // 手续费（%）
+    dto["fee_rate"] = "3.15"
+    // 支付场景
+    dto["pay_scene"] = "1"
+    // 商户经营类目
+    dto["mcc"] = "2016062900190337"
+    // 子渠道号
+    dto["pay_channel_id"] = "10000001"
+    // 拟申请的间联商户等级
+    dto["indirect_level"] = ""
+
+    dtoList := [1]interface{}{dto}
+    dtoByte, _ := json.Marshal(dtoList)
+    return string(dtoByte)
+}
+
+func getWxConfList() string {
+    dto := make(map[string]interface{})
+    // 手续费（%）
+    dto["fee_rate"] = "2.15"
+    // 支付场景
+    dto["pay_scene"] = "10"
+    // ~~商户经营类目~~
+    // dto["~~mcc~~"] = ""
+    // 费率规则ID
+    dto["fee_rule_id"] = "765"
+    // 子渠道号
+    dto["pay_channel_id"] = "JP00001"
+    // 申请服务
+    dto["service_codes"] = ""
+
+    dtoList := [1]interface{}{dto}
+    dtoByte, _ := json.Marshal(dtoList)
     return string(dtoByte)
 }
 
@@ -207,63 +271,6 @@ func getBankCardConf() string {
     return string(dtoByte)
 }
 
-func getAliConfList() string {
-    dto := make(map[string]interface{})
-    // 手续费（%）
-    dto["fee_rate"] = "3.15"
-    // 支付场景
-    dto["pay_scene"] = "1"
-    // 商户经营类目
-    dto["mcc"] = "2016062900190337"
-    // 子渠道号
-    dto["pay_channel_id"] = "10000001"
-    // 拟申请的间联商户等级
-    dto["indirect_level"] = ""
-
-    dtoList := [1]interface{}{dto}
-    dtoByte, _ := json.Marshal(dtoList)
-    return string(dtoByte)
-}
-
-func getWxConfList() string {
-    dto := make(map[string]interface{})
-    // 手续费（%）
-    dto["fee_rate"] = "2.15"
-    // 支付场景
-    dto["pay_scene"] = "10"
-    // ~~商户经营类目~~
-    // dto["~~mcc~~"] = ""
-    // 费率规则ID
-    dto["fee_rule_id"] = "765"
-    // 子渠道号
-    dto["pay_channel_id"] = "JP00001"
-    // 申请服务
-    dto["service_codes"] = ""
-
-    dtoList := [1]interface{}{dto}
-    dtoByte, _ := json.Marshal(dtoList)
-    return string(dtoByte)
-}
-
-func getCombinePayConfig() string {
-    dto := make(map[string]interface{})
-    // 开通状态
-    dto["switch_state"] = "0"
-    // 支付手续费(%)
-    dto["fee_rate"] = "10"
-    // 支付固定手续费(元)
-    dto["fee_fix_amt"] = "5"
-    // 交易手续费外扣时的账户类型
-    // dto["out_fee_acct_type"] = ""
-    // 交易手续费外扣汇付ID
-    // dto["out_fee_huifuid"] = ""
-    // 是否交易手续费外扣
-    // dto["out_fee_flag"] = ""
-
-    dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
-}
-
 func getBalancePayConfig() string {
     dto := make(map[string]interface{})
     // 支付手续费(%)
@@ -283,27 +290,22 @@ func getBalancePayConfig() string {
     return string(dtoByte)
 }
 
-func getOnlineFeeConfList() string {
+func getCombinePayConfig() string {
     dto := make(map[string]interface{})
-    // 业务类型
-    // dto["fee_type"] = "test"
-    // 银行编码
-    // dto["bank_id"] = "test"
-    // 借贷标志
-    // dto["dc_flag"] = "test"
-    // 费率状态
-    // dto["stat_flag"] = "test"
-    // 手续费（固定/元）
-    // dto["fix_amt"] = ""
-    // 费率（百分比/%）
-    // dto["fee_rate"] = ""
-    // 银行名称
-    // dto["bank_name"] = ""
-    // 银行中文简称
-    // dto["bank_short_chn"] = ""
+    // 开通状态
+    dto["switch_state"] = "0"
+    // 支付手续费(%)
+    dto["fee_rate"] = "10"
+    // 支付固定手续费(元)
+    dto["fee_fix_amt"] = "5"
+    // 交易手续费外扣时的账户类型
+    // dto["out_fee_acct_type"] = ""
+    // 交易手续费外扣汇付ID
+    // dto["out_fee_huifuid"] = ""
+    // 是否交易手续费外扣
+    // dto["out_fee_flag"] = ""
 
-    dtoList := [1]interface{}{dto}
-    dtoByte, _ := json.Marshal(dtoList)
+    dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
@@ -369,6 +371,27 @@ func getWxZlConf() string {
     // dto["sub_mch_id"] = "test"
     // 配置集合
     // dto["wx_zl_pay_conf_list"] = getWxZlPayConfList()
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getOutOrderFundsConfig() string {
+    dto := make(map[string]interface{})
+    // 开通状态
+    // dto["switch_state"] = "test"
+    // 自动入账开关
+    // dto["out_order_auto_acct_flag"] = "test"
+    // 支付手续费(%)
+    // dto["fee_rate"] = ""
+    // 支付固定手续费(元)
+    // dto["fee_fix_amt"] = ""
+    // 交易手续费外扣时的账户类型
+    // dto["out_fee_acct_type"] = ""
+    // 交易手续费外扣标记
+    // dto["out_fee_flag"] = ""
+    // 交易手续费外扣汇付ID
+    // dto["out_fee_huifuid"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

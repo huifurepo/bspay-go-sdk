@@ -62,6 +62,8 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["wx_applet_secret"] = "1323a4165a662d6e4f9f51b3f7a58e3f"
     // 渠道号
     extendInfoMap["bank_channel_no"] = "JQF00001"
+    // 异步消息接收地址
+    // extendInfoMap["async_return_url"] = ""
     return extendInfoMap
 }
 

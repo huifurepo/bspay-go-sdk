@@ -32,7 +32,7 @@ func V2TradeOnlinepaymentTransferAccountRequestDemo() {
         // 交易金额
         TransAmt:"10.00",
         // 异步通知地址
-        NotifyUrl:"archer://C_TOPAT_NOTIFY",
+        NotifyUrl:"http://www.huifu.com/getResp",
         // 商品描述
         GoodsDesc:"商品描述001",
     }

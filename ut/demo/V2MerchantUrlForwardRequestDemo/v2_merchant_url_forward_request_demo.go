@@ -25,10 +25,8 @@ func V2MerchantUrlForwardRequestDemo() {
         ReqDate:tool.GetCurrentDate(),
         // 渠道商号
         UpperHuifuId:"6666000123123123",
-        // 手机号
-        Phone:"13917352618",
         // 门店号
-        Storeid:"SH001",
+        // StoreId:"test",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -52,8 +50,14 @@ func V2MerchantUrlForwardRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
-    // 跳转地址失效时间(毫秒)
+    // 手机号
+    extendInfoMap["phone"] = "13917352618"
+    // 跳转地址失效时间
     extendInfoMap["expires"] = "50000"
+    // 返回页面URL
+    // extendInfoMap["back_page_url"] = ""
+    // 异步接收URL
+    // extendInfoMap["async_receive_url"] = ""
     return extendInfoMap
 }
 

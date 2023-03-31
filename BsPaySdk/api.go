@@ -15,6 +15,16 @@ const BASE_API_TEST_URL_V2 = "https://spin-test.cloudpnr.com"
 // 以下为接口uri
 
 /**
+ * 汇付入账确认
+ */
+const V2_TRADE_ONLINEPAYMENT_TRANSFER_REMITTANCE = "/v2/trade/onlinepayment/transfer/remittance"
+
+/**
+ * 汇付入账查询
+ */
+const V2_TRADE_ONLINEPAYMENT_TRANSFER_REMITTANCEORDER = "/v2/trade/onlinepayment/transfer/remittanceorder"
+
+/**
  * 一键绑卡
  */
 const V2_QUICKBUCKLE_ONEKEY_CARDBIND = "/v2/quickbuckle/onekey/cardbind"

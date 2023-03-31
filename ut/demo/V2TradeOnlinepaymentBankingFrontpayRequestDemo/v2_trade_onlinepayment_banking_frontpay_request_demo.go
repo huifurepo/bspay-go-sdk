@@ -82,6 +82,8 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["remark"] = "网银支付接口"
     // 页面跳转地址
     extendInfoMap["front_url"] = "http://www.chinapnr.com"
+    // 手续费扣款标志
+    // extendInfoMap["fee_flag"] = ""
     return extendInfoMap
 }
 
