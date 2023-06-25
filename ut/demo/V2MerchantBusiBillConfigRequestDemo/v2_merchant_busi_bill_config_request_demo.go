@@ -58,6 +58,8 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["ftp_user"] = ""
     // SFTP密码
     // extendInfoMap["ftp_pwd"] = ""
+    // 包含数据范围
+    // extendInfoMap["include_data_range"] = ""
     return extendInfoMap
 }
 

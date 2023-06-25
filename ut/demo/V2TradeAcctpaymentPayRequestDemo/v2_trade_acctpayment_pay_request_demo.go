@@ -125,7 +125,7 @@ func getRiskCheckData() string {
     // 经度
     // dto["longitude"] = ""
     // 基站地址
-    // dto["base_atation"] = ""
+    // dto["base_station"] = ""
     // IP地址
     // dto["ip_addr"] = ""
 

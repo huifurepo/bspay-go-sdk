@@ -23,9 +23,9 @@ func V2MerchantSettleConfigRequestDemo() {
         ReqSeqId:tool.GetReqSeqId(),
         // 请求日期
         ReqDate:tool.GetCurrentDate(),
-        // 商户汇付Id
+        // 商户/用户汇付Id
         HuifuId:"6666000106071234",
-        // 渠道商汇付Id
+        // 上级汇付Id
         UpperHuifuId:"6666000106065087",
         // 子账户类型
         AcctType:"02",
@@ -60,6 +60,8 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["settle_config"] = getSettleConfig()
     // 异步请求地址
     extendInfoMap["async_return_url"] = ""
+    // 汇总结算配置实体
+    // extendInfoMap["collection_settle_config"] = getCollectionSettleConfig()
     return extendInfoMap
 }
 
@@ -91,7 +93,7 @@ func getCardInfo() string {
     dto["cert_validity_type"] = "0"
     // 持卡人证件有效期开始
     dto["cert_begin_date"] = "20220101"
-    // 银行卡绑定手机号
+    // 结算人手机号
     dto["mp"] = "1751111111"
 
     dtoByte, _ := json.Marshal(dto)
@@ -128,6 +130,23 @@ func getSettleConfig() string {
     dto["constant_amt"] = "211221"
     // 卡序列号
     dto["token_no"] = ""
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getCollectionSettleConfig() string {
+    dto := make(map[string]interface{})
+    // 归集留存金(元)
+    // dto["out_resv_amt"] = "test"
+    // 转入账户
+    // dto["in_acct_id"] = "test"
+    // 转入商户号
+    // dto["in_huifu_id"] = "test"
+    // 生效日期
+    // dto["valid_date"] = "test"
+    // 转出账户
+    // dto["out_acct_id"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

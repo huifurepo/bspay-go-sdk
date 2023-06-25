@@ -60,8 +60,6 @@ func V2TradeOnlinepaymentBankingFrontpayRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
-    // 收款用户客户号
-    extendInfoMap["user_huifu_id"] = ""
     // 收款汇付账户号
     extendInfoMap["acct_id"] = ""
     // 订单类型
@@ -150,7 +148,7 @@ func getRiskCheckData() string {
     // ip地址
     dto["ip_addr"] = "1"
     // 基站地址
-    // dto["base_atation"] = ""
+    dto["base_station"] = "2"
     // 纬度
     dto["latitude"] = "3"
     // 经度

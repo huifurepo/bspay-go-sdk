@@ -50,10 +50,10 @@ func V2TradePaymentScanpayClosequeryRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
-    // 原交易返回的全局流水号
-    // extendInfoMap["org_hf_seq_id"] = ""
     // 原交易请求流水号
     extendInfoMap["org_req_seq_id"] = "202109187312431237001"
+    // 原交易返回的全局流水号
+    // extendInfoMap["org_hf_seq_id"] = ""
     return extendInfoMap
 }
 

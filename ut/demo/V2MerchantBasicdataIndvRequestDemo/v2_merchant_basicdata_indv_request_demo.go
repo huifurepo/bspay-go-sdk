@@ -68,7 +68,7 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap := make(map[string]interface{})
     // 商户简称
     extendInfoMap["short_name"] = "张天德"
-    // 商户短信通知标识
+    // 商户通知标识
     extendInfoMap["sms_send_flag"] = "1"
     // 管理员账号
     extendInfoMap["login_name"] = "tinysword0116"
@@ -84,6 +84,16 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["mer_url"] = ""
     // 商户ICP备案编号
     // extendInfoMap["mer_icp"] = ""
+    // 结算卡反面
+    // extendInfoMap["settle_card_back_pic"] = ""
+    // 结算卡正面
+    // extendInfoMap["settle_card_front_pic"] = ""
+    // 法人身份证反面
+    // extendInfoMap["legal_cert_back_pic"] = ""
+    // 法人身份证正面
+    // extendInfoMap["legal_cert_front_pic"] = ""
+    // 授权委托书
+    // extendInfoMap["auth_enturst_pic"] = ""
     return extendInfoMap
 }
 
@@ -107,7 +117,7 @@ func getCardInfo() string {
     dto["cert_begin_date"] = "20180824"
     // 持卡人证件有效期截止日期格式yyyyMMdd，以北京时间为准。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20220125&lt;/font&gt;&lt;br/&gt;当cert_validity_type&#x3D;0时必填  &lt;br/&gt;当cert_validity_type&#x3D;1时为空
     dto["cert_end_date"] = "20380824"
-    // 银行卡绑定手机号
+    // 结算人手机号
     dto["mp"] = "13700000214"
     // 银行编号
     dto["bank_code"] = "01030000"
@@ -164,16 +174,6 @@ func getSettleConfig() string {
     // dto["settle_time"] = ""
     // 节假日结算手续费固定金额（元）
     // dto["constant_amt"] = ""
-    // 结算卡反面
-    // dto["settle_card_back_pic"] = ""
-    // 结算卡正面
-    // dto["settle_card_front_pic"] = ""
-    // 法人身份证反面
-    // dto["legal_cert_back_pic"] = ""
-    // 法人身份证正面
-    // dto["legal_cert_front_pic"] = ""
-    // 授权委托书
-    // dto["auth_enturst_pic"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

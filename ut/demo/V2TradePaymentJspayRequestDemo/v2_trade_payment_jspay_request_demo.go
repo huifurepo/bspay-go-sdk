@@ -64,7 +64,7 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["channel_no"] = ""
     // 手续费扣款标志
     // extendInfoMap["fee_flag"] = ""
-    // 营销补贴信息
+    // 补贴支付信息
     // extendInfoMap["combinedpay_data"] = getCombinedpayData()
     // 场景类型
     extendInfoMap["pay_scene"] = "02"

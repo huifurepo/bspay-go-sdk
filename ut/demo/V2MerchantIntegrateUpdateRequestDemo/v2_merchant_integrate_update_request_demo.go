@@ -58,7 +58,7 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["card_info"] = getCardInfo()
     // 协议信息实体
     // extendInfoMap["agreement_info"] = getAgreementInfo()
-    // 营销补贴
+    // 补贴支付
     // extendInfoMap["combine_pay_config"] = getCombinePayConfig()
     // 取现配置列表
     // extendInfoMap["cash_config"] = getCashConfig()
@@ -229,7 +229,7 @@ func getCardInfo() string {
     // dto["cert_no"] = ""
     // 持卡人证件类型
     // dto["cert_type"] = ""
-    // 银行卡绑定手机号
+    // 结算人手机号
     // dto["mp"] = ""
 
     dtoByte, _ := json.Marshal(dto)
@@ -240,18 +240,18 @@ func getAgreementInfo() string {
     dto := make(map[string]interface{})
     // 协议类型
     // dto["agreement_type"] = "test"
+    // 纸质协议开始日期&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20220822&lt;/font&gt;
+    // dto["agree_begin_date"] = "test"
+    // 纸质协议结束日期&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20230822&lt;/font&gt;
+    // dto["agree_end_date"] = "test"
     // 协议号
     // dto["agreement_no"] = ""
-    // 协议模板号
+    // 纸质协议模板号
     // dto["agreement_model"] = ""
-    // 协议模板名称
+    // 纸质协议模板名称
     // dto["agreement_name"] = ""
-    // 签约日期
+    // 纸质签约日期
     // dto["sign_date"] = ""
-    // 协议开始日期
-    // dto["agree_begin_date"] = ""
-    // 协议结束日期
-    // dto["agree_end_date"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
@@ -341,7 +341,7 @@ func getBizConf() string {
     // dto["wechatpay_pre_auth_flag"] = ""
     // 是否开通支付宝预授权
     // dto["alipay_pre_auth_flag"] = ""
-    // 是否开通营销补贴
+    // 是否开通补贴支付
     // dto["combine_pay_flag"] = ""
     // 是否开通余额支付
     // dto["balance_pay_flag"] = ""
@@ -675,9 +675,9 @@ func getFileInfo() string {
     // dto["store_indoor_pic"] = ""
     // 公司照片三
     // dto["store_cashier_desk_pic"] = ""
-    // 法人身份证反面
+    // 法人身份证人像面
     // dto["legal_cert_back_pic"] = ""
-    // 法人身份证正面
+    // 法人身份证国徽面
     // dto["legal_cert_front_pic"] = ""
     // 营业执照图片
     // dto["license_pic"] = ""
@@ -689,9 +689,9 @@ func getFileInfo() string {
     // dto["settle_card_back_pic"] = ""
     // 结算卡正面
     // dto["settle_card_front_pic"] = ""
-    // 结算人身份证反面
+    // 结算人身份证人像面
     // dto["settle_cert_back_pic"] = ""
-    // 结算人身份证正面
+    // 结算人身份证国徽面
     // dto["settle_cert_front_pic"] = ""
     // 税务登记证
     // dto["tax_reg_pic"] = ""
@@ -713,9 +713,9 @@ func getFileInfo() string {
     // dto["finance_license_pic4"] = ""
     // 金融机构许可证图片5
     // dto["finance_license_pic5"] = ""
-    // 联系人身份证正面照
+    // 联系人身份证国徽面
     // dto["contact_id_front_pic"] = ""
-    // 联系人身份证反面照
+    // 联系人身份证人像面照
     // dto["contact_id_back_pic"] = ""
     // 联系人护照人像面
     // dto["contact_passport_img_pic"] = ""

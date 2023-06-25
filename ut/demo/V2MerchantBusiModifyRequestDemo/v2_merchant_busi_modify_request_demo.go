@@ -114,12 +114,16 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["bank_card_conf"] = getBankCardConf()
     // 余额支付配置对象
     extendInfoMap["balance_pay_config"] = getBalancePayConfig()
-    // 营销补贴
+    // 补贴支付
     extendInfoMap["combine_pay_config"] = getCombinePayConfig()
     // 线上手续费承担方配置
     // extendInfoMap["online_pay_fee_conf_list"] = getOnlinePayFeeConfList()
     // 银行大额转账对象
     // extendInfoMap["bank_big_amt_pay_config"] = getBankBigAmtPayConfig()
+    // 全域资金管理配置
+    // extendInfoMap["out_order_funds_config"] = getOutOrderFundsConfig()
+    // 汇总结算配置实体
+    // extendInfoMap["collection_settle_config_list"] = getCollectionSettleConfigList()
     // 微信直连配置对象
     // extendInfoMap["wx_zl_conf"] = getWxZlConf()
     // 异步消息接收地址
@@ -128,8 +132,6 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["busi_async_return_url"] = ""
     // 交易异步应答地址
     extendInfoMap["recon_resp_addr"] = "[http://192.168.85.157:30031/sspm/testVirgo](http://192.168.85.157:30031/sspm/testVirgo)"
-    // 平台收款资金归集配置
-    // extendInfoMap["out_order_funds_config"] = getOutOrderFundsConfig()
     return extendInfoMap
 }
 
@@ -202,8 +204,8 @@ func getWxConfList() string {
     dto["fee_rate"] = "2.15"
     // 支付场景
     dto["pay_scene"] = "10"
-    // ~~商户经营类目~~
-    // dto["~~mcc~~"] = ""
+    // 商户经营类目[参见微信支付宝MCC](https://paas.huifu.com/partners/api/#/csfl/api_csfl_zfbmcc)；个体工商户、小微商户必填，企业使用fee_rule_id代替原有mcc
+    dto["mcc"] = "5943"
     // 费率规则ID
     dto["fee_rule_id"] = "765"
     // 子渠道号
@@ -350,6 +352,107 @@ func getBankBigAmtPayConfig() string {
     return string(dtoByte)
 }
 
+func getOutOrderAcctCard() string {
+    dto := make(map[string]interface{})
+    // 结算账户名
+    // dto["card_name"] = "test"
+    // 银行卡号
+    // dto["card_no"] = "test"
+    // 卡类型
+    // dto["card_type"] = "test"
+    // 持卡人证件类型00:身份证；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：00&lt;/font&gt;；card_type为1时选填。
+    // dto["cert_type"] = "test"
+    // 持卡人证件有效期（起始）card_type为1时选填；格式：yyyyMMdd，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20210830&lt;/font&gt;；&lt;br/&gt;若填写cert_no，cert_validity_type，cert_type需同时填写。
+    // dto["cert_begin_date"] = "test"
+    // 持卡人证件有效期（截止）cert_validity_type变更为0时必填，格式：yyyyMMdd；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20210830&lt;/font&gt;
+    // dto["cert_end_date"] = "test"
+    // 持卡人证件号码card_type为1时选填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：310112200001018888&lt;/font&gt;；
+    // dto["cert_no"] = "test"
+    // 银行卡绑定手机号
+    // dto["mp"] = "test"
+    // 银行所在省
+    // dto["prov_id"] = ""
+    // 银行所在市
+    // dto["area_id"] = ""
+    // 银行编码
+    // dto["bank_code"] = ""
+    // 支行联行号
+    // dto["branch_code"] = ""
+    // 支行名称
+    // dto["branch_name"] = ""
+    // 持卡人证件有效期类型
+    // dto["cert_validity_type"] = ""
+    // 开户许可证核准号
+    // dto["open_licence_no"] = ""
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getOutOrderAcctOpenFees() string {
+    dto := make(map[string]interface{})
+    // 支付固定手续费(元)
+    // dto["fee_fix_amt"] = "test"
+    // 开户手续费外扣时的账户类型
+    // dto["out_fee_acct_type"] = "test"
+    // 开户手续费外扣汇付ID
+    // dto["out_fee_huifuid"] = "test"
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getOutOrderFundsConfig() string {
+    dto := make(map[string]interface{})
+    // 开通状态
+    // dto["switch_state"] = "test"
+    // 自动入账开关
+    // dto["out_order_auto_acct_flag"] = "test"
+    // 批次入账时间10:00-10点批次入账&lt;br/&gt;16:00-16点批次入账&lt;/br&gt;开通批次入账时必填 ，多个批次使用逗号分隔；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：10:00,16:00&lt;/font&gt;
+    // dto["batch_no"] = "test"
+    // 批量入账开关
+    // dto["batch_auto_acct_flag"] = ""
+    // 支付手续费(%)
+    // dto["fee_rate"] = ""
+    // 支付固定手续费(元)
+    // dto["fee_fix_amt"] = ""
+    // 手续费最小值(元)
+    // dto["fee_min_amt"] = ""
+    // 交易手续费外扣时的账户类型
+    // dto["out_fee_acct_type"] = ""
+    // 交易手续费外扣标记
+    // dto["out_fee_flag"] = ""
+    // 交易手续费外扣汇付ID
+    // dto["out_fee_huifuid"] = ""
+    // 全域资金开户使用的银行卡信息
+    // dto["out_order_acct_card"] = getOutOrderAcctCard()
+    // 全域资金开户手续费
+    // dto["out_order_acct_open_fees"] = getOutOrderAcctOpenFees()
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getCollectionSettleConfigList() string {
+    dto := make(map[string]interface{})
+    // 归集留存金(元)
+    // dto["out_resv_amt"] = "test"
+    // 转入商户号
+    // dto["in_huifu_id"] = "test"
+    // 转入账户
+    // dto["in_acct_id"] = "test"
+    // 生效日期
+    // dto["valid_date"] = "test"
+    // 功能开关
+    // dto["switch_state"] = ""
+    // 转出账户
+    // dto["out_acct_id"] = ""
+
+    dtoList := [1]interface{}{dto}
+    dtoByte, _ := json.Marshal(dtoList)
+    return string(dtoByte)
+}
+
 func getWxZlPayConfList() interface{} {
     dto := make(map[string]interface{})
     // 申请服务
@@ -371,27 +474,6 @@ func getWxZlConf() string {
     // dto["sub_mch_id"] = "test"
     // 配置集合
     // dto["wx_zl_pay_conf_list"] = getWxZlPayConfList()
-
-    dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
-}
-
-func getOutOrderFundsConfig() string {
-    dto := make(map[string]interface{})
-    // 开通状态
-    // dto["switch_state"] = "test"
-    // 自动入账开关
-    // dto["out_order_auto_acct_flag"] = "test"
-    // 支付手续费(%)
-    // dto["fee_rate"] = ""
-    // 支付固定手续费(元)
-    // dto["fee_fix_amt"] = ""
-    // 交易手续费外扣时的账户类型
-    // dto["out_fee_acct_type"] = ""
-    // 交易手续费外扣标记
-    // dto["out_fee_flag"] = ""
-    // 交易手续费外扣汇付ID
-    // dto["out_fee_huifuid"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

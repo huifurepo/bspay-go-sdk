@@ -19,20 +19,16 @@ func V2TradePaymentScanpayQueryRequestDemo() {
 
     // 2.组装请求参数
     dgReq := BsPaySdk.V2TradePaymentScanpayQueryRequest{
+        // 汇付商户号
+        HuifuId:"6666000108854952",
+        // 汇付服务订单号out_order_no,org_hf_seq_id,org_req_seq_id 必填其一；汇付生成的服务订单号；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1234323JKHDFE1243252&lt;/font&gt;
+        // OutOrderNo:"test",
+        // 创建服务订单返回的汇付全局流水号out_order_no,org_hf_seq_id,org_req_seq_id 必填其一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：00290TOP1GR210919004230P853ac13262200000&lt;/font&gt;
+        // OrgHfSeqId:"test",
+        // 服务订单创建请求流水号out_order_no,org_hf_seq_id,org_req_seq_id 必填其一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：202110210012100005&lt;/font&gt;
+        OrgReqSeqId:"202110210012100005",
         // 原机构请求日期
         OrgReqDate:"20221107",
-        // 商户号
-        HuifuId:"6666000108854952",
-        // 商户订单号线下POS、扫码机具发起的交易需要提供；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：22577563652260773965&lt;/font&gt;
-        MerOrdId:"",
-        // 交易返回的全局流水号org_hf_seq_id，org_req_seq_id，out_trans_id，party_order_id四选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：00290TOP1GR210919004230P853ac13262200000&lt;/font&gt;
-        // OrgHfSeqId:"test",
-        // 原机构请求流水号org_hf_seq_id，org_req_seq_id，out_trans_id，party_order_id四选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：202110210012100005&lt;/font&gt;
-        OrgReqSeqId:"",
-        // 用户账单上的交易订单号org_hf_seq_id，org_req_seq_id，out_trans_id，party_order_id四选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：092021091922001451301445517582&lt;/font&gt;；参见[用户账单说明](https://paas.huifu.com/partners/api/#/czsm/api_czsm_yhzd)
-        OutTransId:"2022110722001473401435491529",
-        // 用户账单上的商户订单号org_hf_seq_id，org_req_seq_id，out_trans_id，party_order_id四选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：03232109190255105603561&lt;/font&gt;；参见[用户账单说明](https://paas.huifu.com/partners/api/#/czsm/api_czsm_yhzd)
-        PartyOrderId:"",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()

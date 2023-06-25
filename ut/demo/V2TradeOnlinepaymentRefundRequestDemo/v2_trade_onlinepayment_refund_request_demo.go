@@ -66,7 +66,7 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["remark"] = "remark123"
     // 分账对象
     extendInfoMap["acct_split_bunch"] = getAcctSplitBunchRucan()
-    // 营销补贴信息
+    // 补贴支付信息
     extendInfoMap["combinedpay_data"] = getCombinedpayData()
     return extendInfoMap
 }
@@ -119,7 +119,7 @@ func getRiskCheckData() string {
     // ip地址
     // dto["ip_addr"] = ""
     // 基站地址
-    // dto["base_atation"] = ""
+    // dto["base_station"] = ""
     // 纬度
     // dto["latitude"] = ""
     // 经度

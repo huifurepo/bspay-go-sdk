@@ -12,7 +12,7 @@ type V2TradeSettlementEnchashmentRequest struct {
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     CashAmt string `json:"cash_amt" structs:"cash_amt"` // 取现金额
-    HuifuId string `json:"huifu_id" structs:"huifu_id"` // 商户号
+    HuifuId string `json:"huifu_id" structs:"huifu_id"` // 取现方ID号
     IntoAcctDateType string `json:"into_acct_date_type" structs:"into_acct_date_type"` // 到账日期类型
     TokenNo string `json:"token_no" structs:"token_no"` // 取现卡序列号
 

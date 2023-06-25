@@ -25,7 +25,7 @@ func V2TradeSettlementEnchashmentRequestDemo() {
         ReqSeqId:tool.GetReqSeqId(),
         // 取现金额
         CashAmt:"0.01",
-        // 商户号
+        // 取现方ID号
         HuifuId:"6666000021291985",
         // 到账日期类型
         IntoAcctDateType:"T0",

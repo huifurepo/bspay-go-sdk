@@ -11,8 +11,8 @@ import "encoding/json"
 type V2MerchantSettleConfigRequest struct {
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
-    HuifuId string `json:"huifu_id" structs:"huifu_id"` // 商户汇付Id
-    UpperHuifuId string `json:"upper_huifu_id" structs:"upper_huifu_id"` // 渠道商汇付Id
+    HuifuId string `json:"huifu_id" structs:"huifu_id"` // 商户/用户汇付Id
+    UpperHuifuId string `json:"upper_huifu_id" structs:"upper_huifu_id"` // 上级汇付Id
     AcctType string `json:"acct_type" structs:"acct_type"` // 子账户类型
     AcctName string `json:"acct_name" structs:"acct_name"` // 账户名称
 

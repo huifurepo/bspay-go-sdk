@@ -110,7 +110,7 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["sign_user_info"] = getSignUserInfo()
     // 管理员账号
     extendInfoMap["login_name"] = "LG02022072707540497330158089012"
-    // 是否发送短信通知商户标识
+    // 是否通知商户标识
     extendInfoMap["sms_send_flag"] = "1"
     // 协议信息实体
     extendInfoMap["agreement_info"] = getAgreementInfo()
@@ -132,7 +132,7 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["bank_card_conf"] = getBankCardConf()
     // 花呗分期费率配置实体
     extendInfoMap["hb_fq_fee_config"] = getHbFqFeeConfig()
-    // 营销补贴
+    // 补贴支付
     extendInfoMap["combine_pay_config"] = getCombinePayConfig()
     // 商户业务类型
     // extendInfoMap["mer_bus_type"] = ""
@@ -228,7 +228,7 @@ func getCardInfo() string {
     dto["cert_no"] = "110101199305182000"
     // 持卡人证件类型
     dto["cert_type"] = "00"
-    // 银行卡绑定手机号
+    // 结算人手机号
     dto["mp"] = "1865590000"
 
     dtoByte, _ := json.Marshal(dto)
