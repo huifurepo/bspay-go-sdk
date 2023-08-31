@@ -1,5 +1,5 @@
 /**
- * 商户分账配置
+ * 商户分账配置(2022)
  *
  * @Author sdk-generator
  * @Description 汇付天下

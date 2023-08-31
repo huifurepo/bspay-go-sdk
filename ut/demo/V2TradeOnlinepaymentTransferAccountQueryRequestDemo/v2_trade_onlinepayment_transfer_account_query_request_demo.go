@@ -31,6 +31,8 @@ func V2TradeOnlinepaymentTransferAccountQueryRequestDemo() {
         OrgReqDate:"20220808",
         // 打款结束日期
         TransEndDate:"20220808",
+        // 交易开始日期
+        TransStartDate:"20220801",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()

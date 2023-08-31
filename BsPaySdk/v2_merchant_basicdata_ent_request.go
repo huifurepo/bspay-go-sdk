@@ -1,5 +1,5 @@
 /**
- * 企业商户基本信息入驻
+ * 企业商户基本信息入驻(2022)
  *
  * @Author sdk-generator
  * @Description 汇付天下

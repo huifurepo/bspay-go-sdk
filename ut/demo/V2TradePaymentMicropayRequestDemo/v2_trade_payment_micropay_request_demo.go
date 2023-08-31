@@ -60,7 +60,7 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["time_expire"] = "20220918150330"
     // 手续费扣款标志
     // extendInfoMap["fee_flag"] = ""
-    // 禁用信用卡标记
+    // 禁用支付方式
     extendInfoMap["limit_pay_type"] = ""
     // 是否延迟交易
     extendInfoMap["delay_acct_flag"] = "Y"
@@ -132,13 +132,13 @@ func getAcctSplitBunch() string {
 func getGoodsDetailWxRucan() interface{} {
     dto := make(map[string]interface{})
     // 商品编码
-    // dto["goods_id"] = ""
+    // dto["goods_id"] = "test"
+    // 商品数量
+    // dto["quantity"] = "test"
     // 商品名称
     // dto["goods_name"] = ""
     // 商品单价
     // dto["price"] = ""
-    // 商品数量
-    // dto["quantity"] = ""
     // 微信侧商品编码
     // dto["wxpay_goods_id"] = ""
 
@@ -183,6 +183,8 @@ func getSceneInfo() interface{} {
 
 func getWxData() string {
     dto := make(map[string]interface{})
+    // 收款设备IP直联模式必填字段；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：192.168.2.2&lt;/font&gt;
+    // dto["spbill_create_ip"] = "test"
     // 子商户公众账号id
     // dto["sub_appid"] = ""
     // 用户标识
@@ -197,6 +199,10 @@ func getWxData() string {
     // dto["detail"] = getDetail()
     // 场景信息
     // dto["scene_info"] = getSceneInfo()
+    // 单品优惠标识
+    // dto["promotion_flag"] = ""
+    // 电子发票入口开放标识
+    // dto["receipt"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

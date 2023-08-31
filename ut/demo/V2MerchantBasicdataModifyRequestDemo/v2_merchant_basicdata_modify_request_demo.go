@@ -1,5 +1,5 @@
 /**
- * 商户基本信息修改 - 示例
+ * 商户基本信息修改(2022) - 示例
  *
  * @Author sdk-generator
  * @Description 汇付天下

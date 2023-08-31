@@ -1,5 +1,5 @@
 /**
- * 企业商户基本信息入驻 - 示例
+ * 企业商户基本信息入驻(2022) - 示例
  *
  * @Author sdk-generator
  * @Description 汇付天下
@@ -48,7 +48,7 @@ func V2MerchantBasicdataEntRequestDemo() {
         // 注册详细地址
         RegDetail:"吉林省长春市思明区解放2路59096852",
         // 法人姓名
-        LegalName:"陈立健",
+        LegalName:"陈立二",
         // 法人证件类型
         LegalCertType:"00",
         // 法人证件号码
@@ -142,15 +142,15 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["settle_card_front_pic"] = ""
     // 结算卡反面
     // extendInfoMap["settle_card_back_pic"] = ""
-    // 结算人身份证人像面
-    // extendInfoMap["settle_cert_back_pic"] = ""
     // 结算人身份证国徽面
+    // extendInfoMap["settle_cert_back_pic"] = ""
+    // 结算人身份证人像面
     // extendInfoMap["settle_cert_front_pic"] = ""
     // 税务登记证
     // extendInfoMap["tax_reg_pic"] = ""
-    // 法人身份证反面
+    // 法人身份证国徽面
     // extendInfoMap["legal_cert_back_pic"] = ""
-    // 法人身份证正面
+    // 法人身份证人像面
     // extendInfoMap["legal_cert_front_pic"] = ""
     // 营业执照图片
     // extendInfoMap["license_pic"] = ""
@@ -166,7 +166,7 @@ func getCardInfo() string {
     // 结算账户类型
     dto["card_type"] = "1"
     // 结算账户名
-    dto["card_name"] = "陈立健"
+    dto["card_name"] = "陈立二"
     // 结算账号
     dto["card_no"] = "6225682141000000000"
     // 银行所在省参考[地区编码](https://paas.huifu.com/partners/api/#/csfl/api_csfl_dqbm)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：310000&lt;/font&gt;；如修改省市要级联修改&lt;br/&gt;当card_type&#x3D;0时非必填， 当card_type&#x3D;1或2时必填
@@ -184,13 +184,13 @@ func getCardInfo() string {
     // 支行名称
     dto["branch_name"] = "中国农业银行股份有限公司上海马当路支行"
     // 持卡人证件号码
-    dto["cert_no"] = "321084198912066512"
+    dto["cert_no"] = "321084198912066000"
     // 持卡人证件有效期类型
     dto["cert_validity_type"] = "1"
     // 持卡人证件有效期开始日期
     dto["cert_begin_date"] = "20121201"
     // 结算人手机号
-    dto["mp"] = "13700000214"
+    dto["mp"] = "13700000000"
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

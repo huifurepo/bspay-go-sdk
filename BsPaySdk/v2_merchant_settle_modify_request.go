@@ -1,5 +1,5 @@
 /**
- * 修改子账户配置
+ * 修改子账户配置(2022)
  *
  * @Author sdk-generator
  * @Description 汇付天下

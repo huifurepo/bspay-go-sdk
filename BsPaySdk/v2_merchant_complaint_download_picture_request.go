@@ -12,7 +12,7 @@ type V2MerchantComplaintDownloadPictureRequest struct {
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     ReqDate string `json:"req_date" structs:"req_date"` // 请求时间
     MediaUrl string `json:"media_url" structs:"media_url"` // 下载图片的url
-    MchId string `json:"mch_id" structs:"mch_id"` // 微信商户号
+    ComplaintId string `json:"complaint_id" structs:"complaint_id"` // 投诉单号
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

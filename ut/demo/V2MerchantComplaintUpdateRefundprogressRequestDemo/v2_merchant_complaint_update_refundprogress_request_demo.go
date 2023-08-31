@@ -56,10 +56,25 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["launch_refund_day"] = ""
     // 拒绝退款原因
     extendInfoMap["reject_reason"] = ""
-    // 文件列表
-    extendInfoMap["file_info"] = "{\"reject_media_pic1\":\"a8a096a3-0dd4-3b0e-886c-9afb20d23b1a\",\"reject_media_pic2\":\"a8a096a3-0dd4-3b0e-886c-9afb20d23b2a\",\"reject_media_pic3\":\"a8a096a3-0dd4-3b0e-886c-9afb20d23b3a\",\"reject_media_pic4\":\"a8a096a3-0dd4-3b0e-886c-9afb20d23b4a\"}"
     // 备注
     extendInfoMap["remark"] = "我是备注1111101"
+    // 文件列表
+    extendInfoMap["file_info"] = getFileInfo()
     return extendInfoMap
+}
+
+func getFileInfo() string {
+    dto := make(map[string]interface{})
+    // 拒绝退款的举证图片1
+    dto["reject_media_pic1"] = "a8a096a3-0dd4-3b0e-886c-9afb20d23b1a"
+    // 拒绝退款的举证图片2
+    dto["reject_media_pic2"] = "a8a096a3-0dd4-3b0e-886c-9afb20d23b2a"
+    // 拒绝退款的举证图片3
+    dto["reject_media_pic3"] = "a8a096a3-0dd4-3b0e-886c-9afb20d23b3a"
+    // 拒绝退款的举证图片4
+    dto["reject_media_pic4"] = "a8a096a3-0dd4-3b0e-886c-9afb20d23b4a"
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
 }
 

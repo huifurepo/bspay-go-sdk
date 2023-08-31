@@ -1,5 +1,5 @@
 /**
- * 商户详细信息查询 - 示例
+ * 商户详细信息查询(2022) - 示例
  *
  * @Author sdk-generator
  * @Description 汇付天下

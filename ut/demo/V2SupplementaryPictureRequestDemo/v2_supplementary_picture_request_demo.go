@@ -26,8 +26,6 @@ func V2SupplementaryPictureRequestDemo() {
         ReqDate:tool.GetCurrentDate(),
         // 图片类型
         FileType:"F01",
-        // 图片名称
-        Picture:"图片名称",
     }
     filePath, _ := filepath.Abs("./ut/IMG_4955.JPG")
     // 设置非必填字段

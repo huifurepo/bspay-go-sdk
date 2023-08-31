@@ -78,6 +78,8 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["loan_acct_type"] = ""
     // 补贴支付信息
     // extendInfoMap["combinedpay_data"] = getCombinedpayData()
+    // 聚合正扫微信拓展参数集合
+    // extendInfoMap["wx_data"] = getWxData()
     return extendInfoMap
 }
 
@@ -164,5 +166,36 @@ func getCombinedpayData() string {
     dtoList := [1]interface{}{dto}
     dtoByte, _ := json.Marshal(dtoList)
     return string(dtoByte)
+}
+
+func getGoodsDetail() interface{} {
+    dto := make(map[string]interface{})
+    // 商品编码
+    // dto["goods_id"] = "test"
+    // 优惠退款金额
+    // dto["refund_amount"] = "test"
+    // 商品退货数量
+    // dto["refund_quantity"] = "test"
+    // 商品单价
+    // dto["price"] = "test"
+
+    dtoList := [1]interface{}{dto}
+    return dtoList
+}
+
+func getDetail() interface{} {
+    dto := make(map[string]interface{})
+    // 商品详情列表
+    // dto["goods_detail"] = getGoodsDetail()
+
+    return dto;
+}
+
+func getWxData() interface{} {
+    dto := make(map[string]interface{})
+    // 退款商品详情
+    // dto["detail"] = getDetail()
+
+    return dto;
 }
 

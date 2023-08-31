@@ -15,6 +15,51 @@ const BASE_API_TEST_URL_V2 = "https://spin-test.cloudpnr.com"
 // 以下为接口uri
 
 /**
+ * 支付分扣款
+ */
+const V2_TRADE_PAYSCORE_PAY_PAYSCOREPAY = "/v2/trade/payscore/pay/payscorepay"
+
+/**
+ * 完结支付分订单
+ */
+const V2_TRADE_PAYSCORE_SERVICEORDER_COMPLETE = "/v2/trade/payscore/serviceorder/complete"
+
+/**
+ * 取消支付分订单
+ */
+const V2_TRADE_PAYSCORE_SERVICEORDER_CANCEL = "/v2/trade/payscore/serviceorder/cancel"
+
+/**
+ * 登记扣款信息
+ */
+const V2_TRADE_PAYSCORE_DEDUCT_REGITSTER = "/v2/trade/payscore/deduct/regitster"
+
+/**
+ * 查询扣款信息
+ */
+const V2_TRADE_PAYSCORE_DEDUCT_QUERY = "/v2/trade/payscore/deduct/query"
+
+/**
+ * 查询支付分订单
+ */
+const V2_TRADE_PAYSCORE_SERVICEORDER_QUERY = "/v2/trade/payscore/serviceorder/query"
+
+/**
+ * 创建支付分订单
+ */
+const V2_TRADE_PAYSCORE_SERVICEORDER_CREATE = "/v2/trade/payscore/serviceorder/create"
+
+/**
+ * 交易确认退款查询
+ */
+const V2_TRADE_PAYMENT_DELAYTRANS_CONFIRMREFUNDQUERY = "/v2/trade/payment/delaytrans/confirmrefundquery"
+
+/**
+ * 代扣绑卡页面版
+ */
+const V2_QUICKBUCKLE_WITHHOLD_PAGE_GET = "/v2/quickbuckle/withhold/page/get"
+
+/**
  * 统一进件页面版查询
  */
 const V2_MERCHANT_BUSI_STATUS_QUERY = "/v2/merchant/busi/status/query"
@@ -105,12 +150,12 @@ const V2_QUICKBUCKLE_ONEKEY_CARDBIND = "/v2/quickbuckle/onekey/cardbind"
 const V2_TRADE_SETTLEMENT_ENCHASHMENT_DMAMT_QUERY = "/v2/trade/settlement/enchashment/dmamt/query"
 
 /**
- * 子账户开通配置
+ * 子账户开通配置(2022)
  */
 const V2_MERCHANT_SETTLE_CONFIG = "/v2/merchant/settle/config"
 
 /**
- * 修改子账户配置
+ * 修改子账户配置(2022)
  */
 const V2_MERCHANT_SETTLE_MODIFY = "/v2/merchant/settle/modify"
 
@@ -460,17 +505,17 @@ const V2_MERCHANT_BUSI_CONFIG = "/v2/merchant/busi/config"
 const V2_MERCHANT_BASICDATA_STATUS_QUERY = "/v2/merchant/basicdata/status/query"
 
 /**
- * 商户业务开通修改
+ * 商户业务开通修改(2022)
  */
 const V2_MERCHANT_BUSI_MODIFY = "/v2/merchant/busi/modify"
 
 /**
- * 商户业务开通
+ * 商户业务开通(2022)
  */
 const V2_MERCHANT_BUSI_OPEN = "/v2/merchant/busi/open"
 
 /**
- * 商户详细信息查询
+ * 商户详细信息查询(2022)
  */
 const V2_MERCHANT_BASICDATA_QUERY = "/v2/merchant/basicdata/query"
 
@@ -480,17 +525,17 @@ const V2_MERCHANT_BASICDATA_QUERY = "/v2/merchant/basicdata/query"
 const V2_MERCHANT_URL_FORWARD = "/v2/merchant/url/forward"
 
 /**
- * 商户统一进件接口
+ * 商户统一进件接口(2022)
  */
 const V2_MERCHANT_INTEGRATE_REG = "/v2/merchant/integrate/reg"
 
 /**
- * 商户统一变更接口
+ * 商户统一变更接口(2022)
  */
 const V2_MERCHANT_INTEGRATE_UPDATE = "/v2/merchant/integrate/update"
 
 /**
- * 商户基本信息修改
+ * 商户基本信息修改(2022)
  */
 const V2_MERCHANT_BASICDATA_MODIFY = "/v2/merchant/basicdata/modify"
 
@@ -500,12 +545,12 @@ const V2_MERCHANT_BASICDATA_MODIFY = "/v2/merchant/basicdata/modify"
 const V2_MERCHANT_ACTIVITY_QUERY = "/v2/merchant/activity/query"
 
 /**
- * 企业商户基本信息入驻
+ * 企业商户基本信息入驻(2022)
  */
 const V2_MERCHANT_BASICDATA_ENT = "/v2/merchant/basicdata/ent"
 
 /**
- * 个人商户基本信息入驻
+ * 个人商户基本信息入驻(2022)
  */
 const V2_MERCHANT_BASICDATA_INDV = "/v2/merchant/basicdata/indv"
 
@@ -690,12 +735,12 @@ const V2_PCREDIT_ORDER_QUERY = "/v2/pcredit/order/query"
 const V2_PCREDIT_SOLUTION_CREATE = "/v2/pcredit/solution/create"
 
 /**
- * 商户分账配置查询
+ * 商户分账配置查询(2022)
  */
 const V2_MERCHANT_SPLIT_QUERY = "/v2/merchant/split/query"
 
 /**
- * 商户分账配置
+ * 商户分账配置(2022)
  */
 const V2_MERCHANT_SPLIT_CONFIG = "/v2/merchant/split/config"
 

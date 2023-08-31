@@ -62,34 +62,9 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["remark"] = ""
     // 是否延迟交易
     // extendInfoMap["delay_acct_flag"] = ""
-    // 设备信息
-    extendInfoMap["terminal_device_data"] = getTerminalDeviceData()
     // 出款方账户号
     // extendInfoMap["out_acct_id"] = ""
     return extendInfoMap
-}
-
-func getTerminalDeviceData() string {
-    dto := make(map[string]interface{})
-    // 设备类型
-    dto["device_type"] = "1"
-    // 交易设备IP
-    dto["device_ip"] = "10.10.0.1"
-    // 交易设备MAC
-    // dto["device_mac"] = ""
-    // 交易设备GPS
-    // dto["device_gps"] = ""
-    // 交易设备IMEI
-    // dto["device_imei"] = ""
-    // 交易设备IMSI
-    // dto["device_imsi"] = ""
-    // 交易设备ICCID
-    // dto["device_icc_id"] = ""
-    // 交易设备WIFIMAC
-    // dto["device_wifi_mac"] = ""
-
-    dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
 }
 
 func getAcctInfos() interface{} {

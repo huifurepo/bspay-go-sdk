@@ -25,8 +25,8 @@ func V2MerchantComplaintDownloadPictureRequestDemo() {
         ReqDate:tool.GetCurrentDate(),
         // 下载图片的url
         MediaUrl:"https://api.mch.weixin.qq.com/v3/merchant-service/images/ChsyMDAwMDAwMjAyMjEwMTkyMjAwMzI0MjEzODUYACCN78OaBigBMAE4AQ%3D%3D",
-        // 微信商户号
-        MchId:"1502074861",
+        // 投诉单号
+        // ComplaintId:"test",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()

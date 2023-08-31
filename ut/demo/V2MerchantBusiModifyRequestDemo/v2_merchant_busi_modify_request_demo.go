@@ -1,5 +1,5 @@
 /**
- * 商户业务开通修改 - 示例
+ * 商户业务开通修改(2022) - 示例
  *
  * @Author sdk-generator
  * @Description 汇付天下
@@ -66,8 +66,6 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["license_pic"] = ""
     // 组织机构代码证
     extendInfoMap["org_code_pic"] = ""
-    // 商务协议
-    extendInfoMap["ba_pic"] = ""
     // 开户许可证
     extendInfoMap["reg_acct_pic"] = ""
     // 结算卡反面
@@ -132,6 +130,8 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["busi_async_return_url"] = ""
     // 交易异步应答地址
     extendInfoMap["recon_resp_addr"] = "[http://192.168.85.157:30031/sspm/testVirgo](http://192.168.85.157:30031/sspm/testVirgo)"
+    // 支付宝直连配置对象
+    // extendInfoMap["ali_zl_conf"] = getAliZlConf()
     return extendInfoMap
 }
 
@@ -391,7 +391,7 @@ func getOutOrderAcctCard() string {
 
 func getOutOrderAcctOpenFees() string {
     dto := make(map[string]interface{})
-    // 支付固定手续费(元)
+    // 开户手续费(元)
     // dto["fee_fix_amt"] = "test"
     // 开户手续费外扣时的账户类型
     // dto["out_fee_acct_type"] = "test"
@@ -410,12 +410,14 @@ func getOutOrderFundsConfig() string {
     // dto["out_order_auto_acct_flag"] = "test"
     // 批次入账时间10:00-10点批次入账&lt;br/&gt;16:00-16点批次入账&lt;/br&gt;开通批次入账时必填 ，多个批次使用逗号分隔；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：10:00,16:00&lt;/font&gt;
     // dto["batch_no"] = "test"
+    // 全域资金平台商户ID全域资金平台商户ID，渠道商在银行开通的平台商账号，若为众邦银行则必填，否则不填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：XXXXXXXXX&lt;/font&gt;；
+    // dto["platform_mer_id"] = "test"
+    // 商户与其他支付机构签署的收单协议或证明材料acquiringMode：收单模式时填写；涉及文件类型：F504-(全域资金)商户与其他支付机构签署的收单协议或证明材料；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e529&lt;/font&gt;
+    // dto["other_payment_institutions_pic"] = "test"
     // 批量入账开关
     // dto["batch_auto_acct_flag"] = ""
     // 支付手续费(%)
     // dto["fee_rate"] = ""
-    // 支付固定手续费(元)
-    // dto["fee_fix_amt"] = ""
     // 手续费最小值(元)
     // dto["fee_min_amt"] = ""
     // 交易手续费外扣时的账户类型
@@ -428,6 +430,8 @@ func getOutOrderFundsConfig() string {
     // dto["out_order_acct_card"] = getOutOrderAcctCard()
     // 全域资金开户手续费
     // dto["out_order_acct_open_fees"] = getOutOrderAcctOpenFees()
+    // 全域支付业务模式
+    // dto["business_model"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
@@ -468,12 +472,224 @@ func getWxZlPayConfList() interface{} {
     return dtoList
 }
 
+func getFileList() string {
+    dto := make(map[string]interface{})
+    // 文件类型
+    // dto["file_type"] = "test"
+    // 文件jfileId
+    // dto["file_id"] = "test"
+
+    dtoList := [1]interface{}{dto}
+    dtoByte, _ := json.Marshal(dtoList)
+    return string(dtoByte)
+}
+
+func getContactInfo() string {
+    dto := make(map[string]interface{})
+    // 联系人类型
+    // dto["contact_type"] = "test"
+    // 联系人姓名联系人类型为经办人时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：张三&lt;/font&gt;
+    // dto["contact_name"] = "test"
+    // 联系人证件类型联系人类型为经办人时必填；00：身份证01:护照11：港澳台同胞通行证12：外国人居留证13：港澳居民证14：台湾居民证&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：00&lt;/font&gt;；
+    // dto["cert_type"] = "test"
+    // 联系人证件号码联系人类型为经办人时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：32090297512026402&lt;/font&gt;
+    // dto["contact_cert_no"] = "test"
+    // 联系人手机号
+    // dto["contact_mobile_no"] = "test"
+    // 联系人电子邮箱
+    // dto["contact_email"] = "test"
+    // 联系人资料联系人类型为经办人时必填F28-联系人身份证国徽面   F29-联系人身份证人像面F227-微信业务办理授权函&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：&lt;/font&gt;
+    // dto["contact_file_list"] = getFileList()
+    // 证件有效期类型
+    // dto["contact_cert_validity_type"] = "test"
+    // 证件有效期开始日期
+    // dto["contact_cert_begin_date"] = "test"
+    // 证件有效期截止日期
+    // dto["contact_cert_end_date"] = ""
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getCertificateInfo() string {
+    dto := make(map[string]interface{})
+    // 登记证书类型
+    // dto["cert_type"] = "test"
+    // 证书号
+    // dto["cert_no"] = "test"
+    // 证书商户名称
+    // dto["cert_mer_name"] = "test"
+    // 注册地址
+    // dto["reg_detail"] = "test"
+    // 法人姓名
+    // dto["legal_name"] = "test"
+    // 证书有效期类型
+    // dto["cert_validity_type"] = "test"
+    // 证书有效期开始日期
+    // dto["cert_begin_date"] = "test"
+    // 文件列表
+    // dto["cert_file_list"] = getFileList()
+    // 证书有效期截止日期
+    // dto["cert_end_date"] = ""
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getUboInfoList() string {
+    dto := make(map[string]interface{})
+    // 证件类型
+    // dto["ubo_cert_type"] = "test"
+    // 证件号码
+    // dto["ubo_cert_no"] = "test"
+    // 姓名
+    // dto["ubo_name"] = "test"
+    // 受益人证件居住地址
+    // dto["ubo_cert_doc_address"] = "test"
+    // 证件有效类型
+    // dto["ubo_cert_validity_type"] = "test"
+    // 证件有效期开始日期
+    // dto["ubo_cert_begin_date"] = "test"
+    // 文件列表
+    // dto["ubo_file_list"] = getFileList()
+    // 证件有效期截止日期
+    // dto["ubo_cert_end_date"] = ""
+
+    dtoList := [1]interface{}{dto}
+    dtoByte, _ := json.Marshal(dtoList)
+    return string(dtoByte)
+}
+
+func getUboInfo() string {
+    dto := make(map[string]interface{})
+    // 经营者/法人是否为受益人
+    // dto["ubo_type"] = "test"
+    // 受益人信息列表jsonArray格式,当ubo_type为Y时可不填
+    // dto["ubo_info_list"] = getUboInfoList()
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getSalesInfo() string {
+    dto := make(map[string]interface{})
+    // 经营场景类型
+    // dto["sales_scenes_type"] = "test"
+    // 功能费率仅支持渠道商传入该字段。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.06&lt;/font&gt;平台商户为子商户开通微信直连支付时，不支持该字段，取平台商户费率上送微信。
+    // dto["fee_rate"] = "test"
+    // 线下场所对应的商家公众号APPID开通线下门店场景时，填入。都填入时，取公众号的上送微信。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：wx51aa91a575359ff5&lt;/font&gt;
+    // dto["biz_sub_jsapi_app_id"] = "test"
+    // 线下场所对应的商家小程序APPID开通线下门店场景时，填入。都填入时，取公众号的上送微信。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：wxea9c30a90fs8d3fe&lt;/font&gt;
+    // dto["biz_sub_mini_app_id"] = "test"
+    // 服务商公众号 ID开通公众号场景时，直连服务商和商户的公众号 APP ID，二选一填入。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：wx51aa91a575359ff5&lt;/font&gt;
+    // dto["jsapi_app_id"] = "test"
+    // 商家公众号APPID开通公众号场景时，直连服务商和商户的公众号 APP ID，二选一填入。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：wxea9c30a90fs8d3fe&lt;/font&gt;
+    // dto["jsapi_sub_app_id"] = "test"
+    // 服务商小程序APPID开通小程序场景时，直连服务商和商户的小程序 APP ID，二选一填入。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：wx51aa91a575359ff5&lt;/font&gt;
+    // dto["mini_app_id"] = "test"
+    // 商家小程序APPID开通小程序场景时，直连服务商和商户的小程序 APP ID，二选一填入。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：wx51aa91a575359ff5&lt;/font&gt;
+    // dto["mini_sub_app_id"] = "test"
+    // 服务商应用APPID开通 APP 场景时，直连服务商和商户的 APP ID，二选一填入。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：wx51aa91a575359ff5&lt;/font&gt;
+    // dto["app_app_id"] = "test"
+    // 商家应用APPID开通 APP 场景时，直连服务商和商户的 APP ID，二选一填入。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：wx51aa91a575359ff5&lt;/font&gt;
+    // dto["app_sub_app_id"] = "test"
+    // 互联网网站域名开通互联网场景时填入；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：huifu.com&lt;/font&gt;
+    // dto["web_domain"] = "test"
+    // 互联网网站对应的商家APPID开通互联网场景时填入；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：wx51aa91a575359ff5&lt;/font&gt;
+    // dto["web_app_id"] = "test"
+    // 商家企业微信CorpID开通企业微信场景时填入；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：xxxxx&lt;/font&gt;
+    // dto["sub_corp_id"] = "test"
+    // 文件列表
+    // dto["sales_scenes_file_list"] = getFileList()
+    // 文件列表
+    // dto["fee_rate_file_list"] = ""
+    // 门店名称
+    // dto["biz_store_name"] = ""
+    // 门店省市编码
+    // dto["biz_address_code"] = ""
+    // 门店地址
+    // dto["biz_store_address"] = ""
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getWxCardInfo() string {
+    dto := make(map[string]interface{})
+    // 账户类型
+    // dto["card_type"] = "test"
+    // 开户名称
+    // dto["card_name"] = "test"
+    // 开户银行
+    // dto["bank_code"] = "test"
+    // 开户银行省编码
+    // dto["prov_id"] = "test"
+    // 开户银行市编码
+    // dto["area_id"] = "test"
+    // 开户银行联行号开户银行联行号与开户银行全称（含支行)二选一；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：102290026507&lt;/font&gt;
+    // dto["branch_code"] = "test"
+    // 开户银行全称（含支行)开户银行联行号与开户银行全称（含支行)二选一；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：中国工商银行股份有限公司上海市中山北路支行&lt;/font&gt;
+    // dto["branch_name"] = "test"
+    // 银行账号
+    // dto["card_no"] = "test"
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
 func getWxZlConf() string {
     dto := make(map[string]interface{})
     // 微信子商户号
     // dto["sub_mch_id"] = "test"
     // 配置集合
     // dto["wx_zl_pay_conf_list"] = getWxZlPayConfList()
+    // 操作类型ADD-新增， UPDATE-修改， 默认新增；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：ADD&lt;/font&gt;
+    // dto["operate_type"] = "test"
+    // 联系人信息jsonObject字符串,新增时必填
+    // dto["contact_info"] = getContactInfo()
+    // 特殊主体登记证书jsonObject字符串，商户营业执照类型为政府机关/事业单位/其他组织时，传入相应信息。新增时需填入
+    // dto["certificate_info"] = getCertificateInfo()
+    // 最终受益人信息jsonObject字符串，商户类型为企业时，微信侧必填。（如果基本信息里有的话，可以不传取 huifu_id 对应的信息）。新增时填入
+    // dto["ubo_info"] = getUboInfo()
+    // 经营场景jsonObject字符串，新增时填入
+    // dto["sales_info"] = getSalesInfo()
+    // 银行账户信息jsonObject字符串，该字段不填时，取商户在汇付系统录入的结算账号信息。新增或修改时填入，修改时必填
+    // dto["wx_card_info"] = getWxCardInfo()
+    // 补充说明信息
+    // dto["business_addition_msg"] = ""
+    // 补充说明文件列表
+    // dto["addition_file_list"] = getFileList()
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getAliZlConf() string {
+    dto := make(map[string]interface{})
+    // 申请类型
+    // dto["apply_type"] = "test"
+    // 商户支付宝账号
+    // dto["account"] = "test"
+    // 服务费率仅支持渠道商。平台商户调用不支持该字段服务费率（%），0.38~3之间，精确到0.01。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.06&lt;/font&gt;
+    // dto["fee_rate"] = "test"
+    // 文件列表
+    // dto["file_list"] = getFileList()
+    // 联系人姓名
+    // dto["contact_name"] = ""
+    // 联系人手机号
+    // dto["contact_mobile_no"] = ""
+    // 联系人电子邮箱
+    // dto["contact_email"] = ""
+    // 订单授权凭证
+    // dto["order_ticket"] = ""
+    // 营业执照编号
+    // dto["license_code"] = ""
+    // 营业执照有效期类型
+    // dto["license_validity_type"] = ""
+    // 营业执照有效期开始日期
+    // dto["license_begin_date"] = ""
+    // 营业执照有效期截止日期
+    // dto["license_end_date"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

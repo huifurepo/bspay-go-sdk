@@ -1,5 +1,5 @@
 /**
- * 商户统一变更接口
+ * 商户统一变更接口(2022)
  *
  * @Author sdk-generator
  * @Description 汇付天下

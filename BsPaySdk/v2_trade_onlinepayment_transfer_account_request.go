@@ -15,7 +15,6 @@ type V2TradeOnlinepaymentTransferAccountRequest struct {
     CertificateName string `json:"certificate_name" structs:"certificate_name"` // 付款方名称
     BankCardNo string `json:"bank_card_no" structs:"bank_card_no"` // 付款方银行卡号
     TransAmt string `json:"trans_amt" structs:"trans_amt"` // 交易金额
-    NotifyUrl string `json:"notify_url" structs:"notify_url"` // 异步通知地址
     GoodsDesc string `json:"goods_desc" structs:"goods_desc"` // 商品描述
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段

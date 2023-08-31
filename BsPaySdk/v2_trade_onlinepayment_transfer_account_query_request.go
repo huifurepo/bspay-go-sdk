@@ -15,6 +15,7 @@ type V2TradeOnlinepaymentTransferAccountQueryRequest struct {
     OrgReqSeqId string `json:"org_req_seq_id" structs:"org_req_seq_id"` // 原请求流水号
     OrgReqDate string `json:"org_req_date" structs:"org_req_date"` // 原请求日期
     TransEndDate string `json:"trans_end_date" structs:"trans_end_date"` // 打款结束日期
+    TransStartDate string `json:"trans_start_date" structs:"trans_start_date"` // 交易开始日期
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

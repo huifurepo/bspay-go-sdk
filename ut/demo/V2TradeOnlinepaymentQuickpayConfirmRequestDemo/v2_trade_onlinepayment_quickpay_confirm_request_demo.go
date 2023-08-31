@@ -54,8 +54,6 @@ func V2TradeOnlinepaymentQuickpayConfirmRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
-    // 备注
-    extendInfoMap["remark"] = "remark6"
     return extendInfoMap
 }
 

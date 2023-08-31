@@ -1,5 +1,5 @@
 /**
- * 子账户开通配置
+ * 子账户开通配置(2022)
  *
  * @Author sdk-generator
  * @Description 汇付天下

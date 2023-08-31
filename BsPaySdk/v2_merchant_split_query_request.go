@@ -1,5 +1,5 @@
 /**
- * 商户分账配置查询
+ * 商户分账配置查询(2022)
  *
  * @Author sdk-generator
  * @Description 汇付天下

@@ -269,6 +269,10 @@ func getWxData() string {
     // dto["scene_info"] = getSceneInfo()
     // 终端ip
     // dto["spbill_create_ip"] = ""
+    // 单品优惠标识
+    // dto["promotion_flag"] = ""
+    // 新增商品ID
+    // dto["product_id"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

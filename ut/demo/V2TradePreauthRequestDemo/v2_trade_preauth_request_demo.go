@@ -105,8 +105,6 @@ func getExtendParams() string {
     dto["hb_fq_seller_percent"] = ""
     // 行业数据回流信息
     dto["industry_reflux_info"] = ""
-    // 停车场ID
-    dto["parking_id"] = "123wsx"
     // 系统商编号
     dto["sys_service_provider_id"] = ""
 

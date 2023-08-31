@@ -1,5 +1,5 @@
 /**
- * 商户业务开通修改
+ * 商户业务开通修改(2022)
  *
  * @Author sdk-generator
  * @Description 汇付天下
