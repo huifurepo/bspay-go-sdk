@@ -19,14 +19,22 @@ func V2TradePayscorePayPayscorepayRequestDemo() {
 
     // 2.组装请求参数
     dgReq := BsPaySdk.V2TradePayscorePayPayscorepayRequest{
-        // 微信扣款单号
-        // OutTradeNo:"test",
-        // 商品描述
-        // GoodsDesc:"test",
+        // 请求日期
+        ReqDate:tool.GetCurrentDate(),
+        // 请求流水号
+        ReqSeqId:tool.GetReqSeqId(),
         // 商户号
-        HuifuId:"6666000108854952",
+        HuifuId:"6666000141569791",
+        // 扣款登记创建请求流水号deduct_req_seq_id与deduct_hf_seq_id二选一；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：2022012614120615001&lt;/font&gt;
+        DeductReqSeqId:"1726841301594394626",
+        // 扣款登记返回的汇付全局流水号deduct_req_seq_id与deduct_hf_seq_id二选一；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：00470topo1A211015160805P090ac132fef00000&lt;/font&gt;
+        // DeductHfSeqId:"test",
+        // 微信扣款单号
+        OutTradeNo:"03212311224952047516172",
+        // 商品描述
+        GoodsDesc:"bp充电",
         // 安全信息
-        // RiskCheckData:"test",
+        RiskCheckData:getRiskCheckData(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -50,27 +58,34 @@ func V2TradePayscorePayPayscorepayRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
-    // 分账对象
-    // extendInfoMap["acct_split_bunch"] = getAcctSplitBunch()
-    // 扣款登记返回的汇付全局流水号
-    // extendInfoMap["deduct_hf_seq_id"] = ""
-    // 扣款登记创建请求流水号
-    // extendInfoMap["deduct_req_seq_id"] = ""
-    // 是否延迟交易
-    // extendInfoMap["delay_acct_flag"] = ""
-    // 商户回调地址
-    // extendInfoMap["notify_url"] = ""
-    // 交易备注
-    // extendInfoMap["remark"] = ""
-    // 请求日期
-    extendInfoMap["req_date"] = tool.GetCurrentDate()
-    // 请求流水号
-    extendInfoMap["req_seq_id"] = tool.GetReqSeqId()
-    // 设备信息
-    // extendInfoMap["terminal_device_info"] = getTerminalDeviceInfo()
     // 聚合反扫微信参数集合
     // extendInfoMap["wx_data"] = getWxData()
+    // 是否延迟交易
+    // extendInfoMap["delay_acct_flag"] = ""
+    // 分账对象
+    // extendInfoMap["acct_split_bunch"] = getAcctSplitBunch()
+    // 设备信息
+    // extendInfoMap["terminal_device_info"] = getTerminalDeviceInfo()
+    // 交易备注
+    // extendInfoMap["remark"] = ""
+    // 商户回调地址
+    // extendInfoMap["notify_url"] = ""
     return extendInfoMap
+}
+
+func getWxData() string {
+    dto := make(map[string]interface{})
+    // 子商户用户标识
+    // dto["sub_openid"] = "test"
+    // 子商户公众账号id
+    // dto["sub_appid"] = ""
+    // 用户标识
+    // dto["openid"] = ""
+    // 设备号
+    // dto["device_info"] = ""
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
 }
 
 func getAcctInfos() interface{} {
@@ -88,6 +103,21 @@ func getAcctSplitBunch() string {
     dto := make(map[string]interface{})
     // 分账明细
     // dto["acct_infos"] = getAcctInfos()
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getRiskCheckData() string {
+    dto := make(map[string]interface{})
+    // ip地址
+    dto["ip_address"] = "127.0.0.1"
+    // 基站地址
+    // dto["base_station"] = ""
+    // 纬度
+    // dto["latitude"] = ""
+    // 经度
+    // dto["longitude"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
@@ -113,21 +143,6 @@ func getTerminalDeviceInfo() string {
     // dto["device_gps"] = ""
     // 商户终端应用程序版
     // dto["app_version"] = ""
-
-    dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
-}
-
-func getWxData() string {
-    dto := make(map[string]interface{})
-    // 子商户公众账号id
-    // dto["sub_appid"] = ""
-    // 用户标识
-    // dto["openid"] = ""
-    // 子商户用户标识
-    // dto["sub_openid"] = ""
-    // 设备号
-    // dto["device_info"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

@@ -13,10 +13,10 @@ type V2TradeOnlinepaymentQuickpayFrontpayRequest struct {
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 商户号
     TransAmt string `json:"trans_amt" structs:"trans_amt"` // 订单金额
-    NotifyUrl string `json:"notify_url" structs:"notify_url"` // 异步通知地址
     ExtendPayData string `json:"extend_pay_data" structs:"extend_pay_data"` // 银行扩展信息
     TerminalDeviceData string `json:"terminal_device_data" structs:"terminal_device_data"` // 设备信息
     RiskCheckData string `json:"risk_check_data" structs:"risk_check_data"` // 安全信息
+    NotifyUrl string `json:"notify_url" structs:"notify_url"` // 异步通知地址
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

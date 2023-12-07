@@ -13,8 +13,8 @@ type V2TradeOnlinepaymentQuickpayConfirmRequest struct {
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 商户号
     SmsCode string `json:"sms_code" structs:"sms_code"` // 短信验证码
-    NotifyUrl string `json:"notify_url" structs:"notify_url"` // 外部地址
     GoodsDesc string `json:"goods_desc" structs:"goods_desc"` // 商品描述
+    NotifyUrl string `json:"notify_url" structs:"notify_url"` // 外部地址
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

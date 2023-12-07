@@ -25,24 +25,24 @@ func V2TradeOnlinepaymentWithholdpayRequestDemo() {
         ReqSeqId:tool.GetReqSeqId(),
         // 商户号
         HuifuId:"6666000109812884",
-        // 异步通知地址
-        NotifyUrl:"http://www.chinapnr.com/",
-        // 订单金额
-        TransAmt:"0.01",
-        // 绑卡id
-        CardBindId:"10024597199",
         // 用户客户号
         UserHuifuId:"6666000109818115",
+        // 绑卡id
+        CardBindId:"10024597199",
+        // 订单金额
+        TransAmt:"0.01",
         // 商品描述
         GoodsDesc:"代扣test",
+        // 代扣类型
+        WithholdType:"2",
+        // 银行扩展数据
+        ExtendPayData:getExtendPayData(),
         // 风控信息
         RiskCheckData:getRiskCheckData(),
         // 设备信息数据
         TerminalDeviceData:getTerminalDeviceData(),
-        // 银行扩展数据
-        ExtendPayData:getExtendPayData(),
-        // 代扣类型
-        WithholdType:"2",
+        // 异步通知地址
+        NotifyUrl:"http://www.chinapnr.com/",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -68,13 +68,45 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap := make(map[string]interface{})
     // 备注
     extendInfoMap["remark"] = "reamrk123"
+    // 账户号
+    // extendInfoMap["acct_id"] = ""
     // 订单失效时间
     extendInfoMap["time_expire"] = "20221212121212"
     // 分账对象
     // extendInfoMap["acct_split_bunch"] = getAcctSplitBunch()
-    // 账户号
-    // extendInfoMap["acct_id"] = ""
     return extendInfoMap
+}
+
+func getAcctInfos() interface{} {
+    dto := make(map[string]interface{})
+    // 支付金额
+    // dto["div_amt"] = ""
+    // 商户号
+    // dto["huifu_id"] = ""
+
+    dtoList := [1]interface{}{dto}
+    return dtoList
+}
+
+func getAcctSplitBunch() interface{} {
+    dto := make(map[string]interface{})
+    // 分账信息列表
+    // dto["acct_infos"] = getAcctInfos()
+
+    return dto;
+}
+
+func getExtendPayData() string {
+    dto := make(map[string]interface{})
+    // 业务种类
+    dto["biz_tp"] = "012345"
+    // 商品简称
+    dto["goods_short_name"] = "看看"
+    // 网关支付受理渠道
+    // dto["gw_chnnl_tp"] = "test"
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
 }
 
 func getRiskCheckData() string {
@@ -110,38 +142,6 @@ func getTerminalDeviceData() string {
     // dto["device_mac"] = ""
     // 交易设备wifimac
     // dto["device_wifi_mac"] = ""
-
-    dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
-}
-
-func getAcctInfos() interface{} {
-    dto := make(map[string]interface{})
-    // 支付金额
-    // dto["div_amt"] = ""
-    // 商户号
-    // dto["huifu_id"] = ""
-
-    dtoList := [1]interface{}{dto}
-    return dtoList
-}
-
-func getAcctSplitBunch() interface{} {
-    dto := make(map[string]interface{})
-    // 分账信息列表
-    // dto["acct_infos"] = getAcctInfos()
-
-    return dto;
-}
-
-func getExtendPayData() string {
-    dto := make(map[string]interface{})
-    // 业务种类
-    dto["biz_tp"] = "012345"
-    // 商品简称
-    dto["goods_short_name"] = "看看"
-    // 网关支付受理渠道
-    // dto["gw_chnnl_tp"] = "test"
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

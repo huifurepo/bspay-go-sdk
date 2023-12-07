@@ -67,9 +67,9 @@ func getAcctInfos() interface{} {
     dto := make(map[string]interface{})
     // 被分账方ID
     dto["huifu_id"] = "6666000003109208"
-    // 分账金额
+    // 分账金额(元)
     dto["div_amt"] = "0.01"
-    // 垫资金额
+    // 垫资金额(元)
     // dto["part_loan_amt"] = ""
 
     dtoList := [1]interface{}{dto}

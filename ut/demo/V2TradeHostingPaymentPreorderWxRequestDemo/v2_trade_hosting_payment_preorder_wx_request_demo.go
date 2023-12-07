@@ -26,9 +26,9 @@ func V2TradeHostingPaymentPreorderWxRequestDemo() {
         // 请求流水号
         ReqSeqId:tool.GetReqSeqId(),
         // 商户号
-        HuifuId:"6666000111546360",
+        HuifuId:"6666000003100616",
         // 交易金额
-        TransAmt:"0.10",
+        TransAmt:"0.13",
         // 商品描述
         GoodsDesc:"app跳微信消费",
         // 微信小程序扩展参数集合
@@ -59,22 +59,24 @@ func getExtendInfos() map[string]interface{} {
     // 收银台ID
     extendInfoMap["checkout_id"] = ""
     // 是否延迟交易
-    extendInfoMap["delay_acct_flag"] = "N"
+    extendInfoMap["delay_acct_flag"] = "Y"
     // 分账对象
     extendInfoMap["acct_split_bunch"] = getAcctSplitBunchRucan()
-    // 异步通知地址
-    extendInfoMap["notify_url"] = "https://callback.service.com/xx"
     // 交易失效时间
-    // extendInfoMap["time_expire"] = ""
+    extendInfoMap["time_expire"] = "20231127233423"
+    // 业务信息
+    // extendInfoMap["biz_info"] = getBizInfo()
+    // 交易异步通知地址
+    extendInfoMap["notify_url"] = "https://callback.service.com/xx"
     return extendInfoMap
 }
 
 func getAcctInfosRucan() interface{} {
     dto := make(map[string]interface{})
     // 分账金额
-    dto["div_amt"] = "0.08"
+    dto["div_amt"] = "0.01"
     // 被分账方ID
-    dto["huifu_id"] = "6666000111546360"
+    dto["huifu_id"] = "6666000003100616"
 
     dtoList := [1]interface{}{dto}
     return dtoList
@@ -91,10 +93,45 @@ func getAcctSplitBunchRucan() string {
 
 func getMiniappDataRucan() string {
     dto := make(map[string]interface{})
+    // 是否生成scheme_code
+    dto["need_scheme"] = "Y"
     // 应用ID
-    dto["seq_id"] = "系统应用ID"
+    dto["seq_id"] = "APP_2022033147154783"
     // 私有信息
-    // dto["private_info"] = ""
+    dto["private_info"] = "oppsHosting://"
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getPayCheckWx() interface{} {
+    dto := make(map[string]interface{})
+    // 指定支付者
+    // dto["limit_payer"] = ""
+    // 微信实名验证
+    // dto["real_name_flag"] = ""
+
+    return dto;
+}
+
+func getPersonPayer() interface{} {
+    dto := make(map[string]interface{})
+    // 姓名
+    // dto["name"] = ""
+    // 证件类型
+    // dto["cert_type"] = ""
+    // 证件号
+    // dto["cert_no"] = ""
+
+    return dto;
+}
+
+func getBizInfo() string {
+    dto := make(map[string]interface{})
+    // 付款人验证（微信）
+    // dto["payer_check_wx"] = getPayCheckWx()
+    // 个人付款人信息
+    // dto["person_payer"] = getPersonPayer()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

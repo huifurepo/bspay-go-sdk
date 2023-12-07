@@ -13,6 +13,8 @@ type V2TradeOnlinepaymentWappayRequest struct {
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 商户号
     TransAmt string `json:"trans_amt" structs:"trans_amt"` // 交易金额
+    InstalmentsNum string `json:"instalments_num" structs:"instalments_num"` // 分期期数分期支付时必填；支持：03、06、12、24；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：03&lt;/font&gt;；&lt;br/&gt;空值时是wap支付；
+    BankCardNo string `json:"bank_card_no" structs:"bank_card_no"` // 银行卡号instalments_num不为空时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6228480031509440000&lt;/font&gt;
     ExtendPayData string `json:"extend_pay_data" structs:"extend_pay_data"` // 网联扩展数据
     RiskCheckData string `json:"risk_check_data" structs:"risk_check_data"` // 安全信息
     TerminalDeviceData string `json:"terminal_device_data" structs:"terminal_device_data"` // 设备信息

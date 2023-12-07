@@ -9,9 +9,9 @@ package BsPaySdk
 import "encoding/json"
 
 type V2TradePayscoreServiceorderCreateRequest struct {
-    HuifuId string `json:"huifu_id" structs:"huifu_id"` // 汇付商户号
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 商户申请单号
+    HuifuId string `json:"huifu_id" structs:"huifu_id"` // 汇付商户号
     ServiceIntroduction string `json:"service_introduction" structs:"service_introduction"` // 服务信息
     RiskFund string `json:"risk_fund" structs:"risk_fund"` // 服务风险金
     TimeRange string `json:"time_range" structs:"time_range"` // 服务时间

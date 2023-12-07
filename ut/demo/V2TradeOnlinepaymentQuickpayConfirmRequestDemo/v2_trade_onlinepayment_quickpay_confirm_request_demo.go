@@ -27,10 +27,10 @@ func V2TradeOnlinepaymentQuickpayConfirmRequestDemo() {
         HuifuId:"6666000103423237",
         // 短信验证码
         SmsCode:"111111",
-        // 外部地址
-        NotifyUrl:"http://www.baidu.com",
         // 商品描述
         GoodsDesc:"描述6",
+        // 外部地址
+        NotifyUrl:"http://www.baidu.com",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()

@@ -25,8 +25,6 @@ func V2UserBasicdataEntRequestDemo() {
         ReqDate:tool.GetCurrentDate(),
         // 企业用户名称
         RegName:"企业商户名称8225",
-        // 经营简称
-        ShortName:"企业商户",
         // 营业执照编号
         LicenseCode:"20220222013747149",
         // 证照有效期类型
@@ -82,6 +80,8 @@ func V2UserBasicdataEntRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
+    // 经营简称
+    extendInfoMap["short_name"] = "企业商户"
     // 联系人电子邮箱
     extendInfoMap["contact_email"] = "jeff.peng@huifu.com"
     // 管理员账号

@@ -12,9 +12,9 @@ type V2TradePaymentJspayRequest struct {
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 商户号
+    GoodsDesc string `json:"goods_desc" structs:"goods_desc"` // 商品描述
     TradeType string `json:"trade_type" structs:"trade_type"` // 交易类型
     TransAmt string `json:"trans_amt" structs:"trans_amt"` // 交易金额
-    GoodsDesc string `json:"goods_desc" structs:"goods_desc"` // 商品描述
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

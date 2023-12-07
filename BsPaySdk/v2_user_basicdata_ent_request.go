@@ -12,7 +12,6 @@ type V2UserBasicdataEntRequest struct {
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
     RegName string `json:"reg_name" structs:"reg_name"` // 企业用户名称
-    ShortName string `json:"short_name" structs:"short_name"` // 经营简称
     LicenseCode string `json:"license_code" structs:"license_code"` // 营业执照编号
     LicenseValidityType string `json:"license_validity_type" structs:"license_validity_type"` // 证照有效期类型
     LicenseBeginDate string `json:"license_begin_date" structs:"license_begin_date"` // 证照有效期起始日期

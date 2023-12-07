@@ -25,10 +25,10 @@ func V2TradeOnlinepaymentQuickpaySmscheckRequestDemo() {
         ReqDate:tool.GetCurrentDate(),
         // 商户号
         HuifuId:"6666000109812884",
-        // 原请求流水号
-        OrgReqSeqId:"20230418223666178210001",
         // 原请求日期
         OrgReqDate:"20230418",
+        // 原请求流水号
+        OrgReqSeqId:"20230418223666178210001",
         // 短信验证码
         SmsCode:"657631",
     }

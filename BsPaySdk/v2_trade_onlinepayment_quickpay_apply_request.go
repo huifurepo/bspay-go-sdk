@@ -12,13 +12,13 @@ type V2TradeOnlinepaymentQuickpayApplyRequest struct {
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 商户号
-    TransAmt string `json:"trans_amt" structs:"trans_amt"` // 订单金额
-    CardBindId string `json:"card_bind_id" structs:"card_bind_id"` // 绑卡id
-    NotifyUrl string `json:"notify_url" structs:"notify_url"` // 异步通知地址
     UserHuifuId string `json:"user_huifu_id" structs:"user_huifu_id"` // 用户客户号
+    CardBindId string `json:"card_bind_id" structs:"card_bind_id"` // 绑卡id
+    TransAmt string `json:"trans_amt" structs:"trans_amt"` // 订单金额
+    ExtendPayData string `json:"extend_pay_data" structs:"extend_pay_data"` // 银行扩展字段
     RiskCheckData string `json:"risk_check_data" structs:"risk_check_data"` // 安全信息
     TerminalDeviceData string `json:"terminal_device_data" structs:"terminal_device_data"` // 设备数据
-    ExtendPayData string `json:"extend_pay_data" structs:"extend_pay_data"` // 银行扩展字段
+    NotifyUrl string `json:"notify_url" structs:"notify_url"` // 异步通知地址
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

@@ -25,10 +25,6 @@ func V2TradeOnlinepaymentTransferAccountRequestDemo() {
         ReqDate:tool.GetCurrentDate(),
         // 收款方商户号
         HuifuId:"6666000003100616",
-        // 付款方名称
-        CertificateName:"沈显龙",
-        // 付款方银行卡号
-        BankCardNo:"Xmjm1RB4AAOaFYQ+PgjBlpugXbd8VAYAGB3J2zrbLfC42Bh5xiB47OOV1EdXyGpBq4H8je7mB/MlyEEs6O8PX6aoI4QHumr8VglrLM6uzbVNCIc3S5RPSmi2M+9+EdIQ6nlWd5+XQ7RJXX5Uvnegn74XzQBcN1d4gd04buwKbLpUPV3tWd1qjQwEE8w4gwEtH3L5AP75Mynz+wHFrUKJF3BTiW2/zJlcq5GJomOl06GEW52AZkXwn6U2suP3a0ySd0Rxbf1yQ1lj3SP56NeeEzuBaFLQWB7mEqJfZF3pE9MHNfi6tR1xwLdcxt98bdIqlteKdNAmgfQzcS13UcwH+w==",
         // 交易金额
         TransAmt:"10.00",
         // 商品描述
@@ -60,12 +56,16 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["user_huifu_id"] = "6666000103905031"
     // 收款方账户号
     extendInfoMap["acct_id"] = "A01199826"
-    // 异步通知地址
-    extendInfoMap["notify_url"] = "http://www.huifu.com/getResp"
-    // 备注
-    extendInfoMap["remark"] = "标记123"
+    // 付款方名称
+    extendInfoMap["certificate_name"] = "沈显龙"
+    // 付款方银行卡号
+    extendInfoMap["bank_card_no"] = "Xmjm1RB4AAOaFYQ+PgjBlpugXbd8VAYAGB3J2zrbLfC42Bh5xiB47OOV1EdXyGpBq4H8je7mB/MlyEEs6O8PX6aoI4QHumr8VglrLM6uzbVNCIc3S5RPSmi2M+9+EdIQ6nlWd5+XQ7RJXX5Uvnegn74XzQBcN1d4gd04buwKbLpUPV3tWd1qjQwEE8w4gwEtH3L5AP75Mynz+wHFrUKJF3BTiW2/zJlcq5GJomOl06GEW52AZkXwn6U2suP3a0ySd0Rxbf1yQ1lj3SP56NeeEzuBaFLQWB7mEqJfZF3pE9MHNfi6tR1xwLdcxt98bdIqlteKdNAmgfQzcS13UcwH+w=="
     // 订单类型
     // extendInfoMap["order_type"] = ""
+    // 备注
+    extendInfoMap["remark"] = "标记123"
+    // 异步通知地址
+    extendInfoMap["notify_url"] = "http://www.huifu.com/getResp"
     return extendInfoMap
 }
 

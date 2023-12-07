@@ -27,6 +27,10 @@ func V2TradeOnlinepaymentWappayRequestDemo() {
         HuifuId:"6666000103124174",
         // 交易金额
         TransAmt:"300.01",
+        // 分期期数分期支付时必填；支持：03、06、12、24；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：03&lt;/font&gt;；&lt;br/&gt;空值时是wap支付；
+        InstalmentsNum:"03",
+        // 银行卡号instalments_num不为空时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6228480031509440000&lt;/font&gt;
+        BankCardNo:"6222021102043040313",
         // 网联扩展数据
         ExtendPayData:getExtendPayData(),
         // 安全信息
@@ -60,21 +64,30 @@ func V2TradeOnlinepaymentWappayRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
-    // 分账对象
-    extendInfoMap["acct_split_bunch"] = getAcctSplitBunchRucan()
-    // 银行卡号
-    extendInfoMap["bank_card_no"] = "6222021102043040313"
     // 延时标记
     extendInfoMap["delay_acct_flag"] = "N"
     // 交易有效期
     extendInfoMap["time_expire"] = "20220406210038"
-    // 分期期数
-    extendInfoMap["instalments_num"] = "03"
-    // 页面失败跳转地址
-    extendInfoMap["front_fail_url"] = "http://www.baidu.com"
+    // 分账对象
+    extendInfoMap["acct_split_bunch"] = getAcctSplitBunchRucan()
     // 备注
     extendInfoMap["remark"] = ""
+    // 页面失败跳转地址
+    extendInfoMap["front_fail_url"] = "http://www.baidu.com"
     return extendInfoMap
+}
+
+func getExtendPayData() string {
+    dto := make(map[string]interface{})
+    // 商品简称
+    dto["goods_short_name"] = "一般商品"
+    // 网关支付受理渠道
+    dto["gw_chnnl_tp"] = "01"
+    // 业务种类
+    dto["biz_tp"] = "123456"
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
 }
 
 func getAcctInfos() interface{} {
@@ -94,19 +107,6 @@ func getAcctSplitBunchRucan() string {
     dto := make(map[string]interface{})
     // 分账信息列表
     dto["acct_infos"] = getAcctInfos()
-
-    dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
-}
-
-func getExtendPayData() string {
-    dto := make(map[string]interface{})
-    // 商品简称
-    dto["goods_short_name"] = "一般商品"
-    // 网关支付受理渠道
-    dto["gw_chnnl_tp"] = "01"
-    // 业务种类
-    dto["biz_tp"] = "123456"
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

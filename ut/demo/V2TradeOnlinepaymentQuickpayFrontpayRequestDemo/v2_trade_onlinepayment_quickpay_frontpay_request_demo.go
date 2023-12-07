@@ -27,14 +27,14 @@ func V2TradeOnlinepaymentQuickpayFrontpayRequestDemo() {
         HuifuId:"6666000109812884",
         // 订单金额
         TransAmt:"0.01",
-        // 异步通知地址
-        NotifyUrl:"http://www.baidu.com",
         // 银行扩展信息
         ExtendPayData:getExtendPayData(),
         // 设备信息
         TerminalDeviceData:getTerminalDeviceData(),
         // 安全信息
         RiskCheckData:getRiskCheckData(),
+        // 异步通知地址
+        NotifyUrl:"http://www.baidu.com",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -70,15 +70,37 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["request_type"] = "P"
     // 延时标记
     // extendInfoMap["delay_acct_flag"] = ""
+    // 分账串
+    extendInfoMap["acct_split_bunch"] = getAcctSplitBunchRucan()
     // 手续费扣款标志
     extendInfoMap["fee_flag"] = "2"
     // 备注
     extendInfoMap["remark"] = "remark快捷支付接口"
     // 页面跳转地址
     extendInfoMap["front_url"] = "http://www.baidu.com"
-    // 分账串
-    extendInfoMap["acct_split_bunch"] = getAcctSplitBunchRucan()
     return extendInfoMap
+}
+
+func getAcctInfos() interface{} {
+    dto := make(map[string]interface{})
+    // 被分账对象ID
+    dto["huifu_id"] = "6666000109812884"
+    // 分账金额
+    dto["div_amt"] = "0.01"
+    // 账户号
+    // dto["acct_id"] = ""
+
+    dtoList := [1]interface{}{dto}
+    return dtoList
+}
+
+func getAcctSplitBunchRucan() string {
+    dto := make(map[string]interface{})
+    // 分账明细
+    dto["acct_infos"] = getAcctInfos()
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
 }
 
 func getExtendPayData() string {
@@ -112,28 +134,6 @@ func getTerminalDeviceData() string {
     // dto["device_wifi_mac"] = ""
     // 交易设备GPS
     // dto["device_gps"] = ""
-
-    dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
-}
-
-func getAcctInfos() interface{} {
-    dto := make(map[string]interface{})
-    // 被分账对象ID
-    dto["huifu_id"] = "6666000109812884"
-    // 分账金额
-    dto["div_amt"] = "0.01"
-    // 账户号
-    // dto["acct_id"] = ""
-
-    dtoList := [1]interface{}{dto}
-    return dtoList
-}
-
-func getAcctSplitBunchRucan() string {
-    dto := make(map[string]interface{})
-    // 分账明细
-    dto["acct_infos"] = getAcctInfos()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

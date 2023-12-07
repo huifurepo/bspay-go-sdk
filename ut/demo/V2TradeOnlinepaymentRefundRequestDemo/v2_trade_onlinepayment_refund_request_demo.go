@@ -54,20 +54,22 @@ func V2TradeOnlinepaymentRefundRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
+    // 原交易请求日期
+    extendInfoMap["org_req_date"] = "20221110"
     // 原交易全局流水号
     extendInfoMap["org_hf_seq_id"] = ""
     // 原交易请求流水号
     extendInfoMap["org_req_seq_id"] = "RQ1212333113"
-    // 原交易请求日期
-    extendInfoMap["org_req_date"] = "20221110"
-    // 异步通知地址
-    extendInfoMap["notify_url"] = "http://www.baidu.com"
-    // 备注
-    extendInfoMap["remark"] = "remark123"
     // 分账对象
     extendInfoMap["acct_split_bunch"] = getAcctSplitBunchRucan()
     // 补贴支付信息
     extendInfoMap["combinedpay_data"] = getCombinedpayData()
+    // 大额转账支付账户信息数据
+    // extendInfoMap["bank_info_data"] = getBankInfoData()
+    // 备注
+    extendInfoMap["remark"] = "remark123"
+    // 异步通知地址
+    extendInfoMap["notify_url"] = "http://www.baidu.com"
     return extendInfoMap
 }
 
@@ -86,6 +88,39 @@ func getAcctSplitBunchRucan() string {
     dto := make(map[string]interface{})
     // 分账信息列表
     // dto["acct_infos"] = getAcctInfosRucan()
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getCombinedpayData() string {
+    dto := make(map[string]interface{})
+    // 补贴方汇付编号
+    // dto["huifu_id"] = "test"
+    // 补贴方类型
+    // dto["user_type"] = "test"
+    // 补贴方账户号
+    // dto["acct_id"] = "test"
+    // 补贴金额
+    // dto["amount"] = "test"
+
+    dtoList := [1]interface{}{dto}
+    dtoByte, _ := json.Marshal(dtoList)
+    return string(dtoByte)
+}
+
+func getBankInfoData() string {
+    dto := make(map[string]interface{})
+    // 付款方账户类型
+    // dto["card_acct_type"] = "test"
+    // 省份
+    // dto["province"] = ""
+    // 地区
+    // dto["area"] = ""
+    // 银行编号
+    // dto["bank_code"] = ""
+    // 联行号
+    // dto["correspondent_code"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
@@ -126,22 +161,6 @@ func getRiskCheckData() string {
     // dto["longitude"] = ""
 
     dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
-}
-
-func getCombinedpayData() string {
-    dto := make(map[string]interface{})
-    // 补贴方汇付编号
-    // dto["huifu_id"] = "test"
-    // 补贴方类型
-    // dto["user_type"] = "test"
-    // 补贴方账户号
-    // dto["acct_id"] = "test"
-    // 补贴金额
-    // dto["amount"] = "test"
-
-    dtoList := [1]interface{}{dto}
-    dtoByte, _ := json.Marshal(dtoList)
     return string(dtoByte)
 }
 

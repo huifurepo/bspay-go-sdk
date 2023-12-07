@@ -19,12 +19,12 @@ func V2TradePayscoreServiceorderCreateRequestDemo() {
 
     // 2.组装请求参数
     dgReq := BsPaySdk.V2TradePayscoreServiceorderCreateRequest{
-        // 汇付商户号
-        HuifuId:"6666000108854952",
         // 请求日期
         ReqDate:tool.GetCurrentDate(),
         // 商户申请单号
         ReqSeqId:tool.GetReqSeqId(),
+        // 汇付商户号
+        HuifuId:"6666000108854952",
         // 服务信息
         // ServiceIntroduction:"test",
         // 服务风险金
@@ -60,22 +60,22 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["service_id"] = ""
     // 子商户公众号ID
     // extendInfoMap["sub_appid"] = ""
+    // 场景类型
+    // extendInfoMap["trade_scene"] = ""
+    // 费率类型
+    // extendInfoMap["pay_scene"] = ""
+    // 从业机构公众号下的用户标识
+    // extendInfoMap["openid"] = ""
+    // 子商户公众号下的用户标识
+    // extendInfoMap["sub_openid"] = ""
     // 后付费项目
     // extendInfoMap["post_payments"] = getPostPayments()
     // 商户优惠
     // extendInfoMap["post_discounts"] = getPostDiscounts()
     // 服务位置
     // extendInfoMap["location"] = getLocation()
-    // 从业机构公众号下的用户标识
-    // extendInfoMap["openid"] = ""
-    // 子商户公众号下的用户标识
-    // extendInfoMap["sub_openid"] = ""
     // 附加数据
     // extendInfoMap["attach"] = ""
-    // 场景类型
-    // extendInfoMap["trade_scene"] = ""
-    // 费率类型
-    // extendInfoMap["pay_scene"] = ""
     return extendInfoMap
 }
 

@@ -12,8 +12,6 @@ type V2TradeOnlinepaymentTransferAccountRequest struct {
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 收款方商户号
-    CertificateName string `json:"certificate_name" structs:"certificate_name"` // 付款方名称
-    BankCardNo string `json:"bank_card_no" structs:"bank_card_no"` // 付款方银行卡号
     TransAmt string `json:"trans_amt" structs:"trans_amt"` // 交易金额
     GoodsDesc string `json:"goods_desc" structs:"goods_desc"` // 商品描述
 
