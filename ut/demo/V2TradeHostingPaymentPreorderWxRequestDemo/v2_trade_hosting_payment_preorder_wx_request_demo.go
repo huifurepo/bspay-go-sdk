@@ -56,8 +56,8 @@ func V2TradeHostingPaymentPreorderWxRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
-    // 收银台ID
-    extendInfoMap["checkout_id"] = ""
+    // 收银台样式
+    // extendInfoMap["style_id"] = ""
     // 是否延迟交易
     extendInfoMap["delay_acct_flag"] = "Y"
     // 分账对象
@@ -75,7 +75,7 @@ func getAcctInfosRucan() interface{} {
     dto := make(map[string]interface{})
     // 分账金额
     dto["div_amt"] = "0.01"
-    // 被分账方ID
+    // 分账接收方ID
     dto["huifu_id"] = "6666000003100616"
 
     dtoList := [1]interface{}{dto}

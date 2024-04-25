@@ -25,10 +25,10 @@ func V2MerchantBusiAliRealnameApplyRequestDemo() {
         ReqDate:tool.GetCurrentDate(),
         // 汇付ID
         HuifuId:"6666000105418240",
-        // 联系人信息
-        ContactPersonInfo:getContactPersonInfo(),
         // 主体信息
         AuthIdentityInfo:getAuthIdentityInfo(),
+        // 联系人信息
+        ContactPersonInfo:getContactPersonInfo(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -61,46 +61,6 @@ func getExtendInfos() map[string]interface{} {
     // 受益人信息
     extendInfoMap["ubo_info"] = getUboInfo()
     return extendInfoMap
-}
-
-func getContactPersonInfo() string {
-    dto := make(map[string]interface{})
-    // 联系人身份证号码
-    dto["id_card_number"] = "120103198507275017"
-    // 联系人姓名
-    dto["name"] = "谢季"
-    // 联系人手机号
-    dto["mobile"] = "18900400032"
-
-    dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
-}
-
-func getLegalPersonInfo() string {
-    dto := make(map[string]interface{})
-    // 证件持有人类型
-    dto["legal_type"] = "SUPER"
-    // 证件类型
-    dto["card_type"] = "00"
-    // 法人姓名
-    dto["person_name"] = "李四"
-    // 证件号码
-    dto["card_no"] = "110101199909291419"
-    // 证件生效时间
-    dto["effect_time"] = "19990101"
-    // 证件过期时间
-    dto["expire_time"] = "长期"
-    // 证件正面照
-    dto["card_front_img"] = "afce08c5-1548-30f8-bf70-1752c3012f66"
-    // 证件反面照
-    dto["card_back_img"] = "51dd13bb-6268-36d0-ac84-c4cdc19eccba"
-    // 授权函照片
-    dto["auth_letter_img"] = "51dd13bb-6268-36d0-ac84-c4cdc19eccba"
-    // 是否为受益人
-    dto["is_benefit_person"] = "N"
-
-    dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
 }
 
 func getCertificateInfo() string {
@@ -187,6 +147,46 @@ func getAuthIdentityInfo() string {
     dto["support_credentials"] = getSupportCredentials()
     // 经营许可证
     dto["qualification_info_list"] = getQualificationInfoList()
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getLegalPersonInfo() string {
+    dto := make(map[string]interface{})
+    // 证件持有人类型
+    dto["legal_type"] = "SUPER"
+    // 证件类型
+    dto["card_type"] = "00"
+    // 法人姓名
+    dto["person_name"] = "李四"
+    // 证件号码
+    dto["card_no"] = "110101199909291419"
+    // 证件生效时间
+    dto["effect_time"] = "19990101"
+    // 证件过期时间
+    dto["expire_time"] = "长期"
+    // 证件正面照
+    dto["card_front_img"] = "afce08c5-1548-30f8-bf70-1752c3012f66"
+    // 证件反面照
+    dto["card_back_img"] = "51dd13bb-6268-36d0-ac84-c4cdc19eccba"
+    // 授权函照片
+    dto["auth_letter_img"] = "51dd13bb-6268-36d0-ac84-c4cdc19eccba"
+    // 是否为受益人
+    dto["is_benefit_person"] = "N"
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getContactPersonInfo() string {
+    dto := make(map[string]interface{})
+    // 联系人身份证号码
+    dto["id_card_number"] = "120103198507275017"
+    // 联系人姓名
+    dto["name"] = "谢季"
+    // 联系人手机号
+    dto["mobile"] = "18900400032"
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

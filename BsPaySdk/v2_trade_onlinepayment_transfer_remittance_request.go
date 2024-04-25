@@ -14,7 +14,7 @@ type V2TradeOnlinepaymentTransferRemittanceRequest struct {
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 商户号
     TransAmt string `json:"trans_amt" structs:"trans_amt"` // 交易金额
     NotifyUrl string `json:"notify_url" structs:"notify_url"` // 异步通知地址
-    OrgRemittanceOrderId string `json:"org_remittance_order_id" structs:"org_remittance_order_id"` // 原汇款订单号
+    OrgRemittanceOrderId string `json:"org_remittance_order_id" structs:"org_remittance_order_id"` // 原汇付通道流水号
     GoodsDesc string `json:"goods_desc" structs:"goods_desc"` // 商品描述
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段

@@ -58,8 +58,14 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["ftp_user"] = ""
     // SFTP密码
     // extendInfoMap["ftp_pwd"] = ""
-    // 包含数据范围
-    // extendInfoMap["include_data_range"] = ""
+    // 是否跟随结算时间
+    // extendInfoMap["as_settle_flag"] = ""
+    // 跑批完成通知地址
+    // extendInfoMap["notify_url"] = ""
+    // 用户数据范围
+    // extendInfoMap["contain_user"] = ""
+    // 商户数据范围
+    // extendInfoMap["contain_merchant"] = ""
     return extendInfoMap
 }
 

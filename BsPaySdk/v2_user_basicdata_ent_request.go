@@ -28,6 +28,7 @@ type V2UserBasicdataEntRequest struct {
     LegalCertEndDate string `json:"legal_cert_end_date" structs:"legal_cert_end_date"` // 法人证件有效期截止日期日期格式：yyyyMMdd; 非长期有效时必填，长期有效为空；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20320905&lt;/font&gt;
     ContactName string `json:"contact_name" structs:"contact_name"` // 联系人姓名
     ContactMobile string `json:"contact_mobile" structs:"contact_mobile"` // 联系人手机号
+    LoginName string `json:"login_name" structs:"login_name"` // 管理员账号如需短信通知则必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：Lg20220222013747&lt;/font&gt;
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

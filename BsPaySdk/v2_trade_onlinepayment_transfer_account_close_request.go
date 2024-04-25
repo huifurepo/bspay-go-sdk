@@ -1,5 +1,5 @@
 /**
- * 银行大额转账关单
+ * 银行大额支付关单
  *
  * @Author sdk-generator
  * @Description 汇付天下

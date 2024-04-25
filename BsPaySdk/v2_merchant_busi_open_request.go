@@ -12,7 +12,7 @@ type V2MerchantBusiOpenRequest struct {
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 汇付客户Id
-    UpperHuifuId string `json:"upper_huifu_id" structs:"upper_huifu_id"` // 上级主体ID
+    UpperHuifuId string `json:"upper_huifu_id" structs:"upper_huifu_id"` // 直属渠道号
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

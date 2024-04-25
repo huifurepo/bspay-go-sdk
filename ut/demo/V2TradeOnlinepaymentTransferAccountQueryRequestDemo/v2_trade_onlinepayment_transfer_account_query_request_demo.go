@@ -1,5 +1,5 @@
 /**
- * 银行转账资金流水查询 - 示例
+ * 银行大额资金流水查询 - 示例
  *
  * @Author sdk-generator
  * @Description 汇付天下

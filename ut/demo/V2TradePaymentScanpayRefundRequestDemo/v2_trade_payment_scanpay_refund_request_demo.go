@@ -80,6 +80,8 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["terminal_device_data"] = getTerminalDeviceData()
     // 异步通知地址
     // extendInfoMap["notify_url"] = ""
+    // 银联参数集合
+    // extendInfoMap["unionpay_data"] = getUnionpayData()
     return extendInfoMap
 }
 
@@ -87,7 +89,7 @@ func getAcctInfosRucan() interface{} {
     dto := make(map[string]interface{})
     // 分账金额
     // dto["div_amt"] = "test"
-    // 被分账方ID
+    // 分账接收方ID
     // dto["huifu_id"] = "test"
     // 垫资金额
     // dto["part_loan_amt"] = ""
@@ -194,6 +196,15 @@ func getTerminalDeviceData() string {
     // dto["device_wifi_mac"] = ""
     // 交易设备GPS
     // dto["device_gps"] = ""
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getUnionpayData() string {
+    dto := make(map[string]interface{})
+    // 收款方附加数据
+    // dto["addn_data"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

@@ -11,7 +11,7 @@ import "encoding/json"
 type V2MerchantBasicdataEntRequest struct {
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
-    UpperHuifuId string `json:"upper_huifu_id" structs:"upper_huifu_id"` // 上级主体ID
+    UpperHuifuId string `json:"upper_huifu_id" structs:"upper_huifu_id"` // 直属渠道号
     RegName string `json:"reg_name" structs:"reg_name"` // 商户名称
     ShortName string `json:"short_name" structs:"short_name"` // 商户简称
     EntType string `json:"ent_type" structs:"ent_type"` // 公司类型

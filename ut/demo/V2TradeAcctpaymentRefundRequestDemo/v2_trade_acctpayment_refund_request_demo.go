@@ -25,11 +25,11 @@ func V2TradeAcctpaymentRefundRequestDemo() {
         ReqDate:tool.GetCurrentDate(),
         // 商户号
         HuifuId:"6666000108854952",
-        // 原余额支付请求日期org_hf_seq_id和（orgReqDate+orgReqSeqId）二选一；&lt;br/&gt;格式：yyyyMMdd；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20221023&lt;/font&gt;
+        // 原余额支付请求日期
         OrgReqDate:"20211021",
-        // 原余额支付请求流水号org_hf_seq_id和（orgReqDate+orgReqSeqId）二选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：2021091708126665001&lt;/font&gt;
+        // 原余额支付请求流水号org_hf_seq_id和orgReqSeqId二选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：2021091708126665001&lt;/font&gt;
         OrgReqSeqId:"202110210012100005",
-        // 原余额支付支付全局流水号org_hf_seq_id和（orgReqDate+orgReqSeqId）二选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：00470topo1A211015160805P090ac132fef00000&lt;/font&gt;
+        // 原余额支付支付全局流水号org_hf_seq_id和orgReqSeqId二选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：00470topo1A211015160805P090ac132fef00000&lt;/font&gt;
         OrgHfSeqId:"",
         // 退款金额
         OrdAmt:"0.01",
@@ -56,12 +56,12 @@ func V2TradeAcctpaymentRefundRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
-    // 备注
-    extendInfoMap["remark"] = "1234567890"
     // 分账对象
     // extendInfoMap["acct_split_bunch"] = getAcctSplitBunch()
     // 安全信息
     extendInfoMap["risk_check_data"] = getRiskCheckData()
+    // 备注
+    extendInfoMap["remark"] = "1234567890"
     return extendInfoMap
 }
 

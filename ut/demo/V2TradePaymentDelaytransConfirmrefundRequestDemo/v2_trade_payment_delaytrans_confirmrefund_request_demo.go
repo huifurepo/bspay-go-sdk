@@ -65,7 +65,7 @@ func getExtendInfos() map[string]interface{} {
 
 func getAcctInfos() interface{} {
     dto := make(map[string]interface{})
-    // 被分账方ID
+    // 分账接收方ID
     dto["huifu_id"] = "6666000003109208"
     // 分账金额(元)
     dto["div_amt"] = "0.01"

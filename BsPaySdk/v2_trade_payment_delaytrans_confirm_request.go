@@ -12,6 +12,7 @@ type V2TradePaymentDelaytransConfirmRequest struct {
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 商户号
+    PayType string `json:"pay_type" structs:"pay_type"` // 交易类型**原交易为快捷支付必填：QUICK_PAY**，&lt;br/&gt;**原交易为余额支付必填：ACCT_PAYMENT**；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：ACCT_PAYMENT&lt;/font&gt;
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

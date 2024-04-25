@@ -1,5 +1,5 @@
 /**
- * 银行大额转账
+ * 银行大额支付
  *
  * @Author sdk-generator
  * @Description 汇付天下

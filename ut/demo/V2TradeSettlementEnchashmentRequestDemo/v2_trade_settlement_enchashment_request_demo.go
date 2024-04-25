@@ -56,6 +56,8 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap := make(map[string]interface{})
     // 账户号
     // extendInfoMap["acct_id"] = ""
+    // 取现渠道
+    extendInfoMap["enchashment_channel"] = "00"
     // 备注
     // extendInfoMap["remark"] = ""
     // 异步通知地址

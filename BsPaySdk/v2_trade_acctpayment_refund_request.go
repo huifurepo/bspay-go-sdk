@@ -12,9 +12,9 @@ type V2TradeAcctpaymentRefundRequest struct {
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 商户号
-    OrgReqDate string `json:"org_req_date" structs:"org_req_date"` // 原余额支付请求日期org_hf_seq_id和（orgReqDate+orgReqSeqId）二选一；&lt;br/&gt;格式：yyyyMMdd；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20221023&lt;/font&gt;
-    OrgReqSeqId string `json:"org_req_seq_id" structs:"org_req_seq_id"` // 原余额支付请求流水号org_hf_seq_id和（orgReqDate+orgReqSeqId）二选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：2021091708126665001&lt;/font&gt;
-    OrgHfSeqId string `json:"org_hf_seq_id" structs:"org_hf_seq_id"` // 原余额支付支付全局流水号org_hf_seq_id和（orgReqDate+orgReqSeqId）二选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：00470topo1A211015160805P090ac132fef00000&lt;/font&gt;
+    OrgReqDate string `json:"org_req_date" structs:"org_req_date"` // 原余额支付请求日期
+    OrgReqSeqId string `json:"org_req_seq_id" structs:"org_req_seq_id"` // 原余额支付请求流水号org_hf_seq_id和orgReqSeqId二选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：2021091708126665001&lt;/font&gt;
+    OrgHfSeqId string `json:"org_hf_seq_id" structs:"org_hf_seq_id"` // 原余额支付支付全局流水号org_hf_seq_id和orgReqSeqId二选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：00470topo1A211015160805P090ac132fef00000&lt;/font&gt;
     OrdAmt string `json:"ord_amt" structs:"ord_amt"` // 退款金额
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段

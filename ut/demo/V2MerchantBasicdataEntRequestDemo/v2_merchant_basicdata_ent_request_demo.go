@@ -23,7 +23,7 @@ func V2MerchantBasicdataEntRequestDemo() {
         ReqSeqId:tool.GetReqSeqId(),
         // 请求日期
         ReqDate:tool.GetCurrentDate(),
-        // 上级主体ID
+        // 直属渠道号
         UpperHuifuId:"6666000003080000",
         // 商户名称
         RegName:"集成企业商户8664",

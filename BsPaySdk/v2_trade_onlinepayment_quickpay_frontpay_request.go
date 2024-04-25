@@ -1,5 +1,5 @@
 /**
- * 快捷支付页面版接口
+ * 快捷支付页面版
  *
  * @Author sdk-generator
  * @Description 汇付天下

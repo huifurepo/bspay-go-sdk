@@ -12,8 +12,8 @@ type V2MerchantBusiAliRealnameApplyRequest struct {
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 汇付ID
-    ContactPersonInfo string `json:"contact_person_info" structs:"contact_person_info"` // 联系人信息
     AuthIdentityInfo string `json:"auth_identity_info" structs:"auth_identity_info"` // 主体信息
+    ContactPersonInfo string `json:"contact_person_info" structs:"contact_person_info"` // 联系人信息
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

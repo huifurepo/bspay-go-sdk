@@ -1,5 +1,5 @@
 /**
- * 银行大额转账差错申请查询 - 示例
+ * 银行大额支付差错申请查询 - 示例
  *
  * @Author sdk-generator
  * @Description 汇付天下

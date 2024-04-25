@@ -54,42 +54,40 @@ func V2TradePaymentJspayRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
+    // 账户号
+    // extendInfoMap["acct_id"] = ""
     // 交易有效期
     extendInfoMap["time_expire"] = "20230418235959"
-    // 聚合正扫微信拓展参数集合
+    // 微信参数集合
     // extendInfoMap["wx_data"] = getWxData()
-    // 支付宝扩展参数集合
+    // 支付宝参数集合
     extendInfoMap["alipay_data"] = getAlipayData()
     // 银联参数集合
     // extendInfoMap["unionpay_data"] = getUnionpayData()
-    // 数字人民币参数集合
-    // extendInfoMap["dc_data"] = getDcData()
+    // 是否延迟交易
+    extendInfoMap["delay_acct_flag"] = "N"
+    // 手续费扣款标志
+    // extendInfoMap["fee_flag"] = ""
     // 分账对象
     extendInfoMap["acct_split_bunch"] = getAcctSplitBunch()
-    // 传入分帐遇到优惠的处理规则
+    // 传入分账遇到优惠的处理规则
     extendInfoMap["term_div_coupon_type"] = "0"
     // 补贴支付信息
     // extendInfoMap["combinedpay_data"] = getCombinedpayData()
-    // 账户号
-    // extendInfoMap["acct_id"] = ""
-    // 手续费扣款标志
-    // extendInfoMap["fee_flag"] = ""
     // 禁用信用卡标记
     extendInfoMap["limit_pay_type"] = "NO_CREDIT"
-    // 是否延迟交易
-    extendInfoMap["delay_acct_flag"] = "N"
     // 商户贴息标记
     extendInfoMap["fq_mer_discount_flag"] = "N"
     // 渠道号
     extendInfoMap["channel_no"] = ""
     // 场景类型
     extendInfoMap["pay_scene"] = "02"
+    // 备注
+    extendInfoMap["remark"] = "String"
     // 安全信息
     extendInfoMap["risk_check_data"] = getRiskCheckData()
     // 设备信息
     extendInfoMap["terminal_device_data"] = getTerminalDeviceData()
-    // 备注
-    extendInfoMap["remark"] = "String"
     // 异步通知地址
     extendInfoMap["notify_url"] = "http://www.baidu.com"
     return extendInfoMap
@@ -192,16 +190,16 @@ func getExtendParams() interface{} {
     dto["food_order_type"] = "qr_order"
     // 花呗分期数
     dto["hb_fq_num"] = ""
-    // 花呗卖家承担的手续费百分比
+    // 花呗卖家手续费百分比
     dto["hb_fq_seller_percent"] = ""
     // 行业数据回流信息
     dto["industry_reflux_info"] = "String"
+    // 信用卡分期资产方式
+    // dto["fq_channels"] = ""
     // 停车场id
     dto["parking_id"] = "123wsx"
     // 系统商编号
     dto["sys_service_provider_id"] = "1111111"
-    // 信用卡分期资产方式
-    // dto["fq_channels"] = ""
 
     return dto;
 }
@@ -210,9 +208,9 @@ func getGoodsDetail() interface{} {
     dto := make(map[string]interface{})
     // 商品的编号
     dto["goods_id"] = "12312321"
-    // 商品名称(元)
+    // 商品名称
     dto["goods_name"] = "阿里"
-    // 商品单价
+    // 商品单价(元)
     dto["price"] = "0.01"
     // 商品数量
     dto["quantity"] = "20"
@@ -277,6 +275,10 @@ func getAlipayData() string {
     // dto["subject"] = ""
     // 商家门店名称
     // dto["store_name"] = ""
+    // 小程序应用的appid
+    // dto["op_app_id"] = ""
+    // 商户业务信息
+    // dto["ali_business_params"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
@@ -299,7 +301,7 @@ func getPayeeInfo() interface{} {
 func getUnionpayData() string {
     dto := make(map[string]interface{})
     // 收款方附加数据
-    // dto["acq_addn_data"] = ""
+    // dto["addn_data"] = ""
     // 地区信息
     // dto["area_info"] = ""
     // 持卡人ip
@@ -318,17 +320,8 @@ func getUnionpayData() string {
     // dto["req_reserved"] = ""
     // 终端信息
     // dto["term_info"] = ""
-    // 云闪付用户标识
+    // 银联用户标识
     // dto["user_id"] = ""
-
-    dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
-}
-
-func getDcData() string {
-    dto := make(map[string]interface{})
-    // 数字货币银行编号
-    // dto["digital_bank_no"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
@@ -338,7 +331,7 @@ func getAcctInfosRucan() interface{} {
     dto := make(map[string]interface{})
     // 分账金额
     // dto["div_amt"] = "test"
-    // 被分账方ID
+    // 分账接收方ID
     // dto["huifu_id"] = "test"
     // 账户号
     // dto["acct_id"] = ""
@@ -358,7 +351,7 @@ func getAcctSplitBunch() string {
 
 func getCombinedpayData() string {
     dto := make(map[string]interface{})
-    // 补贴方汇付编号
+    // 补贴方汇付商户号
     // dto["huifu_id"] = "test"
     // 补贴方类型
     // dto["user_type"] = "test"

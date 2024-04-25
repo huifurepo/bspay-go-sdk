@@ -13,8 +13,8 @@ type V2TradeOnlinepaymentRefundRequest struct {
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 商户号
     OrdAmt string `json:"ord_amt" structs:"ord_amt"` // 退款金额
-    TerminalDeviceData string `json:"terminal_device_data" structs:"terminal_device_data"` // 设备信息
-    RiskCheckData string `json:"risk_check_data" structs:"risk_check_data"` // 安全信息
+    TerminalDeviceData string `json:"terminal_device_data" structs:"terminal_device_data"` // 设备信息条件必填，当为银行大额支付时可不填，jsonObject格式
+    RiskCheckData string `json:"risk_check_data" structs:"risk_check_data"` // 安全信息条件必填，当为银行大额支付时可不填，jsonObject格式
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

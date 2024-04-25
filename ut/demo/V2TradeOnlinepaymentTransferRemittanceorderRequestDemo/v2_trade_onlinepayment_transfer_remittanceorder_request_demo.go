@@ -52,7 +52,7 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["org_req_seq_id"] = "20230110155433defaultit655128593"
     // 原请求日期
     extendInfoMap["org_req_date"] = "20230110"
-    // 原汇款订单号
+    // 原汇付通道流水号
     extendInfoMap["org_remittance_order_id"] = "20230110155433defaultit655128591"
     // 每页条数
     extendInfoMap["page_size"] = "1"

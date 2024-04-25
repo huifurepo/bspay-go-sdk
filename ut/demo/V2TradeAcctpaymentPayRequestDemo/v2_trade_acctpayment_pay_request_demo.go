@@ -31,6 +31,10 @@ func V2TradeAcctpaymentPayRequestDemo() {
         AcctSplitBunch:getAcctSplitBunch(),
         // 安全信息
         RiskCheckData:getRiskCheckData(),
+        // 资金类型资金类型。支付渠道为中信E管家时，资金类型必填（[详见说明](https://paas.huifu.com/partners/api/#/yuer/api_zxegjzllx)）
+        // FundType:"test",
+        // 手续费承担方标识余额支付手续费承担方标识；商户余额支付扣收规则为接口指定承担方时必填！枚举值：&lt;br/&gt;OUT：出款方；&lt;br/&gt;IN：分账接受方。&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：IN&lt;/font&gt;
+        // TransFeeTakeFlag:"test",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -64,6 +68,16 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["delay_acct_flag"] = ""
     // 出款方账户号
     // extendInfoMap["out_acct_id"] = ""
+    // 支付渠道
+    // extendInfoMap["acct_channel"] = ""
+    // 灵活用工标志
+    // extendInfoMap["hyc_flag"] = ""
+    // 代发模式
+    // extendInfoMap["salary_modle_type"] = ""
+    // 落地公司商户号
+    // extendInfoMap["bmember_id"] = ""
+    // 异步通知地址
+    // extendInfoMap["notify_url"] = ""
     return extendInfoMap
 }
 
@@ -71,9 +85,9 @@ func getAcctInfos() interface{} {
     dto := make(map[string]interface{})
     // 分账金额
     dto["div_amt"] = "0.01"
-    // 被分账方ID
+    // 分账接收方ID
     dto["huifu_id"] = "6666000018344461"
-    // 被分账方账户号
+    // 账户号
     // dto["acct_id"] = ""
 
     dtoList := [1]interface{}{dto}

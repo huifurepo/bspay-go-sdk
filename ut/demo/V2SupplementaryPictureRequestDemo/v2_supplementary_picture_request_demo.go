@@ -52,6 +52,8 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap := make(map[string]interface{})
     // 商户号
     extendInfoMap["huifu_id"] = "6666000103413615"
+    // 文件url链接
+    extendInfoMap["file_url"] = "https://example.com/image.jpg"
     return extendInfoMap
 }
 

@@ -60,6 +60,8 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["mobile_no"] = "15556622000"
     // 文件列表
     // extendInfoMap["file_list"] = getFileList()
+    // 地址
+    // extendInfoMap["**address**"] = ""
     return extendInfoMap
 }
 

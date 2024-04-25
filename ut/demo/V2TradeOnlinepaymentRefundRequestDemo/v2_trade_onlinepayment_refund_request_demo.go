@@ -27,9 +27,9 @@ func V2TradeOnlinepaymentRefundRequestDemo() {
         HuifuId:"6666000108854952",
         // 退款金额
         OrdAmt:"0.01",
-        // 设备信息
+        // 设备信息条件必填，当为银行大额支付时可不填，jsonObject格式
         TerminalDeviceData:getTerminalDeviceData(),
-        // 安全信息
+        // 安全信息条件必填，当为银行大额支付时可不填，jsonObject格式
         RiskCheckData:getRiskCheckData(),
     }
     // 设置非必填字段

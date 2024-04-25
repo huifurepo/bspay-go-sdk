@@ -15,6 +15,146 @@ const BASE_API_TEST_URL_V2 = "https://spin-test.cloudpnr.com"
 // 以下为接口uri
 
 /**
+ * 完税凭证下载
+ */
+const V2_HYC_TAX_DOWNLOAD = "/v2/hyc/tax/download"
+
+/**
+ * 用户申请单状态查询
+ */
+const V2_USER_APPLY_QUERY = "/v2/user/apply/query"
+
+/**
+ * 开通下级商户权限配置接口
+ */
+const V2_MERCHANT_BUSI_HEAD_CONFIG = "/v2/merchant/busi/head/config"
+
+/**
+ * 一键绑卡-工行卡号查询
+ */
+const V2_QUICKBUCKLE_BIND_CARDINFO_QUERY = "/v2/quickbuckle/bind/cardInfo/query"
+
+/**
+ * 完税凭证查询
+ */
+const V2_HYC_TAX_QUERY = "/v2/hyc/tax/query"
+
+/**
+ * 申请开票
+ */
+const V2_HYC_INVOICE_APPLY = "/v2/hyc/invoice/apply"
+
+/**
+ * 商户签约查询
+ */
+const V2_HYC_MERSIGN_QUERY = "/v2/hyc/mersign/query"
+
+/**
+ * 开票信息查询
+ */
+const V2_HYC_INVINFO_QUERY = "/v2/hyc/invinfo/query"
+
+/**
+ * 开票类目查询
+ */
+const V2_HYC_INVCATEGORY_QUERY = "/v2/hyc/invcategory/query"
+
+/**
+ * 个人签约状态查询
+ */
+const V2_HYC_CONTRACT_QUERY = "/v2/hyc/contract/query"
+
+/**
+ * 个人签约发起
+ */
+const V2_HYC_PERSONSIGN_CREATE = "/v2/hyc/personsign/create"
+
+/**
+ * 用户补贴
+ */
+const V2_WALLET_TRADE_RECHARGE_TRANSFER = "/v2/wallet/trade/recharge/transfer"
+
+/**
+ * 钱包关单
+ */
+const V2_WALLET_TRADE_ORDER_CLOSE = "/v2/wallet/trade/order/close"
+
+/**
+ * 自助扫码开票
+ */
+const V2_INVOICE_SELFSCANOPEN = "/v2/invoice/selfscanopen"
+
+/**
+ * 发票开具申请查询
+ */
+const V2_INVOICE_QUERYAPPLY = "/v2/invoice/queryapply"
+
+/**
+ * 发票开具
+ */
+const V2_INVOICE_OPEN = "/v2/invoice/open"
+
+/**
+ * 全域资金管理配置查询
+ */
+const V2_MERCHANT_BUSI_EFPDETAIL = "/v2/merchant/busi/efpdetail"
+
+/**
+ * 全域资金管理配置
+ */
+const V2_MERCHANT_BUSI_EFPCONFIG = "/v2/merchant/busi/efpconfig"
+
+/**
+ * 银行大额未入账流水列表查询
+ */
+const V2_TRADE_ONLINEPAYMENT_TRANSFER_BANKBLOTTER_QUERY = "/v2/trade/onlinepayment/transfer/bankblotter/query"
+
+/**
+ * 托管交易退款查询
+ */
+const V2_TRADE_HOSTING_PAYMENT_QUERYREFUNDINFO = "/v2/trade/hosting/payment/queryRefundInfo"
+
+/**
+ * 托管交易退款
+ */
+const V2_TRADE_HOSTING_PAYMENT_HTREFUND = "/v2/trade/hosting/payment/htRefund"
+
+/**
+ * 托管交易查询
+ */
+const V2_TRADE_HOSTING_PAYMENT_QUERYORDERINFO = "/v2/trade/hosting/payment/queryorderinfo"
+
+/**
+ * E账户转账及充值查询接口
+ */
+const V2_TRADE_PAYMENT_ZXE_INCASH_QUERY = "/v2/trade/payment/zxe/incash/query"
+
+/**
+ * 电子账户账务明细查询
+ */
+const V2_TRADE_PAYMENT_ZXE_ACCTDETAIL_QUERY = "/v2/trade/payment/zxe/acctdetail/query"
+
+/**
+ * 付款关系提交
+ */
+const V2_TRADE_PAYRELATION_APPLY = "/v2/trade/payrelation/apply"
+
+/**
+ * 电子账户设置默认卡
+ */
+const V2_MERCHANT_ELEC_CARD_DEFAULT = "/v2/merchant/elec/card/default"
+
+/**
+ * 电子账户解绑
+ */
+const V2_MERCHANT_ELEC_CARD_UNBIND = "/v2/merchant/elec/card/unbind"
+
+/**
+ * 电子账户绑卡
+ */
+const V2_MERCHANT_ELEC_CARD_BIND = "/v2/merchant/elec/card/bind"
+
+/**
  * 钱包转账下单
  */
 const V2_WALLET_TRADE_TRANSFER = "/v2/wallet/trade/transfer"
@@ -100,12 +240,12 @@ const V2_WALLET_TRADE_QUERY = "/v2/wallet/trade/query"
 const V2_WALLET_TRADE_RECHARGE_CARD = "/v2/wallet/trade/recharge/card"
 
 /**
- * 银行大额转账差错申请查询
+ * 银行大额支付差错申请查询
  */
 const V2_TRADE_ONLINEPAYMENT_TRANSFER_BANKMISTAKE_APPLYQUERY = "/v2/trade/onlinepayment/transfer/bankmistake/applyquery"
 
 /**
- * 银行大额转账差错申请
+ * 银行大额支付差错申请
  */
 const V2_TRADE_ONLINEPAYMENT_TRANSFER_BANKMISTAKE_APPLY = "/v2/trade/onlinepayment/transfer/bankmistake/apply"
 
@@ -175,7 +315,7 @@ const V2_MERCHANT_BASICDATA_SMS_SEND = "/v2/merchant/basicdata/sms/send"
 const V2_TRADE_BATCHTRANSLOG_QUERY = "/v2/trade/batchtranslog/query"
 
 /**
- * 快捷支付页面版接口
+ * 快捷支付页面版
  */
 const V2_TRADE_ONLINEPAYMENT_QUICKPAY_FRONTPAY = "/v2/trade/onlinepayment/quickpay/frontpay"
 
@@ -555,7 +695,7 @@ const V2_MERCHANT_DIRECT_WECHAT_SETTLEMENTINFO_QUERY = "/v2/merchant/direct/wech
 const V2_TRADE_WXUSERMARK_QUERY = "/v2/trade/wxusermark/query"
 
 /**
- * 银联统一在线收银台接口
+ * 银联统一在线收银台
  */
 const V2_TRADE_ONLINEPAYMENT_UNIONPAY = "/v2/trade/onlinepayment/unionpay"
 
@@ -850,17 +990,17 @@ const V2_TRADE_TRANS_SPLIT_QUERY = "/v2/trade/trans/split/query"
 const V2_TRADE_PAYMENT_GETELECTRONICRECEIPT = "/v2/trade/payment/getelectronicreceipt"
 
 /**
- * 银行转账资金流水查询
+ * 银行大额资金流水查询
  */
 const V2_TRADE_ONLINEPAYMENT_TRANSFER_ACCOUNT_QUERY = "/v2/trade/onlinepayment/transfer/account/query"
 
 /**
- * 银行大额转账关单
+ * 银行大额支付关单
  */
 const V2_TRADE_ONLINEPAYMENT_TRANSFER_ACCOUNT_CLOSE = "/v2/trade/onlinepayment/transfer/account/close"
 
 /**
- * 银行大额转账
+ * 银行大额支付
  */
 const V2_TRADE_ONLINEPAYMENT_TRANSFER_ACCOUNT = "/v2/trade/onlinepayment/transfer/account"
 

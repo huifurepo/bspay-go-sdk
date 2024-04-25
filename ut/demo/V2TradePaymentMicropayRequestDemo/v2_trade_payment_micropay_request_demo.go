@@ -67,7 +67,7 @@ func getExtendInfos() map[string]interface{} {
     // 渠道号
     extendInfoMap["channel_no"] = ""
     // 补贴支付信息
-    // extendInfoMap["combinedpay_data"] = getCombinedpayData()
+    // extendInfoMap["combinedpay_data"] = ""
     // 场景类型
     extendInfoMap["pay_scene"] = ""
     // 分账对象
@@ -91,27 +91,11 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getCombinedpayData() string {
-    dto := make(map[string]interface{})
-    // 补贴方汇付编号
-    // dto["huifu_id"] = "test"
-    // 补贴方类型
-    // dto["user_type"] = "test"
-    // 补贴方账户号
-    // dto["acct_id"] = "test"
-    // 补贴金额
-    // dto["amount"] = "test"
-
-    dtoList := [1]interface{}{dto}
-    dtoByte, _ := json.Marshal(dtoList)
-    return string(dtoByte)
-}
-
 func getAcctInfosRucan() interface{} {
     dto := make(map[string]interface{})
     // 分账金额
     // dto["div_amt"] = "test"
-    // 被分账方ID
+    // 分账接收方ID
     // dto["huifu_id"] = "test"
     // 账户号
     // dto["acct_id"] = ""
@@ -187,10 +171,6 @@ func getWxData() string {
     // dto["spbill_create_ip"] = "test"
     // 子商户公众账号id
     // dto["sub_appid"] = ""
-    // 用户标识
-    // dto["openid"] = ""
-    // 子商户用户标识
-    // dto["sub_openid"] = ""
     // 设备号
     // dto["device_info"] = ""
     // 附加数据
@@ -285,6 +265,8 @@ func getAlipayData() string {
     dto["store_id"] = ""
     // 外部指定买家
     // dto["ext_user_info"] = getExtUserInfo()
+    // 商户业务信息
+    // dto["ali_business_params"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
@@ -304,6 +286,8 @@ func getUnionpayData() string {
     // dto["specfeeinfo"] = ""
     // 终端号
     // dto["term_id"] = ""
+    // 收款方附加数据
+    // dto["addn_data"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
