@@ -52,10 +52,12 @@ func V2TradeOnlinepaymentTransferAccountRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
-    // 收款方用户客户号
+    // 用户客户号
     extendInfoMap["user_huifu_id"] = "6666000103905031"
     // 收款方账户号
     extendInfoMap["acct_id"] = "A01199826"
+    // 页面标识
+    // extendInfoMap["page_flag"] = ""
     // 付款方名称
     extendInfoMap["certificate_name"] = "沈显龙"
     // 付款方银行卡号
@@ -70,6 +72,29 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["acct_mode"] = ""
     // 银行模式
     // extendInfoMap["bank_mode"] = ""
+    // 延时标记
+    // extendInfoMap["delay_acct_flag"] = ""
+    // 分账对象
+    // extendInfoMap["acct_split_bunch"] = getAcctSplitBunch()
     return extendInfoMap
+}
+
+func getAcctInfos() interface{} {
+    dto := make(map[string]interface{})
+    // 支付金额
+    // dto["div_amt"] = ""
+    // 商户号
+    // dto["huifu_id"] = ""
+
+    dtoList := [1]interface{}{dto}
+    return dtoList
+}
+
+func getAcctSplitBunch() interface{} {
+    dto := make(map[string]interface{})
+    // 分账信息列表
+    // dto["acct_infos"] = getAcctInfos()
+
+    return dto;
 }
 

@@ -24,11 +24,11 @@ func V2TradePaymentDelaytransConfirmrefundRequestDemo() {
         // 请求流水号
         ReqSeqId:tool.GetReqSeqId(),
         // 商户号
-        HuifuId:"6666000103423237",
+        HuifuId:"6666000109133323",
         // 原交易请求日期
-        OrgReqDate:"20221108",
+        OrgReqDate:"20240513",
         // 原交易请求流水号
-        OrgReqSeqId:"20221108349713659620211667908395",
+        OrgReqSeqId:"20240513105825239x0lp7ldbus4sji",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -66,7 +66,7 @@ func getExtendInfos() map[string]interface{} {
 func getAcctInfos() interface{} {
     dto := make(map[string]interface{})
     // 分账接收方ID
-    dto["huifu_id"] = "6666000003109208"
+    dto["huifu_id"] = "6666000109133323"
     // 分账金额(元)
     dto["div_amt"] = "0.01"
     // 垫资金额(元)

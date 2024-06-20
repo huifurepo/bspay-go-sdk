@@ -53,7 +53,7 @@ func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
     // 支付宝配置对象
-    // extendInfoMap["ali_conf_list"] = getSubmberAliConfList()
+    // extendInfoMap["ali_conf_list"] = getSubmerAliConfList()
     // 微信配置对象
     // extendInfoMap["wx_conf_list"] = getSubmerWxConfList()
     // 银联二维码配置对象
@@ -69,7 +69,7 @@ func getExtendInfos() map[string]interface{} {
     // 线上配置对象
     // extendInfoMap["online_fee_conf_list"] = getSubmerOnlineFeeConfList()
     // 余额支付配置对象
-    // extendInfoMap["online_fee_conf_list"] = getSubmerBalancePayConfig()
+    // extendInfoMap["balance_pay_config"] = getSubmerBalancePayConfig()
     // 补贴支付配置对象
     // extendInfoMap["combine_pay_config"] = getSubmerCombinePayConfig()
     // 银行大额转账配置对象
@@ -99,7 +99,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getSubmberAliConfList() string {
+func getSubmerAliConfList() string {
     dto := make(map[string]interface{})
     // 支付场景
     // dto["pay_scene"] = "test"

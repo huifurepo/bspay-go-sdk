@@ -1,5 +1,5 @@
 /**
- * 网银支付接口 - 示例
+ * 网银支付 - 示例
  *
  * @Author sdk-generator
  * @Description 汇付天下
@@ -24,7 +24,7 @@ func V2TradeOnlinepaymentBankingFrontpayRequestDemo() {
         // 请求日期
         ReqDate:tool.GetCurrentDate(),
         // 商户号
-        HuifuId:"6666000108854952",
+        HuifuId:"6666000109133323",
         // 订单金额
         TransAmt:"0.02",
         // 商品描述

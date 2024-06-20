@@ -24,7 +24,7 @@ func V2TradeOnlinepaymentRefundRequestDemo() {
         // 请求流水号
         ReqSeqId:tool.GetReqSeqId(),
         // 商户号
-        HuifuId:"6666000108854952",
+        HuifuId:"6666000109133323",
         // 退款金额
         OrdAmt:"0.01",
         // 设备信息条件必填，当为银行大额支付时可不填，jsonObject格式
@@ -55,19 +55,19 @@ func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
     // 原交易请求日期
-    extendInfoMap["org_req_date"] = "20221110"
+    extendInfoMap["org_req_date"] = "20240401"
     // 原交易全局流水号
     extendInfoMap["org_hf_seq_id"] = ""
     // 原交易请求流水号
-    extendInfoMap["org_req_seq_id"] = "RQ1212333113"
+    extendInfoMap["org_req_seq_id"] = "295700155481522176"
     // 分账对象
-    extendInfoMap["acct_split_bunch"] = getAcctSplitBunchRucan()
+    // extendInfoMap["acct_split_bunch"] = getAcctSplitBunchRucan()
     // 补贴支付信息
-    extendInfoMap["combinedpay_data"] = getCombinedpayData()
+    // extendInfoMap["combinedpay_data"] = getCombinedpayData()
     // 大额转账支付账户信息数据
     // extendInfoMap["bank_info_data"] = getBankInfoData()
     // 备注
-    extendInfoMap["remark"] = "remark123"
+    // extendInfoMap["remark"] = ""
     // 异步通知地址
     extendInfoMap["notify_url"] = "http://www.baidu.com"
     return extendInfoMap
@@ -152,7 +152,7 @@ func getTerminalDeviceData() string {
 func getRiskCheckData() string {
     dto := make(map[string]interface{})
     // ip地址
-    // dto["ip_addr"] = ""
+    dto["ip_addr"] = "172.1.1.1"
     // 基站地址
     // dto["base_station"] = ""
     // 纬度

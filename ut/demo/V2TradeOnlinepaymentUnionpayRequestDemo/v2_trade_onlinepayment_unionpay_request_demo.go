@@ -20,19 +20,19 @@ func V2TradeOnlinepaymentUnionpayRequestDemo() {
     // 2.组装请求参数
     dgReq := BsPaySdk.V2TradeOnlinepaymentUnionpayRequest{
         // 商户号
-        HuifuId:"6666000105470650",
+        HuifuId:"6666000109133323",
         // 请求日期
         ReqDate:tool.GetCurrentDate(),
         // 请求流水号
         ReqSeqId:tool.GetReqSeqId(),
         // 订单金额
-        TransAmt:"1.00",
+        TransAmt:"0.11",
         // 商品描述
-        OrderDesc:"order123",
+        OrderDesc:"通用性商品1",
         // 安全信息
         RiskCheckData:getRiskCheckData(),
         // 三方支付数据jsonObject；pay_scene为云闪付公众号与云闪付小程序时必填
-        ThirdPayData:getThirdPayData(),
+        // ThirdPayData:getThirdPayData(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -63,19 +63,19 @@ func getExtendInfos() map[string]interface{} {
     // 交易银行卡卡号
     extendInfoMap["pay_card_no"] = ""
     // 支付卡类型
-    extendInfoMap["pay_card_type"] = "C"
+    // extendInfoMap["pay_card_type"] = ""
     // 订单失效时间
     extendInfoMap["time_expire"] = ""
     // 分账对象
-    extendInfoMap["acct_split_bunch"] = getAcctSplitBunchRucan()
+    // extendInfoMap["acct_split_bunch"] = getAcctSplitBunchRucan()
     // 前端跳转地址
-    extendInfoMap["front_url"] = ""
+    extendInfoMap["front_url"] = "https://www.service.com/getresp"
     // 异步通知地址
-    extendInfoMap["notify_url"] = "http://www.baidu.com"
+    extendInfoMap["notify_url"] = "https://www.service.com/getresp"
     // 备注
-    extendInfoMap["remark"] = ""
+    extendInfoMap["remark"] = "merPriv11"
     // 支付场景
-    extendInfoMap["pay_scene"] = "U_MINIAPP"
+    // extendInfoMap["pay_scene"] = ""
     return extendInfoMap
 }
 
@@ -95,7 +95,7 @@ func getAcctInfos() interface{} {
 func getAcctSplitBunchRucan() string {
     dto := make(map[string]interface{})
     // 分账明细
-    dto["acct_infos"] = getAcctInfos()
+    // dto["acct_infos"] = getAcctInfos()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
@@ -106,7 +106,7 @@ func getRiskCheckData() string {
     // 基站地址
     dto["base_station"] = "7"
     // ip地址
-    // dto["ip_addr"] = ""
+    dto["ip_addr"] = "172.28.52.52"
     // 纬度
     dto["latitude"] = "4"
     // 经度

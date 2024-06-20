@@ -20,11 +20,11 @@ func V2TradePaymentDelaytransConfirmqueryRequestDemo() {
     // 2.组装请求参数
     dgReq := BsPaySdk.V2TradePaymentDelaytransConfirmqueryRequest{
         // 原请求日期
-        OrgReqDate:"20210923",
+        OrgReqDate:"20240513",
         // 原请求流水号
-        OrgReqSeqId:"202109232638806002",
+        OrgReqSeqId:"20240513105825239x0lp7ldbus4sji",
         // 商户号
-        HuifuId:"6666000018328947",
+        HuifuId:"6666000109133323",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()

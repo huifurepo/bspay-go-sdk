@@ -224,11 +224,15 @@ func getElecAcctConfig() string {
     // 电子账户提现手续费承担方
     // dto["cash_fee_party"] = "test"
     // 场景
-    // dto["scence"] = "test"
+    // dto["scene"] = "test"
     // 角色类型(角色编号)
     // dto["role_type"] = "test"
+    // 电子账户开通状态
+    // dto["bank_status"] = "test"
     // 银行卡信息
     // dto["**elec_card_list**"] = getElecCardList()
+    // 银行信息
+    // dto["bank_message"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

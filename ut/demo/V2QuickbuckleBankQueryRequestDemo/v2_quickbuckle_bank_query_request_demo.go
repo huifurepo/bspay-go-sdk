@@ -24,7 +24,7 @@ func V2QuickbuckleBankQueryRequestDemo() {
         // 请求时间
         ReqDate:tool.GetCurrentDate(),
         // 商户汇付Id
-        HuifuId:"6666000106605078",
+        HuifuId:"6666000109133323",
         // 业务类型
         BizType:"B2C",
         // 借贷类型

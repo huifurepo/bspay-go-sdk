@@ -20,15 +20,15 @@ func V2TradePaymentScanpayQueryRequestDemo() {
     // 2.组装请求参数
     dgReq := BsPaySdk.V2TradePaymentScanpayQueryRequest{
         // 汇付商户号
-        HuifuId:"6666000108854952",
+        HuifuId:"6666000109133323",
         // 原机构请求日期
-        OrgReqDate:"20221107",
+        OrgReqDate:"20240405",
         // 汇付服务订单号out_ord_id,org_hf_seq_id,org_req_seq_id 必填其一；汇付生成的服务订单号；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1234323JKHDFE1243252&lt;/font&gt;
         // OutOrdId:"test",
         // 创建服务订单返回的汇付全局流水号out_ord_id,org_hf_seq_id,org_req_seq_id 必填其一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：00290TOP1GR210919004230P853ac13262200000&lt;/font&gt;
         // OrgHfSeqId:"test",
         // 服务订单创建请求流水号out_ord_id,org_hf_seq_id,org_req_seq_id 必填其一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：202110210012100005&lt;/font&gt;
-        OrgReqSeqId:"202110210012100005",
+        OrgReqSeqId:"20240405221826354151",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()

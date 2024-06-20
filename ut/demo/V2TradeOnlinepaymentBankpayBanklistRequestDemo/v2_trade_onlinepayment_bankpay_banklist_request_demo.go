@@ -20,7 +20,7 @@ func V2TradeOnlinepaymentBankpayBanklistRequestDemo() {
     // 2.组装请求参数
     dgReq := BsPaySdk.V2TradeOnlinepaymentBankpayBanklistRequest{
         // 商户号
-        HuifuId:"6666000108854952",
+        HuifuId:"6666000109133323",
         // 网关支付类型
         GateType:"01",
         // 订单类型

@@ -24,7 +24,7 @@ func V2TradeAcctpaymentPayRequestDemo() {
         // 请求日期
         ReqDate:tool.GetCurrentDate(),
         // 出款方商户号
-        OutHuifuId:"6666000018344461",
+        OutHuifuId:"6666000109133323",
         // 支付金额
         OrdAmt:"0.01",
         // 分账对象
@@ -86,7 +86,7 @@ func getAcctInfos() interface{} {
     // 分账金额
     dto["div_amt"] = "0.01"
     // 分账接收方ID
-    dto["huifu_id"] = "6666000018344461"
+    dto["huifu_id"] = "6666000109133323"
     // 账户号
     // dto["acct_id"] = ""
 

@@ -20,11 +20,11 @@ func V2TradeAcctpaymentRefundQueryRequestDemo() {
     // 2.组装请求参数
     dgReq := BsPaySdk.V2TradeAcctpaymentRefundQueryRequest{
         // 退款请求流水号
-        OrgReqSeqId:"20211021787214848332",
+        OrgReqSeqId:"20240515134124629vmalwxl5nxajgd",
         // 余额支付退款请求日期
-        OrgReqDate:"20211021",
+        OrgReqDate:"20240515",
         // 商户号
-        HuifuId:"6666000018344461",
+        HuifuId:"6666000109133323",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()

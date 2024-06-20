@@ -24,7 +24,7 @@ func V2TradeCheckReplayRequestDemo() {
         // 交易日期
         ReqDate:tool.GetCurrentDate(),
         // 汇付机构编号
-        HuifuId:"6666000003099901",
+        HuifuId:"6666000109133323",
         // 文件类型
         FileType:"2",
     }

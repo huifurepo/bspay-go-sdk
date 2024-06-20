@@ -24,13 +24,13 @@ func V2TradePaymentMicropayRequestDemo() {
         // 请求流水号
         ReqSeqId:tool.GetReqSeqId(),
         // 商户号
-        HuifuId:"6666000018328947",
+        HuifuId:"6666000109133323",
         // 交易金额
-        TransAmt:"0.01",
+        TransAmt:"1.01",
         // 商品描述
         GoodsDesc:"聚合反扫消费",
         // 支付授权码
-        AuthCode:"2884138408701518074",
+        AuthCode:"131135212661863252",
         // 安全信息
         RiskCheckData:getRiskCheckData(),
     }
@@ -57,35 +57,35 @@ func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
     // 交易有效期
-    extendInfoMap["time_expire"] = "20220918150330"
+    // extendInfoMap["time_expire"] = ""
     // 手续费扣款标志
     // extendInfoMap["fee_flag"] = ""
     // 禁用支付方式
-    extendInfoMap["limit_pay_type"] = ""
+    // extendInfoMap["limit_pay_type"] = ""
     // 是否延迟交易
-    extendInfoMap["delay_acct_flag"] = "Y"
+    // extendInfoMap["delay_acct_flag"] = ""
     // 渠道号
-    extendInfoMap["channel_no"] = ""
+    // extendInfoMap["channel_no"] = ""
     // 补贴支付信息
     // extendInfoMap["combinedpay_data"] = ""
     // 场景类型
-    extendInfoMap["pay_scene"] = ""
+    // extendInfoMap["pay_scene"] = ""
     // 分账对象
     // extendInfoMap["acct_split_bunch"] = getAcctSplitBunch()
     // 传入分帐遇到优惠的处理规则
-    extendInfoMap["term_div_coupon_type"] = "3"
+    // extendInfoMap["term_div_coupon_type"] = ""
     // 聚合反扫微信参数集合
     // extendInfoMap["wx_data"] = getWxData()
     // 支付宝扩展参数集合
-    extendInfoMap["alipay_data"] = getAlipayData()
+    // extendInfoMap["alipay_data"] = getAlipayData()
     // 银联参数集合
     // extendInfoMap["unionpay_data"] = getUnionpayData()
     // 设备信息
-    extendInfoMap["terminal_device_info"] = getTerminalDeviceInfo()
+    // extendInfoMap["terminal_device_info"] = getTerminalDeviceInfo()
     // 异步通知地址
     extendInfoMap["notify_url"] = "http://www.baidu.com"
     // 交易备注
-    extendInfoMap["remark"] = ""
+    // extendInfoMap["remark"] = ""
     // 账户号
     // extendInfoMap["acct_id"] = ""
     return extendInfoMap
@@ -153,8 +153,7 @@ func getStoreInfo() interface{} {
     // 门店详细地址
     // dto["address"] = ""
 
-    dtoList := [1]interface{}{dto}
-    return dtoList
+    return dto;
 }
 
 func getSceneInfo() interface{} {
@@ -254,7 +253,7 @@ func getExtUserInfo() interface{} {
 func getAlipayData() string {
     dto := make(map[string]interface{})
     // 支付宝的店铺编号
-    dto["alipay_store_id"] = ""
+    // dto["alipay_store_id"] = ""
     // 订单包含的商品列表信息
     // dto["goods_detail"] = getGoodsDetail()
     // 业务扩展参数
@@ -262,7 +261,7 @@ func getAlipayData() string {
     // 商户操作员编号
     // dto["operator_id"] = ""
     // 商户门店编号
-    dto["store_id"] = ""
+    // dto["store_id"] = ""
     // 外部指定买家
     // dto["ext_user_info"] = getExtUserInfo()
     // 商户业务信息
@@ -315,21 +314,21 @@ func getTerminalDeviceInfo() string {
     // 汇付机具号
     // dto["devs_id"] = "test"
     // 设备类型
-    dto["device_type"] = "4"
+    // dto["device_type"] = ""
     // 交易设备IP
-    dto["device_ip"] = "10.10.0.1"
+    // dto["device_ip"] = ""
     // 交易设备MAC
-    dto["device_mac"] = "030147441006000182623"
+    // dto["device_mac"] = ""
     // 交易设备IMEI
-    dto["device_imei"] = "030147441006000182623"
+    // dto["device_imei"] = ""
     // 交易设备IMSI
-    dto["device_imsi"] = "030147441006000182623"
+    // dto["device_imsi"] = ""
     // 交易设备ICCID
-    dto["device_icc_id"] = "030147441006000182623"
+    // dto["device_icc_id"] = ""
     // 交易设备WIFIMAC
-    dto["device_wifi_mac"] = "030147441006000182623"
+    // dto["device_wifi_mac"] = ""
     // 交易设备GPS
-    dto["device_gps"] = "111"
+    // dto["device_gps"] = ""
     // 商户终端应用程序版
     // dto["app_version"] = ""
     // 加密随机因子

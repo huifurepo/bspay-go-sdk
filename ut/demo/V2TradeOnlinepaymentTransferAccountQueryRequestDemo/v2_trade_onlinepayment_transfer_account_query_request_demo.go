@@ -62,6 +62,14 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["certificate_name"] = "沈显龙"
     // 入账标识
     extendInfoMap["in_acct_flag"] = "YDNI2NDJIKKPAFGQ"
+    // 订单模式
+    // extendInfoMap["order_mode"] = ""
+    // 实际打款日期
+    // extendInfoMap["remit_date"] = ""
+    // 每页条数
+    // extendInfoMap["page_size"] = ""
+    // 分页页码
+    // extendInfoMap["page_no"] = ""
     return extendInfoMap
 }
 

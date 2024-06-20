@@ -12,6 +12,7 @@ type V2MerchantElecCardBindRequest struct {
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     ReqDate string `json:"req_date" structs:"req_date"` // 请求时间
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 汇付Id
+    ElecCardInfo string `json:"elec_card_info" structs:"elec_card_info"` // 电子卡信息
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

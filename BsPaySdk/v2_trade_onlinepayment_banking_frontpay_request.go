@@ -1,5 +1,5 @@
 /**
- * 网银支付接口
+ * 网银支付
  *
  * @Author sdk-generator
  * @Description 汇付天下

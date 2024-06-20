@@ -1,5 +1,5 @@
 /**
- * 全域资金管理配置查询
+ * 全渠道资金管理配置查询
  *
  * @Author sdk-generator
  * @Description 汇付天下

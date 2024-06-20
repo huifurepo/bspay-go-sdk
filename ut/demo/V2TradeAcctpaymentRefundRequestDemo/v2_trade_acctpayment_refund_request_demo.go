@@ -24,11 +24,11 @@ func V2TradeAcctpaymentRefundRequestDemo() {
         // 请求日期
         ReqDate:tool.GetCurrentDate(),
         // 商户号
-        HuifuId:"6666000108854952",
+        HuifuId:"6666000109133323",
         // 原余额支付请求日期
-        OrgReqDate:"20211021",
+        OrgReqDate:"20240515",
         // 原余额支付请求流水号org_hf_seq_id和orgReqSeqId二选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：2021091708126665001&lt;/font&gt;
-        OrgReqSeqId:"202110210012100005",
+        OrgReqSeqId:"20240515132857954fk8wpk2hvwnnfw",
         // 原余额支付支付全局流水号org_hf_seq_id和orgReqSeqId二选一；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：00470topo1A211015160805P090ac132fef00000&lt;/font&gt;
         OrgHfSeqId:"",
         // 退款金额

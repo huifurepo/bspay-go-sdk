@@ -1,5 +1,5 @@
 /**
- * 交易分账明细查询接口 - 示例
+ * 交易分账明细查询 - 示例
  *
  * @Author sdk-generator
  * @Description 汇付天下
@@ -20,9 +20,9 @@ func V2TradeTransSplitQueryRequestDemo() {
     // 2.组装请求参数
     dgReq := BsPaySdk.V2TradeTransSplitQueryRequest{
         // 分账交易汇付全局流水号
-        HfSeqId:"202109237745559",
+        HfSeqId:"003500TOP2B230718174911P075ac139ccf00000",
         // 商户号
-        HuifuId:"6666000109812123",
+        HuifuId:"6666000109133323",
         // 交易类型
         OrdType:"consume",
     }

@@ -24,11 +24,11 @@ func V2TradeOnlinepaymentQuickpayConfirmRequestDemo() {
         // 请求流水号
         ReqSeqId:tool.GetReqSeqId(),
         // 商户号
-        HuifuId:"6666000103423237",
+        HuifuId:"6666000109133323",
         // 短信验证码
-        SmsCode:"111111",
+        SmsCode:"222222",
         // 商品描述
-        GoodsDesc:"描述6",
+        GoodsDesc:"描述",
         // 外部地址
         NotifyUrl:"http://www.baidu.com",
     }

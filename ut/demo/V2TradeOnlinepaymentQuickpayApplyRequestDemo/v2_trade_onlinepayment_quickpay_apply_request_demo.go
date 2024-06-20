@@ -24,13 +24,13 @@ func V2TradeOnlinepaymentQuickpayApplyRequestDemo() {
         // 请求流水号
         ReqSeqId:tool.GetReqSeqId(),
         // 商户号
-        HuifuId:"6666000119640000",
+        HuifuId:"6666000109133323",
         // 用户客户号
-        UserHuifuId:"6666000121370000",
+        UserHuifuId:"6666000149909053",
         // 绑卡id
-        CardBindId:"10032850000",
+        CardBindId:"10049847200",
         // 订单金额
-        TransAmt:"1980.00",
+        TransAmt:"10.00",
         // 银行扩展字段
         ExtendPayData:getExtendPayData(),
         // 安全信息

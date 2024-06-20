@@ -24,9 +24,9 @@ func V2TradePaymentScanpayCloseRequestDemo() {
         // 请求流水号
         ReqSeqId:tool.GetReqSeqId(),
         // 商户号
-        HuifuId:"6666000018328947",
+        HuifuId:"6666000109133323",
         // 原交易请求日期
-        OrgReqDate:"20210918",
+        OrgReqDate:"20240405",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()

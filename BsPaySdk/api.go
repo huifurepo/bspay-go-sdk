@@ -15,6 +15,66 @@ const BASE_API_TEST_URL_V2 = "https://spin-test.cloudpnr.com"
 // 以下为接口uri
 
 /**
+ * 上传短信验证码
+ */
+const V2_INVOICE_MER_VERIFYCODE_UPLOAD = "/v2/invoice/mer/verifycode/upload"
+
+/**
+ * 获取人脸认证二维码
+ */
+const V2_INVOICE_MER_AUTHQRCODE_GRANT = "/v2/invoice/mer/authqrcode/grant"
+
+/**
+ * 查询人脸认证结果
+ */
+const V2_INVOICE_MER_AUTHQRCODE_QUERY = "/v2/invoice/mer/authqrcode/query"
+
+/**
+ * 用户列表查询
+ */
+const V2_USER_LIST_QUERY = "/v2/user/list/query"
+
+/**
+ * 电子发票业务开通查询
+ */
+const V2_INVOICE_PERMISSION_QUERY = "/v2/invoice/permission/query"
+
+/**
+ * 电子发票业务开通
+ */
+const V2_INVOICE_PERMISSION_GRANT = "/v2/invoice/permission/grant"
+
+/**
+ * 商户注册状态查询
+ */
+const V2_INVOICE_MER_STATUS_QUERY = "/v2/invoice/mer/status/query"
+
+/**
+ * 商户注册信息修改
+ */
+const V2_INVOICE_MER_MODIFY = "/v2/invoice/mer/modify"
+
+/**
+ * 商户注册信息查询
+ */
+const V2_INVOICE_MER_QUERY = "/v2/invoice/mer/query"
+
+/**
+ * 商户注册
+ */
+const V2_INVOICE_MER_REG = "/v2/invoice/mer/reg"
+
+/**
+ * 开票员登录
+ */
+const V2_INVOICE_CLERK_LOGON = "/v2/invoice/clerk/logon"
+
+/**
+ * 开票员登记
+ */
+const V2_INVOICE_CLERK_REG = "/v2/invoice/clerk/reg"
+
+/**
  * 完税凭证下载
  */
 const V2_HYC_TAX_DOWNLOAD = "/v2/hyc/tax/download"
@@ -95,12 +155,12 @@ const V2_INVOICE_QUERYAPPLY = "/v2/invoice/queryapply"
 const V2_INVOICE_OPEN = "/v2/invoice/open"
 
 /**
- * 全域资金管理配置查询
+ * 全渠道资金管理配置查询
  */
 const V2_MERCHANT_BUSI_EFPDETAIL = "/v2/merchant/busi/efpdetail"
 
 /**
- * 全域资金管理配置
+ * 全渠道资金管理配置
  */
 const V2_MERCHANT_BUSI_EFPCONFIG = "/v2/merchant/busi/efpconfig"
 
@@ -400,7 +460,7 @@ const V2_MERCHANT_SETTLE_MODIFY = "/v2/merchant/settle/modify"
 const V2_TRADE_TRANSSTAT_QUERY = "/v2/trade/transstat/query"
 
 /**
- * 网银支付接口
+ * 网银支付
  */
 const V2_TRADE_ONLINEPAYMENT_BANKING_FRONTPAY = "/v2/trade/onlinepayment/banking/frontpay"
 
@@ -805,7 +865,7 @@ const V2_MERCHANT_BUSI_AT_MODIFY = "/v2/merchant/busi/at/modify"
 const V2_MERCHANT_BUSI_MODIFY_BUSISTATUS = "/v2/merchant/busi/modify/busistatus"
 
 /**
- * 取现接口
+ * 取现
  */
 const V2_TRADE_SETTLEMENT_ENCHASHMENT = "/v2/trade/settlement/enchashment"
 
@@ -980,7 +1040,7 @@ const V2_MERCHANT_SPLIT_QUERY = "/v2/merchant/split/query"
 const V2_MERCHANT_SPLIT_CONFIG = "/v2/merchant/split/config"
 
 /**
- * 交易分账明细查询接口
+ * 交易分账明细查询
  */
 const V2_TRADE_TRANS_SPLIT_QUERY = "/v2/trade/trans/split/query"
 

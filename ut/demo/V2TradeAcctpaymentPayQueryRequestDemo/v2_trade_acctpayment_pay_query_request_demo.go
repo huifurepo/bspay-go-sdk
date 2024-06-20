@@ -20,9 +20,9 @@ func V2TradeAcctpaymentPayQueryRequestDemo() {
     // 2.组装请求参数
     dgReq := BsPaySdk.V2TradeAcctpaymentPayQueryRequest{
         // 商户号
-        HuifuId:"6666000018344461",
+        HuifuId:"6666000109133323",
         // 原交易请求日期
-        OrgReqDate:"20211021",
+        OrgReqDate:"20240515",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -47,7 +47,7 @@ func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
     // 原交易请求流水号
-    extendInfoMap["org_req_seq_id"] = "202110210012100005"
+    extendInfoMap["org_req_seq_id"] = "20240515132857954fk8wpk2hvwnnfw"
     // 原交易全局流水号
     extendInfoMap["org_hf_seq_id"] = ""
     return extendInfoMap

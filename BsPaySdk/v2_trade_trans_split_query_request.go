@@ -1,5 +1,5 @@
 /**
- * 交易分账明细查询接口
+ * 交易分账明细查询
  *
  * @Author sdk-generator
  * @Description 汇付天下

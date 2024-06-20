@@ -24,9 +24,9 @@ func V2TradeCheckFilequeryRequestDemo() {
         // 请求流水号
         ReqSeqId:tool.GetReqSeqId(),
         // 汇付客户Id
-        HuifuId:"6666000108854952",
+        HuifuId:"6666000109133323",
         // 文件生成日期
-        FileDate:"20220822",
+        FileDate:"20240428",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()

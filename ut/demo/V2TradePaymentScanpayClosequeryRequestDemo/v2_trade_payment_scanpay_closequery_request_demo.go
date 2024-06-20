@@ -24,9 +24,9 @@ func V2TradePaymentScanpayClosequeryRequestDemo() {
         // 请求流水号
         ReqSeqId:tool.GetReqSeqId(),
         // 商户号
-        HuifuId:"6666000018328947",
+        HuifuId:"6666000109133323",
         // 原交易请求日期
-        OrgReqDate:"20210918",
+        OrgReqDate:"20240328",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -51,7 +51,7 @@ func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
     // 原交易请求流水号
-    extendInfoMap["org_req_seq_id"] = "202109187312431237001"
+    extendInfoMap["org_req_seq_id"] = "20240129555522220211711612931"
     // 原交易返回的全局流水号
     // extendInfoMap["org_hf_seq_id"] = ""
     return extendInfoMap

@@ -20,13 +20,13 @@ func V2TradeTransstatQueryRequestDemo() {
     // 2.组装请求参数
     dgReq := BsPaySdk.V2TradeTransstatQueryRequest{
         // 商户号
-        // HuifuId:"test",
+        HuifuId:"6666000109133323",
         // 页码
         PageNo:"1",
         // 页大小
         PageSize:"4",
         // 请求日期
-        // ReqDate:tool.GetCurrentDate(),
+        ReqDate:tool.GetCurrentDate(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -51,7 +51,7 @@ func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
     // 请求订单
-    extendInfoMap["reqseqid_list"] = "[\"20221108104332293079\",\"20221108104817E93140\",\"20221108104800E93135\",\"20221108112153E93750\",\"20221108133737E96102\"]"
+    extendInfoMap["reqseqid_list"] = "[\"295700155481522176\",\"20221108104817E93140\",\"20221108104800E93135\",\"20221108112153E93750\",\"20221108133737E96102\"]"
     return extendInfoMap
 }
 

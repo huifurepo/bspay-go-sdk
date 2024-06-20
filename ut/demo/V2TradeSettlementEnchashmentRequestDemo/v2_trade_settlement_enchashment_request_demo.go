@@ -1,5 +1,5 @@
 /**
- * 取现接口 - 示例
+ * 取现 - 示例
  *
  * @Author sdk-generator
  * @Description 汇付天下

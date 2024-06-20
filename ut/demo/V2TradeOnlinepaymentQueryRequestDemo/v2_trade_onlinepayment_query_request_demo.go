@@ -20,13 +20,13 @@ func V2TradeOnlinepaymentQueryRequestDemo() {
     // 2.组装请求参数
     dgReq := BsPaySdk.V2TradeOnlinepaymentQueryRequest{
         // 商户号
-        HuifuId:"6666000108854952",
+        HuifuId:"6666000109133323",
         // 原交易请求日期
-        OrgReqDate:"20220818",
+        OrgReqDate:"20240401",
         // 原交易返回的全局流水号原交易请求流水号、原交易返回的全局流水号至少要送其中一项；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：00290TOP1GR210919004230P853ac13262200000&lt;/font&gt;
-        OrgHfSeqId:"remark123",
+        OrgHfSeqId:"00600000000240401100725P864ac13645d00000",
         // 原交易请求流水号原交易请求流水号、原交易返回的全局流水号至少要送其中一项；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：2021091708126665001&lt;/font&gt;
-        OrgReqSeqId:"2791018993535389",
+        OrgReqSeqId:"295700155481522176",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()

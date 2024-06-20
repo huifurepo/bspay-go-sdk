@@ -24,7 +24,7 @@ func V2QuickbuckleUnbindRequestDemo() {
         // 请求流水号
         ReqSeqId:tool.GetReqSeqId(),
         // 汇付商户Id
-        HuifuId:"6666000003078984",
+        HuifuId:"6666000109133323",
         // 用户ID
         OutCustId:"6666000103633606",
         // 卡令牌

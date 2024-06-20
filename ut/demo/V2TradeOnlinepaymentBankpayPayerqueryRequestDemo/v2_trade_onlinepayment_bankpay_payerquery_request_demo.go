@@ -24,11 +24,11 @@ func V2TradeOnlinepaymentBankpayPayerqueryRequestDemo() {
         // 请求流水号
         ReqSeqId:tool.GetReqSeqId(),
         // 商户号
-        HuifuId:"6666000003100615",
+        HuifuId:"6666000109133323",
         // 原交易请求日期
-        OrgReqDate:"20221104",
+        OrgReqDate:"20240401",
         // 原交易请求流水号
-        OrgReqSeqId:"6246684562803777",
+        OrgReqSeqId:"295700155481522176",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()

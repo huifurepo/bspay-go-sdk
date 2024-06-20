@@ -20,7 +20,7 @@ func V2TradeHostingPaymentPreorderAliRequestDemo() {
     // 2.组装请求参数
     dgReq := BsPaySdk.V2TradeHostingPaymentPreorderAliRequest{
         // 商户号
-        HuifuId:"6666000111546360",
+        HuifuId:"6666000109133323",
         // 请求日期
         ReqDate:tool.GetCurrentDate(),
         // 请求流水号
@@ -76,7 +76,7 @@ func getAcctInfosRucan() interface{} {
     // 分账金额
     dto["div_amt"] = "0.08"
     // 分账接收方ID
-    dto["huifu_id"] = "6666000111546360"
+    dto["huifu_id"] = "6666000109133323"
 
     dtoList := [1]interface{}{dto}
     return dtoList

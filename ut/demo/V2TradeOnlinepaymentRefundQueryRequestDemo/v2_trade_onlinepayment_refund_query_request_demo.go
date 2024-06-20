@@ -20,9 +20,9 @@ func V2TradeOnlinepaymentRefundQueryRequestDemo() {
     // 2.组装请求参数
     dgReq := BsPaySdk.V2TradeOnlinepaymentRefundQueryRequest{
         // 商户号
-        HuifuId:"6666000108854952",
+        HuifuId:"6666000109133323",
         // 原退款请求日期
-        OrgReqDate:"20220818",
+        OrgReqDate:"20240419",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -47,9 +47,9 @@ func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
     // 原退款全局流水号
-    extendInfoMap["org_hf_seq_id"] = "0047default220818142809P500c0a8212f00000"
+    extendInfoMap["org_hf_seq_id"] = "00470topo1A240419133804P954ac139c0400000"
     // 原退款请求流水号
-    extendInfoMap["org_req_seq_id"] = "1660804089"
+    extendInfoMap["org_req_seq_id"] = "SSPC1713505084888"
     return extendInfoMap
 }
 

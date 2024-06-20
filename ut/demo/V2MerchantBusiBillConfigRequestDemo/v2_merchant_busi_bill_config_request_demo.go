@@ -24,7 +24,7 @@ func V2MerchantBusiBillConfigRequestDemo() {
         // 请求流水号
         ReqSeqId:tool.GetReqSeqId(),
         // 汇付机构编号
-        HuifuId:"6666000121363028",
+        HuifuId:"6666000109133323",
         // 对账文件生成开关
         ReconSendFlag:"Y",
         // 对账单类型
