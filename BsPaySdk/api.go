@@ -15,6 +15,151 @@ const BASE_API_TEST_URL_V2 = "https://spin-test.cloudpnr.com"
 // 以下为接口uri
 
 /**
+ * 云MIS订单详情查询接口
+ */
+const V2_TRADE_CLOUDMIS_ORDER_DETAIL = "/v2/trade/cloudmis/order/detail"
+
+/**
+ * 终端云MIS接入
+ */
+const V2_TRADE_CLOUDMIS_DEVICE_INFORMATION_MIS = "/v2/trade/cloudmis/device/information/mis"
+
+/**
+ * 新建付款人
+ */
+const V2_BILL_ENT_PAYER_CREATE = "/v2/bill/ent/payer/create"
+
+/**
+ * 修改付款人信息
+ */
+const V2_BILL_ENT_PAYER_UPDATE = "/v2/bill/ent/payer/update"
+
+/**
+ * 删除付款人
+ */
+const V2_BILL_ENT_PAYER_DELETE = "/v2/bill/ent/payer/delete"
+
+/**
+ * 企业账单状态变更
+ */
+const V2_BILL_ENT_CHANGESTAT = "/v2/bill/ent/changeStat"
+
+/**
+ * 企业账单退款查询
+ */
+const V2_BILL_ENT_REFUND_QUERY = "/v2/bill/ent/refund/query"
+
+/**
+ * 企业账单退款
+ */
+const V2_BILL_ENT_REFUND = "/v2/bill/ent/refund"
+
+/**
+ * 企业账单查询
+ */
+const V2_BILL_ENT_QUERY = "/v2/bill/ent/query"
+
+/**
+ * 付款人查询
+ */
+const V2_BILL_ENT_PAYER_QUERY = "/v2/bill/ent/payer/query"
+
+/**
+ * 创建企业账单
+ */
+const V2_BILL_ENT_CREATE = "/v2/bill/ent/create"
+
+/**
+ * 申诉单详情查询
+ */
+const V2_MERCHANT_APPEAL_DETAIL_QUERY = "/v2/merchant/appeal/detail/query"
+
+/**
+ * 提交申诉
+ */
+const V2_MERCHANT_APPEAL_COMMON_SUBMIT = "/v2/merchant/appeal/common/submit"
+
+/**
+ * 申诉文件url查询
+ */
+const V2_MERCHANT_APPEAL_FILEURL_QUERY = "/v2/merchant/appeal/fileurl/query"
+
+/**
+ * 申诉单列表查询
+ */
+const V2_MERCHANT_APPEAL_LIST_QUERY = "/v2/merchant/appeal/list/query"
+
+/**
+ * 申诉客户信息查询
+ */
+const V2_MERCHANT_APPEAL_CUSTINFO_QUERY = "/v2/merchant/appeal/custinfo/query"
+
+/**
+ * 关联线索查询
+ */
+const V2_MERCHANT_APPEAL_RELATEDCLUE_QUERY = "/v2/merchant/appeal/relatedclue/query"
+
+/**
+ * 操作日志查询
+ */
+const V2_MERCHANT_APPEAL_LOG_QUERY = "/v2/merchant/appeal/log/query"
+
+/**
+ * 快捷绑卡申请接口
+ */
+const V3_QUICKBUCKLE_APPLY = "/v3/quickbuckle/apply"
+
+/**
+ * 快捷绑卡确认接口
+ */
+const V3_QUICKBUCKLE_CONFIRM = "/v3/quickbuckle/confirm"
+
+/**
+ * 新增归集配置
+ */
+const V2_TRADE_SETTLE_COLLECTION_RULE_ADD = "/v2/trade/settle/collection/rule/add"
+
+/**
+ * 修改归集配置
+ */
+const V2_TRADE_SETTLE_COLLECTION_RULE_MODIFY = "/v2/trade/settle/collection/rule/modify"
+
+/**
+ * 归集配置查询
+ */
+const V2_TRADE_SETTLE_COLLECTION_RULE_QUERY = "/v2/trade/settle/collection/rule/query"
+
+/**
+ * 资金归集明细查询
+ */
+const V2_TRADE_SETTLE_COLLECTION_DETAIL_QUERY = "/v2/trade/settle/collection/detail/query"
+
+/**
+ * 灵工微信代发查询
+ */
+const V2_TRADE_LGWX_SURROGATE_QUERY = "/v2/trade/lgwx/surrogate/query"
+
+/**
+ * 灵工微信代发
+ */
+const V2_TRADE_LGWX_SURROGATE = "/v2/trade/lgwx/surrogate"
+
+/**
+ * 银行大额支付解绑
+ */
+const V2_LARGEAMT_BINDCARD_UNBIND = "/v2/largeamt/bindcard/unbind"
+
+/**
+ * 银行大额支付绑卡查询
+ */
+const V2_LARGEAMT_BINDCARD_QUERY = "/v2/largeamt/bindcard/query"
+
+/**
+ * 银行大额支付绑卡
+ */
+const V2_LARGEAMT_BINDCARD_BIND = "/v2/largeamt/bindcard/bind"
+
+/**
  * 上传短信验证码
  */
 const V2_INVOICE_MER_VERIFYCODE_UPLOAD = "/v2/invoice/mer/verifycode/upload"

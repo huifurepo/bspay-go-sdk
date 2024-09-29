@@ -52,6 +52,8 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["bank_fq_list"] = getBankFqList()
     // 花呗分期费率
     extendInfoMap["hb_fq_fee_list"] = getHbFqFeeList()
+    // 白条分期配置对象
+    // extendInfoMap["jdbt_data"] = getJdbtData()
     return extendInfoMap
 }
 
@@ -135,6 +137,47 @@ func getHbFqFeeList() string {
 
     dtoList := [1]interface{}{dto}
     dtoByte, _ := json.Marshal(dtoList)
+    return string(dtoByte)
+}
+
+func getJdbtFeeData() string {
+    dto := make(map[string]interface{})
+    // 支付场景
+    // dto["pay_scene"] = "test"
+    // 业务开通标识
+    // dto["open_flag"] = "test"
+    // 手续费率(%)
+    // dto["fee_rate"] = ""
+    // 手续费扣取方式
+    // dto["fee_rec_type"] = ""
+    // 交易手续费扣款标记
+    // dto["fee_flag"] = ""
+    // 手续费外扣的汇付商户号
+    // dto["out_fee_huifu_id"] = ""
+    // 手续费外扣的汇付账户号
+    // dto["out_fee_acct_id"] = ""
+
+    dtoList := [1]interface{}{dto}
+    dtoByte, _ := json.Marshal(dtoList)
+    return string(dtoByte)
+}
+
+func getJdbtData() string {
+    dto := make(map[string]interface{})
+    // 商户汇付Id
+    // dto["huifu_id"] = "test"
+    // 签约人类型
+    // dto["sign_user_type"] = "test"
+    // 签约人姓名
+    // dto["name"] = "test"
+    // 签约人手机号
+    // dto["mobile_no"] = "test"
+    // 签约人身份证号
+    // dto["cert_no"] = "test"
+    // 京东白条费率数据
+    // dto["jdbt_fee_data"] = getJdbtFeeData()
+
+    dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 

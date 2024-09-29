@@ -37,9 +37,9 @@ func V2MerchantBusiEfpconfigRequestDemo() {
         OutOrderAcctCard:"{\"area_id\":\"310100\",\"card_name\":\"圆务铁白事\",\"card_no\":\"4340622119959288\",\"card_type\":\"0\",\"prov_id\":\"310000\",\"bank_code\":\"01050000\",\"branch_code\":\"105290071113\",\"branch_name\":\"中国建设银行股份有限公司上海市中支行\",\"cert_begin_date\":\"20240314\",\"cert_end_date\":\"\",\"cert_no\":\"340000199810170714\",\"cert_type\":\"00\",\"cert_validity_type\":\"1\",\"mp\":\"13777842539\",\"open_licence_no\":\"123456789\"}",
         // 全域资金开户手续费首次开通时必填 jsonObject格式
         OutOrderAcctOpenFees:"{\"fee_fix_amt\":\"0\",\"out_fee_acct_type\":\"\",\"out_fee_huifuid\":\"\"}",
-        // 全渠道资金管理补充材料id首次开通时必填；涉及文件类型：[F504-全渠道资金管理补充材料](https://paas.huifu.com/partners/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+        // 全渠道资金管理补充材料id涉及文件类型：[F504-全渠道资金管理补充材料](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
         OtherPaymentInstitutionsPic:"8c4f6254-6c36-3b3c-ae8b-efcf24ca215e",
-        // 新网银行数字证书及电子签名授权委托书out_funds_gate_id为xw0时必填；涉及文件类型：[F534-银行数字证书及电子签名授权委托书](https://paas.huifu.com/partners/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+        // 新网银行数字证书及电子签名授权委托书out_funds_gate_id为xw0时必填；涉及文件类型：[F534-银行数字证书及电子签名授权委托书](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
         // XwDigitalCertificatePic:"test",
         // 银行类型
         OutFundsGateId:"xw0",
@@ -88,6 +88,26 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["pay_every_deal"] = ""
     // 申请单日限额
     extendInfoMap["pay_every_day"] = ""
+    // 抖音合作证明材料
+    // extendInfoMap["dy_cooperation_prove_pic"] = ""
+    // 美团合作证明材料
+    // extendInfoMap["mt_cooperation_prove_pic"] = ""
+    // 快手合作证明材料
+    // extendInfoMap["ks_cooperation_prove_pic"] = ""
+    // 拼多多合作证明材料
+    // extendInfoMap["pdd_cooperation_prove_pic"] = ""
+    // 小红书合作证明材料
+    // extendInfoMap["xhs_cooperation_prove_pic"] = ""
+    // 支付宝相关平台合作证明材料
+    // extendInfoMap["zfb_cooperation_prove_pic"] = ""
+    // 微信相关平台合作证明材料
+    // extendInfoMap["wx_cooperation_prove_pic"] = ""
+    // 京东合作证明材料
+    // extendInfoMap["jd_cooperation_prove_pic"] = ""
+    // 饿了么合作证明材料
+    // extendInfoMap["elm_cooperation_prove_pic"] = ""
+    // 全域资金分账规则
+    // extendInfoMap["efp_spb_config"] = ""
     return extendInfoMap
 }
 

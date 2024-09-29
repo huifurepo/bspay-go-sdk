@@ -31,7 +31,7 @@ func V2TradeAcctpaymentPayRequestDemo() {
         AcctSplitBunch:getAcctSplitBunch(),
         // 安全信息
         RiskCheckData:getRiskCheckData(),
-        // 资金类型资金类型。支付渠道为中信E管家时，资金类型必填（[详见说明](https://paas.huifu.com/partners/api/#/yuer/api_zxegjzllx)）
+        // 资金类型资金类型。支付渠道为中信E管家时，资金类型必填（[详见说明](https://paas.huifu.com/open/doc/api/#/yuer/api_zxegjzllx)）
         // FundType:"test",
         // 手续费承担方标识余额支付手续费承担方标识；商户余额支付扣收规则为接口指定承担方时必填！枚举值：&lt;br/&gt;OUT：出款方；&lt;br/&gt;IN：分账接受方。&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：IN&lt;/font&gt;
         // TransFeeTakeFlag:"test",
@@ -72,10 +72,14 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["acct_channel"] = ""
     // 灵活用工标志
     // extendInfoMap["hyc_flag"] = ""
+    // 灵活用工平台
+    // extendInfoMap["lg_platform_type"] = ""
     // 代发模式
     // extendInfoMap["salary_modle_type"] = ""
     // 落地公司商户号
     // extendInfoMap["bmember_id"] = ""
+    // 乐接活请求参数集合
+    // extendInfoMap["ljh_data"] = getLjhData()
     // 异步通知地址
     // extendInfoMap["notify_url"] = ""
     return extendInfoMap
@@ -83,12 +87,14 @@ func getExtendInfos() map[string]interface{} {
 
 func getAcctInfos() interface{} {
     dto := make(map[string]interface{})
-    // 分账金额
-    dto["div_amt"] = "0.01"
     // 分账接收方ID
     dto["huifu_id"] = "6666000109133323"
+    // 分账金额
+    dto["div_amt"] = "0.01"
     // 账户号
     // dto["acct_id"] = ""
+    // 分账百分比%
+    // dto["percentage_div"] = ""
 
     dtoList := [1]interface{}{dto}
     return dtoList
@@ -98,6 +104,10 @@ func getAcctSplitBunch() string {
     dto := make(map[string]interface{})
     // 分账明细
     dto["acct_infos"] = getAcctInfos()
+    // 百分比分账标志
+    // dto["percentage_flag"] = ""
+    // 是否净值分账
+    // dto["is_clean_split"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
@@ -117,6 +127,17 @@ func getRiskCheckData() string {
     // dto["base_station"] = ""
     // IP地址
     // dto["ip_addr"] = ""
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getLjhData() string {
+    dto := make(map[string]interface{})
+    // 税源地ID
+    // dto["tax_area_id"] = ""
+    // 任务模板ID
+    // dto["template_id"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

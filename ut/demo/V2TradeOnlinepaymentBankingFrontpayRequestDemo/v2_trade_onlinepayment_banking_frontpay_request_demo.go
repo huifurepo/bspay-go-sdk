@@ -93,6 +93,8 @@ func getAcctInfos() interface{} {
     // dto["huifu_id"] = ""
     // 接收方账户号
     // dto["acct_id"] = ""
+    // 分账百分比%
+    // dto["percentage_div"] = ""
 
     dtoList := [1]interface{}{dto}
     return dtoList
@@ -102,6 +104,10 @@ func getAcctSplitBunchRucan() string {
     dto := make(map[string]interface{})
     // 分账明细
     // dto["acct_infos"] = getAcctInfos()
+    // 百分比分账标志
+    // dto["percentage_flag"] = ""
+    // 是否净值分账
+    // dto["is_clean_split"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

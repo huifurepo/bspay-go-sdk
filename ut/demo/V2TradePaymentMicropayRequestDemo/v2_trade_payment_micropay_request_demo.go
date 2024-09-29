@@ -93,12 +93,14 @@ func getExtendInfos() map[string]interface{} {
 
 func getAcctInfosRucan() interface{} {
     dto := make(map[string]interface{})
-    // 分账金额
-    // dto["div_amt"] = "test"
     // 分账接收方ID
     // dto["huifu_id"] = "test"
+    // 分账金额
+    // dto["div_amt"] = ""
     // 账户号
     // dto["acct_id"] = ""
+    // 分账百分比%
+    // dto["percentage_div"] = ""
 
     dtoList := [1]interface{}{dto}
     return dtoList
@@ -108,6 +110,10 @@ func getAcctSplitBunch() string {
     dto := make(map[string]interface{})
     // 分账明细
     // dto["acct_infos"] = getAcctInfosRucan()
+    // 百分比分账标志
+    // dto["percentage_flag"] = ""
+    // 是否净值分账
+    // dto["is_clean_split"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
@@ -279,8 +285,8 @@ func getUnionpayData() string {
     // dto["invoice_st"] = ""
     // 商户类别
     // dto["mer_cat_code"] = ""
-    // 银联参数集合
-    // dto["pnrins_id_cd"] = ""
+    // 服务商机构标识码
+    // dto["pnr_ins_id_cd"] = ""
     // 特殊计费信息
     // dto["specfeeinfo"] = ""
     // 终端号

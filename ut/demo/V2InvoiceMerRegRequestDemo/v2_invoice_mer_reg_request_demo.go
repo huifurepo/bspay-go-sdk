@@ -43,6 +43,8 @@ func V2InvoiceMerRegRequestDemo() {
         OpenMode:"2",
         // 所属省
         ProvId:"310000",
+        // 所属市
+        CityId:"310100",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -70,8 +72,6 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["contact"] = "王姗"
     // 联系人身份证号
     extendInfoMap["id_card_no"] = "210123198702122747"
-    // 所属市
-    extendInfoMap["city_id"] = "310100"
     // 业务到期年限
     extendInfoMap["valid_period"] = "1"
     // 自动续约

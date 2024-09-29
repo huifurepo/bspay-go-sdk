@@ -24,9 +24,9 @@ func V2QuickbuckleQueryRequestDemo() {
         // 请求流水号
         ReqSeqId:tool.GetReqSeqId(),
         // 汇付商户Id
-        HuifuId:"6666000106023398",
+        HuifuId:"6666000109133323",
         // 用户id
-        OutCustId:"6666000103633618",
+        OutCustId:"6666000103637719",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()

@@ -24,7 +24,7 @@ func V2TradeOnlinepaymentQuickpayFrontpayRequestDemo() {
         // 请求日期
         ReqDate:tool.GetCurrentDate(),
         // 商户号
-        HuifuId:"6666000109812884",
+        HuifuId:"6666000109133323",
         // 订单金额
         TransAmt:"0.01",
         // 银行扩展信息
@@ -84,11 +84,13 @@ func getExtendInfos() map[string]interface{} {
 func getAcctInfos() interface{} {
     dto := make(map[string]interface{})
     // 分账接收方ID
-    dto["huifu_id"] = "6666000109812884"
+    dto["huifu_id"] = "6666000109133323"
     // 分账金额
     dto["div_amt"] = "0.01"
     // 账户号
     // dto["acct_id"] = ""
+    // 分账百分比%
+    // dto["percentage_div"] = ""
 
     dtoList := [1]interface{}{dto}
     return dtoList
@@ -98,6 +100,10 @@ func getAcctSplitBunchRucan() string {
     dto := make(map[string]interface{})
     // 分账明细
     dto["acct_infos"] = getAcctInfos()
+    // 百分比分账标志
+    // dto["percentage_flag"] = ""
+    // 是否净值分账
+    // dto["is_clean_split"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

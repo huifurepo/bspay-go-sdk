@@ -50,8 +50,6 @@ func V2TradeOnlinepaymentQueryRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
-    // 原交易支付类型
-    extendInfoMap["pay_type"] = "QUICK_PAY"
     return extendInfoMap
 }
 

@@ -18,8 +18,8 @@ type V2InvoiceOpenRequest struct {
     OrderAmt string `json:"order_amt" structs:"order_amt"` // 含税合计金额(元)
     RedApplyReason string `json:"red_apply_reason" structs:"red_apply_reason"` // 冲红原因open_type&#x3D;1时必填01：开票有误02：销货退回03：服务终止04：销售转让
     RedApplySource string `json:"red_apply_source" structs:"red_apply_source"` // 冲红申请来源open_type&#x3D;1时必填01：销方02：购方
-    OriIvcCode string `json:"ori_ivc_code" structs:"ori_ivc_code"` // 原发票代码openType&#x3D;1时必填；参见[发票右上角](https://paas.huifu.com/partners/api/#/fp/api_fp_yanglitu.md)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：144032209110&lt;/font&gt;
-    OriIvcNumber string `json:"ori_ivc_number" structs:"ori_ivc_number"` // 原发票号码openType&#x3D;1时必填；参见[发票右上角](https://paas.huifu.com/partners/api/#/fp/api_fp_yanglitu.md)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20685767&lt;/font&gt;
+    OriIvcCode string `json:"ori_ivc_code" structs:"ori_ivc_code"` // 原发票代码openType&#x3D;1时必填；参见[发票右上角](https://paas.huifu.com/open/doc/api/#/fp/api_fp_yanglitu.md)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：144032209110&lt;/font&gt;
+    OriIvcNumber string `json:"ori_ivc_number" structs:"ori_ivc_number"` // 原发票号码openType&#x3D;1时必填；参见[发票右上角](https://paas.huifu.com/open/doc/api/#/fp/api_fp_yanglitu.md)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20685767&lt;/font&gt;
     GoodsInfos string `json:"goods_infos" structs:"goods_infos"` // 开票商品信息
     PayerInfo string `json:"payer_info" structs:"payer_info"` // 开票人信息
 

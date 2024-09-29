@@ -62,10 +62,6 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["org_req_seq_id"] = "295700155481522176"
     // 分账对象
     // extendInfoMap["acct_split_bunch"] = getAcctSplitBunchRucan()
-    // 补贴支付信息
-    // extendInfoMap["combinedpay_data"] = getCombinedpayData()
-    // 大额转账支付账户信息数据
-    // extendInfoMap["bank_info_data"] = getBankInfoData()
     // 备注
     // extendInfoMap["remark"] = ""
     // 异步通知地址
@@ -76,9 +72,11 @@ func getExtendInfos() map[string]interface{} {
 func getAcctInfosRucan() interface{} {
     dto := make(map[string]interface{})
     // 商户号
-    // dto["huifu_id"] = ""
+    // dto["huifu_id"] = "test"
     // 支付金额
     // dto["div_amt"] = ""
+    // 账户号
+    // dto["acct_id"] = ""
 
     dtoList := [1]interface{}{dto}
     return dtoList
@@ -88,39 +86,6 @@ func getAcctSplitBunchRucan() string {
     dto := make(map[string]interface{})
     // 分账信息列表
     // dto["acct_infos"] = getAcctInfosRucan()
-
-    dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
-}
-
-func getCombinedpayData() string {
-    dto := make(map[string]interface{})
-    // 补贴方汇付编号
-    // dto["huifu_id"] = "test"
-    // 补贴方类型
-    // dto["user_type"] = "test"
-    // 补贴方账户号
-    // dto["acct_id"] = "test"
-    // 补贴金额
-    // dto["amount"] = "test"
-
-    dtoList := [1]interface{}{dto}
-    dtoByte, _ := json.Marshal(dtoList)
-    return string(dtoByte)
-}
-
-func getBankInfoData() string {
-    dto := make(map[string]interface{})
-    // 付款方账户类型
-    // dto["card_acct_type"] = "test"
-    // 省份
-    // dto["province"] = ""
-    // 地区
-    // dto["area"] = ""
-    // 银行编号
-    // dto["bank_code"] = ""
-    // 联行号
-    // dto["correspondent_code"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
@@ -151,14 +116,14 @@ func getTerminalDeviceData() string {
 
 func getRiskCheckData() string {
     dto := make(map[string]interface{})
+    // 经度
+    // dto["longitude"] = "test"
+    // 纬度
+    // dto["latitude"] = "test"
+    // 基站地址
+    // dto["base_station"] = "test"
     // ip地址
     dto["ip_addr"] = "172.1.1.1"
-    // 基站地址
-    // dto["base_station"] = ""
-    // 纬度
-    // dto["latitude"] = ""
-    // 经度
-    // dto["longitude"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

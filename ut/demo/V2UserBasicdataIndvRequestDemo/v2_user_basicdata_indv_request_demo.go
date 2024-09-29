@@ -35,6 +35,8 @@ func V2UserBasicdataIndvRequestDemo() {
         CertBeginDate:"20200117",
         // 手机号
         MobileNo:"13764462205",
+        // 地址开通中信E管家必填
+        // Address:"test",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -70,8 +72,6 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["expand_id"] = ""
     // 文件列表
     extendInfoMap["file_list"] = getFileList()
-    // 地址
-    // extendInfoMap["**address**"] = ""
     return extendInfoMap
 }
 

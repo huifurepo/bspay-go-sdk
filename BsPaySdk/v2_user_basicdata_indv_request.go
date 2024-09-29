@@ -17,6 +17,7 @@ type V2UserBasicdataIndvRequest struct {
     CertValidityType string `json:"cert_validity_type" structs:"cert_validity_type"` // 个人证件有效期类型
     CertBeginDate string `json:"cert_begin_date" structs:"cert_begin_date"` // 个人证件有效期开始日期
     MobileNo string `json:"mobile_no" structs:"mobile_no"` // 手机号
+    Address string `json:"address" structs:"address"` // 地址开通中信E管家必填
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

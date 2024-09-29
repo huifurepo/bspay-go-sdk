@@ -96,6 +96,10 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["use_upper_mer_auth_flag"] = ""
     // 允许使用上级商户号发起AT交易
     // extendInfoMap["use_upper_mer_at_trans_flag"] = ""
+    // 大额支付配置
+    // extendInfoMap["large_amt_pay_config_list"] = getLargeAmtPayConfigList()
+    // 全域资金管理配置(苏商)
+    // extendInfoMap["out_order_funds_su_shang_config"] = getOutOrderFundsSuShangConfig()
     return extendInfoMap
 }
 
@@ -347,6 +351,42 @@ func getSubmerOutFeeConfig() string {
     // dto["trans_fee_out_flag"] = "test"
     // 支持取现手续费外扣
     // dto["cash_out_fee_flag"] = "test"
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getLargeAmtPayConfigList() string {
+    dto := make(map[string]interface{})
+    // 手续费（%）
+    // dto["fee_rate"] = "test"
+    // 固定手续费(元)
+    // dto["fee_fix_amt"] = "test"
+    // 允许开通大额转账业务
+    // dto["open_flag"] = "test"
+    // 大额支付业务模式
+    // dto["business_model"] = "test"
+    // 允许用户入账
+    // dto["allow_user_deposit_flag"] = ""
+    // 银行卡绑定支付权限
+    // dto["mer_same_card_recharge_flag"] = ""
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getOutOrderFundsSuShangConfig() string {
+    dto := make(map[string]interface{})
+    // 手续费（%）
+    // dto["fee_rate"] = "test"
+    // 保底手续费(元)
+    // dto["fee_min_amt"] = "test"
+    // 对公固定手续费(元)
+    // dto["public_fee_fix_amt"] = "test"
+    // 对私固定手续费(元)
+    // dto["private_fee_fix_amt"] = "test"
+    // 允许开通全域资金业务(苏商)
+    // dto["open_flag"] = "test"
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

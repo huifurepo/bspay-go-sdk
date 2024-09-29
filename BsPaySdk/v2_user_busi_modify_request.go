@@ -13,6 +13,7 @@ type V2UserBusiModifyRequest struct {
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
     UpperHuifuId string `json:"upper_huifu_id" structs:"upper_huifu_id"` // 渠道商/商户汇付Id
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 汇付ID
+    LjhData string `json:"ljh_data" structs:"ljh_data"` // 乐接活配置当合作平台为乐接活，必填
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

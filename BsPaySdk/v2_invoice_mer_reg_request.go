@@ -21,6 +21,7 @@ type V2InvoiceMerRegRequest struct {
     ContactPhoneNo string `json:"contact_phone_no" structs:"contact_phone_no"` // 联系人手机号
     OpenMode string `json:"open_mode" structs:"open_mode"` // 开票方式
     ProvId string `json:"prov_id" structs:"prov_id"` // 所属省
+    CityId string `json:"city_id" structs:"city_id"` // 所属市
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

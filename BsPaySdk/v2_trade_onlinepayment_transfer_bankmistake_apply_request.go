@@ -22,7 +22,7 @@ type V2TradeOnlinepaymentTransferBankmistakeApplyRequest struct {
     BankName string `json:"bank_name" structs:"bank_name"` // 实际付款方银行名称
     NotifyUrl string `json:"notify_url" structs:"notify_url"` // 异步通知地址
     GoodsDesc string `json:"goods_desc" structs:"goods_desc"` // 商品描述
-    CertificateContent string `json:"certificate_content" structs:"certificate_content"` // 汇款凭证文件内容
+    CertificateFileId string `json:"certificate_file_id" structs:"certificate_file_id"` // 汇款凭证文件id
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

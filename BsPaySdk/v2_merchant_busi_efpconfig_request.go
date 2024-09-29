@@ -18,8 +18,8 @@ type V2MerchantBusiEfpconfigRequest struct {
     OutFeeHuifuid string `json:"out_fee_huifuid" structs:"out_fee_huifuid"` // 支付手续费外扣汇付ID支付手续费外扣标记为1时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000109812123&lt;/font&gt;
     OutOrderAcctCard string `json:"out_order_acct_card" structs:"out_order_acct_card"` // 全域资金开户使用的银行卡信息首次开通时必填 jsonObject格式
     OutOrderAcctOpenFees string `json:"out_order_acct_open_fees" structs:"out_order_acct_open_fees"` // 全域资金开户手续费首次开通时必填 jsonObject格式
-    OtherPaymentInstitutionsPic string `json:"other_payment_institutions_pic" structs:"other_payment_institutions_pic"` // 全渠道资金管理补充材料id首次开通时必填；涉及文件类型：[F504-全渠道资金管理补充材料](https://paas.huifu.com/partners/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
-    XwDigitalCertificatePic string `json:"xw_digital_certificate_pic" structs:"xw_digital_certificate_pic"` // 新网银行数字证书及电子签名授权委托书out_funds_gate_id为xw0时必填；涉及文件类型：[F534-银行数字证书及电子签名授权委托书](https://paas.huifu.com/partners/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+    OtherPaymentInstitutionsPic string `json:"other_payment_institutions_pic" structs:"other_payment_institutions_pic"` // 全渠道资金管理补充材料id涉及文件类型：[F504-全渠道资金管理补充材料](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+    XwDigitalCertificatePic string `json:"xw_digital_certificate_pic" structs:"xw_digital_certificate_pic"` // 新网银行数字证书及电子签名授权委托书out_funds_gate_id为xw0时必填；涉及文件类型：[F534-银行数字证书及电子签名授权委托书](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
     OutFundsGateId string `json:"out_funds_gate_id" structs:"out_funds_gate_id"` // 银行类型
     SignUserInfo string `json:"sign_user_info" structs:"sign_user_info"` // 签约人信息switch_state为1时必填 jsonObject格式
     AcctSource string `json:"acct_source" structs:"acct_source"` // 入账来源

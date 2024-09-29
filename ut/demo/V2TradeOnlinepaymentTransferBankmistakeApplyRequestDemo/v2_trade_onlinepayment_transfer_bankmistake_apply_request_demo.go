@@ -45,8 +45,8 @@ func V2TradeOnlinepaymentTransferBankmistakeApplyRequestDemo() {
         NotifyUrl:"http://www.baidu.com",
         // 商品描述
         // GoodsDesc:"test",
-        // 汇款凭证文件内容
-        CertificateContent:"/9j/4QCARXhpZgAATU0…………AAB//2Q==",
+        // 汇款凭证文件id
+        // CertificateFileId:"test",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -70,8 +70,6 @@ func V2TradeOnlinepaymentTransferBankmistakeApplyRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
-    // 汇款凭证文件名称
-    extendInfoMap["file_name"] = "汇付电子小票验证.jpg"
     // 备注
     extendInfoMap["remark"] = "大额支付补入账验证"
     // 银行信息数据
@@ -91,7 +89,7 @@ func getBankInfoData() string {
     dto["area"] = "3100"
     // 银行编号
     dto["bank_code"] = "03080000"
-    // 联行号选填，参见：[银行支行编码](https://paas.huifu.com/partners/api/#/csfl/api_csfl_yhzhbm)； &lt;font color&#x3D;&quot;green&quot;&gt;示例值：102290026507&lt;/font&gt;&lt;br/&gt;对私代发非必填；
+    // 联行号选填，参见：[银行支行编码](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_yhzhbm)； &lt;font color&#x3D;&quot;green&quot;&gt;示例值：102290026507&lt;/font&gt;&lt;br/&gt;对私代发非必填；
     dto["correspondent_code"] = "103290076178"
     // 对公对私标识
     dto["card_acct_type"] = "P"
