@@ -15,12 +15,52 @@ const BASE_API_TEST_URL_V2 = "https://spin-test.cloudpnr.com"
 // 以下为接口uri
 
 /**
+ * 服务单关闭
+ */
+const V2_TRADE_PAYAFTERUSE_CREDITBIZORDER_CLOSE = "/v2/trade/payafteruse/creditbizorder/close"
+
+/**
+ * 服务单查询
+ */
+const V2_TRADE_PAYAFTERUSE_CREDITBIZORDER_QUERY = "/v2/trade/payafteruse/creditbizorder/query"
+
+/**
+ * 服务单创建
+ */
+const V2_TRADE_PAYAFTERUSE_CREDITBIZORDER_CREATE = "/v2/trade/payafteruse/creditbizorder/create"
+
+/**
+ * 分期扣款查询
+ */
+const V2_TRADE_PAYAFTERUSE_INSTALLMENT_QUERY = "/v2/trade/payafteruse/installment/query"
+
+/**
+ * 分期扣款
+ */
+const V2_TRADE_PAYAFTERUSE_INSTALLMENT_PAY = "/v2/trade/payafteruse/installment/pay"
+
+/**
+ * 分期交易退款查询
+ */
+const V2_TRADE_PAYAFTERUSE_INSTALLMENT_REFUNDQUERY = "/v2/trade/payafteruse/installment/refundquery"
+
+/**
+ * 分期交易退款
+ */
+const V2_TRADE_PAYAFTERUSE_INSTALLMENT_REFUND = "/v2/trade/payafteruse/installment/refund"
+
+/**
+ * 分期单创建
+ */
+const V2_TRADE_PAYAFTERUSE_INSTALLMENT_CREATE = "/v2/trade/payafteruse/installment/create"
+
+/**
  * 云MIS订单详情查询接口
  */
 const V2_TRADE_CLOUDMIS_ORDER_DETAIL = "/v2/trade/cloudmis/order/detail"
 
 /**
- * 终端云MIS接入
+ * 终端云MIS交易
  */
 const V2_TRADE_CLOUDMIS_DEVICE_INFORMATION_MIS = "/v2/trade/cloudmis/device/information/mis"
 
@@ -290,7 +330,7 @@ const V2_WALLET_TRADE_ORDER_CLOSE = "/v2/wallet/trade/order/close"
 const V2_INVOICE_SELFSCANOPEN = "/v2/invoice/selfscanopen"
 
 /**
- * 发票开具申请查询
+ * 发票开具状态查询
  */
 const V2_INVOICE_QUERYAPPLY = "/v2/invoice/queryapply"
 
