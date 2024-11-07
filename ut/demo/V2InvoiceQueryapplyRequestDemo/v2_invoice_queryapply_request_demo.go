@@ -1,5 +1,5 @@
 /**
- * 发票开具申请查询 - 示例
+ * 发票开具状态查询 - 示例
  *
  * @Author sdk-generator
  * @Description 汇付天下
@@ -23,10 +23,8 @@ func V2InvoiceQueryapplyRequestDemo() {
         ReqSeqId:tool.GetReqSeqId(),
         // 请求时间
         ReqDate:tool.GetCurrentDate(),
-        // 渠道号汇付商户号为空时，必传；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000109812124&lt;/font&gt;
-        ChannelId:"",
-        // 流水号
-        SeqId:"SS293178620480778240",
+        // 汇付商户号
+        HuifuId:"6666000103675282",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -50,10 +48,8 @@ func V2InvoiceQueryapplyRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
-    // 汇付商户号
-    extendInfoMap["huifu_id"] = "6666000105874518"
-    // 外部商户号
-    extendInfoMap["ext_mer_id"] = ""
+    // 开票系统流水号
+    // extendInfoMap["seq_id"] = ""
     return extendInfoMap
 }
 

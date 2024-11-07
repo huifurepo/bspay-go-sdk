@@ -74,8 +74,6 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["bank_mode"] = ""
     // 延时标记
     // extendInfoMap["delay_acct_flag"] = ""
-    // 分账对象
-    // extendInfoMap["acct_split_bunch"] = getAcctSplitBunch()
     // 订单模式
     // extendInfoMap["order_mode"] = ""
     // 原汇款订单号
@@ -85,24 +83,5 @@ func getExtendInfos() map[string]interface{} {
     // 订单失效时间
     // extendInfoMap["time_expire"] = ""
     return extendInfoMap
-}
-
-func getAcctInfos() interface{} {
-    dto := make(map[string]interface{})
-    // 支付金额
-    // dto["div_amt"] = ""
-    // 商户号
-    // dto["huifu_id"] = ""
-
-    dtoList := [1]interface{}{dto}
-    return dtoList
-}
-
-func getAcctSplitBunch() interface{} {
-    dto := make(map[string]interface{})
-    // 分账信息列表
-    // dto["acct_infos"] = getAcctInfos()
-
-    return dto;
 }
 

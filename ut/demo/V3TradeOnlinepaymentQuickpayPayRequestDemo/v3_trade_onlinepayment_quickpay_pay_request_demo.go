@@ -1,10 +1,10 @@
 /**
- * 终端云MIS交易 - 示例
+ * 快捷支付 - 示例
  *
  * @Author sdk-generator
  * @Description 汇付天下
  */
-package V2TradeCloudmisDeviceInformationMisRequestDemo
+package V3TradeOnlinepaymentQuickpayPayRequestDemo
 
 import (
     "encoding/json"
@@ -13,18 +13,20 @@ import (
 	"github.com/huifurepo/bspay-go-sdk/ut/tool"
 )
 
-func V2TradeCloudmisDeviceInformationMisRequestDemo() {
+func V3TradeOnlinepaymentQuickpayPayRequestDemo() {
     // 1. 数据初始化
 	dgSDK, _ := BsPaySdk.NewBsPay(true, "./config/config.json")
 
     // 2.组装请求参数
-    dgReq := BsPaySdk.V2TradeCloudmisDeviceInformationMisRequest{
-        // 终端设备号
-        DeviceId:"310000011015000063677",
+    dgReq := BsPaySdk.V3TradeOnlinepaymentQuickpayPayRequest{
+        // 请求流水号
+        ReqSeqId:tool.GetReqSeqId(),
+        // 请求日期
+        ReqDate:tool.GetCurrentDate(),
         // 商户号
-        HuifuId:"6666000141203565",
-        // 交易信息
-        JsonData:"{\"transAmount\":\"11\",\"interfaceType\":\"SALE\",\"bgRetUrl\":\"virgo://https://shop.91lpp.com/api/common/huifu/posCallback\",\"thirdOrderId\":\"20240313115926539uf7cqcmwxl30\" }",
+        HuifuId:"6666000109133323",
+        // 短信验证码
+        SmsCode:"222222",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -34,7 +36,7 @@ func V2TradeCloudmisDeviceInformationMisRequestDemo() {
     fmt.Println("请求数据:", string(respStr))
 
     // 3. 发起API调用
-    resp, err := dgSDK.V2TradeCloudmisDeviceInformationMisRequest(dgReq)
+    resp, err := dgSDK.V3TradeOnlinepaymentQuickpayPayRequest(dgReq)
   	if err != nil {
 		fmt.Println("请求异常:", err)
 	}
@@ -48,6 +50,10 @@ func V2TradeCloudmisDeviceInformationMisRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
+    // 备注
+    // extendInfoMap["remark"] = ""
+    // 异步通知地址
+    extendInfoMap["notify_url"] = "http://www.baidu.com"
     return extendInfoMap
 }
 

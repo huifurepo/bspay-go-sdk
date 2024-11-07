@@ -16,10 +16,6 @@ type V2TradeOnlinepaymentTransferBankmistakeApplyRequest struct {
     OrderType string `json:"order_type" structs:"order_type"` // 订单类型
     OrgReqSeqId string `json:"org_req_seq_id" structs:"org_req_seq_id"` // 原请求流水号
     OrgReqDate string `json:"org_req_date" structs:"org_req_date"` // 原请求日期
-    RemitDate string `json:"remit_date" structs:"remit_date"` // 实际打款日期
-    CertificateName string `json:"certificate_name" structs:"certificate_name"` // 实际付款方姓名
-    BankCardNo string `json:"bank_card_no" structs:"bank_card_no"` // 实际付款方银行卡号
-    BankName string `json:"bank_name" structs:"bank_name"` // 实际付款方银行名称
     NotifyUrl string `json:"notify_url" structs:"notify_url"` // 异步通知地址
     GoodsDesc string `json:"goods_desc" structs:"goods_desc"` // 商品描述
     CertificateFileId string `json:"certificate_file_id" structs:"certificate_file_id"` // 汇款凭证文件id

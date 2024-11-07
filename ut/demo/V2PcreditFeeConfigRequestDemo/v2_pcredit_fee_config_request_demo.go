@@ -168,14 +168,14 @@ func getJdbtData() string {
     // dto["huifu_id"] = "test"
     // 签约人类型
     // dto["sign_user_type"] = "test"
-    // 签约人姓名
-    // dto["name"] = "test"
     // 签约人手机号
     // dto["mobile_no"] = "test"
-    // 签约人身份证号
-    // dto["cert_no"] = "test"
     // 京东白条费率数据
     // dto["jdbt_fee_data"] = getJdbtFeeData()
+    // 签约人姓名
+    // dto["name"] = ""
+    // 签约人身份证号
+    // dto["cert_no"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

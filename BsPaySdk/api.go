@@ -15,6 +15,41 @@ const BASE_API_TEST_URL_V2 = "https://spin-test.cloudpnr.com"
 // 以下为接口uri
 
 /**
+ * 分期支付
+ */
+const V2_TRADE_INSTALLMENT_PAYMENT = "/v2/trade/installment/payment"
+
+/**
+ * 快捷支付
+ */
+const V3_TRADE_ONLINEPAYMENT_QUICKPAY_PAY = "/v3/trade/onlinepayment/quickpay/pay"
+
+/**
+ * 快捷短信发送
+ */
+const V3_TRADE_ONLINEPAYMENT_QUICKPAY_SMSSEND = "/v3/trade/onlinepayment/quickpay/smssend"
+
+/**
+ * 电子账户余额查询
+ */
+const V2_BANK_BALANCE_QUERY = "/v2/bank/balance/query"
+
+/**
+ * 不明来账列表查询
+ */
+const V2_TRADE_PAYMENT_ZXE_UNKNOWNINCOME_QUERY = "/v2/trade/payment/zxe/unknownincome/query"
+
+/**
+ * 不明来账处理结果查询
+ */
+const V2_TRADE_PAYMENT_ZXE_UNKNOWNINCOME_DISPOSEQUERY = "/v2/trade/payment/zxe/unknownincome/disposequery"
+
+/**
+ * 不明来账处理
+ */
+const V2_TRADE_PAYMENT_ZXE_UNKNOWNINCOME_DISPOSE = "/v2/trade/payment/zxe/unknownincome/dispose"
+
+/**
  * 服务单关闭
  */
 const V2_TRADE_PAYAFTERUSE_CREDITBIZORDER_CLOSE = "/v2/trade/payafteruse/creditbizorder/close"

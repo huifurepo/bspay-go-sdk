@@ -33,14 +33,6 @@ func V2TradeOnlinepaymentTransferBankmistakeApplyRequestDemo() {
         OrgReqSeqId:"202308312345678931",
         // 原请求日期
         OrgReqDate:"20230831",
-        // 实际打款日期
-        RemitDate:"20230615",
-        // 实际付款方姓名
-        CertificateName:"孙洁",
-        // 实际付款方银行卡号
-        BankCardNo:"V2olJv4Srh…………78M8A==",
-        // 实际付款方银行名称
-        BankName:"招商银行",
         // 异步通知地址
         NotifyUrl:"http://www.baidu.com",
         // 商品描述
@@ -70,6 +62,8 @@ func V2TradeOnlinepaymentTransferBankmistakeApplyRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
+    // 下单标识
+    // extendInfoMap["order_flag"] = ""
     // 备注
     extendInfoMap["remark"] = "大额支付补入账验证"
     // 银行信息数据
@@ -78,6 +72,8 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["delay_acct_flag"] = ""
     // 分账对象
     // extendInfoMap["acct_split_bunch"] = getAcctSplitBunch()
+    // 实际打款信息
+    // extendInfoMap["actual_remit_data"] = getActualRemitData()
     return extendInfoMap
 }
 
@@ -93,16 +89,8 @@ func getBankInfoData() string {
     dto["correspondent_code"] = "103290076178"
     // 对公对私标识
     dto["card_acct_type"] = "P"
-    // 证件类型
-    dto["certificate_type"] = "01"
-    // 手机号
-    dto["mobile_no"] = "oO6XYz…………Is3nZb/5dFj860Z+nQ=="
-    // 证件号
-    dto["certify_no"] = "yL09mhS5…………WK04Kdfyg=="
     // 支行名
     dto["subbranch_bank_name"] = "中国农业银行股份有限公司上海联洋支行"
-    // 付款方三证合一码
-    dto["bank_acct_three_in_one"] = "92650109MA79R8E308"
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
@@ -125,5 +113,26 @@ func getAcctSplitBunch() interface{} {
     // dto["acct_infos"] = getAcctInfos()
 
     return dto;
+}
+
+func getActualRemitData() string {
+    dto := make(map[string]interface{})
+    // 实际打款日期
+    // dto["actual_remit_date"] = "test"
+    // 实际打款方姓名
+    // dto["actual_remit_name"] = "test"
+    // 实际打款金额
+    // dto["actual_remit_amt"] = "test"
+    // 实际打款方银行卡号
+    // dto["actual_remit_card_no"] = "test"
+    // 实际打款卡号银行名称
+    // dto["actual_bank_name"] = "test"
+    // 汇款凭证文件ID
+    // dto["certificate_file_id"] = "test"
+    // 退款卡标识
+    // dto["refund_card_flag"] = "test"
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
 }
 

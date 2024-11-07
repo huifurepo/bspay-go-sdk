@@ -160,7 +160,7 @@ func getSubmerBankCardConfig() string {
     // 借记卡手续费（%）
     // dto["debit_fee_rate"] = "test"
     // 贷记卡手续费（%）
-    // dto["credit_fee_limit"] = "test"
+    // dto["credit_fee_rate&lt;!--任雪梅发现要改正--&gt;"] = "test"
     // 允许开通银行卡业务
     // dto["open_flag"] = "test"
     // 借记卡封顶值

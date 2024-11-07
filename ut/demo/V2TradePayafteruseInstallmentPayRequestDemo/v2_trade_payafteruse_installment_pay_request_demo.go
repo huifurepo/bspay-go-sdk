@@ -62,8 +62,6 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["acct_id"] = "C02682415"
     // 交易备注
     extendInfoMap["remark"] = ""
-    // 交易有效期
-    extendInfoMap["time_expire"] = ""
     // 是否延迟交易
     // extendInfoMap["delay_acct_flag"] = ""
     // 分账串

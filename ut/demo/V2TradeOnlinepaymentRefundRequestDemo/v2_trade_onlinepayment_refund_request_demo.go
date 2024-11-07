@@ -66,6 +66,8 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["remark"] = ""
     // 异步通知地址
     extendInfoMap["notify_url"] = "http://www.baidu.com"
+    // 大额转账支付账户信息数据
+    // extendInfoMap["bank_info_data"] = getBankInfoData()
     return extendInfoMap
 }
 
@@ -124,6 +126,23 @@ func getRiskCheckData() string {
     // dto["base_station"] = "test"
     // ip地址
     dto["ip_addr"] = "172.1.1.1"
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getBankInfoData() string {
+    dto := make(map[string]interface{})
+    // 付款方账户类型
+    // dto["card_acct_type"] = "test"
+    // 省份
+    // dto["province"] = ""
+    // 地区
+    // dto["area"] = ""
+    // 银行编号
+    // dto["bank_code"] = ""
+    // 联行号
+    // dto["correspondent_code"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

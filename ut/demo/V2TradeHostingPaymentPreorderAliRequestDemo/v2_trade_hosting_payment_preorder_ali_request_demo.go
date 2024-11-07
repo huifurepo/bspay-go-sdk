@@ -68,6 +68,8 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["biz_info"] = getBizInfo()
     // 异步通知地址
     extendInfoMap["notify_url"] = "https://callback.service.com/xx"
+    // 支付宝参数集合
+    // extendInfoMap["alipay_data"] = getAlipayData()
     return extendInfoMap
 }
 
@@ -134,6 +136,80 @@ func getBizInfo() string {
     // dto["payer_check_ali"] = getPayerCheckAli()
     // 个人付款人信息
     // dto["person_payer"] = getPersonPayer()
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getExtendParams() interface{} {
+    dto := make(map[string]interface{})
+    // 卡类型
+    // dto["card_type"] = ""
+    // 支付宝点餐场景类型
+    // dto["food_order_type"] = ""
+    // 花呗分期数
+    // dto["hb_fq_num"] = ""
+    // 花呗卖家手续费百分比
+    // dto["hb_fq_seller_percent"] = ""
+    // 行业数据回流信息
+    // dto["industry_reflux_info"] = ""
+    // 信用卡分期资产方式
+    // dto["fq_channels"] = ""
+    // 停车场id
+    // dto["parking_id"] = ""
+    // 系统商编号
+    // dto["sys_service_provider_id"] = ""
+
+    return dto;
+}
+
+func getGoodsDetail() interface{} {
+    dto := make(map[string]interface{})
+    // 商品的编号
+    // dto["goods_id"] = "test"
+    // 商品名称
+    // dto["goods_name"] = "test"
+    // 商品单价(元)
+    // dto["price"] = "test"
+    // 商品数量
+    // dto["quantity"] = "test"
+    // 商品描述信息
+    // dto["body"] = ""
+    // 商品类目树
+    // dto["categories_tree"] = ""
+    // 商品类目
+    // dto["goods_category"] = ""
+    // 商品的展示地址
+    // dto["show_url"] = ""
+
+    dtoList := [1]interface{}{dto}
+    return dtoList
+}
+
+func getAlipayData() string {
+    dto := make(map[string]interface{})
+    // 支付宝的店铺编号
+    // dto["alipay_store_id"] = ""
+    // 业务扩展参数
+    // dto["extend_params"] = getExtendParams()
+    // 订单包含的商品列表信息
+    // dto["goods_detail"] = getGoodsDetail()
+    // 商户原始订单号
+    // dto["merchant_order_no"] = ""
+    // 商户操作员编号
+    // dto["operator_id"] = ""
+    // 销售产品码
+    // dto["product_code"] = ""
+    // 卖家支付宝用户号
+    // dto["seller_id"] = ""
+    // 商户门店编号
+    // dto["store_id"] = ""
+    // 订单标题
+    // dto["subject"] = ""
+    // 商家门店名称
+    // dto["store_name"] = ""
+    // 商户业务信息
+    // dto["ali_business_params"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

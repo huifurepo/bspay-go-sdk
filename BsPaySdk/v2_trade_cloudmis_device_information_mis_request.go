@@ -1,5 +1,5 @@
 /**
- * 终端云MIS接入
+ * 终端云MIS交易
  *
  * @Author sdk-generator
  * @Description 汇付天下

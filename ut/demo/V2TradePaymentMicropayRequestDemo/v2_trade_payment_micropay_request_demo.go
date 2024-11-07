@@ -258,6 +258,8 @@ func getExtUserInfo() interface{} {
 
 func getAlipayData() string {
     dto := make(map[string]interface{})
+    // 优惠明细参数
+    // dto["ali_promo_params"] = "test"
     // 支付宝的店铺编号
     // dto["alipay_store_id"] = ""
     // 订单包含的商品列表信息
@@ -272,6 +274,8 @@ func getAlipayData() string {
     // dto["ext_user_info"] = getExtUserInfo()
     // 商户业务信息
     // dto["ali_business_params"] = ""
+    // 订单描述
+    // dto["body"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
@@ -301,13 +305,13 @@ func getUnionpayData() string {
 func getRiskCheckData() string {
     dto := make(map[string]interface{})
     // ip地址
-    // dto["ip_addr"] = ""
+    dto["ip_addr"] = "180.167.105.130"
     // 基站地址
-    dto["base_station"] = "3"
+    dto["base_station"] = "192.168.1.1"
     // 纬度
-    dto["latitude"] = "2"
+    dto["latitude"] = "33.3"
     // 经度
-    dto["longitude"] = "1"
+    dto["longitude"] = "33.3"
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

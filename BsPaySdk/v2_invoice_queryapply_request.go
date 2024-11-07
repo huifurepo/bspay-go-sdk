@@ -1,5 +1,5 @@
 /**
- * 发票开具申请查询
+ * 发票开具状态查询
  *
  * @Author sdk-generator
  * @Description 汇付天下
@@ -11,8 +11,7 @@ import "encoding/json"
 type V2InvoiceQueryapplyRequest struct {
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     ReqDate string `json:"req_date" structs:"req_date"` // 请求时间
-    ChannelId string `json:"channel_id" structs:"channel_id"` // 渠道号汇付商户号为空时，必传；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000109812124&lt;/font&gt;
-    SeqId string `json:"seq_id" structs:"seq_id"` // 流水号
+    HuifuId string `json:"huifu_id" structs:"huifu_id"` // 汇付商户号
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }
