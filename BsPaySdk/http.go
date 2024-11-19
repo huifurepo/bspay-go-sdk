@@ -9,7 +9,7 @@ import (
 	"mime/multipart"
 	"net/http"
 	"os"
-	"path"
+	"path/filepath"
 	"strings"
 )
 
@@ -42,11 +42,11 @@ func DoPostReq(url string, params map[string]interface{}, msc *MerchSysConfig) (
 	return http.DefaultClient.Do(request)
 }
 
-func DoUploadFile(url string, params map[string]interface{}, filepath string, msc *MerchSysConfig) (*http.Response, error) {
+func DoUploadFile(url string, params map[string]interface{}, filedirname string, msc *MerchSysConfig) (*http.Response, error) {
 	// 构建参数字符串
 
 	// 打开文件句柄
-	file, openErr := os.Open(filepath)
+	file, openErr := os.Open(filedirname)
 	if openErr != nil {
 		BspayPrintln("open file error: " + openErr.Error())
 		return nil, openErr
@@ -59,7 +59,7 @@ func DoUploadFile(url string, params map[string]interface{}, filepath string, ms
 	if str, ok := params["picture"].(string); ok {
 		fileName = str
 	} else {
-		fileName = path.Base(filepath)
+		fileName = filepath.Base(filedirname)
 	}
 	// 参数写入文件
 	part, writerErr := writer.CreateFormFile("file", fileName)
