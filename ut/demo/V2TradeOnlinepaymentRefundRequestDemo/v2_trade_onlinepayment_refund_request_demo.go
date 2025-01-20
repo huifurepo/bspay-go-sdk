@@ -133,8 +133,6 @@ func getRiskCheckData() string {
 
 func getBankInfoData() string {
     dto := make(map[string]interface{})
-    // 付款方账户类型
-    // dto["card_acct_type"] = "test"
     // 省份
     // dto["province"] = ""
     // 地区
@@ -143,6 +141,8 @@ func getBankInfoData() string {
     // dto["bank_code"] = ""
     // 联行号
     // dto["correspondent_code"] = ""
+    // 付款方账户类型
+    // dto["card_acct_type"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

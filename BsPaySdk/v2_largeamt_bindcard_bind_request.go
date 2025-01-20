@@ -16,6 +16,7 @@ type V2LargeamtBindcardBindRequest struct {
     CardName string `json:"card_name" structs:"card_name"` // 银行账户名
     CardNo string `json:"card_no" structs:"card_no"` // 银行卡号密文
     BankCode string `json:"bank_code" structs:"bank_code"` // 银行编码
+    MobileNo string `json:"mobile_no" structs:"mobile_no"` // 手机号
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

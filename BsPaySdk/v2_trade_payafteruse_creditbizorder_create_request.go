@@ -13,7 +13,6 @@ type V2TradePayafteruseCreditbizorderCreateRequest struct {
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 商户号
     TransAmt string `json:"trans_amt" structs:"trans_amt"` // 订单总金额
-    SourceId string `json:"source_id" structs:"source_id"` // 追踪ID
     BuyerId string `json:"buyer_id" structs:"buyer_id"` // 支付宝用户ID
     Title string `json:"title" structs:"title"` // 订单标题
     MerchantBizType string `json:"merchant_biz_type" structs:"merchant_biz_type"` // 订单类型

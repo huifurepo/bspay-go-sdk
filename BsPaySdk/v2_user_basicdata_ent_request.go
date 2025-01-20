@@ -26,6 +26,7 @@ type V2UserBasicdataEntRequest struct {
     LegalCertValidityType string `json:"legal_cert_validity_type" structs:"legal_cert_validity_type"` // 法人证件有效期类型
     LegalCertBeginDate string `json:"legal_cert_begin_date" structs:"legal_cert_begin_date"` // 法人证件有效期开始日期
     LegalCertEndDate string `json:"legal_cert_end_date" structs:"legal_cert_end_date"` // 法人证件有效期截止日期日期格式：yyyyMMdd; 非长期有效时必填，长期有效为空；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20320905&lt;/font&gt;
+    LegalCertNationality string `json:"legal_cert_nationality" structs:"legal_cert_nationality"` // 法人国籍法人的证件类型为外国人居留证时，必填，参见《[国籍编码](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/area/%E5%9B%BD%E7%B1%8D.xlsx)》&lt;font color&#x3D;&quot;green&quot;&gt;示例值：CHN&lt;/font&gt;
     ContactName string `json:"contact_name" structs:"contact_name"` // 联系人姓名
     ContactMobile string `json:"contact_mobile" structs:"contact_mobile"` // 联系人手机号
     LoginName string `json:"login_name" structs:"login_name"` // 管理员账号如需短信通知则必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：Lg20220222013747&lt;/font&gt;

@@ -56,6 +56,8 @@ func V2TradeHostingPaymentPreorderWxRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
+    // 收款汇付账户号
+    // extendInfoMap["acct_id"] = ""
     // 收银台样式
     // extendInfoMap["style_id"] = ""
     // 是否延迟交易
@@ -68,8 +70,12 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["biz_info"] = getBizInfo()
     // 交易异步通知地址
     extendInfoMap["notify_url"] = "https://callback.service.com/xx"
+    // 回调地址
+    // extendInfoMap["callback_url"] = ""
     // 微信参数集合
     // extendInfoMap["wx_data"] = getWxData()
+    // 设备信息
+    // extendInfoMap["terminal_device_data"] = getTerminalDeviceData()
     return extendInfoMap
 }
 
@@ -79,6 +85,10 @@ func getAcctInfosRucan() interface{} {
     dto["div_amt"] = "0.01"
     // 分账接收方ID
     dto["huifu_id"] = "6666000109133323"
+    // 收款汇付账户号
+    // dto["acct_id"] = ""
+    // 分账百分比%
+    // dto["percentage_div"] = ""
 
     dtoList := [1]interface{}{dto}
     return dtoList
@@ -88,6 +98,10 @@ func getAcctSplitBunchRucan() string {
     dto := make(map[string]interface{})
     // 分账明细
     dto["acct_infos"] = getAcctInfosRucan()
+    // 百分比分账标志
+    // dto["percentage_flag"] = ""
+    // 是否净值分账
+    // dto["is_clean_split"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
@@ -220,6 +234,15 @@ func getWxData() string {
     // dto["product_id"] = ""
     // 指定支付者
     // dto["limit_payer"] = ""
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getTerminalDeviceData() string {
+    dto := make(map[string]interface{})
+    // 汇付机具号
+    // dto["devs_id"] = "test"
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

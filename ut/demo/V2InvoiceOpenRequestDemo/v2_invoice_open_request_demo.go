@@ -45,6 +45,10 @@ func V2InvoiceOpenRequestDemo() {
         GoodsInfos:getGoodsInfosRc(),
         // 开票人信息
         PayerInfo:getPayerInfo(),
+        // 不动产销售特殊字段specialFlag为05时，必填；jsonArray格式
+        // EstateSales:getEstateSales(),
+        // 不动产租赁特殊字段specialFlag为16时，必填；jsonArray格式
+        // EstateLease:getEstateLease(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -151,6 +155,54 @@ func getPayerInfo() string {
     dto["reviewer"] = "复核"
 
     dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getEstateSales() string {
+    dto := make(map[string]interface{})
+    // 不动产地址
+    // dto["addr"] = "test"
+    // 不动产详细地址
+    // dto["detail_addr"] = "test"
+    // 跨地（市）标志
+    // dto["area_flag"] = "test"
+    // 土地增值税项目编号
+    // dto["tax_item_no"] = "test"
+    // 不动产单元代码/网签合同备案编号
+    // dto["record_no"] = "test"
+    // 核定计税价格
+    // dto["total_amt"] = "test"
+    // 实际成交含税金额
+    // dto["deal_amt"] = "test"
+    // 房屋产权证书/不动产产权号
+    // dto["estate_no"] = "test"
+    // 不动产单位
+    // dto["unit"] = "test"
+
+    dtoList := [1]interface{}{dto}
+    dtoByte, _ := json.Marshal(dtoList)
+    return string(dtoByte)
+}
+
+func getEstateLease() string {
+    dto := make(map[string]interface{})
+    // 不动产地址
+    // dto["addr"] = "test"
+    // 不动产详细地址
+    // dto["detail_addr"] = "test"
+    // 跨地（市）标志
+    // dto["area_flag"] = "test"
+    // 租赁日期起
+    // dto["start_date"] = "test"
+    // 租赁日期止
+    // dto["end_date"] = "test"
+    // 房屋产权证书/不动产产权号
+    // dto["estate_no"] = "test"
+    // 不动产单位
+    // dto["unit"] = "test"
+
+    dtoList := [1]interface{}{dto}
+    dtoByte, _ := json.Marshal(dtoList)
     return string(dtoByte)
 }
 

@@ -33,6 +33,8 @@ func V2UserBasicdataIndvRequestDemo() {
         CertValidityType:"1",
         // 个人证件有效期开始日期
         CertBeginDate:"20200117",
+        // 个人国籍个人证件类型为外国人居留证时，必填，参见《[国籍编码](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/area/%E5%9B%BD%E7%B1%8D.xlsx)》&lt;font color&#x3D;&quot;green&quot;&gt;示例值：CHN&lt;/font&gt;
+        // CertNationality:"test",
         // 手机号
         MobileNo:"13764462205",
         // 地址开通中信E管家必填

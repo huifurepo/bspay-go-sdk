@@ -15,6 +15,11 @@ const BASE_API_TEST_URL_V2 = "https://spin-test.cloudpnr.com"
 // 以下为接口uri
 
 /**
+ * 交易确认查询接口
+ */
+const V3_TRADE_PAYMENT_DELAYTRANS_CONFIRMQUERY = "/v3/trade/payment/delaytrans/confirmquery"
+
+/**
  * 分期支付
  */
 const V2_TRADE_INSTALLMENT_PAYMENT = "/v2/trade/installment/payment"

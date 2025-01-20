@@ -53,6 +53,8 @@ func V2UserBasicdataEntRequestDemo() {
         LegalCertBeginDate:"20120801",
         // 法人证件有效期截止日期日期格式：yyyyMMdd; 非长期有效时必填，长期有效为空；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20320905&lt;/font&gt;
         LegalCertEndDate:"20300801",
+        // 法人国籍法人的证件类型为外国人居留证时，必填，参见《[国籍编码](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/area/%E5%9B%BD%E7%B1%8D.xlsx)》&lt;font color&#x3D;&quot;green&quot;&gt;示例值：CHN&lt;/font&gt;
+        // LegalCertNationality:"test",
         // 联系人姓名
         ContactName:"小的",
         // 联系人手机号

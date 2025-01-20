@@ -54,6 +54,8 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["hb_fq_fee_list"] = getHbFqFeeList()
     // 白条分期配置对象
     // extendInfoMap["jdbt_data"] = getJdbtData()
+    // 银联聚分期配置对象
+    // extendInfoMap["yljfq_data"] = getYljfqData()
     return extendInfoMap
 }
 
@@ -176,6 +178,62 @@ func getJdbtData() string {
     // dto["name"] = ""
     // 签约人身份证号
     // dto["cert_no"] = ""
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getYljfqFeeData() string {
+    dto := make(map[string]interface{})
+    // 支付场景
+    // dto["pay_scene"] = "test"
+    // 业务开通标识
+    // dto["open_flag"] = "test"
+    // 贴息模式
+    // dto["discount_model"] = ""
+    // 手续费率(%)
+    // dto["fee_rate"] = ""
+    // 手续费扣取方式
+    // dto["fee_rec_type"] = ""
+    // 交易手续费扣款标记
+    // dto["fee_flag"] = ""
+    // 手续费外扣的汇付商户号
+    // dto["out_fee_huifu_id"] = ""
+    // 手续费外扣的汇付账户号
+    // dto["out_fee_acct_id"] = ""
+
+    dtoList := [1]interface{}{dto}
+    dtoByte, _ := json.Marshal(dtoList)
+    return string(dtoByte)
+}
+
+func getFileList() interface{} {
+    dto := make(map[string]interface{})
+    // 文件id
+    // dto["file_id"] = "test"
+    // 文件类型
+    // dto["file_type"] = ""
+
+    dtoList := [1]interface{}{dto}
+    return dtoList
+}
+
+func getYljfqData() string {
+    dto := make(map[string]interface{})
+    // 商户汇付Id
+    // dto["huifu_id"] = "test"
+    // 签约人类型
+    // dto["sign_user_type"] = "test"
+    // 签约人手机号
+    // dto["mobile_no"] = "test"
+    // 银联聚分期费率数据
+    // dto["yljfq_fee_data"] = getYljfqFeeData()
+    // 签约人姓名
+    // dto["name"] = ""
+    // 签约人身份证号
+    // dto["cert_no"] = ""
+    // 补充业务信息
+    // dto["file_list"] = getFileList()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

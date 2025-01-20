@@ -27,8 +27,6 @@ func V2TradePayafteruseCreditbizorderCreateRequestDemo() {
         HuifuId:"6666000108281250",
         // 订单总金额
         TransAmt:"0.01",
-        // 追踪ID
-        SourceId:"MjA4ODcwMjY5OTkwODI1N3wyMDIxMDAzMTUwNjM4MTE2fDE3Mjg1NDk3OTU0OTl8ZmFsc2V8VE9LRU5fSVNfTlVMTA==",
         // 支付宝用户ID
         BuyerId:"2088000000000000",
         // 订单标题
@@ -66,12 +64,18 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap := make(map[string]interface{})
     // 异步通知地址
     extendInfoMap["notify_url"] = "https://mock.uutool.cn/4pga0jqv8vv0"
+    // 追踪ID
+    extendInfoMap["source_id"] = "MjA4ODcwMjY5OTkwODI1N3wyMDIxMDAzMTUwNjM4MTE2fDE3Mjg1NDk3OTU0OTl8ZmFsc2V8VE9LRU5fSVNfTlVMTA=="
     // 支付宝交易号
     extendInfoMap["trade_no"] = "2024092722001408251414114417"
     // 代扣协议签约场景
     extendInfoMap["deduct_sign_scene"] = "INDUSTRY|XIANXIANG_BIKE_CHARGE"
     // 芝麻信用外部类⽬
     extendInfoMap["zm_category_id"] = "credit_pay_for_battery_charging"
+    // 是否不需要核身
+    // extendInfoMap["no_need_verify_identity"] = ""
+    // 开通成功后跳转地址
+    // extendInfoMap["acceptance_jump_url"] = ""
     return extendInfoMap
 }
 

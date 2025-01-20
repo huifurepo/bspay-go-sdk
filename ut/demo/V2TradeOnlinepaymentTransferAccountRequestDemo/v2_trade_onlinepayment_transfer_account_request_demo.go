@@ -82,6 +82,8 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["dynamic_flag"] = ""
     // 订单失效时间
     // extendInfoMap["time_expire"] = ""
+    // 手续费扣款标志
+    // extendInfoMap["fee_flag"] = ""
     return extendInfoMap
 }
 

@@ -56,6 +56,8 @@ func V2TradeHostingPaymentPreorderH5RequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
+    // 收款汇付账户号
+    // extendInfoMap["acct_id"] = ""
     // 收银台样式
     // extendInfoMap["style_id"] = ""
     // 是否延迟交易
@@ -78,6 +80,8 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["alipay_data"] = getAlipayData()
     // 银联参数集合
     // extendInfoMap["unionpay_data"] = getUnionpayData()
+    // 设备信息
+    // extendInfoMap["terminal_device_data"] = getTerminalDeviceData()
     return extendInfoMap
 }
 
@@ -87,6 +91,10 @@ func getAcctInfosRucan() interface{} {
     dto["div_amt"] = "0.08"
     // 分账接收方ID
     dto["huifu_id"] = "6666000111546360"
+    // 收款汇付账户号
+    // dto["acct_id"] = ""
+    // 分账百分比%
+    // dto["percentage_div"] = ""
 
     dtoList := [1]interface{}{dto}
     return dtoList
@@ -96,6 +104,10 @@ func getAcctSplitBunch() string {
     dto := make(map[string]interface{})
     // 分账明细
     dto["acct_infos"] = getAcctInfosRucan()
+    // 百分比分账标志
+    // dto["percentage_flag"] = ""
+    // 是否净值分账
+    // dto["is_clean_split"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
@@ -263,16 +275,22 @@ func getExtendParams() interface{} {
 
 func getGoodsDetail() interface{} {
     dto := make(map[string]interface{})
-    // 商品编码
+    // 商品的编号
     // dto["goods_id"] = "test"
-    // 商品优惠金额
-    // dto["discount_amount"] = "test"
+    // 商品名称
+    // dto["goods_name"] = "test"
+    // 商品单价(元)
+    // dto["price"] = "test"
     // 商品数量
     // dto["quantity"] = "test"
-    // 商品价格
-    // dto["price"] = "test"
-    // 商品备注
-    // dto["goods_remark"] = ""
+    // 商品描述信息
+    // dto["body"] = ""
+    // 商品类目树
+    // dto["categories_tree"] = ""
+    // 商品类目
+    // dto["goods_category"] = ""
+    // 商品的展示地址
+    // dto["show_url"] = ""
 
     dtoList := [1]interface{}{dto}
     return dtoList
@@ -339,6 +357,15 @@ func getUnionpayData() string {
     // dto["req_reserved"] = ""
     // 终端信息
     // dto["term_info"] = ""
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getTerminalDeviceData() string {
+    dto := make(map[string]interface{})
+    // 汇付机具号
+    // dto["devs_id"] = "test"
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

@@ -29,16 +29,14 @@ func V2TradeOnlinepaymentTransferBankmistakeApplyRequestDemo() {
         TransAmt:"0.01",
         // 订单类型
         OrderType:"REFUND",
-        // 原请求流水号
+        // 原请求流水号order_flag&#x3D;Y时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：2022012514120615009&lt;/font&gt;
         OrgReqSeqId:"202308312345678931",
-        // 原请求日期
+        // 原请求日期格式:yyyyMMdd；order_flag&#x3D;Y时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20220125&lt;/font&gt;
         OrgReqDate:"20230831",
         // 异步通知地址
         NotifyUrl:"http://www.baidu.com",
         // 商品描述
         // GoodsDesc:"test",
-        // 汇款凭证文件id
-        // CertificateFileId:"test",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -125,14 +123,15 @@ func getActualRemitData() string {
     // dto["actual_remit_amt"] = "test"
     // 实际打款方银行卡号
     // dto["actual_remit_card_no"] = "test"
-    // 实际打款卡号银行名称
-    // dto["actual_bank_name"] = "test"
     // 汇款凭证文件ID
     // dto["certificate_file_id"] = "test"
     // 退款卡标识
     // dto["refund_card_flag"] = "test"
+    // 实际打款卡号银行名称
+    // dto["actual_bank_name"] = ""
 
-    dtoByte, _ := json.Marshal(dto)
+    dtoList := [1]interface{}{dto}
+    dtoByte, _ := json.Marshal(dtoList)
     return string(dtoByte)
 }
 

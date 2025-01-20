@@ -17,6 +17,7 @@ type V2TradeInstallmentPaymentRequest struct {
     GoodsDesc string `json:"goods_desc" structs:"goods_desc"` // 商品描述
     RiskCheckData string `json:"risk_check_data" structs:"risk_check_data"` // 安全信息
     JdbtData string `json:"jdbt_data" structs:"jdbt_data"` // 京东白条分期信息trans_type&#x3D;JDBT时，必填jsonObject字符串，京东白条分期相关信息通过该参数集上送
+    YljfqData string `json:"yljfq_data" structs:"yljfq_data"` // 银联聚分期信息trans_type&#x3D;YLJFQ-银联聚分期时，必填jsonObject字符串，银联聚分期相关信息通过该参数集上送
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

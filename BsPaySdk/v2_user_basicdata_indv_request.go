@@ -16,6 +16,7 @@ type V2UserBasicdataIndvRequest struct {
     CertNo string `json:"cert_no" structs:"cert_no"` // 个人证件号码
     CertValidityType string `json:"cert_validity_type" structs:"cert_validity_type"` // 个人证件有效期类型
     CertBeginDate string `json:"cert_begin_date" structs:"cert_begin_date"` // 个人证件有效期开始日期
+    CertNationality string `json:"cert_nationality" structs:"cert_nationality"` // 个人国籍个人证件类型为外国人居留证时，必填，参见《[国籍编码](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/area/%E5%9B%BD%E7%B1%8D.xlsx)》&lt;font color&#x3D;&quot;green&quot;&gt;示例值：CHN&lt;/font&gt;
     MobileNo string `json:"mobile_no" structs:"mobile_no"` // 手机号
     Address string `json:"address" structs:"address"` // 地址开通中信E管家必填
 
