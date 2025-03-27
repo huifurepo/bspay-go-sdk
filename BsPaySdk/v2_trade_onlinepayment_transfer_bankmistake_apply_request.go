@@ -17,7 +17,6 @@ type V2TradeOnlinepaymentTransferBankmistakeApplyRequest struct {
     OrgReqSeqId string `json:"org_req_seq_id" structs:"org_req_seq_id"` // 原请求流水号order_flag&#x3D;Y时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：2022012514120615009&lt;/font&gt;
     OrgReqDate string `json:"org_req_date" structs:"org_req_date"` // 原请求日期格式:yyyyMMdd；order_flag&#x3D;Y时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20220125&lt;/font&gt;
     NotifyUrl string `json:"notify_url" structs:"notify_url"` // 异步通知地址
-    GoodsDesc string `json:"goods_desc" structs:"goods_desc"` // 商品描述
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

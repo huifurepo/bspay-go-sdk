@@ -49,7 +49,7 @@ func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
     // 操作类型
-    // extendInfoMap["elect_acct_type"] = ""
+    extendInfoMap["elect_acct_type"] = "MERCH"
     return extendInfoMap
 }
 

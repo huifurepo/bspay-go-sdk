@@ -95,13 +95,13 @@ func getExtendInfos() map[string]interface{} {
     // 扩展方字段
     extendInfoMap["expand_id"] = ""
     // 文件列表
-    // extendInfoMap["file_list"] = getFileList()
+    // extendInfoMap["file_list"] = get20d74ac41da44b12Aeee688f03e91870()
     // 公司类型
     // extendInfoMap["ent_type"] = ""
     return extendInfoMap
 }
 
-func getFileList() string {
+func get20d74ac41da44b12Aeee688f03e91870() string {
     dto := make(map[string]interface{})
     // 文件类型
     // dto["file_type"] = "test"

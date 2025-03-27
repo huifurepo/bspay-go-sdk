@@ -19,14 +19,16 @@ func V2WalletTradeRechargeTransferRequestDemo() {
 
     // 2.组装请求参数
     dgReq := BsPaySdk.V2WalletTradeRechargeTransferRequest{
-        // 系统号
-        // SysId:"test",
-        // 产品号
-        // ProductId:"test",
-        // 加签结果
-        // Sign:"test",
-        // 数据
-        // Data:"test",
+        // 请求流水号
+        ReqSeqId:tool.GetReqSeqId(),
+        // 请求日期
+        ReqDate:tool.GetCurrentDate(),
+        // 出款方商户号
+        HuifuId:"6666000107309462",
+        // 收款方用户号
+        UserHuifuId:"6666000187364826",
+        // 转账金额
+        TransAmt:"0.01",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -50,6 +52,12 @@ func V2WalletTradeRechargeTransferRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
+    // 出款方账户
+    extendInfoMap["acct_id"] = "F00598600"
+    // 转账描述
+    extendInfoMap["description"] = "用户补贴"
+    // 备注
+    extendInfoMap["remark"] = "备注"
     return extendInfoMap
 }
 

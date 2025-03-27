@@ -38,7 +38,7 @@ func V2TradePayafteruseCreditbizorderCreateRequestDemo() {
         // 芝麻信用服务ID
         ZmServiceId:"2024081500001003000081751200",
         // 商品详细信息
-        ItemInfos:getItemInfos(),
+        ItemInfos:get864f5a50D5064cea9423A5f3ca9e73a7(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -79,7 +79,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getItemInstallmentInfo() interface{} {
+func get1efd507a9385411f80f998b1c37876d9() interface{} {
     dto := make(map[string]interface{})
     // 总分期数
     dto["period_num"] = 1
@@ -91,7 +91,7 @@ func getItemInstallmentInfo() interface{} {
     return dto;
 }
 
-func getItemInfos() string {
+func get864f5a50D5064cea9423A5f3ca9e73a7() string {
     dto := make(map[string]interface{})
     // 商户商品ID
     dto["out_item_id"] = "1234567"
@@ -104,7 +104,7 @@ func getItemInfos() string {
     // 商品的编号
     dto["goods_id"] = "Ldkc00001"
     // 商品分期信息
-    dto["item_installment_info"] = getItemInstallmentInfo()
+    dto["item_installment_info"] = get1efd507a9385411f80f998b1c37876d9()
 
     dtoList := [1]interface{}{dto}
     dtoByte, _ := json.Marshal(dtoList)

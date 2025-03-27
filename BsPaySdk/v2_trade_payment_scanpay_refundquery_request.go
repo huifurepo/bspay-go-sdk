@@ -1,5 +1,5 @@
 /**
- * 交易退款查询接口
+ * 扫码交易退款查询
  *
  * @Author sdk-generator
  * @Description 汇付天下
@@ -10,7 +10,7 @@ import "encoding/json"
 
 type V2TradePaymentScanpayRefundqueryRequest struct {
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 商户号
-    OrgReqDate string `json:"org_req_date" structs:"org_req_date"` // 退款请求日期
+    OrgReqDate string `json:"org_req_date" structs:"org_req_date"` // 退款请求日期退款发生的日期，格式为yyyyMMdd，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20220925&lt;/font&gt;；&lt;/br&gt;传入退款全局流水号时，非必填，其他场景必填；
     OrgHfSeqId string `json:"org_hf_seq_id" structs:"org_hf_seq_id"` // 退款全局流水号退款请求流水号,退款全局流水号,终端订单号三选一不能都为空；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0030default220825182711P099ac1f343f00000&lt;/font&gt;
     OrgReqSeqId string `json:"org_req_seq_id" structs:"org_req_seq_id"` // 退款请求流水号退款请求流水号,退款全局流水号,终端订单号三选一不能都为空；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：202110210012100005&lt;/font&gt;
     MerOrdId string `json:"mer_ord_id" structs:"mer_ord_id"` // 终端订单号退款请求流水号,退款全局流水号,终端订单号三选一不能都为空；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：16672670833524393&lt;/font&gt;

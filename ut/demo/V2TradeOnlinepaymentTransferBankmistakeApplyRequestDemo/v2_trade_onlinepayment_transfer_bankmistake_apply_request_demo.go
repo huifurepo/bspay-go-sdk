@@ -35,8 +35,6 @@ func V2TradeOnlinepaymentTransferBankmistakeApplyRequestDemo() {
         OrgReqDate:"20230831",
         // 异步通知地址
         NotifyUrl:"http://www.baidu.com",
-        // 商品描述
-        // GoodsDesc:"test",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -65,17 +63,17 @@ func getExtendInfos() map[string]interface{} {
     // 备注
     extendInfoMap["remark"] = "大额支付补入账验证"
     // 银行信息数据
-    extendInfoMap["bank_info_data"] = getBankInfoData()
+    extendInfoMap["bank_info_data"] = getB08e9ba8D88347f9A142D9b1fafb4e03()
     // 延时标记
     // extendInfoMap["delay_acct_flag"] = ""
     // 分账对象
-    // extendInfoMap["acct_split_bunch"] = getAcctSplitBunch()
+    // extendInfoMap["acct_split_bunch"] = getEebc6e3a5eff4b11895cC49b66a59c30()
     // 实际打款信息
-    // extendInfoMap["actual_remit_data"] = getActualRemitData()
+    // extendInfoMap["actual_remit_data"] = get1e12e80a87644cb8964b58c5edbb79e6()
     return extendInfoMap
 }
 
-func getBankInfoData() string {
+func getB08e9ba8D88347f9A142D9b1fafb4e03() string {
     dto := make(map[string]interface{})
     // 省份对公代发必填，[参见省市地区码](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/area/%E6%96%97%E6%8B%B1%E4%BB%A3%E5%8F%91%E7%9C%81%E4%BB%BD%E5%9C%B0%E5%8C%BA%E7%BC%96%E7%A0%81.xlsx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0013&lt;/font&gt;
     dto["province"] = "0031"
@@ -94,7 +92,7 @@ func getBankInfoData() string {
     return string(dtoByte)
 }
 
-func getAcctInfos() interface{} {
+func getB01b07d9B4d94a099a60F25781cc910f() interface{} {
     dto := make(map[string]interface{})
     // 支付金额
     // dto["div_amt"] = ""
@@ -105,15 +103,16 @@ func getAcctInfos() interface{} {
     return dtoList
 }
 
-func getAcctSplitBunch() interface{} {
+func getEebc6e3a5eff4b11895cC49b66a59c30() string {
     dto := make(map[string]interface{})
     // 分账信息列表
-    // dto["acct_infos"] = getAcctInfos()
+    // dto["acct_infos"] = getB01b07d9B4d94a099a60F25781cc910f()
 
-    return dto;
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
 }
 
-func getActualRemitData() string {
+func get1e12e80a87644cb8964b58c5edbb79e6() string {
     dto := make(map[string]interface{})
     // 实际打款日期
     // dto["actual_remit_date"] = "test"

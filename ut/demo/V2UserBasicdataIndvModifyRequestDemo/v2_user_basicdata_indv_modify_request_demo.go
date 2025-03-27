@@ -59,13 +59,13 @@ func getExtendInfos() map[string]interface{} {
     // 手机号
     extendInfoMap["mobile_no"] = "15556622000"
     // 文件列表
-    // extendInfoMap["file_list"] = getFileList()
+    // extendInfoMap["file_list"] = get8ace1c78E20e4c36B860Bf175485748a()
     // 地址
     // extendInfoMap["address"] = ""
     return extendInfoMap
 }
 
-func getFileList() string {
+func get8ace1c78E20e4c36B860Bf175485748a() string {
     dto := make(map[string]interface{})
     // 文件类型
     // dto["file_type"] = "test"

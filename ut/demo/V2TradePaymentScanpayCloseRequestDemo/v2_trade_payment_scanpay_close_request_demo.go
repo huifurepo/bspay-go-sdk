@@ -1,5 +1,5 @@
 /**
- * 交易关单接口 - 示例
+ * 扫码交易关单 - 示例
  *
  * @Author sdk-generator
  * @Description 汇付天下

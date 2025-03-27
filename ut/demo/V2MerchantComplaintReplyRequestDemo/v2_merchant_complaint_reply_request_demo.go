@@ -29,10 +29,6 @@ func V2MerchantComplaintReplyRequestDemo() {
         ComplaintedMchid:"535295270",
         // 回复内容
         ResponseContent:"该问题请联系商家处理，谢谢。",
-        // 跳转链接
-        JumpUrl:"",
-        // 跳转链接文案
-        JumpUrlText:"",
         // 微信商户号
         MchId:"1502073961",
     }
@@ -59,11 +55,15 @@ func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
     // 文件列表
-    // extendInfoMap["file_info"] = getFileInfo()
+    // extendInfoMap["file_info"] = get42b0f39dAdb944a8B720B6b3a55f3c41()
+    // 跳转链接
+    extendInfoMap["jump_url"] = ""
+    // 跳转链接文案
+    extendInfoMap["jump_url_text"] = ""
     return extendInfoMap
 }
 
-func getFileInfo() string {
+func get42b0f39dAdb944a8B720B6b3a55f3c41() string {
     dto := make(map[string]interface{})
     // 回复图片1
     // dto["response_pic1"] = ""

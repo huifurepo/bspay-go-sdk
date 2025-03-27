@@ -28,7 +28,7 @@ func V2UserBusiOpenRequestDemo() {
         // 渠道商/商户汇付Id
         UpperHuifuId:"6666000003084836",
         // 乐接活配置当合作平台为乐接活，必填
-        // LjhData:getLjhData(),
+        // LjhData:get7928a71736b14ffe9aa0Ee852dc0b86a(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -53,17 +53,17 @@ func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
     // 结算信息配置
-    extendInfoMap["settle_config"] = getSettleConfig()
+    extendInfoMap["settle_config"] = getCa71a7df63174cfeB0265628121f36d8()
     // 结算卡信息
-    extendInfoMap["card_info"] = getCardInfo()
+    extendInfoMap["card_info"] = get7a1b78f8D2d9483f9248Ffa360f5ab0b()
     // 取现配置列表
-    extendInfoMap["cash_config"] = getCashConfig()
+    extendInfoMap["cash_config"] = getBc6c0988B7344c1f9279Ab8281cdd2d7()
     // 文件列表
-    extendInfoMap["file_list"] = getFileList()
+    extendInfoMap["file_list"] = getF9126565Dc674812984234c8dee5c990()
     // 延迟入账开关
     // extendInfoMap["delay_flag"] = ""
     // 斗拱e账户功能配置
-    // extendInfoMap["elec_acct_config"] = getElecAcctConfig()
+    // extendInfoMap["elec_acct_config"] = get1aaf2d76E1c3480bAaa933be0552e6ef()
     // 灵活用工开关
     // extendInfoMap["open_tax_flag"] = ""
     // 异步请求地址
@@ -73,7 +73,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getSettleConfig() string {
+func getCa71a7df63174cfeB0265628121f36d8() string {
     dto := make(map[string]interface{})
     // 结算周期
     dto["settle_cycle"] = "D1"
@@ -108,7 +108,7 @@ func getSettleConfig() string {
     return string(dtoByte)
 }
 
-func getCardInfo() string {
+func get7a1b78f8D2d9483f9248Ffa360f5ab0b() string {
     dto := make(map[string]interface{})
     // 卡类型
     dto["card_type"] = "0"
@@ -143,7 +143,7 @@ func getCardInfo() string {
     return string(dtoByte)
 }
 
-func getCashConfig() string {
+func getBc6c0988B7344c1f9279Ab8281cdd2d7() string {
     dto := make(map[string]interface{})
     // 提现手续费（固定/元）fix_amt与fee_rate至少填写一项， 需保留小数点后两位，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;注：当cash_type&#x3D;D1时为节假日取现手续费
     dto["fix_amt"] = "0.03"
@@ -169,7 +169,7 @@ func getCashConfig() string {
     return string(dtoByte)
 }
 
-func getFileList() string {
+func getF9126565Dc674812984234c8dee5c990() string {
     dto := make(map[string]interface{})
     // 文件类型
     dto["file_type"] = "F02"
@@ -183,7 +183,7 @@ func getFileList() string {
     return string(dtoByte)
 }
 
-func getElecCardList() string {
+func getB48226ab36cc4f0aB7ae23eaa07e30b8() interface{} {
     dto := make(map[string]interface{})
     // 银行编码
     // dto["bank_code"] = "test"
@@ -211,11 +211,10 @@ func getElecCardList() string {
     // dto["auth_no"] = ""
 
     dtoList := [1]interface{}{dto}
-    dtoByte, _ := json.Marshal(dtoList)
-    return string(dtoByte)
+    return dtoList
 }
 
-func getElecAcctConfig() string {
+func get1aaf2d76E1c3480bAaa933be0552e6ef() string {
     dto := make(map[string]interface{})
     // 电子账户开关
     // dto["switch_state"] = "test"
@@ -228,7 +227,7 @@ func getElecAcctConfig() string {
     // 角色类型(角色编号)
     // dto["role_type"] = "test"
     // 银行卡信息
-    // dto["elec_card_list"] = getElecCardList()
+    // dto["elec_card_list"] = getB48226ab36cc4f0aB7ae23eaa07e30b8()
     // 用户类型
     // dto["user_type"] = ""
 
@@ -236,7 +235,7 @@ func getElecAcctConfig() string {
     return string(dtoByte)
 }
 
-func getLjhData() string {
+func get7928a71736b14ffe9aa0Ee852dc0b86a() string {
     dto := make(map[string]interface{})
     // 税源地id当合作平台为乐接活，必填
     // dto["tax_area_id"] = "test"

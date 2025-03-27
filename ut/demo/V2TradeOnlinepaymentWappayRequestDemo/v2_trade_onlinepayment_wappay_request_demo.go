@@ -32,11 +32,11 @@ func V2TradeOnlinepaymentWappayRequestDemo() {
         // 银行卡号instalments_num不为空时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6228480031509440000&lt;/font&gt;
         BankCardNo:"6222021102043040313",
         // 网联扩展数据
-        ExtendPayData:getExtendPayData(),
+        ExtendPayData:get1c945dd28edc49028e0680c1fb534f3f(),
         // 安全信息
-        RiskCheckData:getRiskCheckData(),
+        RiskCheckData:getD018c6c2109742049307945098bfbd51(),
         // 设备信息
-        TerminalDeviceData:getTerminalDeviceData(),
+        TerminalDeviceData:get4d2787cfA75f4d3a88da534c0127bbee(),
         // 页面跳转地址
         FrontUrl:"http://www.baidu.com",
         // 异步通知地址
@@ -69,7 +69,7 @@ func getExtendInfos() map[string]interface{} {
     // 交易有效期
     extendInfoMap["time_expire"] = "20220406210038"
     // 分账对象
-    extendInfoMap["acct_split_bunch"] = getAcctSplitBunchRucan()
+    extendInfoMap["acct_split_bunch"] = getA275eacfEacc4bb0A7d3661c44bd5409()
     // 备注
     extendInfoMap["remark"] = ""
     // 页面失败跳转地址
@@ -77,7 +77,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getExtendPayData() string {
+func get1c945dd28edc49028e0680c1fb534f3f() string {
     dto := make(map[string]interface{})
     // 商品简称
     dto["goods_short_name"] = "一般商品"
@@ -90,7 +90,7 @@ func getExtendPayData() string {
     return string(dtoByte)
 }
 
-func getAcctInfos() interface{} {
+func get3e0798528f5e41ba97d2F42c4cffb13e() interface{} {
     dto := make(map[string]interface{})
     // 支付金额
     // dto["div_amt"] = ""
@@ -105,10 +105,10 @@ func getAcctInfos() interface{} {
     return dtoList
 }
 
-func getAcctSplitBunchRucan() string {
+func getA275eacfEacc4bb0A7d3661c44bd5409() string {
     dto := make(map[string]interface{})
     // 分账信息列表
-    dto["acct_infos"] = getAcctInfos()
+    dto["acct_infos"] = get3e0798528f5e41ba97d2F42c4cffb13e()
     // 百分比分账标志
     // dto["percentage_flag"] = ""
     // 是否净值分账
@@ -118,7 +118,7 @@ func getAcctSplitBunchRucan() string {
     return string(dtoByte)
 }
 
-func getRiskCheckData() string {
+func getD018c6c2109742049307945098bfbd51() string {
     dto := make(map[string]interface{})
     // ip地址
     dto["ip_addr"] = "111"
@@ -133,7 +133,7 @@ func getRiskCheckData() string {
     return string(dtoByte)
 }
 
-func getTerminalDeviceData() string {
+func get4d2787cfA75f4d3a88da534c0127bbee() string {
     dto := make(map[string]interface{})
     // 交易设备ip
     dto["device_ip"] = "127.0.0.1"

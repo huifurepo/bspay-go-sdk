@@ -28,9 +28,9 @@ func V2TradeAcctpaymentPayRequestDemo() {
         // 支付金额
         OrdAmt:"0.01",
         // 分账对象
-        AcctSplitBunch:getAcctSplitBunch(),
+        AcctSplitBunch:getD37742661e6048c3B305B86f6af02ff6(),
         // 安全信息
-        RiskCheckData:getRiskCheckData(),
+        RiskCheckData:get7e2f3a0329204bd7Af5b4b0e8e8e6e57(),
         // 资金类型资金类型。支付渠道为中信E管家时，资金类型必填（[详见说明](https://paas.huifu.com/open/doc/api/#/yuer/api_zxegjzllx)）
         // FundType:"test",
         // 手续费承担方标识余额支付手续费承担方标识；商户余额支付扣收规则为接口指定承担方时必填！枚举值：&lt;br/&gt;OUT：出款方；&lt;br/&gt;IN：分账接受方。&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：IN&lt;/font&gt;
@@ -58,8 +58,8 @@ func V2TradeAcctpaymentPayRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
-    // ~~发起方商户号~~
-    // extendInfoMap["~~huifu_id~~"] = ""
+    // 发起方商户号
+    // extendInfoMap["huifu_id"] = ""
     // 商品描述
     // extendInfoMap["good_desc"] = ""
     // 备注
@@ -79,13 +79,13 @@ func getExtendInfos() map[string]interface{} {
     // 落地公司商户号
     // extendInfoMap["bmember_id"] = ""
     // 乐接活请求参数集合
-    // extendInfoMap["ljh_data"] = getLjhData()
+    // extendInfoMap["ljh_data"] = get5de9d033D391477aB3266dcce6b8b3e4()
     // 异步通知地址
     // extendInfoMap["notify_url"] = ""
     return extendInfoMap
 }
 
-func getAcctInfos() interface{} {
+func getF21d3168F3f74616B096Bccba329d0b9() interface{} {
     dto := make(map[string]interface{})
     // 分账接收方ID
     dto["huifu_id"] = "6666000109133323"
@@ -100,10 +100,10 @@ func getAcctInfos() interface{} {
     return dtoList
 }
 
-func getAcctSplitBunch() string {
+func getD37742661e6048c3B305B86f6af02ff6() string {
     dto := make(map[string]interface{})
     // 分账明细
-    dto["acct_infos"] = getAcctInfos()
+    dto["acct_infos"] = getF21d3168F3f74616B096Bccba329d0b9()
     // 百分比分账标志
     // dto["percentage_flag"] = ""
     // 是否净值分账
@@ -113,7 +113,7 @@ func getAcctSplitBunch() string {
     return string(dtoByte)
 }
 
-func getRiskCheckData() string {
+func get7e2f3a0329204bd7Af5b4b0e8e8e6e57() string {
     dto := make(map[string]interface{})
     // 转账原因
     dto["transfer_type"] = "04"
@@ -132,7 +132,7 @@ func getRiskCheckData() string {
     return string(dtoByte)
 }
 
-func getLjhData() string {
+func get5de9d033D391477aB3266dcce6b8b3e4() string {
     dto := make(map[string]interface{})
     // 税源地ID
     // dto["tax_area_id"] = ""

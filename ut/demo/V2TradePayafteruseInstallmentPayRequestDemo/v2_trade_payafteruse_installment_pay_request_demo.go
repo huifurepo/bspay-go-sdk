@@ -30,11 +30,11 @@ func V2TradePayafteruseInstallmentPayRequestDemo() {
         // 商品描述
         GoodsDesc:"聚合反扫消费",
         // 风控信息
-        RiskCheckData:getRiskCheckData(),
+        RiskCheckData:getA47aa2696845419eB2099cf96a6f6b5c(),
         // 交易有效期
         TimeExpire:"",
         // 支付宝扩展参数集合
-        AlipayData:getAlipayData(),
+        AlipayData:getA0329980Ebf143329e49D930384b1d02(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -65,15 +65,15 @@ func getExtendInfos() map[string]interface{} {
     // 是否延迟交易
     // extendInfoMap["delay_acct_flag"] = ""
     // 分账串
-    // extendInfoMap["acct_split_bunch"] = getAcctSplitBunch()
+    // extendInfoMap["acct_split_bunch"] = get86e4c05a19de4df4A69a51ebf28455f7()
     // 设备信息
-    extendInfoMap["terminal_device_info"] = getTerminalDeviceInfo()
+    extendInfoMap["terminal_device_info"] = getB176e55836034938A712A69c42883fa3()
     // 异步通知地址
     extendInfoMap["notify_url"] = "http://www.baidu.com"
     return extendInfoMap
 }
 
-func getAcctInfos() interface{} {
+func get5993c742Db134c4eB6fe906df83a68de() interface{} {
     dto := make(map[string]interface{})
     // 分账金额
     // dto["div_amt"] = "test"
@@ -88,20 +88,20 @@ func getAcctInfos() interface{} {
     return dtoList
 }
 
-func getAcctSplitBunch() string {
+func get86e4c05a19de4df4A69a51ebf28455f7() string {
     dto := make(map[string]interface{})
     // 百分比分账标志
     // dto["percentage_flag"] = ""
     // 是否净值分账
     // dto["is_clean_split"] = ""
     // 分账明细
-    // dto["acct_infos"] = getAcctInfos()
+    // dto["acct_infos"] = get5993c742Db134c4eB6fe906df83a68de()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
-func getRiskCheckData() string {
+func getA47aa2696845419eB2099cf96a6f6b5c() string {
     dto := make(map[string]interface{})
     // IP地址
     // dto["ip_addr"] = "test"
@@ -114,7 +114,7 @@ func getRiskCheckData() string {
     return string(dtoByte)
 }
 
-func getTerminalDeviceInfo() string {
+func getB176e55836034938A712A69c42883fa3() string {
     dto := make(map[string]interface{})
     // 商户设备类型
     dto["mer_device_type"] = "01"
@@ -138,14 +138,12 @@ func getTerminalDeviceInfo() string {
     dto["device_icc_id"] = "660035730311000126101"
     // 交易设备WIFIMAC
     dto["device_wifi_mac"] = "968778695A4B"
-    // 交易设备GPS
-    dto["device_gps"] = "20.346790"
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
-func getGoodsDetail() interface{} {
+func getA02ad04e759a4dc88d5fEeec63cc63ae() interface{} {
     dto := make(map[string]interface{})
     // 商品的编号
     // dto["goods_id"] = "test"
@@ -166,7 +164,7 @@ func getGoodsDetail() interface{} {
     return dtoList
 }
 
-func getExtendParams() interface{} {
+func getAedbe837F1c84b448795D02af16ff82c() interface{} {
     dto := make(map[string]interface{})
     // 业务主单号
     dto["trade_component_order_id"] = "2024101001502300000002570023887054"
@@ -178,10 +176,10 @@ func getExtendParams() interface{} {
     return dto;
 }
 
-func getAlipayData() string {
+func getA0329980Ebf143329e49D930384b1d02() string {
     dto := make(map[string]interface{})
     // 业务扩展参数
-    dto["extend_params"] = getExtendParams()
+    dto["extend_params"] = getAedbe837F1c84b448795D02af16ff82c()
     // 支付宝的店铺编号
     dto["alipay_store_id"] = ""
     // 商户操作员编号
@@ -189,7 +187,7 @@ func getAlipayData() string {
     // 商户业务信息
     // dto["ali_business_params"] = ""
     // 订单包含的商品列表信息
-    // dto["goods_detail"] = getGoodsDetail()
+    // dto["goods_detail"] = getA02ad04e759a4dc88d5fEeec63cc63ae()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

@@ -53,37 +53,37 @@ func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
     // 支付宝配置对象
-    // extendInfoMap["ali_conf_list"] = getSubmerAliConfList()
+    // extendInfoMap["ali_conf_list"] = get916e568b03b4448b8442Bc59607f55a9()
     // 微信配置对象
-    // extendInfoMap["wx_conf_list"] = getSubmerWxConfList()
+    // extendInfoMap["wx_conf_list"] = get91a6f3c897084daaA750D460c4223fdd()
     // 银联二维码配置对象
-    // extendInfoMap["union_conf_list"] = getSubmerUnionConfList()
+    // extendInfoMap["union_conf_list"] = get11f18154070b4ef3B79c6bd7442b51bd()
     // 银联卡配置对象
-    // extendInfoMap["bank_card_config"] = getSubmerBankCardConfig()
+    // extendInfoMap["bank_card_config"] = getD38dbb2fA005448eAefa2631e82a43bd()
     // 分账配置对象
-    // extendInfoMap["split_config"] = getSubmerSplitConfig()
+    // extendInfoMap["split_config"] = getD74f8d2cAb1345d7B05859cbc476ef6e()
     // 微信直连配置对象
-    // extendInfoMap["wx_zl_conf_list"] = getSubmerWxZlConfList()
+    // extendInfoMap["wx_zl_conf_list"] = get5a0a3440F93241359adcC4c7bd515643()
     // 支付宝直连配置对象
-    // extendInfoMap["ali_zl_conf"] = getSubmerAliZlConf()
+    // extendInfoMap["ali_zl_conf"] = getD624c523351a4f1f995f73e7862d4f5c()
     // 线上配置对象
-    // extendInfoMap["online_fee_conf_list"] = getSubmerOnlineFeeConfList()
+    // extendInfoMap["online_fee_conf_list"] = get5ed15ef0B2e847f8A438A8c88a7bab1f()
     // 余额支付配置对象
-    // extendInfoMap["balance_pay_config"] = getSubmerBalancePayConfig()
+    // extendInfoMap["balance_pay_config"] = get78b6d2f909434f408f929dd15fee6672()
     // 补贴支付配置对象
-    // extendInfoMap["combine_pay_config"] = getSubmerCombinePayConfig()
+    // extendInfoMap["combine_pay_config"] = get019b2ffc8bb04a42Aa4f87623ed4ee78()
     // 银行大额转账配置对象
-    // extendInfoMap["bank_big_amt_pay_config"] = getSubmerBankBigAmtPayConfig()
+    // extendInfoMap["bank_big_amt_pay_config"] = getDdb760be91d245959c0c57e3795c2e75()
     // 全域资金管理配置对象（华通银行）
-    // extendInfoMap["out_order_funds_config"] = getSubmerOutOrderFundsConfig()
+    // extendInfoMap["out_order_funds_config"] = get029b9aa1Ef7c445eAee78f34392d75a1()
     // 全域资金管理配置(XW银行)
-    // extendInfoMap["out_order_funds_new_net_config"] = getOutOrderFundsNewNetConfig()
+    // extendInfoMap["out_order_funds_new_net_config"] = get11de5eefC8bc4ddd9bc091896e59685a()
     // 结算配置对象
-    // extendInfoMap["settle_config_list"] = getSubmerSettleConfigList()
+    // extendInfoMap["settle_config_list"] = getB3273ffb43614889855bF0effa4c544e()
     // 取现配置对象
-    // extendInfoMap["cash_config_list"] = getSubmerCashConfigList()
+    // extendInfoMap["cash_config_list"] = getAb8250102ee14d688a3c697ded75df88()
     // 外扣配置对象
-    // extendInfoMap["out_fee_config"] = getSubmerOutFeeConfig()
+    // extendInfoMap["out_fee_config"] = get3a66f24451584846865293177b71f238()
     // 允许开通支付宝预授权
     // extendInfoMap["alipay_pre_auth_flag"] = ""
     // 允许开通微信预授权
@@ -97,15 +97,15 @@ func getExtendInfos() map[string]interface{} {
     // 允许使用上级商户号发起AT交易
     // extendInfoMap["use_upper_mer_at_trans_flag"] = ""
     // 大额支付配置
-    // extendInfoMap["large_amt_pay_config_list"] = getLargeAmtPayConfigList()
+    // extendInfoMap["large_amt_pay_config_list"] = getD8c6d0c002ca46cfB9efD110095bd83a()
     // 全域资金管理配置(苏商)
-    // extendInfoMap["out_order_funds_su_shang_config"] = getOutOrderFundsSuShangConfig()
+    // extendInfoMap["out_order_funds_su_shang_config"] = getD31e7929847346248e31C3f56fb221a4()
     // 托管支付开关
     // extendInfoMap["half_pay_host_flag"] = ""
     return extendInfoMap
 }
 
-func getSubmerAliConfList() string {
+func get916e568b03b4448b8442Bc59607f55a9() string {
     dto := make(map[string]interface{})
     // 支付场景
     // dto["pay_scene"] = "test"
@@ -119,7 +119,7 @@ func getSubmerAliConfList() string {
     return string(dtoByte)
 }
 
-func getSubmerWxConfList() string {
+func get91a6f3c897084daaA750D460c4223fdd() string {
     dto := make(map[string]interface{})
     // 支付场景
     // dto["pay_scene"] = "test"
@@ -127,13 +127,15 @@ func getSubmerWxConfList() string {
     // dto["fee_rate"] = "test"
     // 允许开通该场景业务
     // dto["open_flag"] = "test"
+    // 最低收取手续费（元）
+    // dto["fee_min_amt"] = "test"
 
     dtoList := [1]interface{}{dto}
     dtoByte, _ := json.Marshal(dtoList)
     return string(dtoByte)
 }
 
-func getSubmerUnionConfList() string {
+func get11f18154070b4ef3B79c6bd7442b51bd() string {
     dto := make(map[string]interface{})
     // 借记卡手续费1000以上(%)
     // dto["debit_fee_rate_up"] = "test"
@@ -157,12 +159,12 @@ func getSubmerUnionConfList() string {
     return string(dtoByte)
 }
 
-func getSubmerBankCardConfig() string {
+func getD38dbb2fA005448eAefa2631e82a43bd() string {
     dto := make(map[string]interface{})
     // 借记卡手续费（%）
     // dto["debit_fee_rate"] = "test"
     // 贷记卡手续费（%）
-    // dto["credit_fee_rate&lt;!--任雪梅发现要改正--&gt;"] = "test"
+    // dto["credit_fee_rate"] = "test"
     // 允许开通银行卡业务
     // dto["open_flag"] = "test"
     // 借记卡封顶值
@@ -184,7 +186,7 @@ func getSubmerBankCardConfig() string {
     return string(dtoByte)
 }
 
-func getSubmerSplitConfig() string {
+func getD74f8d2cAb1345d7B05859cbc476ef6e() string {
     dto := make(map[string]interface{})
     // 手续费（%）
     // dto["fee_rate"] = "test"
@@ -197,7 +199,7 @@ func getSubmerSplitConfig() string {
     return string(dtoByte)
 }
 
-func getSubmerWxZlConfList() string {
+func get5a0a3440F93241359adcC4c7bd515643() string {
     dto := make(map[string]interface{})
     // 支付场景
     // dto["pay_scene"] = "test"
@@ -211,7 +213,7 @@ func getSubmerWxZlConfList() string {
     return string(dtoByte)
 }
 
-func getSubmerAliZlConf() string {
+func getD624c523351a4f1f995f73e7862d4f5c() string {
     dto := make(map[string]interface{})
     // 手续费（%）
     // dto["fee_rate"] = "test"
@@ -222,7 +224,7 @@ func getSubmerAliZlConf() string {
     return string(dtoByte)
 }
 
-func getSubmerOnlineFeeConfList() string {
+func get5ed15ef0B2e847f8A438A8c88a7bab1f() string {
     dto := make(map[string]interface{})
     // 业务类型
     // dto["bus_type"] = "test"
@@ -242,7 +244,7 @@ func getSubmerOnlineFeeConfList() string {
     return string(dtoByte)
 }
 
-func getSubmerBalancePayConfig() string {
+func get78b6d2f909434f408f929dd15fee6672() string {
     dto := make(map[string]interface{})
     // 手续费（%）
     // dto["fee_rate"] = "test"
@@ -255,7 +257,7 @@ func getSubmerBalancePayConfig() string {
     return string(dtoByte)
 }
 
-func getSubmerCombinePayConfig() string {
+func get019b2ffc8bb04a42Aa4f87623ed4ee78() string {
     dto := make(map[string]interface{})
     // 手续费（%）
     // dto["fee_rate"] = "test"
@@ -268,7 +270,7 @@ func getSubmerCombinePayConfig() string {
     return string(dtoByte)
 }
 
-func getSubmerBankBigAmtPayConfig() string {
+func getDdb760be91d245959c0c57e3795c2e75() string {
     dto := make(map[string]interface{})
     // 手续费（%）
     // dto["fee_rate"] = "test"
@@ -281,7 +283,7 @@ func getSubmerBankBigAmtPayConfig() string {
     return string(dtoByte)
 }
 
-func getSubmerOutOrderFundsConfig() string {
+func get029b9aa1Ef7c445eAee78f34392d75a1() string {
     dto := make(map[string]interface{})
     // 手续费（%）
     // dto["fee_rate"] = "test"
@@ -296,7 +298,7 @@ func getSubmerOutOrderFundsConfig() string {
     return string(dtoByte)
 }
 
-func getOutOrderFundsNewNetConfig() string {
+func get11de5eefC8bc4ddd9bc091896e59685a() string {
     dto := make(map[string]interface{})
     // 手续费（%）
     // dto["fee_rate"] = "test"
@@ -313,7 +315,7 @@ func getOutOrderFundsNewNetConfig() string {
     return string(dtoByte)
 }
 
-func getSubmerSettleConfigList() string {
+func getB3273ffb43614889855bF0effa4c544e() string {
     dto := make(map[string]interface{})
     // 业务类型
     // dto["bus_type"] = "test"
@@ -329,7 +331,7 @@ func getSubmerSettleConfigList() string {
     return string(dtoByte)
 }
 
-func getSubmerCashConfigList() string {
+func getAb8250102ee14d688a3c697ded75df88() string {
     dto := make(map[string]interface{})
     // 业务类型
     // dto["bus_type"] = "test"
@@ -345,7 +347,7 @@ func getSubmerCashConfigList() string {
     return string(dtoByte)
 }
 
-func getSubmerOutFeeConfig() string {
+func get3a66f24451584846865293177b71f238() string {
     dto := make(map[string]interface{})
     // 支持结算手续费外扣
     // dto["settle_out_fee_flag"] = "test"
@@ -358,7 +360,7 @@ func getSubmerOutFeeConfig() string {
     return string(dtoByte)
 }
 
-func getLargeAmtPayConfigList() string {
+func getD8c6d0c002ca46cfB9efD110095bd83a() string {
     dto := make(map[string]interface{})
     // 手续费（%）
     // dto["fee_rate"] = "test"
@@ -379,7 +381,7 @@ func getLargeAmtPayConfigList() string {
     return string(dtoByte)
 }
 
-func getOutOrderFundsSuShangConfig() string {
+func getD31e7929847346248e31C3f56fb221a4() string {
     dto := make(map[string]interface{})
     // 手续费（%）
     // dto["fee_rate"] = "test"

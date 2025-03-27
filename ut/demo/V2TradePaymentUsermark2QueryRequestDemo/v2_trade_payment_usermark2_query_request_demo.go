@@ -25,8 +25,10 @@ func V2TradePaymentUsermark2QueryRequestDemo() {
         ReqSeqId:tool.GetReqSeqId(),
         // 商户号
         HuifuId:"6666000018328947",
-        // 支付授权码
+        // 授权码
         AuthCode:"6264664305553562612",
+        // 银联支付标识
+        AppUpIdentifier:"UnionPay/1.0 CloudPay",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -50,8 +52,6 @@ func V2TradePaymentUsermark2QueryRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
-    // 银联支付标识
-    extendInfoMap["app_up_identifier"] = "CloudPay"
     return extendInfoMap
 }
 

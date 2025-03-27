@@ -15,6 +15,7 @@ type V2InvoiceClerkRegRequest struct {
     ClerkIdentity string `json:"clerk_identity" structs:"clerk_identity"` // 开票员登录身份
     LoginAccount string `json:"login_account" structs:"login_account"` // 登录账号
     LoginPassword string `json:"login_password" structs:"login_password"` // 登录密码
+    ClerkPhoneNo string `json:"clerk_phone_no" structs:"clerk_phone_no"` // 开票员手机号
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

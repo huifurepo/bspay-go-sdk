@@ -59,13 +59,13 @@ func getExtendInfos() map[string]interface{} {
     // 原交易请求流水号
     // extendInfoMap["org_req_seq_id"] = ""
     // 分账对象
-    // extendInfoMap["acct_split_bunch"] = getAcctSplitBunchRucan()
+    // extendInfoMap["acct_split_bunch"] = get3b184c4f594a4e5dAd16139e268ea262()
     // 聚合正扫微信拓展参数集合
-    // extendInfoMap["wx_data"] = getWxData()
+    // extendInfoMap["wx_data"] = getEca5a6193ca0415d8858C68b04f2b084()
     // 数字货币扩展参数集合
-    // extendInfoMap["digital_currency_data"] = getDigitalCurrencyData()
+    // extendInfoMap["digital_currency_data"] = get2e8257160acc40feA926348d6b93e397()
     // 补贴支付信息
-    // extendInfoMap["combinedpay_data"] = getCombinedpayData()
+    // extendInfoMap["combinedpay_data"] = get4ff4cb7c1f3441c3A6e42c67977ba3d5()
     // 备注
     // extendInfoMap["remark"] = ""
     // 是否垫资退款
@@ -75,17 +75,17 @@ func getExtendInfos() map[string]interface{} {
     // 垫资账户类型
     // extendInfoMap["loan_acct_type"] = ""
     // 安全信息
-    // extendInfoMap["risk_check_data"] = getRiskCheckData()
+    // extendInfoMap["risk_check_data"] = getCf92bb6eC72f4cb99aecD93ab8feb1ad()
     // 设备信息
-    // extendInfoMap["terminal_device_data"] = getTerminalDeviceData()
+    // extendInfoMap["terminal_device_data"] = get4266b1ebBea34de29bee87926120bbe1()
     // 异步通知地址
     // extendInfoMap["notify_url"] = ""
     // 银联参数集合
-    // extendInfoMap["unionpay_data"] = getUnionpayData()
+    // extendInfoMap["unionpay_data"] = getE49018bbB7564fb09a8b095ba2b266e4()
     return extendInfoMap
 }
 
-func getAcctInfosRucan() interface{} {
+func getF34b22c421e84e59Ba80499431bed84a() interface{} {
     dto := make(map[string]interface{})
     // 分账金额
     // dto["div_amt"] = "test"
@@ -98,47 +98,52 @@ func getAcctInfosRucan() interface{} {
     return dtoList
 }
 
-func getAcctSplitBunchRucan() string {
+func get3b184c4f594a4e5dAd16139e268ea262() string {
     dto := make(map[string]interface{})
     // 分账信息列表
-    // dto["acct_infos"] = getAcctInfosRucan()
+    // dto["acct_infos"] = getF34b22c421e84e59Ba80499431bed84a()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
-func getGoodsDetail() interface{} {
+func get5cd41df8Aa5e4da58c2aD4e6e6946efe() interface{} {
     dto := make(map[string]interface{})
     // 商品编码
     // dto["goods_id"] = "test"
-    // 优惠退款金额
-    // dto["refund_amount"] = "test"
-    // 商品退货数量
+    // 商品退款金额
+    // dto["refund_amt"] = "test"
+    // 商品退款数量
     // dto["refund_quantity"] = "test"
     // 商品单价
     // dto["price"] = "test"
+    // 微信支付商品编码
+    // dto["wxpay_goods_id"] = ""
+    // 商品名称
+    // dto["goods_name"] = ""
 
     dtoList := [1]interface{}{dto}
     return dtoList
 }
 
-func getDetail() interface{} {
+func get0993f7b168404b65Ba8bBd063915d7c8() interface{} {
     dto := make(map[string]interface{})
     // 商品详情列表
-    // dto["goods_detail"] = getGoodsDetail()
+    // dto["goods_detail"] = get5cd41df8Aa5e4da58c2aD4e6e6946efe()
 
     return dto;
 }
 
-func getWxData() interface{} {
+func getEca5a6193ca0415d8858C68b04f2b084() string {
     dto := make(map[string]interface{})
     // 退款商品详情
-    // dto["detail"] = getDetail()
+    // dto["detail"] = get0993f7b168404b65Ba8bBd063915d7c8()
 
-    return dto;
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
 }
 
-func getDigitalCurrencyData() string {
+func get2e8257160acc40feA926348d6b93e397() string {
     dto := make(map[string]interface{})
     // 退款原因
     // dto["refund_desc"] = ""
@@ -147,7 +152,7 @@ func getDigitalCurrencyData() string {
     return string(dtoByte)
 }
 
-func getCombinedpayData() string {
+func get4ff4cb7c1f3441c3A6e42c67977ba3d5() string {
     dto := make(map[string]interface{})
     // 补贴方汇付编号
     // dto["huifu_id"] = "test"
@@ -163,7 +168,7 @@ func getCombinedpayData() string {
     return string(dtoByte)
 }
 
-func getRiskCheckData() string {
+func getCf92bb6eC72f4cb99aecD93ab8feb1ad() string {
     dto := make(map[string]interface{})
     // ip地址
     // dto["ip_addr"] = ""
@@ -178,7 +183,7 @@ func getRiskCheckData() string {
     return string(dtoByte)
 }
 
-func getTerminalDeviceData() string {
+func get4266b1ebBea34de29bee87926120bbe1() string {
     dto := make(map[string]interface{})
     // 设备类型
     // dto["device_type"] = ""
@@ -201,7 +206,7 @@ func getTerminalDeviceData() string {
     return string(dtoByte)
 }
 
-func getUnionpayData() string {
+func getE49018bbB7564fb09a8b095ba2b266e4() string {
     dto := make(map[string]interface{})
     // 收款方附加数据
     // dto["addn_data"] = ""

@@ -30,7 +30,7 @@ func V2MerchantComplaintSubmitCertificatesRequestDemo() {
         // 解限风险类型
         RelieveRiskType:"SMID_MERCHANT",
         // 提交的凭证数据
-        RelieveCertDataList:getRelieveCertDataList(),
+        RelieveCertDataList:get28cea73e4b8543ad899a4d2cdd0659ab(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -57,7 +57,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getRelieveCertDataList() string {
+func get28cea73e4b8543ad899a4d2cdd0659ab() string {
     dto := make(map[string]interface{})
     // 凭证的唯一ID
     dto["request_id"] = "1efc8c73afd64fc1b1fc50a834a54be0"

@@ -15,7 +15,47 @@ const BASE_API_TEST_URL_V2 = "https://spin-test.cloudpnr.com"
 // 以下为接口uri
 
 /**
- * 交易确认查询接口
+ * 防断链子商户号列表查询
+ */
+const V2_MERCHANT_ATPREVENT_QUERYSUBMERLIST = "/v2/merchant/atPrevent/querySubMerList"
+
+/**
+ * 防断链入驻
+ */
+const V2_MERCHANT_ATPREVENT_APPLY = "/v2/merchant/atPrevent/apply"
+
+/**
+ * 全渠道资金提现申请
+ */
+const V2_EFP_ENCASH = "/v2/efp/encash"
+
+/**
+ * 全渠道资金付款提现记录查询
+ */
+const V2_EFP_WITHDRAW_QUERY = "/v2/efp/withdraw/query"
+
+/**
+ * 全渠道资金付款申请
+ */
+const V2_EFP_SURROGATE = "/v2/efp/surrogate"
+
+/**
+ * 托管交易关单
+ */
+const V2_TRADE_HOSTING_PAYMENT_CLOSE = "/v2/trade/hosting/payment/close"
+
+/**
+ * 取现
+ */
+const V2_TRADE_SETTLEMENT_ENCASHMENT = "/v2/trade/settlement/encashment"
+
+/**
+ * 红字发票开具接口
+ */
+const V2_INVOICE_REDOPEN = "/v2/invoice/redopen"
+
+/**
+ * 交易确认查询
  */
 const V3_TRADE_PAYMENT_DELAYTRANS_CONFIRMQUERY = "/v3/trade/payment/delaytrans/confirmquery"
 
@@ -415,7 +455,7 @@ const V2_TRADE_HOSTING_PAYMENT_QUERYORDERINFO = "/v2/trade/hosting/payment/query
 const V2_TRADE_PAYMENT_ZXE_INCASH_QUERY = "/v2/trade/payment/zxe/incash/query"
 
 /**
- * 电子账户账务明细查询
+ * E账户账务明细查询
  */
 const V2_TRADE_PAYMENT_ZXE_ACCTDETAIL_QUERY = "/v2/trade/payment/zxe/acctdetail/query"
 
@@ -480,7 +520,7 @@ const V2_WALLET_TRADE_PAY_REFUND = "/v2/wallet/trade/pay/refund"
 const V2_WALLET_CARD_QUERY = "/v2/wallet/card/query"
 
 /**
- * 新增绑定银行卡
+ * 新增绑定卡
  */
 const V2_WALLET_CARD_ADD = "/v2/wallet/card/add"
 
@@ -565,7 +605,7 @@ const V2_TRADE_PAYSCORE_DEDUCT_QUERY = "/v2/trade/payscore/deduct/query"
 const V2_TRADE_PAYSCORE_SERVICEORDER_QUERY = "/v2/trade/payscore/serviceorder/query"
 
 /**
- * 创建支付分订单
+ * 创建支付分
  */
 const V2_TRADE_PAYSCORE_SERVICEORDER_CREATE = "/v2/trade/payscore/serviceorder/create"
 
@@ -650,7 +690,7 @@ const V2_QUICKBUCKLE_WITHHOLD_APPLY = "/v2/quickbuckle/withhold/apply"
 const V2_QUICKBUCKLE_WITHHOLD_QUERY = "/v2/quickbuckle/withhold/query"
 
 /**
- * 汇付入账确认
+ * 汇付入账通知
  */
 const V2_TRADE_ONLINEPAYMENT_TRANSFER_REMITTANCE = "/v2/trade/onlinepayment/transfer/remittance"
 
@@ -670,12 +710,12 @@ const V2_QUICKBUCKLE_ONEKEY_CARDBIND = "/v2/quickbuckle/onekey/cardbind"
 const V2_TRADE_SETTLEMENT_ENCHASHMENT_DMAMT_QUERY = "/v2/trade/settlement/enchashment/dmamt/query"
 
 /**
- * 子账户开通配置(2022)
+ * 子账户开通配置
  */
 const V2_MERCHANT_SETTLE_CONFIG = "/v2/merchant/settle/config"
 
 /**
- * 修改子账户配置(2022)
+ * 修改子账户配置
  */
 const V2_MERCHANT_SETTLE_MODIFY = "/v2/merchant/settle/modify"
 
@@ -1025,17 +1065,17 @@ const V2_MERCHANT_BUSI_CONFIG = "/v2/merchant/busi/config"
 const V2_MERCHANT_BASICDATA_STATUS_QUERY = "/v2/merchant/basicdata/status/query"
 
 /**
- * 商户业务开通修改(2022)
+ * 商户业务开通修改
  */
 const V2_MERCHANT_BUSI_MODIFY = "/v2/merchant/busi/modify"
 
 /**
- * 商户业务开通(2022)
+ * 商户业务开通
  */
 const V2_MERCHANT_BUSI_OPEN = "/v2/merchant/busi/open"
 
 /**
- * 商户详细信息查询(2022)
+ * 商户详细信息查询
  */
 const V2_MERCHANT_BASICDATA_QUERY = "/v2/merchant/basicdata/query"
 
@@ -1055,7 +1095,7 @@ const V2_MERCHANT_INTEGRATE_REG = "/v2/merchant/integrate/reg"
 const V2_MERCHANT_INTEGRATE_UPDATE = "/v2/merchant/integrate/update"
 
 /**
- * 商户基本信息修改(2022)
+ * 商户基本信息修改
  */
 const V2_MERCHANT_BASICDATA_MODIFY = "/v2/merchant/basicdata/modify"
 
@@ -1065,12 +1105,12 @@ const V2_MERCHANT_BASICDATA_MODIFY = "/v2/merchant/basicdata/modify"
 const V2_MERCHANT_ACTIVITY_QUERY = "/v2/merchant/activity/query"
 
 /**
- * 企业商户基本信息入驻(2022)
+ * 企业商户进件
  */
 const V2_MERCHANT_BASICDATA_ENT = "/v2/merchant/basicdata/ent"
 
 /**
- * 个人商户基本信息入驻(2022)
+ * 个人商户进件
  */
 const V2_MERCHANT_BASICDATA_INDV = "/v2/merchant/basicdata/indv"
 
@@ -1100,7 +1140,7 @@ const V2_TRADE_SETTLEMENT_ENCHASHMENT = "/v2/trade/settlement/enchashment"
 const V2_TRADE_PAYMENT_USERMARK2_QUERY = "/v2/trade/payment/usermark2/query"
 
 /**
- * 交易退款查询接口
+ * 扫码交易退款查询
  */
 const V2_TRADE_PAYMENT_SCANPAY_REFUNDQUERY = "/v2/trade/payment/scanpay/refundquery"
 
@@ -1110,12 +1150,12 @@ const V2_TRADE_PAYMENT_SCANPAY_REFUNDQUERY = "/v2/trade/payment/scanpay/refundqu
 const V2_TRADE_PAYMENT_SCANPAY_REFUND = "/v2/trade/payment/scanpay/refund"
 
 /**
- * 交易关单接口
+ * 扫码交易关单
  */
 const V2_TRADE_PAYMENT_SCANPAY_CLOSE = "/v2/trade/payment/scanpay/close"
 
 /**
- * 交易查询接口
+ * 扫码交易查询
  */
 const V2_TRADE_PAYMENT_SCANPAY_QUERY = "/v2/trade/payment/scanpay/query"
 
@@ -1130,7 +1170,7 @@ const V2_TRADE_ONLINEPAYMENT_QUICKPAY_APPLY = "/v2/trade/onlinepayment/quickpay/
 const V2_TRADE_ONLINEPAYMENT_QUICKPAY_CONFIRM = "/v2/trade/onlinepayment/quickpay/confirm"
 
 /**
- * 快捷支付页面版接口
+ * 快捷支付页面版
  */
 const V2_TRADE_ONLINEPAYMENT_QUICKPAY_PAGEINFO = "/v2/trade/onlinepayment/quickpay/pageinfo"
 
@@ -1150,7 +1190,7 @@ const V2_QUICKBUCKLE_APPLY = "/v2/quickbuckle/apply"
 const V2_QUICKBUCKLE_CONFIRM = "/v2/quickbuckle/confirm"
 
 /**
- * 交易确认退款接口
+ * 交易确认退款
  */
 const V2_TRADE_PAYMENT_DELAYTRANS_CONFIRMREFUND = "/v2/trade/payment/delaytrans/confirmrefund"
 
@@ -1160,12 +1200,12 @@ const V2_TRADE_PAYMENT_DELAYTRANS_CONFIRMREFUND = "/v2/trade/payment/delaytrans/
 const V2_TRADE_PAYMENT_DELAYTRANS_CONFIRMQUERY = "/v2/trade/payment/delaytrans/confirmquery"
 
 /**
- * 交易确认接口
+ * 交易确认
  */
 const V2_TRADE_PAYMENT_DELAYTRANS_CONFIRM = "/v2/trade/payment/delaytrans/confirm"
 
 /**
- * 账户余额信息查询接口
+ * 账户余额信息查询
  */
 const V2_TRADE_ACCTPAYMENT_BALANCE_QUERY = "/v2/trade/acctpayment/balance/query"
 
@@ -1190,7 +1230,7 @@ const V2_TRADE_CHECK_FILEQUERY = "/v2/trade/check/filequery"
 const V2_TRADE_CHECK_REPLAY = "/v2/trade/check/replay"
 
 /**
- * 交易关单查询接口
+ * 扫码交易关单查询
  */
 const V2_TRADE_PAYMENT_SCANPAY_CLOSEQUERY = "/v2/trade/payment/scanpay/closequery"
 
@@ -1200,17 +1240,17 @@ const V2_TRADE_PAYMENT_SCANPAY_CLOSEQUERY = "/v2/trade/payment/scanpay/closequer
 const V2_MERCHANT_BASICDATA_SETTLEMENT_QUERY = "/v2/merchant/basicdata/settlement/query"
 
 /**
- * 聚合正扫接口
+ * 应用场景
  */
 const V2_TRADE_PAYMENT_JSPAY = "/v2/trade/payment/jspay"
 
 /**
- * 聚合反扫接口
+ * 聚合反扫
  */
 const V2_TRADE_PAYMENT_MICROPAY = "/v2/trade/payment/micropay"
 
 /**
- * 商户分期配置详情查询
+ * 商户分期配置查询
  */
 const V2_PCREDIT_FEE_DETAIL = "/v2/pcredit/fee/detail"
 
@@ -1310,7 +1350,7 @@ const V2_TRADE_TRANS_WX_SURROGATE = "/v2/trade/trans/wx/surrogate"
 const V2_TRADE_HOSTING_PAYMENT_PREORDER = "/v2/trade/hosting/payment/preorder"
 
 /**
- * 出金交易查询接口
+ * 出金交易查询
  */
 const V2_TRADE_SETTLEMENT_QUERY = "/v2/trade/settlement/query"
 

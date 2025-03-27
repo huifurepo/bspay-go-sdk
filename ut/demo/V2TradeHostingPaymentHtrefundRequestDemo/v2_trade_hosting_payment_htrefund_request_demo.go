@@ -30,9 +30,11 @@ func V2TradeHostingPaymentHtrefundRequestDemo() {
         // 原交易请求日期
         OrgReqDate:"20240229",
         // 安全信息线上交易退款必填，参见线上退款接口；jsonObject字符串
-        RiskCheckData:getRiskCheckData(),
+        RiskCheckData:get195595a868964f2bB023E9566fcd0297(),
         // 设备信息线上交易退款必填，参见线上退款接口；jsonObject字符串
-        TerminalDeviceData:getTerminalDeviceData(),
+        TerminalDeviceData:get8d8843c250f94e9b80a253d37ec6f80a(),
+        // 大额转账支付账户信息数据jsonObject格式；银行大额转账支付交易退款申请时必填
+        // BankInfoData:getAa3a4591240343e2Bad5D6a0764f06dc(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -63,7 +65,7 @@ func getExtendInfos() map[string]interface{} {
     // 原交易请求流水号
     extendInfoMap["org_req_seq_id"] = "202207099803123123199941"
     // 分账对象
-    extendInfoMap["acct_split_bunch"] = getAcctSplitBunch()
+    extendInfoMap["acct_split_bunch"] = get4a68d378Cb6e41dfA9405a589b476160()
     // 备注
     // extendInfoMap["remark"] = ""
     // 异步通知地址
@@ -71,7 +73,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getAcctInfosRucan() interface{} {
+func get33a52525B1614d3bBc18Ff7d935b2bca() interface{} {
     dto := make(map[string]interface{})
     // 分账金额
     dto["div_amt"] = "0.12"
@@ -82,16 +84,16 @@ func getAcctInfosRucan() interface{} {
     return dtoList
 }
 
-func getAcctSplitBunch() string {
+func get4a68d378Cb6e41dfA9405a589b476160() string {
     dto := make(map[string]interface{})
     // 分账明细
-    dto["acct_infos"] = getAcctInfosRucan()
+    dto["acct_infos"] = get33a52525B1614d3bBc18Ff7d935b2bca()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
-func getRiskCheckData() string {
+func get195595a868964f2bB023E9566fcd0297() string {
     dto := make(map[string]interface{})
     // ip地址
     // dto["ip_addr"] = ""
@@ -106,7 +108,7 @@ func getRiskCheckData() string {
     return string(dtoByte)
 }
 
-func getTerminalDeviceData() string {
+func get8d8843c250f94e9b80a253d37ec6f80a() string {
     dto := make(map[string]interface{})
     // 设备类型
     dto["device_type"] = "4"
@@ -124,6 +126,23 @@ func getTerminalDeviceData() string {
     // dto["device_icc_id"] = ""
     // 交易设备WIFIMAC
     // dto["device_wifi_mac"] = ""
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func getAa3a4591240343e2Bad5D6a0764f06dc() string {
+    dto := make(map[string]interface{})
+    // 省份付款方为对公账户时必填，参见省市地区码；示例值：0013
+    // dto["province"] = "test"
+    // 地区付款方为对公账户时必填，参见省市地区码；示例值：1301
+    // dto["area"] = "test"
+    // 银行编号付款方为对公账户时必填，参考：银行编码； 示例值：01040000
+    // dto["bank_code"] = "test"
+    // 联行号付款方为对公账户时必填，参见：银行支行编码； 示例值：102290026507
+    // dto["correspondent_code"] = "test"
+    // 付款方账户类型
+    // dto["card_acct_type"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

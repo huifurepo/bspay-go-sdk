@@ -19,14 +19,12 @@ func V2HycInvcategoryQueryRequestDemo() {
 
     // 2.组装请求参数
     dgReq := BsPaySdk.V2HycInvcategoryQueryRequest{
-        // 系统号
-        // SysId:"test",
-        // 产品号
-        // ProductId:"test",
-        // 加签结果
-        // Sign:"test",
-        // 数据
-        // Data:"test",
+        // 请求流水号
+        ReqSeqId:tool.GetReqSeqId(),
+        // 请求日期
+        ReqDate:tool.GetCurrentDate(),
+        // 落地公司机构号
+        MinorAgentId:"L20210316173416881",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()

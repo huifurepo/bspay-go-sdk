@@ -1,5 +1,5 @@
 /**
- * 电子账户账务明细查询
+ * E账户账务明细查询
  *
  * @Author sdk-generator
  * @Description 汇付天下

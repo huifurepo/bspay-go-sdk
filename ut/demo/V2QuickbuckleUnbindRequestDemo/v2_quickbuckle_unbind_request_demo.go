@@ -26,7 +26,7 @@ func V2QuickbuckleUnbindRequestDemo() {
         // 汇付商户Id
         HuifuId:"6666000109133323",
         // 用户ID
-        OutCustId:"6666000103633606",
+        OutCustId:"asdtrw123123123",
         // 卡令牌
         TokenNo:"10000085852",
     }

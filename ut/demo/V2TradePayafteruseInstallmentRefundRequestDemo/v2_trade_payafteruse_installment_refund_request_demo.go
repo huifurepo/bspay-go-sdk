@@ -27,6 +27,8 @@ func V2TradePayafteruseInstallmentRefundRequestDemo() {
         HuifuId:"6666000108281250",
         // 申请退款金额
         OrdAmt:"0.01",
+        // 原请求日期
+        OrgReqDate:"20241010",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -51,11 +53,9 @@ func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
     // 分账串
-    // extendInfoMap["acct_split_bunch"] = getAcctSplitBunch()
+    // extendInfoMap["acct_split_bunch"] = get1313ce8b81ce4f5493a623949b89ffd3()
     // 原请求流水号
     extendInfoMap["org_req_seq_id"] = "20241010test10000111qccrr"
-    // 原请求日期
-    extendInfoMap["org_req_date"] = "20241010"
     // 原全局流水号
     // extendInfoMap["org_hf_seq_id"] = ""
     // 交易备注
@@ -65,7 +65,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getAcctInfos() interface{} {
+func get5864fd7678e24596B3ce38dba15bb024() interface{} {
     dto := make(map[string]interface{})
     // 分账金额
     // dto["div_amt"] = "test"
@@ -78,15 +78,16 @@ func getAcctInfos() interface{} {
     return dtoList
 }
 
-func getAcctSplitBunch() interface{} {
+func get1313ce8b81ce4f5493a623949b89ffd3() string {
     dto := make(map[string]interface{})
     // 百分比分账标志
     // dto["percentage_flag"] = ""
     // 是否净值分账
     // dto["is_clean_split"] = ""
     // 分账明细
-    // dto["acct_infos"] = getAcctInfos()
+    // dto["acct_infos"] = get5864fd7678e24596B3ce38dba15bb024()
 
-    return dto;
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
 }
 

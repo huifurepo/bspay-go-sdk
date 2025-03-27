@@ -1,5 +1,5 @@
 /**
- * 交易确认退款接口
+ * 交易确认退款
  *
  * @Author sdk-generator
  * @Description 汇付天下

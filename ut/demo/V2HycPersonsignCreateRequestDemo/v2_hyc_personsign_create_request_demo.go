@@ -19,14 +19,16 @@ func V2HycPersonsignCreateRequestDemo() {
 
     // 2.组装请求参数
     dgReq := BsPaySdk.V2HycPersonsignCreateRequest{
-        // 系统号
-        // SysId:"test",
-        // 产品号
-        // ProductId:"test",
-        // 加签结果
-        // Sign:"test",
-        // 数据
-        // Data:"test",
+        // 请求流水号
+        ReqSeqId:tool.GetReqSeqId(),
+        // 请求日期
+        ReqDate:tool.GetCurrentDate(),
+        // 用户汇付id
+        HuifuId:"6666000145962643",
+        // 落地公司机构号
+        MinorAgentId:"L20231113140106443",
+        // 乐接活请求参数jsonObject格式 合作平台为乐接活时必传
+        // LjhData:getDa04d656159b4ec89e2b3b57e7164683(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -50,6 +52,25 @@ func V2HycPersonsignCreateRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
+    // 合作平台
+    // extendInfoMap["lg_platform_type"] = ""
+    // 是否发送签约短信
+    extendInfoMap["send_sms_flag"] = "Y"
+    // 签约结果通知地址
+    extendInfoMap["asyn_url"] = ""
     return extendInfoMap
+}
+
+func getDa04d656159b4ec89e2b3b57e7164683() string {
+    dto := make(map[string]interface{})
+    // 合同模板id合作平台为乐接活时必填 数字格式
+    // dto["contract_template_id"] = "test"
+    // 任务模板id合作平台为乐接活时必填 数字格式
+    // dto["task_template_id"] = "test"
+    // 税源地id合作平台为乐接活时必填 数字格式
+    // dto["tax_area_id"] = "test"
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
 }
 

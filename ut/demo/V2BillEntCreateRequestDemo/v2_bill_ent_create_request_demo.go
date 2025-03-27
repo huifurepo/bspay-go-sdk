@@ -36,7 +36,7 @@ func V2BillEntCreateRequestDemo() {
         // 账单截止日期
         BillEndDate:"20990909",
         // 收款人信息
-        PayeeInfo:getPayeeInfo(),
+        PayeeInfo:get7cb71210B6e945638ed7D26989882224(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -63,9 +63,9 @@ func getExtendInfos() map[string]interface{} {
     // 账单说明
     extendInfoMap["bill_remark"] = "您本次 SaaS 服务周期为[开始日期]至[结束日期]。费用包括基础服务套餐[X]元，高级功能模块[X]元，总计[X]元。"
     // 汇总信息
-    // extendInfoMap["bill_summary_info"] = getBillSummaryInfo()
+    // extendInfoMap["bill_summary_info"] = getB7fe106a1ade4660865e83374ad40fbf()
     // 更多信息
-    // extendInfoMap["bill_extend_info"] = getBillExtendInfo()
+    // extendInfoMap["bill_extend_info"] = get31ba075559984fd7B7d0C256e889b5c0()
     // 账单推送方式
     extendInfoMap["push_type"] = "EMAIL"
     // 抄送邮箱
@@ -79,7 +79,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getBillSummaryInfo() string {
+func getB7fe106a1ade4660865e83374ad40fbf() string {
     dto := make(map[string]interface{})
     // 字段名
     // dto["extend_name"] = "test"
@@ -90,7 +90,7 @@ func getBillSummaryInfo() string {
     return string(dtoByte)
 }
 
-func getBillExtendInfo() string {
+func get31ba075559984fd7B7d0C256e889b5c0() string {
     dto := make(map[string]interface{})
     // 字段名
     // dto["extend_name"] = "test"
@@ -101,7 +101,7 @@ func getBillExtendInfo() string {
     return string(dtoByte)
 }
 
-func getPayeeInfo() string {
+func get7cb71210B6e945638ed7D26989882224() string {
     dto := make(map[string]interface{})
     // 收款联系人姓名
     dto["payee_name"] = "黄云"

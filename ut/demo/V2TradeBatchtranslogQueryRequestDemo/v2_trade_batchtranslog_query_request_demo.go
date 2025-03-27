@@ -54,6 +54,8 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["page_num"] = "1"
     // 分页条数
     extendInfoMap["page_size"] = "10"
+    // 原支付全局流水号
+    // extendInfoMap["payment_hf_seq_id"] = ""
     return extendInfoMap
 }
 

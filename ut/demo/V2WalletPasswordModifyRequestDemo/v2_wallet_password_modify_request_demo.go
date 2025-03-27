@@ -19,14 +19,20 @@ func V2WalletPasswordModifyRequestDemo() {
 
     // 2.组装请求参数
     dgReq := BsPaySdk.V2WalletPasswordModifyRequest{
-        // 系统号
-        // SysId:"test",
-        // 产品号
-        // ProductId:"test",
-        // 加签结果
-        // Sign:"test",
-        // 数据
-        // Data:"test",
+        // 请求流水号
+        ReqSeqId:tool.GetReqSeqId(),
+        // 请求日期
+        ReqDate:tool.GetCurrentDate(),
+        // 商户号
+        HuifuId:"6666000107309462",
+        // 钱包用户ID
+        UserHuifuId:"6666000107355468",
+        // 手机短信验证码
+        VerifyNo:"011363",
+        // 短信验证流水号
+        VerifySeqId:"WALLET0000000054024907",
+        // 跳转地址
+        FrontUrl:"https://www.huifu.com/products-services/",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -50,6 +56,8 @@ func V2WalletPasswordModifyRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
+    // 请求失效时间
+    extendInfoMap["time_expired"] = ""
     return extendInfoMap
 }
 

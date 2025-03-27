@@ -30,7 +30,7 @@ func V2MerchantDirectCertinfoAddRequestDemo() {
         // 开发者的应用ID
         AppId:"20220818198665087",
         // 文件列表
-        FileList:getFileList(),
+        FileList:getD3445b35252c4ebd855b4f1aeb23cfbc(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -65,7 +65,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getFileList() string {
+func getD3445b35252c4ebd855b4f1aeb23cfbc() string {
     dto := make(map[string]interface{})
     // 文件类型
     dto["file_type"] = "F53"

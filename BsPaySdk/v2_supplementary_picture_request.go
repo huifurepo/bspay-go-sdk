@@ -12,6 +12,7 @@ type V2SupplementaryPictureRequest struct {
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 业务请求流水号
     ReqDate string `json:"req_date" structs:"req_date"` // 业务请求日期
     FileType string `json:"file_type" structs:"file_type"` // 图片类型
+    Picture string `json:"picture" structs:"picture"` // 图片名称
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

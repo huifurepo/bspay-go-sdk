@@ -19,14 +19,10 @@ func V2HycContractQueryRequestDemo() {
 
     // 2.组装请求参数
     dgReq := BsPaySdk.V2HycContractQueryRequest{
-        // 系统号
-        // SysId:"test",
-        // 产品号
-        // ProductId:"test",
-        // 加签结果
-        // Sign:"test",
-        // 数据
-        // Data:"test",
+        // 请求流水号
+        ReqSeqId:tool.GetReqSeqId(),
+        // 请求日期
+        ReqDate:tool.GetCurrentDate(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -50,6 +46,10 @@ func V2HycContractQueryRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
+    // 合同编号
+    extendInfoMap["contract_id"] = "202401120202733426"
+    // 合作平台
+    // extendInfoMap["lg_platform_type"] = ""
     return extendInfoMap
 }
 

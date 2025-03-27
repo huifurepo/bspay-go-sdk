@@ -1,5 +1,5 @@
 /**
- * 出金交易查询接口
+ * 出金交易查询
  *
  * @Author sdk-generator
  * @Description 汇付天下

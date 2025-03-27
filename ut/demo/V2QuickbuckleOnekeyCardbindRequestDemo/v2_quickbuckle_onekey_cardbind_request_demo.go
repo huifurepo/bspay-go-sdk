@@ -26,7 +26,7 @@ func V2QuickbuckleOnekeyCardbindRequestDemo() {
         // 汇付Id
         HuifuId:"6666000003078984",
         // 顾客用户号 
-        OutCustId:"6666000103633619",
+        OutCustId:"asdtrw123123123",
         // 银行号
         BankId:"01030000",
         // 银行卡开户姓名 

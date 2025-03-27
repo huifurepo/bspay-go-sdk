@@ -16,6 +16,7 @@ type V2TradeHostingPaymentHtrefundRequest struct {
     OrgReqDate string `json:"org_req_date" structs:"org_req_date"` // 原交易请求日期
     RiskCheckData string `json:"risk_check_data" structs:"risk_check_data"` // 安全信息线上交易退款必填，参见线上退款接口；jsonObject字符串
     TerminalDeviceData string `json:"terminal_device_data" structs:"terminal_device_data"` // 设备信息线上交易退款必填，参见线上退款接口；jsonObject字符串
+    BankInfoData string `json:"bank_info_data" structs:"bank_info_data"` // 大额转账支付账户信息数据jsonObject格式；银行大额转账支付交易退款申请时必填
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

@@ -30,7 +30,7 @@ func V2TradePaymentPreauthpaycancelRefundRequestDemo() {
         // 完成撤销金额
         OrdAmt:"0.02",
         // 风控信息
-        RiskCheckInfo:getRiskCheckInfo(),
+        RiskCheckInfo:getB6b94958D58f402dA1271d898ffe2200(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -75,13 +75,13 @@ func getExtendInfos() map[string]interface{} {
     // 扩展域
     // extendInfoMap["mer_priv"] = ""
     // 设备信息
-    extendInfoMap["terminal_device_info"] = getTerminalDeviceInfo()
+    extendInfoMap["terminal_device_info"] = getB4cf3131629a41389d2285e0202d1062()
     // 异步通知地址
     extendInfoMap["notify_url"] = "http://www.baidu.com"
     return extendInfoMap
 }
 
-func getRiskCheckInfo() string {
+func getB6b94958D58f402dA1271d898ffe2200() string {
     dto := make(map[string]interface{})
     // 基站地址
     dto["base_station"] = "192.168.1.1"
@@ -96,7 +96,7 @@ func getRiskCheckInfo() string {
     return string(dtoByte)
 }
 
-func getTerminalDeviceInfo() interface{} {
+func getB4cf3131629a41389d2285e0202d1062() string {
     dto := make(map[string]interface{})
     // 交易设备GPS
     dto["device_gps"] = "192.168.0.0"
@@ -121,6 +121,7 @@ func getTerminalDeviceInfo() interface{} {
     // 逻辑终端号
     dto["pnr_dev_id"] = ""
 
-    return dto;
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
 }
 

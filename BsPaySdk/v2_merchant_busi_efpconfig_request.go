@@ -13,8 +13,6 @@ type V2MerchantBusiEfpconfigRequest struct {
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 商户汇付id
     UpperHuifuId string `json:"upper_huifu_id" structs:"upper_huifu_id"` // 所属渠道商
-    SwitchState string `json:"switch_state" structs:"switch_state"` // 开关
-    OutOrderAutoAcctFlag string `json:"out_order_auto_acct_flag" structs:"out_order_auto_acct_flag"` // 自动入账开关0:关闭 1:开通；switch_state为1时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1&lt;/font&gt;
     OutFeeHuifuid string `json:"out_fee_huifuid" structs:"out_fee_huifuid"` // 支付手续费外扣汇付ID支付手续费外扣标记为1时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000109812123&lt;/font&gt;
     OutOrderAcctCard string `json:"out_order_acct_card" structs:"out_order_acct_card"` // 全域资金开户使用的银行卡信息首次开通时必填 jsonObject格式
     OutOrderAcctOpenFees string `json:"out_order_acct_open_fees" structs:"out_order_acct_open_fees"` // 全域资金开户手续费首次开通时必填 jsonObject格式

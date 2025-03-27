@@ -46,7 +46,7 @@ func V2PcreditSolutionCreateRequestDemo() {
         // 预算提醒手机号列表
         BudgetWarningMobileNoList:"13940001100",
         // 子门店信息集合
-        SubShopInfoList:getSubShopInfoList(),
+        SubShopInfoList:get5b9e78e1B07f4c27Aea4A87833d62a7e(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -75,7 +75,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getSubShopInfoList() string {
+func get5b9e78e1B07f4c27Aea4A87833d62a7e() string {
     dto := make(map[string]interface{})
     // 二级商户号
     dto["sub_mer_id"] = "A4854135335181517376"

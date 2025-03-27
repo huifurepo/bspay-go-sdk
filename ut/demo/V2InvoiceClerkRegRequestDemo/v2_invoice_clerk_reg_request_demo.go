@@ -31,6 +31,8 @@ func V2InvoiceClerkRegRequestDemo() {
         LoginAccount:"31011520010",
         // 登录密码
         LoginPassword:"1******5",
+        // 开票员手机号
+        ClerkPhoneNo:"17621100776",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -54,8 +56,6 @@ func V2InvoiceClerkRegRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
-    // 开票员手机号
-    extendInfoMap["clerk_phone_no"] = "17621100776"
     return extendInfoMap
 }
 

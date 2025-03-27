@@ -34,7 +34,7 @@ func V2TradePayscorePayPayscorepayRequestDemo() {
         // 商品描述
         GoodsDesc:"bp充电",
         // 安全信息
-        RiskCheckData:getRiskCheckData(),
+        RiskCheckData:get7b611856F3284acbB2b933e5277201fd(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -59,13 +59,13 @@ func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
     // 聚合反扫微信参数集合
-    // extendInfoMap["wx_data"] = getWxData()
+    // extendInfoMap["wx_data"] = get26abfe33D15b4d88969eE4b82e981c40()
     // 是否延迟交易
     // extendInfoMap["delay_acct_flag"] = ""
     // 分账对象
-    // extendInfoMap["acct_split_bunch"] = getAcctSplitBunch()
+    // extendInfoMap["acct_split_bunch"] = getB4a7c01e8049417cBfaf23cca015476e()
     // 设备信息
-    // extendInfoMap["terminal_device_info"] = getTerminalDeviceInfo()
+    // extendInfoMap["terminal_device_info"] = get18bf806b138f41fb9eb85470b909b79b()
     // 交易备注
     // extendInfoMap["remark"] = ""
     // 商户回调地址
@@ -73,7 +73,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getWxData() string {
+func get26abfe33D15b4d88969eE4b82e981c40() string {
     dto := make(map[string]interface{})
     // 子商户用户标识
     // dto["sub_openid"] = "test"
@@ -88,7 +88,7 @@ func getWxData() string {
     return string(dtoByte)
 }
 
-func getAcctInfos() interface{} {
+func get74fe15d7F3cf4781880dA528d270b475() interface{} {
     dto := make(map[string]interface{})
     // 分账金额
     // dto["div_amt"] = "test"
@@ -99,16 +99,16 @@ func getAcctInfos() interface{} {
     return dtoList
 }
 
-func getAcctSplitBunch() string {
+func getB4a7c01e8049417cBfaf23cca015476e() string {
     dto := make(map[string]interface{})
     // 分账明细
-    // dto["acct_infos"] = getAcctInfos()
+    // dto["acct_infos"] = get74fe15d7F3cf4781880dA528d270b475()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
-func getRiskCheckData() string {
+func get7b611856F3284acbB2b933e5277201fd() string {
     dto := make(map[string]interface{})
     // ip地址
     dto["ip_address"] = "127.0.0.1"
@@ -123,7 +123,7 @@ func getRiskCheckData() string {
     return string(dtoByte)
 }
 
-func getTerminalDeviceInfo() string {
+func get18bf806b138f41fb9eb85470b909b79b() string {
     dto := make(map[string]interface{})
     // 设备类型
     // dto["device_type"] = ""

@@ -14,8 +14,6 @@ type V2MerchantComplaintReplyRequest struct {
     ComplaintId string `json:"complaint_id" structs:"complaint_id"` // 微信投诉单号
     ComplaintedMchid string `json:"complainted_mchid" structs:"complainted_mchid"` // 被诉商户微信号
     ResponseContent string `json:"response_content" structs:"response_content"` // 回复内容
-    JumpUrl string `json:"jump_url" structs:"jump_url"` // 跳转链接
-    JumpUrlText string `json:"jump_url_text" structs:"jump_url_text"` // 跳转链接文案
     MchId string `json:"mch_id" structs:"mch_id"` // 微信商户号
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段

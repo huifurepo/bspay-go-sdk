@@ -19,14 +19,24 @@ func V2WalletTradeWithdrawalRequestDemo() {
 
     // 2.组装请求参数
     dgReq := BsPaySdk.V2WalletTradeWithdrawalRequest{
-        // 系统号
-        // SysId:"test",
-        // 产品号
-        // ProductId:"test",
-        // 加签结果
-        // Sign:"test",
-        // 数据
-        // Data:"test",
+        // 请求流水号
+        ReqSeqId:tool.GetReqSeqId(),
+        // 请求日期
+        ReqDate:tool.GetCurrentDate(),
+        // 商户号
+        HuifuId:"6666000135653240",
+        // 钱包用户ID
+        UserHuifuId:"6666000136655020",
+        // 银行卡序列号
+        TokenNo:"10043478052",
+        // 提现金额
+        // TransAmt:"test",
+        // 跳转地址
+        FrontUrl:"http://www.huifu.com",
+        // 异步通知地址
+        NotifyUrl:"https://",
+        // 到账日期类型
+        IntoAcctDateType:"D0",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -50,6 +60,10 @@ func V2WalletTradeWithdrawalRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
+    // 密码页面类型
+    extendInfoMap["request_type"] = "M"
+    // 备注
+    extendInfoMap["remark"] = "remark11"
     return extendInfoMap
 }
 

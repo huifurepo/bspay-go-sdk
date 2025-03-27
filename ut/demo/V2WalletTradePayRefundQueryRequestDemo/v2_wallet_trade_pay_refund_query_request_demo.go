@@ -19,14 +19,10 @@ func V2WalletTradePayRefundQueryRequestDemo() {
 
     // 2.组装请求参数
     dgReq := BsPaySdk.V2WalletTradePayRefundQueryRequest{
-        // 系统号
-        // SysId:"test",
-        // 产品号
-        // ProductId:"test",
-        // 加签结果
-        // Sign:"test",
-        // 数据
-        // Data:"test",
+        // 原退款交易请求日期
+        OrgReqDate:"20230816",
+        // 原退款交易请求流水号
+        // OrgReqSeqId:"test",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -50,6 +46,10 @@ func V2WalletTradePayRefundQueryRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
+    // 钱包用户id
+    extendInfoMap["user_huifu_id"] = "6666000136655020"
+    // 原退款交易全局流水号
+    extendInfoMap["org_hf_seq_id"] = "003100TOP1A230816150903P990ac139c0600000"
     return extendInfoMap
 }
 

@@ -19,14 +19,14 @@ func V2WalletTradeQueryRequestDemo() {
 
     // 2.组装请求参数
     dgReq := BsPaySdk.V2WalletTradeQueryRequest{
-        // 系统号
-        // SysId:"test",
-        // 产品号
-        // ProductId:"test",
-        // 加签结果
-        // Sign:"test",
-        // 数据
-        // Data:"test",
+        // 商户号
+        HuifuId:"6666000135653240",
+        // 原交易请求日期
+        OrgReqDate:"20230803",
+        // 原交易请求流水号
+        OrgReqSeqId:"2023080325123001",
+        // 交易类型
+        TransType:"WALLET_PAY",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()

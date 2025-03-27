@@ -54,6 +54,8 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["page_num"] = "1"
     // 账户号
     // extendInfoMap["acct_id"] = ""
+    // 账户类型
+    extendInfoMap["acct_type"] = "01"
     return extendInfoMap
 }
 

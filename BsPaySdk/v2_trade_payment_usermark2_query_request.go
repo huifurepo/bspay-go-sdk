@@ -12,7 +12,8 @@ type V2TradePaymentUsermark2QueryRequest struct {
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 商户号
-    AuthCode string `json:"auth_code" structs:"auth_code"` // 支付授权码
+    AuthCode string `json:"auth_code" structs:"auth_code"` // 授权码
+    AppUpIdentifier string `json:"app_up_identifier" structs:"app_up_identifier"` // 银联支付标识
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

@@ -9,10 +9,14 @@ package BsPaySdk
 import "encoding/json"
 
 type V2WalletCreateRequest struct {
-    SysId string `json:"sys_id" structs:"sys_id"` // 系统号
-    ProductId string `json:"product_id" structs:"product_id"` // 产品号
-    Sign string `json:"sign" structs:"sign"` // 加签结果
-    Data string `json:"data" structs:"data"` // 数据
+    ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
+    ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
+    HuifuId string `json:"huifu_id" structs:"huifu_id"` // 商户号
+    Name string `json:"name" structs:"name"` // 个人姓名钱包账户开户人的本人真实姓名；wallet_type&#x3D;1时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：张三&lt;/font&gt;
+    MobileNo string `json:"mobile_no" structs:"mobile_no"` // 钱包绑定手机号
+    VerifyCode string `json:"verify_code" structs:"verify_code"` // 手机短信验证码
+    VerifySeqId string `json:"verify_seq_id" structs:"verify_seq_id"` // 短信验证流水号
+    FrontUrl string `json:"front_url" structs:"front_url"` // 跳转地址
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

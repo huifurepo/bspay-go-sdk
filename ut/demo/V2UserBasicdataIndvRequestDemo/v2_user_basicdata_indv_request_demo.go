@@ -73,11 +73,11 @@ func getExtendInfos() map[string]interface{} {
     // 拓展方字段
     extendInfoMap["expand_id"] = ""
     // 文件列表
-    extendInfoMap["file_list"] = getFileList()
+    extendInfoMap["file_list"] = getA2b3ad80C6e54290Ad01D1bd6ad4753b()
     return extendInfoMap
 }
 
-func getFileList() string {
+func getA2b3ad80C6e54290Ad01D1bd6ad4753b() string {
     dto := make(map[string]interface{})
     // 文件类型
     dto["file_type"] = "F04"

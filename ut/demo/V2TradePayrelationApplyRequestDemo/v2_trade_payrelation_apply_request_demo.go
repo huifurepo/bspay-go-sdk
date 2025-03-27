@@ -26,7 +26,7 @@ func V2TradePayrelationApplyRequestDemo() {
         // 请求流水号
         ReqSeqId:tool.GetReqSeqId(),
         // 付款关系明细
-        PayRelations:getPayRelationsRc(),
+        PayRelations:getA4340f0d9f434de0910eC4522943e67d(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -53,7 +53,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getPayRelationsRc() string {
+func getA4340f0d9f434de0910eC4522943e67d() string {
     dto := make(map[string]interface{})
     // 入账方商户号
     dto["in_huifu_id"] = "6666000104558835"

@@ -1,5 +1,5 @@
 /**
- * 聚合反扫接口
+ * 聚合反扫
  *
  * @Author sdk-generator
  * @Description 汇付天下

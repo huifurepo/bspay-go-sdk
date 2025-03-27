@@ -13,6 +13,7 @@ type V2TradePayafteruseInstallmentRefundRequest struct {
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 商户号
     OrdAmt string `json:"ord_amt" structs:"ord_amt"` // 申请退款金额
+    OrgReqDate string `json:"org_req_date" structs:"org_req_date"` // 原请求日期
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

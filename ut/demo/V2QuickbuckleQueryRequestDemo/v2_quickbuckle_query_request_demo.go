@@ -26,7 +26,7 @@ func V2QuickbuckleQueryRequestDemo() {
         // 汇付商户Id
         HuifuId:"6666000109133323",
         // 用户id
-        OutCustId:"6666000103637719",
+        OutCustId:"asdtrw123123123",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()

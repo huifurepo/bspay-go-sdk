@@ -19,14 +19,16 @@ func V2TradeLgwxSurrogateQueryRequestDemo() {
 
     // 2.组装请求参数
     dgReq := BsPaySdk.V2TradeLgwxSurrogateQueryRequest{
-        // 系统号
-        // SysId:"test",
-        // 产品号
-        // ProductId:"test",
-        // 加签结果
-        // Sign:"test",
-        // 数据
-        // Data:"test",
+        // 请求日期
+        ReqDate:tool.GetCurrentDate(),
+        // 请求流水号
+        ReqSeqId:tool.GetReqSeqId(),
+        // 原交易的商户号
+        HuifuId:"6666000107755175",
+        // 原交易请求日期
+        OrgReqDate:"20240621",
+        // 原交易请求流水号
+        OrgReqSeqId:"1399999316713470",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()

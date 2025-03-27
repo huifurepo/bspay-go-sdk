@@ -9,10 +9,8 @@ package BsPaySdk
 import "encoding/json"
 
 type V2WalletTradePayRefundQueryRequest struct {
-    SysId string `json:"sys_id" structs:"sys_id"` // 系统号
-    ProductId string `json:"product_id" structs:"product_id"` // 产品号
-    Sign string `json:"sign" structs:"sign"` // 加签结果
-    Data string `json:"data" structs:"data"` // 数据
+    OrgReqDate string `json:"org_req_date" structs:"org_req_date"` // 原退款交易请求日期
+    OrgReqSeqId string `json:"org_req_seq_id" structs:"org_req_seq_id"` // 原退款交易请求流水号
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

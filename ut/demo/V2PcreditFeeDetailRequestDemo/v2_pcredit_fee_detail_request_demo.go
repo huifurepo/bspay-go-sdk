@@ -1,5 +1,5 @@
 /**
- * 商户分期配置详情查询 - 示例
+ * 商户分期配置查询 - 示例
  *
  * @Author sdk-generator
  * @Description 汇付天下

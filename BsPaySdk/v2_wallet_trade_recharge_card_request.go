@@ -9,10 +9,13 @@ package BsPaySdk
 import "encoding/json"
 
 type V2WalletTradeRechargeCardRequest struct {
-    SysId string `json:"sys_id" structs:"sys_id"` // 系统号
-    ProductId string `json:"product_id" structs:"product_id"` // 产品号
-    Sign string `json:"sign" structs:"sign"` // 加签结果
-    Data string `json:"data" structs:"data"` // 数据
+    ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
+    ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
+    HuifuId string `json:"huifu_id" structs:"huifu_id"` // 商户号
+    UserHuifuId string `json:"user_huifu_id" structs:"user_huifu_id"` // 钱包用户ID
+    TransAmt string `json:"trans_amt" structs:"trans_amt"` // 订单金额
+    WxRechareInfo string `json:"wx_rechare_info" structs:"wx_rechare_info"` // 微信充值信息微信充值必填
+    AlipayRechargeInfo string `json:"alipay_recharge_info" structs:"alipay_recharge_info"` // 支付宝充值信息支付宝充值必填
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

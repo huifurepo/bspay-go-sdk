@@ -1,5 +1,5 @@
 /**
- * 交易确认查询接口
+ * 交易确认查询
  *
  * @Author sdk-generator
  * @Description 汇付天下

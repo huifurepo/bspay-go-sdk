@@ -19,14 +19,14 @@ func V2WalletCardQueryRequestDemo() {
 
     // 2.组装请求参数
     dgReq := BsPaySdk.V2WalletCardQueryRequest{
-        // 系统号
-        // SysId:"test",
-        // 产品号
-        // ProductId:"test",
-        // 加签结果
-        // Sign:"test",
-        // 数据
-        // Data:"test",
+        // 请求流水号
+        ReqSeqId:tool.GetReqSeqId(),
+        // 请求日期
+        ReqDate:tool.GetCurrentDate(),
+        // 商户号
+        HuifuId:"6666000103423237",
+        // 原请求流水号
+        OrgReqSeqId:"RQHWJ169085715011",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()

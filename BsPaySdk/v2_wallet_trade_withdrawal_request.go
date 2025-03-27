@@ -9,10 +9,15 @@ package BsPaySdk
 import "encoding/json"
 
 type V2WalletTradeWithdrawalRequest struct {
-    SysId string `json:"sys_id" structs:"sys_id"` // 系统号
-    ProductId string `json:"product_id" structs:"product_id"` // 产品号
-    Sign string `json:"sign" structs:"sign"` // 加签结果
-    Data string `json:"data" structs:"data"` // 数据
+    ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
+    ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
+    HuifuId string `json:"huifu_id" structs:"huifu_id"` // 商户号
+    UserHuifuId string `json:"user_huifu_id" structs:"user_huifu_id"` // 钱包用户ID
+    TokenNo string `json:"token_no" structs:"token_no"` // 银行卡序列号
+    TransAmt string `json:"trans_amt" structs:"trans_amt"` // 提现金额
+    FrontUrl string `json:"front_url" structs:"front_url"` // 跳转地址
+    NotifyUrl string `json:"notify_url" structs:"notify_url"` // 异步通知地址
+    IntoAcctDateType string `json:"into_acct_date_type" structs:"into_acct_date_type"` // 到账日期类型
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

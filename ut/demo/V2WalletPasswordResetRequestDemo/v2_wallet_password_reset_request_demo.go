@@ -19,14 +19,22 @@ func V2WalletPasswordResetRequestDemo() {
 
     // 2.组装请求参数
     dgReq := BsPaySdk.V2WalletPasswordResetRequest{
-        // 系统号
-        // SysId:"test",
-        // 产品号
-        // ProductId:"test",
-        // 加签结果
-        // Sign:"test",
-        // 数据
-        // Data:"test",
+        // 请求流水号
+        ReqSeqId:tool.GetReqSeqId(),
+        // 请求日期
+        ReqDate:tool.GetCurrentDate(),
+        // 商户号
+        HuifuId:"6666000107309462",
+        // 钱包用户ID
+        UserHuifuId:"6666000107355468",
+        // 钱包绑定手机号
+        CustMobile:"13771817106",
+        // 手机短信验证码
+        VerifyNo:"652364",
+        // 短信验证流水号
+        VerifySeqId:"WALLET0000000054024907",
+        // 跳转地址
+        FrontUrl:"",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -50,6 +58,14 @@ func V2WalletPasswordResetRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
+    // 请求失效时间
+    extendInfoMap["time_expired"] = ""
+    // 个人证件号码
+    // extendInfoMap["cert_no"] = ""
+    // 银行卡号
+    extendInfoMap["card_no"] = ""
+    // 银行卡绑定手机号
+    // extendInfoMap["card_mobile"] = ""
     return extendInfoMap
 }
 

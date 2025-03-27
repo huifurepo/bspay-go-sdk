@@ -32,7 +32,7 @@ func V2TradePreauthRequestDemo() {
         // 支付授权码
         AuthCode:"280426995846228615",
         // 安全信息
-        RiskCheckData:getRiskCheckData(),
+        RiskCheckData:get88a48f6c221e4ff5B8006bf8874c4dd3(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -71,9 +71,9 @@ func getExtendInfos() map[string]interface{} {
     // 传入分帐遇到优惠的处理规则
     extendInfoMap["term_div_coupon_type"] = "1"
     // 支付宝扩展参数集合
-    extendInfoMap["alipay_data"] = getAlipayData()
+    extendInfoMap["alipay_data"] = get386c6c5f282c46f1A7232adc003f8634()
     // 微信扩展参数集合
-    extendInfoMap["wx_data"] = getWxData()
+    extendInfoMap["wx_data"] = get7dd691ab53b04a40Bc4085a152d039a5()
     // 商户扩展域
     extendInfoMap["mer_priv"] = "{\"callType\":\"01\",\"lc\":\"12345678901234567890123456789012123\",\"softVersion\":\"6.5.3\"}"
     // 备注
@@ -87,13 +87,15 @@ func getExtendInfos() map[string]interface{} {
     // 输入密码提示
     // extendInfoMap["password_trade"] = ""
     // 设备信息
-    extendInfoMap["terminal_device_data"] = getTerminalDeviceData()
+    extendInfoMap["terminal_device_data"] = get99f5455594464feeAa6a9f39230613f8()
     // 异步通知地址
     extendInfoMap["notify_url"] = "http://www.baidu.com"
+    // 账户号
+    // extendInfoMap["acct_id"] = ""
     return extendInfoMap
 }
 
-func getExtendParams() string {
+func getFc5a9d0c6088469684325146af94fd15() interface{} {
     dto := make(map[string]interface{})
     // 卡类型
     dto["card_type"] = ""
@@ -108,11 +110,10 @@ func getExtendParams() string {
     // 系统商编号
     dto["sys_service_provider_id"] = ""
 
-    dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
+    return dto;
 }
 
-func getAliGoodsDetail() interface{} {
+func get334aa3af21e2449b9ef567aef6e832f3() interface{} {
     dto := make(map[string]interface{})
     // 商品的编号
     dto["goods_id"] = "12345678901234567890123456789012"
@@ -135,14 +136,14 @@ func getAliGoodsDetail() interface{} {
     return dtoList
 }
 
-func getAlipayData() string {
+func get386c6c5f282c46f1A7232adc003f8634() string {
     dto := make(map[string]interface{})
     // 支付宝的店铺编号
     dto["alipay_store_id"] = ""
     // 业务扩展参数
-    dto["extend_params"] = getExtendParams()
+    dto["extend_params"] = getFc5a9d0c6088469684325146af94fd15()
     // 订单包含的商品列表信息
-    dto["goods_detail"] = getAliGoodsDetail()
+    dto["goods_detail"] = get334aa3af21e2449b9ef567aef6e832f3()
     // 商户操作员编号
     dto["operator_id"] = "1234567890123456789012345678"
     // 商户门店编号
@@ -152,7 +153,7 @@ func getAlipayData() string {
     return string(dtoByte)
 }
 
-func getWxGoodsDetailRucan() interface{} {
+func get1475c6ac101f41fcBb3e7240e5b8b639() interface{} {
     dto := make(map[string]interface{})
     // 商品编码
     dto["goods_id"] = "1232131"
@@ -169,10 +170,10 @@ func getWxGoodsDetailRucan() interface{} {
     return dtoList
 }
 
-func getWxGoodsRucan() interface{} {
+func get0a4d393026664aa68b07Be0921a28479() interface{} {
     dto := make(map[string]interface{})
     // 单品列表
-    dto["goods_detail"] = getWxGoodsDetailRucan()
+    dto["goods_detail"] = get1475c6ac101f41fcBb3e7240e5b8b639()
     // 订单原价
     dto["cost_price"] = "1"
     // 商品小票ID
@@ -181,7 +182,7 @@ func getWxGoodsRucan() interface{} {
     return dto;
 }
 
-func getWxStoreRucan() interface{} {
+func get77b20125Baf94a3dA333C5fdeb7033d0() interface{} {
     dto := make(map[string]interface{})
     // 门店详细地址
     dto["address"] = "汇付天下桂林路"
@@ -195,26 +196,26 @@ func getWxStoreRucan() interface{} {
     return dto;
 }
 
-func getWxSceneRucan() interface{} {
+func get3f7b8679D63e470a90c9F1bda7adaa66() interface{} {
     dto := make(map[string]interface{})
     // 门店信息
-    dto["store_info"] = getWxStoreRucan()
+    dto["store_info"] = get77b20125Baf94a3dA333C5fdeb7033d0()
 
     return dto;
 }
 
-func getWxData() string {
+func get7dd691ab53b04a40Bc4085a152d039a5() string {
     dto := make(map[string]interface{})
     // 附加数据
     dto["attach"] = ""
     // 商品详情
-    dto["detail"] = getWxGoodsRucan()
+    dto["detail"] = get0a4d393026664aa68b07Be0921a28479()
     // 设备号
     dto["device_info"] = ""
     // 订单优惠标记
     dto["goods_tag"] = "12321312"
     // 场景信息
-    dto["scene_info"] = getWxSceneRucan()
+    dto["scene_info"] = get3f7b8679D63e470a90c9F1bda7adaa66()
     // 子商户公众账号ID
     dto["sub_appid"] = "wx48abf94e085e98e1"
 
@@ -222,7 +223,7 @@ func getWxData() string {
     return string(dtoByte)
 }
 
-func getRiskCheckData() string {
+func get88a48f6c221e4ff5B8006bf8874c4dd3() string {
     dto := make(map[string]interface{})
     // 基站地址
     dto["base_station"] = "192.168.1.1"
@@ -237,7 +238,7 @@ func getRiskCheckData() string {
     return string(dtoByte)
 }
 
-func getTerminalDeviceData() string {
+func get99f5455594464feeAa6a9f39230613f8() string {
     dto := make(map[string]interface{})
     // 商户终端版本号
     dto["app_version"] = ""

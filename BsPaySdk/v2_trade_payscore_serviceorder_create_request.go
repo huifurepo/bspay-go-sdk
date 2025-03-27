@@ -1,5 +1,5 @@
 /**
- * 创建支付分订单
+ * 创建支付分
  *
  * @Author sdk-generator
  * @Description 汇付天下

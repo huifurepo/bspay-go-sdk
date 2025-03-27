@@ -1,5 +1,5 @@
 /**
- * 账户余额信息查询接口
+ * 账户余额信息查询
  *
  * @Author sdk-generator
  * @Description 汇付天下

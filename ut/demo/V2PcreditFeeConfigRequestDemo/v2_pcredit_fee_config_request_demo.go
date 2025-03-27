@@ -49,17 +49,17 @@ func getExtendInfos() map[string]interface{} {
     // 异步通知地址
     extendInfoMap["async_return_url"] = "http://192.168.85.157:30031/sspm/testVirgo"
     // 银行分期费率
-    extendInfoMap["bank_fq_list"] = getBankFqList()
+    extendInfoMap["bank_fq_list"] = get4fb8cc07Dcf34749Ba678a7a3d56ec62()
     // 花呗分期费率
-    extendInfoMap["hb_fq_fee_list"] = getHbFqFeeList()
+    extendInfoMap["hb_fq_fee_list"] = getF679bb7cD1da48449f62A76fda90cd35()
     // 白条分期配置对象
-    // extendInfoMap["jdbt_data"] = getJdbtData()
+    // extendInfoMap["jdbt_data"] = get72e57141A7df493eA43eCd5375e866e9()
     // 银联聚分期配置对象
-    // extendInfoMap["yljfq_data"] = getYljfqData()
+    // extendInfoMap["yljfq_data"] = get2d12f633Dee949f897d48200985f520d()
     return extendInfoMap
 }
 
-func getBankFqFeeList() interface{} {
+func get4001bbdcDb50466191ab9541fac18128() interface{} {
     dto := make(map[string]interface{})
     // 银行编号
     dto["bank_code"] = "01040000"
@@ -90,7 +90,7 @@ func getBankFqFeeList() interface{} {
     return dtoList
 }
 
-func getBankFqList() string {
+func get4fb8cc07Dcf34749Ba678a7a3d56ec62() string {
     dto := make(map[string]interface{})
     // 银联入网模式
     dto["ent_way"] = "1"
@@ -99,7 +99,7 @@ func getBankFqList() string {
     // 银行卡分期状态
     dto["bank_card_fq_status"] = "1"
     // 银行卡分期费率
-    dto["bank_fq_fee_list"] = getBankFqFeeList()
+    dto["bank_fq_fee_list"] = get4001bbdcDb50466191ab9541fac18128()
     // 贴息模式
     dto["fee_model"] = "1"
 
@@ -108,7 +108,7 @@ func getBankFqList() string {
     return string(dtoByte)
 }
 
-func getHbFqFeeList() string {
+func getF679bb7cD1da48449f62A76fda90cd35() string {
     dto := make(map[string]interface{})
     // 商户汇付Id
     dto["huifu_id"] = "6666000003156435"
@@ -142,7 +142,7 @@ func getHbFqFeeList() string {
     return string(dtoByte)
 }
 
-func getJdbtFeeData() string {
+func getB7932aa31ea947479e26D0111688ef67() interface{} {
     dto := make(map[string]interface{})
     // 支付场景
     // dto["pay_scene"] = "test"
@@ -160,11 +160,10 @@ func getJdbtFeeData() string {
     // dto["out_fee_acct_id"] = ""
 
     dtoList := [1]interface{}{dto}
-    dtoByte, _ := json.Marshal(dtoList)
-    return string(dtoByte)
+    return dtoList
 }
 
-func getJdbtData() string {
+func get72e57141A7df493eA43eCd5375e866e9() string {
     dto := make(map[string]interface{})
     // 商户汇付Id
     // dto["huifu_id"] = "test"
@@ -172,18 +171,22 @@ func getJdbtData() string {
     // dto["sign_user_type"] = "test"
     // 签约人手机号
     // dto["mobile_no"] = "test"
+    // 挂网协议地址3-挂网协议必填；示例值：https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/dg_gwxy/PaymentServiceAgreement_xxxx.html
+    // dto["agreement_url"] = "test"
     // 京东白条费率数据
-    // dto["jdbt_fee_data"] = getJdbtFeeData()
+    // dto["jdbt_fee_data"] = getB7932aa31ea947479e26D0111688ef67()
     // 签约人姓名
     // dto["name"] = ""
     // 签约人身份证号
     // dto["cert_no"] = ""
+    // 协议类型
+    // dto["agreement_type"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
-func getYljfqFeeData() string {
+func get2aee432225064626A6152ba2edc80431() interface{} {
     dto := make(map[string]interface{})
     // 支付场景
     // dto["pay_scene"] = "test"
@@ -203,11 +206,10 @@ func getYljfqFeeData() string {
     // dto["out_fee_acct_id"] = ""
 
     dtoList := [1]interface{}{dto}
-    dtoByte, _ := json.Marshal(dtoList)
-    return string(dtoByte)
+    return dtoList
 }
 
-func getFileList() interface{} {
+func getF1bf35fa515e401dA366599b0ff5a993() interface{} {
     dto := make(map[string]interface{})
     // 文件id
     // dto["file_id"] = "test"
@@ -218,7 +220,7 @@ func getFileList() interface{} {
     return dtoList
 }
 
-func getYljfqData() string {
+func get2d12f633Dee949f897d48200985f520d() string {
     dto := make(map[string]interface{})
     // 商户汇付Id
     // dto["huifu_id"] = "test"
@@ -227,13 +229,13 @@ func getYljfqData() string {
     // 签约人手机号
     // dto["mobile_no"] = "test"
     // 银联聚分期费率数据
-    // dto["yljfq_fee_data"] = getYljfqFeeData()
+    // dto["yljfq_fee_data"] = get2aee432225064626A6152ba2edc80431()
     // 签约人姓名
     // dto["name"] = ""
     // 签约人身份证号
     // dto["cert_no"] = ""
     // 补充业务信息
-    // dto["file_list"] = getFileList()
+    // dto["file_list"] = getF1bf35fa515e401dA366599b0ff5a993()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

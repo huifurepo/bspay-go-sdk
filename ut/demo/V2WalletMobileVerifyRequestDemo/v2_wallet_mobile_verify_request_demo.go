@@ -19,14 +19,18 @@ func V2WalletMobileVerifyRequestDemo() {
 
     // 2.组装请求参数
     dgReq := BsPaySdk.V2WalletMobileVerifyRequest{
-        // 系统号
-        // SysId:"test",
-        // 产品号
-        // ProductId:"test",
-        // 加签结果
-        // Sign:"test",
-        // 数据
-        // Data:"test",
+        // 请求流水号
+        // ReqSeqId:tool.GetReqSeqId(),
+        // 请求日期
+        // ReqDate:tool.GetCurrentDate(),
+        // 商户号
+        HuifuId:"6666000107309462",
+        // 钱包用户ID斗拱系统生成的钱包用户ID。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000123122343&lt;/font&gt;&lt;br/&gt;验证类型为2-密码修改和3-密码重置时，必须提供钱包用户的汇付ID。
+        UserHuifuId:"6666000107355468",
+        // 用户手机号
+        MobileNo:"13771817106",
+        // 验证类型
+        Type:"3",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()

@@ -30,11 +30,11 @@ func V2TradeOnlinepaymentBankingFrontpayRequestDemo() {
         // 商品描述
         GoodsDesc:"网银支付下单",
         // 网联扩展数据
-        ExtendPayData:getExtendPayData(),
+        ExtendPayData:getB8d477d00a6a4030Ace142ca39668751(),
         // 设备信息
-        TerminalDeviceData:getTerminalDeviceData(),
+        TerminalDeviceData:get717e161834f94d4dB4ddEa65cfa90232(),
         // 安全信息
-        RiskCheckData:getRiskCheckData(),
+        RiskCheckData:get6cc9497e0d5b4c668551Ad5cad9618b8(),
         // 异步通知地址
         NotifyUrl:"http://www.chinapnr.com",
     }
@@ -77,7 +77,7 @@ func getExtendInfos() map[string]interface{} {
     // 延时标记
     extendInfoMap["delay_acct_flag"] = "N"
     // 分账对象
-    // extendInfoMap["acct_split_bunch"] = getAcctSplitBunchRucan()
+    // extendInfoMap["acct_split_bunch"] = getB2fea2721bd54ecc9e2a2c51e6f90cec()
     // 手续费扣款标志
     // extendInfoMap["fee_flag"] = ""
     // 页面跳转地址
@@ -85,7 +85,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getAcctInfos() interface{} {
+func getCf93db2030034a6382d98682b23ccfb4() interface{} {
     dto := make(map[string]interface{})
     // 分账金额
     // dto["div_amt"] = ""
@@ -100,10 +100,10 @@ func getAcctInfos() interface{} {
     return dtoList
 }
 
-func getAcctSplitBunchRucan() string {
+func getB2fea2721bd54ecc9e2a2c51e6f90cec() string {
     dto := make(map[string]interface{})
     // 分账明细
-    // dto["acct_infos"] = getAcctInfos()
+    // dto["acct_infos"] = getCf93db2030034a6382d98682b23ccfb4()
     // 百分比分账标志
     // dto["percentage_flag"] = ""
     // 是否净值分账
@@ -113,7 +113,7 @@ func getAcctSplitBunchRucan() string {
     return string(dtoByte)
 }
 
-func getExtendPayData() string {
+func getB8d477d00a6a4030Ace142ca39668751() string {
     dto := make(map[string]interface{})
     // 商品简称
     dto["goods_short_name"] = "011111"
@@ -126,7 +126,7 @@ func getExtendPayData() string {
     return string(dtoByte)
 }
 
-func getTerminalDeviceData() string {
+func get717e161834f94d4dB4ddEa65cfa90232() string {
     dto := make(map[string]interface{})
     // 交易设备类型
     dto["device_type"] = "1"
@@ -149,7 +149,7 @@ func getTerminalDeviceData() string {
     return string(dtoByte)
 }
 
-func getRiskCheckData() string {
+func get6cc9497e0d5b4c668551Ad5cad9618b8() string {
     dto := make(map[string]interface{})
     // ip地址
     dto["ip_addr"] = "1"

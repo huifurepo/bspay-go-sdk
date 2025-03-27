@@ -59,11 +59,11 @@ func getExtendInfos() map[string]interface{} {
     // 备注
     extendInfoMap["remark"] = "我是备注1111101"
     // 文件列表
-    extendInfoMap["file_info"] = getFileInfo()
+    extendInfoMap["file_info"] = get8e7653eaD27d4c589fdd887b957250c4()
     return extendInfoMap
 }
 
-func getFileInfo() string {
+func get8e7653eaD27d4c589fdd887b957250c4() string {
     dto := make(map[string]interface{})
     // 拒绝退款的举证图片1
     dto["reject_media_pic1"] = "a8a096a3-0dd4-3b0e-886c-9afb20d23b1a"
