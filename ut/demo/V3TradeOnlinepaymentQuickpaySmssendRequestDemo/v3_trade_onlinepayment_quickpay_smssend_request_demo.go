@@ -34,11 +34,11 @@ func V3TradeOnlinepaymentQuickpaySmssendRequestDemo() {
         // 异步通知地址
         NotifyUrl:"http://tianyi.demo.test.cn/core/extend/BsPaySdk/notify_quick.php",
         // 网联数据
-        // NuccData:getNuccData(),
+        // NuccData:getA552c831Cd0846b8830f0ce1be990e53(),
         // 设备数据
-        TerminalDeviceData:getTerminalDeviceData(),
+        TerminalDeviceData:getEb10401d27a0468aA840Fd020391c341(),
         // 安全信息
-        RiskCheckData:getRiskCheckData(),
+        RiskCheckData:getBe09da814577476eA71c6d47f2fac2ac(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -69,26 +69,24 @@ func getExtendInfos() map[string]interface{} {
     // 订单失效时间
     // extendInfoMap["time_expire"] = ""
     // 分账对象
-    // extendInfoMap["acct_split_bunch"] = getAcctSplitBunchRucan()
+    // extendInfoMap["acct_split_bunch"] = get0fda4a7803b94a2fB5f17a083f8b015f()
     // 是否延迟交易
     // extendInfoMap["delay_acct_flag"] = ""
     // 账户号
     // extendInfoMap["acct_id"] = ""
     // 手续费扣款标志
     // extendInfoMap["fee_flag"] = ""
-    // 备注
-    // extendInfoMap["remark"] = ""
     // 补贴支付信息
-    // extendInfoMap["combinedpay_data"] = getCombinedpayData()
+    // extendInfoMap["combinedpay_data"] = get79bd2ee956e844ee8bb65e2f3ebf8096()
     return extendInfoMap
 }
 
-func getAcctInfos() interface{} {
+func getAdfb77e661f444deB2ddF0631bb7f4d4() interface{} {
     dto := make(map[string]interface{})
+    // 分账接收方ID
+    // dto["huifu_id"] = "test"
     // 分账金额
     // dto["div_amt"] = ""
-    // 分账接收方ID
-    // dto["huifu_id"] = ""
     // 账户号
     // dto["acct_id"] = ""
     // 分账百分比%
@@ -98,20 +96,20 @@ func getAcctInfos() interface{} {
     return dtoList
 }
 
-func getAcctSplitBunchRucan() string {
+func get0fda4a7803b94a2fB5f17a083f8b015f() string {
     dto := make(map[string]interface{})
     // 百分比分账标志
     // dto["percentage_flag"] = ""
     // 是否净值分账
     // dto["is_clean_split"] = ""
-    // 分账信息列表
-    // dto["acct_infos"] = getAcctInfos()
+    // 分账信息列表，Array格式
+    // dto["acct_infos"] = getAdfb77e661f444deB2ddF0631bb7f4d4()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
-func getNuccData() string {
+func getA552c831Cd0846b8830f0ce1be990e53() string {
     dto := make(map[string]interface{})
     // 商品简称
     // dto["goods_short_name"] = "test"
@@ -124,7 +122,7 @@ func getNuccData() string {
     return string(dtoByte)
 }
 
-func getTerminalDeviceData() string {
+func getEb10401d27a0468aA840Fd020391c341() string {
     dto := make(map[string]interface{})
     // 设备类型
     dto["device_type"] = "1"
@@ -147,7 +145,7 @@ func getTerminalDeviceData() string {
     return string(dtoByte)
 }
 
-func getRiskCheckData() string {
+func getBe09da814577476eA71c6d47f2fac2ac() string {
     dto := make(map[string]interface{})
     // ip地址
     dto["ip_addr"] = "106.33.180.238"
@@ -162,7 +160,7 @@ func getRiskCheckData() string {
     return string(dtoByte)
 }
 
-func getCombinedpayData() string {
+func get79bd2ee956e844ee8bb65e2f3ebf8096() string {
     dto := make(map[string]interface{})
     // 补贴方汇付编号
     // dto["huifu_id"] = "test"

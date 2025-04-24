@@ -26,7 +26,7 @@ func V2PcreditCertificateConfigRequestDemo() {
         // 开发者的应用ID
         AppId:"2019090666961966",
         // 证书文件列表
-        FileList:getFileList(),
+        FileList:getEbe71eceF1a04373A7e1C99bb697b700(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -53,7 +53,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getFileList() string {
+func getEbe71eceF1a04373A7e1C99bb697b700() string {
     dto := make(map[string]interface{})
     // 文件类型
     dto["file_type"] = "F120"

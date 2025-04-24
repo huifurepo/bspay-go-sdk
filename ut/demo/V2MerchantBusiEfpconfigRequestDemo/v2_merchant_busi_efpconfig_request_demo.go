@@ -30,19 +30,51 @@ func V2MerchantBusiEfpconfigRequestDemo() {
         // 支付手续费外扣汇付ID支付手续费外扣标记为1时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000109812123&lt;/font&gt;
         OutFeeHuifuid:"",
         // 全域资金开户使用的银行卡信息首次开通时必填 jsonObject格式
-        OutOrderAcctCard:get15450004Aee5439a91ea27335c38848e(),
+        OutOrderAcctCard:getE9d5554b81314b74Afe28ebd8700f796(),
         // 全域资金开户手续费首次开通时必填 jsonObject格式
-        OutOrderAcctOpenFees:getB5b41bb39d8540b0Bc4966794b8df5ba(),
-        // 全渠道资金管理补充材料id涉及文件类型：[F504-全渠道资金管理补充材料](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
-        OtherPaymentInstitutionsPic:"8c4f6254-6c36-3b3c-ae8b-efcf24ca215e",
-        // XW银行数字证书及电子签名授权委托书out_funds_gate_id为xw0时必填；涉及文件类型：[F534-银行数字证书及电子签名授权委托书](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
-        // XwDigitalCertificatePic:"test",
-        // 银行类型
+        OutOrderAcctOpenFees:get4e9c1d3bFa194046BeddE00ca5fa556a(),
+        // 银行类型switch_state有值时需填写； ht1-华通银行，xw0-XW银行，ss0-苏商银行；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：ht1&lt;/font&gt;
         OutFundsGateId:"xw0",
         // 签约人信息switch_state为1时必填 jsonObject格式
-        SignUserInfo:getFf52f12c32fa410b99011a3ff546d82a(),
-        // 入账来源
+        SignUserInfo:get274579b48edf404fB267763f08206682(),
+        // 入账来源开通全域资金时需填写；01:抖音 02:美团 03:快手 04:拼多多 05:小红书 06:淘宝/天猫/飞猪 07:微信视频号/微信小店 08:京东 09:饿了么 11:得物 12:唯品会 13:携程 14:支付宝直连 15:微信直连 16:滴滴加油 17:团油 18:通联 19:易宝 多个逗号分隔；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：01,02,05&lt;/font&gt;；
         AcctSource:"01",
+        // 抖音合作证明材料入账来源包含01:抖音时必填 文件类型F535；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+        // DyCooperationProvePic:"test",
+        // 美团合作证明材料入账来源包含02:美团时必填 文件类型F536；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+        // MtCooperationProvePic:"test",
+        // 快手合作证明材料入账来源包含03:快手时必填 文件类型F537；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+        // KsCooperationProvePic:"test",
+        // 拼多多合作证明材料入账来源包含04:拼多多时必填 文件类型F538；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+        // PddCooperationProvePic:"test",
+        // 小红书合作证明材料入账来源包含05:小红书时必填 文件类型F539；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+        // XhsCooperationProvePic:"test",
+        // 淘宝天猫飞猪合作证明材料入账来源包含06:淘宝天猫飞猪时必填 文件类型F540；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+        // ZfbCooperationProvePic:"test",
+        // 微信视频号合作证明材料入账来源包含07:微信视频号时必填 文件类型F541；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+        // WxCooperationProvePic:"test",
+        // 京东合作证明材料入账来源包含08:京东时必填 文件类型F542；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+        // JdCooperationProvePic:"test",
+        // 饿了么合作证明材料入账来源包含09:饿了么时必填 文件类型F543；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+        // ElmCooperationProvePic:"test",
+        // 得物合作证明材料入账来源包含11:得物时必填 文件类型F591；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+        // DwCooperationProvePic:"test",
+        // 唯品会合作证明材料入账来源包含12:唯品会时必填 文件类型F592；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+        // WphCooperationProvePic:"test",
+        // 携程合作证明材料入账来源包含13:携程时必填 文件类型F593；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+        // XcCooperationProvePic:"test",
+        // 支付宝直连合作证明材料入账来源包含14:支付宝直连时必填 文件类型F594；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+        // ZfbzlCooperationProvePic:"test",
+        // 微信直连合作证明材料入账来源包含15:微信直连时必填 文件类型F595；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+        // WxzlCooperationProvePic:"test",
+        // 滴滴加油合作证明材料入账来源包含16:滴滴加油时必填 文件类型F596；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+        // DdjyCooperationProvePic:"test",
+        // 团油合作证明材料入账来源包含17:团油时必填 文件类型F597；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+        // TyCooperationProvePic:"test",
+        // 通联合作证明材料入账来源包含18:通联时必填 文件类型F598；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+        // TlCooperationProvePic:"test",
+        // 易宝合作证明材料入账来源包含19:易宝时必填 文件类型F599；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+        // YbCooperationProvePic:"test",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -78,6 +110,10 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["out_fee_flag"] = "2"
     // 业务模式
     extendInfoMap["business_model"] = "acquiringMode"
+    // 全渠道资金管理补充材料id
+    extendInfoMap["other_payment_institutions_pic"] = "8c4f6254-6c36-3b3c-ae8b-efcf24ca215e"
+    // XW银行数字证书及电子签名授权委托书
+    // extendInfoMap["xw_digital_certificate_pic"] = ""
     // 异步消息接收地址
     extendInfoMap["async_return_url"] = "http://service.example.com/to/path"
     // 业务开通结果异步消息接收地址
@@ -86,32 +122,8 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["pay_every_deal"] = ""
     // 申请单日限额
     extendInfoMap["pay_every_day"] = ""
-    // 抖音合作证明材料
-    // extendInfoMap["dy_cooperation_prove_pic"] = ""
-    // 美团合作证明材料
-    // extendInfoMap["mt_cooperation_prove_pic"] = ""
-    // 快手合作证明材料
-    // extendInfoMap["ks_cooperation_prove_pic"] = ""
-    // 拼多多合作证明材料
-    // extendInfoMap["pdd_cooperation_prove_pic"] = ""
-    // 小红书合作证明材料
-    // extendInfoMap["xhs_cooperation_prove_pic"] = ""
-    // 支付宝相关平台合作证明材料
-    // extendInfoMap["zfb_cooperation_prove_pic"] = ""
-    // 微信相关平台合作证明材料
-    // extendInfoMap["wx_cooperation_prove_pic"] = ""
-    // 京东合作证明材料
-    // extendInfoMap["jd_cooperation_prove_pic"] = ""
-    // 饿了么合作证明材料
-    // extendInfoMap["elm_cooperation_prove_pic"] = ""
-    // 得物合作证明材料
-    // extendInfoMap["dw_cooperation_prove_pic"] = ""
-    // 唯品会合作证明材料
-    // extendInfoMap["wph_cooperation_prove_pic"] = ""
-    // 携程合作证明材料
-    // extendInfoMap["xc_cooperation_prove_pic"] = ""
     // 全域资金分账规则
-    // extendInfoMap["efp_spb_config"] = get4e79720c366f4c8587218bebf0ef3080()
+    // extendInfoMap["efp_spb_config"] = getFfdc69bd5e2d4c708c5d6039791ebeb9()
     // 客户ip地址
     // extendInfoMap["ip_address"] = ""
     // 是否线上场景
@@ -127,7 +139,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func get15450004Aee5439a91ea27335c38848e() string {
+func getE9d5554b81314b74Afe28ebd8700f796() string {
     dto := make(map[string]interface{})
     // 结算账户名
     dto["card_name"] = "圆务铁白事"
@@ -164,7 +176,7 @@ func get15450004Aee5439a91ea27335c38848e() string {
     return string(dtoByte)
 }
 
-func getB5b41bb39d8540b0Bc4966794b8df5ba() string {
+func get4e9c1d3bFa194046BeddE00ca5fa556a() string {
     dto := make(map[string]interface{})
     // 开户固定手续费(元)
     dto["fee_fix_amt"] = "0"
@@ -177,7 +189,7 @@ func getB5b41bb39d8540b0Bc4966794b8df5ba() string {
     return string(dtoByte)
 }
 
-func getFf52f12c32fa410b99011a3ff546d82a() string {
+func get274579b48edf404fB267763f08206682() string {
     dto := make(map[string]interface{})
     // 签约人类型
     dto["type"] = "LEGAL"
@@ -192,7 +204,7 @@ func getFf52f12c32fa410b99011a3ff546d82a() string {
     return string(dtoByte)
 }
 
-func get3aad6229A4ae4cde92287d824f92ef1c() string {
+func get47bafdadDe014a8dB3b59f294493a494() string {
     dto := make(map[string]interface{})
     // 分账接收方汇付ID
     // dto["huifu_id"] = "test"
@@ -206,7 +218,7 @@ func get3aad6229A4ae4cde92287d824f92ef1c() string {
     return string(dtoByte)
 }
 
-func get4e79720c366f4c8587218bebf0ef3080() string {
+func getFfdc69bd5e2d4c708c5d6039791ebeb9() string {
     dto := make(map[string]interface{})
     // 分账规则来源
     // dto["rule_origin"] = "test"
@@ -219,7 +231,7 @@ func get4e79720c366f4c8587218bebf0ef3080() string {
     // 全域资金分账手续费外扣账户类型交易手续费外扣标记为1时必填 01-基本户05-充值户 09-营销户；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：01&lt;/font&gt;；
     // dto["out_fee_acct_type"] = "test"
     // 分账规则明细规则来源为01时必填 jsonArray格式 最多7条
-    // dto["rule_detail"] = get3aad6229A4ae4cde92287d824f92ef1c()
+    // dto["rule_detail"] = get47bafdadDe014a8dB3b59f294493a494()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

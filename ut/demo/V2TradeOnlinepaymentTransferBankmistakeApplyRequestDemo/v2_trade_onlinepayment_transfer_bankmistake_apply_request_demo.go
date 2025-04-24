@@ -63,36 +63,28 @@ func getExtendInfos() map[string]interface{} {
     // 备注
     extendInfoMap["remark"] = "大额支付补入账验证"
     // 银行信息数据
-    extendInfoMap["bank_info_data"] = getB08e9ba8D88347f9A142D9b1fafb4e03()
+    extendInfoMap["bank_info_data"] = getAbecf41199e2427189e378ecb5bc0872()
     // 延时标记
     // extendInfoMap["delay_acct_flag"] = ""
     // 分账对象
-    // extendInfoMap["acct_split_bunch"] = getEebc6e3a5eff4b11895cC49b66a59c30()
+    // extendInfoMap["acct_split_bunch"] = get887cec5eC9324ee3B2b5282eb708eb87()
     // 实际打款信息
-    // extendInfoMap["actual_remit_data"] = get1e12e80a87644cb8964b58c5edbb79e6()
+    // extendInfoMap["actual_remit_data"] = get8bcd25edC7614d4181cf7d7f6bd6e4b5()
     return extendInfoMap
 }
 
-func getB08e9ba8D88347f9A142D9b1fafb4e03() string {
+func getAbecf41199e2427189e378ecb5bc0872() string {
     dto := make(map[string]interface{})
-    // 省份对公代发必填，[参见省市地区码](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/area/%E6%96%97%E6%8B%B1%E4%BB%A3%E5%8F%91%E7%9C%81%E4%BB%BD%E5%9C%B0%E5%8C%BA%E7%BC%96%E7%A0%81.xlsx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0013&lt;/font&gt;
-    dto["province"] = "0031"
-    // 地区对公代发必填，[参见省市地区码](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/area/%E6%96%97%E6%8B%B1%E4%BB%A3%E5%8F%91%E7%9C%81%E4%BB%BD%E5%9C%B0%E5%8C%BA%E7%BC%96%E7%A0%81.xlsx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1301&lt;/font&gt;
-    dto["area"] = "3100"
     // 银行编号
     dto["bank_code"] = "03080000"
-    // 联行号选填，参见：[银行支行编码](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_yhzhbm)； &lt;font color&#x3D;&quot;green&quot;&gt;示例值：102290026507&lt;/font&gt;&lt;br/&gt;对私代发非必填；
-    dto["correspondent_code"] = "103290076178"
     // 对公对私标识
     dto["card_acct_type"] = "P"
-    // 支行名
-    dto["subbranch_bank_name"] = "中国农业银行股份有限公司上海联洋支行"
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
-func getB01b07d9B4d94a099a60F25781cc910f() interface{} {
+func get7cb41945E40f4907Ab1e1dd0dcfaee14() interface{} {
     dto := make(map[string]interface{})
     // 支付金额
     // dto["div_amt"] = ""
@@ -103,16 +95,16 @@ func getB01b07d9B4d94a099a60F25781cc910f() interface{} {
     return dtoList
 }
 
-func getEebc6e3a5eff4b11895cC49b66a59c30() string {
+func get887cec5eC9324ee3B2b5282eb708eb87() string {
     dto := make(map[string]interface{})
     // 分账信息列表
-    // dto["acct_infos"] = getB01b07d9B4d94a099a60F25781cc910f()
+    // dto["acct_infos"] = get7cb41945E40f4907Ab1e1dd0dcfaee14()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
-func get1e12e80a87644cb8964b58c5edbb79e6() string {
+func get8bcd25edC7614d4181cf7d7f6bd6e4b5() string {
     dto := make(map[string]interface{})
     // 实际打款日期
     // dto["actual_remit_date"] = "test"

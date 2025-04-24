@@ -16,7 +16,6 @@ type V2InvoiceSelfscanopenRequest struct {
     OpenType string `json:"open_type" structs:"open_type"` // 开票类型
     OrderAmt string `json:"order_amt" structs:"order_amt"` // 含税合计金额（元）
     GoodsInfos string `json:"goods_infos" structs:"goods_infos"` // 开票商品信息
-    PayerInfo string `json:"payer_info" structs:"payer_info"` // 开票人信息
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

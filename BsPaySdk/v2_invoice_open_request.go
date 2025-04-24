@@ -23,7 +23,6 @@ type V2InvoiceOpenRequest struct {
     OriIvcCode string `json:"ori_ivc_code" structs:"ori_ivc_code"` // 原发票代码openType&#x3D;1时必填；参见[发票右上角](https://paas.huifu.com/open/doc/api/#/fp/api_fp_yanglitu.md)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：144032209110&lt;/font&gt;
     OriIvcNumber string `json:"ori_ivc_number" structs:"ori_ivc_number"` // 原发票号码openType&#x3D;1时必填；参见[发票右上角](https://paas.huifu.com/open/doc/api/#/fp/api_fp_yanglitu.md)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20685767&lt;/font&gt;
     GoodsInfos string `json:"goods_infos" structs:"goods_infos"` // 开票商品信息
-    PayerInfo string `json:"payer_info" structs:"payer_info"` // 开票人信息
     EstateSales string `json:"estate_sales" structs:"estate_sales"` // 不动产销售特殊字段specialFlag为05时，必填；jsonArray格式
     EstateLease string `json:"estate_lease" structs:"estate_lease"` // 不动产租赁特殊字段specialFlag为16时，必填；jsonArray格式
 

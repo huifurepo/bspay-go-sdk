@@ -51,7 +51,7 @@ func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
     // 文件类型
-    extendInfoMap["file_type_query"] = "2"
+    extendInfoMap["bill_type"] = "TRADE_BILL"
     return extendInfoMap
 }
 

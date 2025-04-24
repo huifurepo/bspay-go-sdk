@@ -15,7 +15,6 @@ type V2TradePayafteruseInstallmentPayRequest struct {
     TransAmt string `json:"trans_amt" structs:"trans_amt"` // 交易金额
     GoodsDesc string `json:"goods_desc" structs:"goods_desc"` // 商品描述
     RiskCheckData string `json:"risk_check_data" structs:"risk_check_data"` // 风控信息
-    TimeExpire string `json:"time_expire" structs:"time_expire"` // 交易有效期
     AlipayData string `json:"alipay_data" structs:"alipay_data"` // 支付宝扩展参数集合
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段

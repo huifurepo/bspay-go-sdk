@@ -56,6 +56,8 @@ func V2InvoiceClerkRegRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
+    // 开票员名字
+    extendInfoMap["clerk_name"] = "张三"
     return extendInfoMap
 }
 

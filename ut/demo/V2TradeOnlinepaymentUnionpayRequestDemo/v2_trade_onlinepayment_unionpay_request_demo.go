@@ -30,9 +30,9 @@ func V2TradeOnlinepaymentUnionpayRequestDemo() {
         // 商品描述
         OrderDesc:"通用性商品1",
         // 安全信息
-        RiskCheckData:get039a5a632a524bedBdf01306634c96e2(),
+        RiskCheckData:get24cac05aE51448a1960b54ff953dcaf2(),
         // 三方支付数据jsonObject；pay_scene为云闪付公众号与云闪付小程序时必填
-        // ThirdPayData:getFd7b99d3543a4935Aece1411798bc9d5(),
+        // ThirdPayData:get7945798a32654321Bea45a70676268d8(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -67,7 +67,7 @@ func getExtendInfos() map[string]interface{} {
     // 订单失效时间
     extendInfoMap["time_expire"] = ""
     // 分账对象
-    // extendInfoMap["acct_split_bunch"] = get962ca1cb6e3c44d8A1c13660223fe9fd()
+    // extendInfoMap["acct_split_bunch"] = get4629873c1e2342f689ccE0172d96371f()
     // 前端跳转地址
     extendInfoMap["front_url"] = "https://www.service.com/getresp"
     // 异步通知地址
@@ -76,12 +76,14 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["remark"] = "merPriv11"
     // 支付场景
     // extendInfoMap["pay_scene"] = ""
+    // 签约令牌号
+    // extendInfoMap["sign_token_no"] = ""
     // 延时标记
     extendInfoMap["delay_acct_flag"] = "Y"
     return extendInfoMap
 }
 
-func get634a1ff623df402fA0a621cd0982a65d() interface{} {
+func get10d0f278Ee0e4dedB75b4d7f64376944() interface{} {
     dto := make(map[string]interface{})
     // 分账金额
     // dto["div_amt"] = ""
@@ -96,10 +98,10 @@ func get634a1ff623df402fA0a621cd0982a65d() interface{} {
     return dtoList
 }
 
-func get962ca1cb6e3c44d8A1c13660223fe9fd() string {
+func get4629873c1e2342f689ccE0172d96371f() string {
     dto := make(map[string]interface{})
     // 分账明细
-    // dto["acct_infos"] = get634a1ff623df402fA0a621cd0982a65d()
+    // dto["acct_infos"] = get10d0f278Ee0e4dedB75b4d7f64376944()
     // 百分比分账标志
     // dto["percentage_flag"] = ""
     // 是否净值分账
@@ -109,7 +111,7 @@ func get962ca1cb6e3c44d8A1c13660223fe9fd() string {
     return string(dtoByte)
 }
 
-func get039a5a632a524bedBdf01306634c96e2() string {
+func get24cac05aE51448a1960b54ff953dcaf2() string {
     dto := make(map[string]interface{})
     // 基站地址
     dto["base_station"] = "7"
@@ -124,7 +126,7 @@ func get039a5a632a524bedBdf01306634c96e2() string {
     return string(dtoByte)
 }
 
-func getFd7b99d3543a4935Aece1411798bc9d5() string {
+func get7945798a32654321Bea45a70676268d8() string {
     dto := make(map[string]interface{})
     // 小程序id
     // dto["app_id"] = ""

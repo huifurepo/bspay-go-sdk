@@ -34,5 +34,5 @@ func (bp *BsPay) V2TradeOnlinepaymentQuickpayFrontpayRequest(reqParam V2TradeOnl
 		url = BASE_API_URL_V2
 	}
 	reqUrl := url + V2_TRADE_ONLINEPAYMENT_QUICKPAY_FRONTPAY
-    return PostRequest(reqUrl, ToMap(reqParam), bp.Msc, false)
+    return PostRequest(reqUrl, ToMap(reqParam), bp.Msc)
 }

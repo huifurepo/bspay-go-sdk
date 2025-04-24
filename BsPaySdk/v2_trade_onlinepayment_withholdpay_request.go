@@ -17,10 +17,10 @@ type V2TradeOnlinepaymentWithholdpayRequest struct {
     TransAmt string `json:"trans_amt" structs:"trans_amt"` // 订单金额
     GoodsDesc string `json:"goods_desc" structs:"goods_desc"` // 商品描述
     WithholdType string `json:"withhold_type" structs:"withhold_type"` // 代扣类型
+    NotifyUrl string `json:"notify_url" structs:"notify_url"` // 异步通知地址
     ExtendPayData string `json:"extend_pay_data" structs:"extend_pay_data"` // 银行扩展数据
     RiskCheckData string `json:"risk_check_data" structs:"risk_check_data"` // 风控信息
     TerminalDeviceData string `json:"terminal_device_data" structs:"terminal_device_data"` // 设备信息数据
-    NotifyUrl string `json:"notify_url" structs:"notify_url"` // 异步通知地址
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

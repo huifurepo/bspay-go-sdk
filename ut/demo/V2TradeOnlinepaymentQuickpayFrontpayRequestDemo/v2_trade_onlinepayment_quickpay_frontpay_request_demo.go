@@ -28,11 +28,11 @@ func V2TradeOnlinepaymentQuickpayFrontpayRequestDemo() {
         // 订单金额
         TransAmt:"0.01",
         // 银行扩展信息
-        ExtendPayData:getExtendPayData(),
+        ExtendPayData:getA5a44257248146f586ec9275ef51ed56(),
         // 设备信息
-        TerminalDeviceData:getTerminalDeviceData(),
+        TerminalDeviceData:get843a86e56f334304Ac7c38c6524abd82(),
         // 安全信息
-        RiskCheckData:getRiskCheckData(),
+        RiskCheckData:getE7f925f2Ab5041919687F439e2fba4ad(),
         // 异步通知地址
         NotifyUrl:"http://www.baidu.com",
     }
@@ -71,7 +71,7 @@ func getExtendInfos() map[string]interface{} {
     // 延时标记
     // extendInfoMap["delay_acct_flag"] = ""
     // 分账串
-    extendInfoMap["acct_split_bunch"] = getAcctSplitBunchRucan()
+    extendInfoMap["acct_split_bunch"] = get82800b8cE35d42b9B688260754e5deef()
     // 手续费扣款标志
     extendInfoMap["fee_flag"] = "2"
     // 备注
@@ -81,7 +81,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getAcctInfos() interface{} {
+func getDef0a935D6a343269064019353c3caf5() interface{} {
     dto := make(map[string]interface{})
     // 分账接收方ID
     dto["huifu_id"] = "6666000109133323"
@@ -96,10 +96,10 @@ func getAcctInfos() interface{} {
     return dtoList
 }
 
-func getAcctSplitBunchRucan() string {
+func get82800b8cE35d42b9B688260754e5deef() string {
     dto := make(map[string]interface{})
     // 分账明细
-    dto["acct_infos"] = getAcctInfos()
+    dto["acct_infos"] = getDef0a935D6a343269064019353c3caf5()
     // 百分比分账标志
     // dto["percentage_flag"] = ""
     // 是否净值分账
@@ -109,7 +109,7 @@ func getAcctSplitBunchRucan() string {
     return string(dtoByte)
 }
 
-func getExtendPayData() string {
+func getA5a44257248146f586ec9275ef51ed56() string {
     dto := make(map[string]interface{})
     // 商品简称
     dto["goods_short_name"] = "01"
@@ -122,7 +122,7 @@ func getExtendPayData() string {
     return string(dtoByte)
 }
 
-func getTerminalDeviceData() string {
+func get843a86e56f334304Ac7c38c6524abd82() string {
     dto := make(map[string]interface{})
     // 设备类型
     dto["device_type"] = "1"
@@ -145,7 +145,7 @@ func getTerminalDeviceData() string {
     return string(dtoByte)
 }
 
-func getRiskCheckData() string {
+func getE7f925f2Ab5041919687F439e2fba4ad() string {
     dto := make(map[string]interface{})
     // ip地址
     dto["ip_addr"] = "127.0.0.1"

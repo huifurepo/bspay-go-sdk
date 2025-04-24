@@ -30,11 +30,11 @@ func V2TradeOnlinepaymentBankingFrontpayRequestDemo() {
         // 商品描述
         GoodsDesc:"网银支付下单",
         // 网联扩展数据
-        ExtendPayData:getB8d477d00a6a4030Ace142ca39668751(),
+        ExtendPayData:get3194e7baDdea4c7188127b568d867933(),
         // 设备信息
-        TerminalDeviceData:get717e161834f94d4dB4ddEa65cfa90232(),
+        TerminalDeviceData:get311c0af960b243a4Ae3797b5e7958321(),
         // 安全信息
-        RiskCheckData:get6cc9497e0d5b4c668551Ad5cad9618b8(),
+        RiskCheckData:get3189111156d949719cc958f824f77fbd(),
         // 异步通知地址
         NotifyUrl:"http://www.chinapnr.com",
     }
@@ -77,7 +77,7 @@ func getExtendInfos() map[string]interface{} {
     // 延时标记
     extendInfoMap["delay_acct_flag"] = "N"
     // 分账对象
-    // extendInfoMap["acct_split_bunch"] = getB2fea2721bd54ecc9e2a2c51e6f90cec()
+    // extendInfoMap["acct_split_bunch"] = get25c8debcE5ba43afAcd2738c16b98199()
     // 手续费扣款标志
     // extendInfoMap["fee_flag"] = ""
     // 页面跳转地址
@@ -85,7 +85,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getCf93db2030034a6382d98682b23ccfb4() interface{} {
+func getD0d7f539767c4784A84eA384d0e3ee19() interface{} {
     dto := make(map[string]interface{})
     // 分账金额
     // dto["div_amt"] = ""
@@ -100,10 +100,10 @@ func getCf93db2030034a6382d98682b23ccfb4() interface{} {
     return dtoList
 }
 
-func getB2fea2721bd54ecc9e2a2c51e6f90cec() string {
+func get25c8debcE5ba43afAcd2738c16b98199() string {
     dto := make(map[string]interface{})
     // 分账明细
-    // dto["acct_infos"] = getCf93db2030034a6382d98682b23ccfb4()
+    // dto["acct_infos"] = getD0d7f539767c4784A84eA384d0e3ee19()
     // 百分比分账标志
     // dto["percentage_flag"] = ""
     // 是否净值分账
@@ -113,7 +113,7 @@ func getB2fea2721bd54ecc9e2a2c51e6f90cec() string {
     return string(dtoByte)
 }
 
-func getB8d477d00a6a4030Ace142ca39668751() string {
+func get3194e7baDdea4c7188127b568d867933() string {
     dto := make(map[string]interface{})
     // 商品简称
     dto["goods_short_name"] = "011111"
@@ -126,7 +126,7 @@ func getB8d477d00a6a4030Ace142ca39668751() string {
     return string(dtoByte)
 }
 
-func get717e161834f94d4dB4ddEa65cfa90232() string {
+func get311c0af960b243a4Ae3797b5e7958321() string {
     dto := make(map[string]interface{})
     // 交易设备类型
     dto["device_type"] = "1"
@@ -149,7 +149,7 @@ func get717e161834f94d4dB4ddEa65cfa90232() string {
     return string(dtoByte)
 }
 
-func get6cc9497e0d5b4c668551Ad5cad9618b8() string {
+func get3189111156d949719cc958f824f77fbd() string {
     dto := make(map[string]interface{})
     // ip地址
     dto["ip_addr"] = "1"

@@ -1,5 +1,5 @@
 /**
- * 汇付入账确认
+ * 汇付入账通知
  *
  * @Author sdk-generator
  * @Description 汇付天下

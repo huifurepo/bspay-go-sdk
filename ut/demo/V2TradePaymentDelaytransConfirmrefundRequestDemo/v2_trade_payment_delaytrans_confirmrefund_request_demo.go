@@ -53,7 +53,7 @@ func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
     // 分账对象
-    extendInfoMap["acct_split_bunch"] = get04d3f49d20fe496f8d152c880fb07b78()
+    extendInfoMap["acct_split_bunch"] = get52147df86c694d86B9305a431b675f29()
     // 是否垫资退款
     // extendInfoMap["loan_flag"] = ""
     // 垫资承担者
@@ -65,7 +65,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getF889ccf24ed3483fA4c053df49b5783f() interface{} {
+func get8b3eddeaB8474c7f905e858f0050be27() interface{} {
     dto := make(map[string]interface{})
     // 分账接收方ID
     dto["huifu_id"] = "6666000109133323"
@@ -78,10 +78,10 @@ func getF889ccf24ed3483fA4c053df49b5783f() interface{} {
     return dtoList
 }
 
-func get04d3f49d20fe496f8d152c880fb07b78() string {
+func get52147df86c694d86B9305a431b675f29() string {
     dto := make(map[string]interface{})
     // 分账明细
-    dto["acct_infos"] = getF889ccf24ed3483fA4c053df49b5783f()
+    dto["acct_infos"] = get8b3eddeaB8474c7f905e858f0050be27()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

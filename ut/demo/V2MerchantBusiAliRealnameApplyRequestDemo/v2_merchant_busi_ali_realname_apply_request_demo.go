@@ -166,9 +166,9 @@ func getLegalPersonInfo() string {
     dto["effect_time"] = "19990101"
     // 证件过期时间
     dto["expire_time"] = "长期"
-    // 证件正面照
+    // 证件人像面
     dto["card_front_img"] = "afce08c5-1548-30f8-bf70-1752c3012f66"
-    // 证件反面照
+    // 证件国徽面
     dto["card_back_img"] = "51dd13bb-6268-36d0-ac84-c4cdc19eccba"
     // 授权函照片
     dto["auth_letter_img"] = "51dd13bb-6268-36d0-ac84-c4cdc19eccba"
@@ -204,9 +204,9 @@ func getUboInfo() string {
     dto["ubo_period_begin"] = "19990101"
     // 证件有效期结束时间
     dto["ubo_period_end"] = "20260606"
-    // 证件正面照片
+    // 证件人像面
     dto["ubo_id_doc_copy"] = "afce08c5-1548-30f8-bf70-1752c3012f66"
-    // 证件反面照片
+    // 证件国徽面
     dto["ubo_id_doc_copy_back"] = "51dd13bb-6268-36d0-ac84-c4cdc19eccba"
 
     dtoByte, _ := json.Marshal(dto)
