@@ -52,6 +52,8 @@ func V2TradePaymentZxeAcctdetailQueryRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
+    // 登记薄类型
+    // extendInfoMap["register_type"] = ""
     // 页码
     extendInfoMap["page_num"] = "1"
     return extendInfoMap

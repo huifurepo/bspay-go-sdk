@@ -73,11 +73,19 @@ func getExtendInfos() map[string]interface{} {
     // 拓展方字段
     extendInfoMap["expand_id"] = ""
     // 文件列表
-    extendInfoMap["file_list"] = getA2b3ad80C6e54290Ad01D1bd6ad4753b()
+    extendInfoMap["file_list"] = getDb2bd6a770dd4fbc80f23305842efb38()
+    // 所属行业
+    // extendInfoMap["mcc"] = ""
+    // 省
+    // extendInfoMap["prov_id"] = ""
+    // 市
+    // extendInfoMap["area_id"] = ""
+    // 区
+    // extendInfoMap["district_id"] = ""
     return extendInfoMap
 }
 
-func getA2b3ad80C6e54290Ad01D1bd6ad4753b() string {
+func getDb2bd6a770dd4fbc80f23305842efb38() string {
     dto := make(map[string]interface{})
     // 文件类型
     dto["file_type"] = "F04"

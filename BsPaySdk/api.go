@@ -15,6 +15,146 @@ const BASE_API_TEST_URL_V2 = "https://spin-test.cloudpnr.com"
 // 以下为接口uri
 
 /**
+ * 电子账户资金清分
+ */
+const V2_TRADE_SETTLEMENT_CLEARING_ADD = "/v2/trade/settlement/clearing/add"
+
+/**
+ * 电子账户资金清分结果查询
+ */
+const V2_TRADE_SETTLEMENT_CLEARING_QUERY = "/v2/trade/settlement/clearing/query"
+
+/**
+ * 全渠道订单分账明细操作
+ */
+const V2_OCO_ORDER_DETAIL_OPERATE = "/v2/oco/order/detail/operate"
+
+/**
+ * 全渠道订单分账接收方查询
+ */
+const V2_OCO_ORDER_DETAIL_LIST = "/v2/oco/order/detail/list"
+
+/**
+ * 全渠道订单分账计算
+ */
+const V2_OCO_ORDER_CALCULATE = "/v2/oco/order/calculate"
+
+/**
+ * 获取控台页面跳转链接
+ */
+const V2_JUMP_PAGE_GETURL = "/v2/jump/page/geturl"
+
+/**
+ * 全渠道订单分账查询
+ */
+const V2_OCO_ORDER_LIST = "/v2/oco/order/list"
+
+/**
+ * 美团卡券校验
+ */
+const V2_COUPON_MEITUAN_PREPARE = "/v2/coupon/meituan/prepare"
+
+/**
+ * 美团卡券核销结果查询
+ */
+const V2_COUPON_MEITUAN_QUERY = "/v2/coupon/meituan/query"
+
+/**
+ * 美团卡券核销
+ */
+const V2_COUPON_MEITUAN_CONSUME = "/v2/coupon/meituan/consume"
+
+/**
+ * 美团卡券撤销
+ */
+const V2_COUPON_MEITUAN_CANCEL = "/v2/coupon/meituan/cancel"
+
+/**
+ * 美团餐饮门店套餐映射
+ */
+const V2_COUPON_MEAL_QUERY = "/v2/coupon/meal/query"
+
+/**
+ * 三方门店解绑
+ */
+const V2_LINKAPP_STORE_UNBIND = "/v2/linkapp/store/unbind"
+
+/**
+ * 三方门店查询（三方门店绑定一阶段）
+ */
+const V2_LINKAPP_STORE_SHOPLIST = "/v2/linkapp/store/shoplist"
+
+/**
+ * 三方门店绑定（二阶段）
+ */
+const V2_LINKAPP_STORE_BIND = "/v2/linkapp/store/bind"
+
+/**
+ * 门店绑定列表查询
+ */
+const V2_LINKAPP_STORE_QUERY = "/v2/linkapp/store/query"
+
+/**
+ * 美团非餐饮获取团购信息
+ */
+const V2_COUPON_SHOPDEAL_QUERY = "/v2/coupon/shopdeal/query"
+
+/**
+ * 授权结果查询
+ */
+const V2_LINKAPP_AUTH_RESULT = "/v2/linkapp/auth/result"
+
+/**
+ * 商户公域授权
+ */
+const V2_LINKAPP_AUTH_DO = "/v2/linkapp/auth/do"
+
+/**
+ * 查询授权记录
+ */
+const V2_LINKAPP_AUTH_QUERY = "/v2/linkapp/auth/query"
+
+/**
+ * 抖音套餐映射接口
+ */
+const V2_COUPON_DOUYIN_PRODUCT_QUERY = "/v2/coupon/douyin/product/query"
+
+/**
+ * 抖音券状态批量查询
+ */
+const V2_COUPON_DOUYIN_CERTIFICATE_QUERY = "/v2/coupon/douyin/certificate/query"
+
+/**
+ * 抖音卡券校验
+ */
+const V2_COUPON_DOUYIN_PREPARE = "/v2/coupon/douyin/prepare"
+
+/**
+ * 抖音卡券核销
+ */
+const V2_COUPON_DOUYIN_CONSUME = "/v2/coupon/douyin/consume"
+
+/**
+ * 抖音卡券撤销
+ */
+const V2_COUPON_DOUYIN_CANCEL = "/v2/coupon/douyin/cancel"
+
+/**
+ * 银行大额支付固定转账标识申请接口
+ */
+const V2_TRADE_ONLINEPAYMENT_TRANSFER_FIXEDFLAG_APPLY = "/v2/trade/onlinepayment/transfer/fixedflag/apply"
+
+/**
+ * 电子账户付款查询
+ */
+const V2_TRADE_PAYMENT_ZXE_ACCTPYERQUERY = "/v2/trade/payment/zxe/acctpyerquery"
+
+/**
+ * 电子账户付款
+ */
+const V2_TRADE_PAYMENT_ZXE_ACCTPYER = "/v2/trade/payment/zxe/acctpyer"
+
+/**
  * 银联统一在线收银台签解约查询接口
  */
 const V2_TRADE_ONLINEPAYMENT_UNIONSIGNQUERY = "/v2/trade/onlinepayment/unionsignquery"

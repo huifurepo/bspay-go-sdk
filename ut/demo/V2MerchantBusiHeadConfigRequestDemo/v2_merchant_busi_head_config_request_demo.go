@@ -53,37 +53,37 @@ func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
     // 支付宝配置对象
-    // extendInfoMap["ali_conf_list"] = get916e568b03b4448b8442Bc59607f55a9()
+    // extendInfoMap["ali_conf_list"] = get3914bf384f3e4c9591b8893e9fb4f9ee()
     // 微信配置对象
-    // extendInfoMap["wx_conf_list"] = get91a6f3c897084daaA750D460c4223fdd()
+    // extendInfoMap["wx_conf_list"] = get91cc2a27888c46de9614Dbb4516cc335()
     // 银联二维码配置对象
-    // extendInfoMap["union_conf_list"] = get11f18154070b4ef3B79c6bd7442b51bd()
+    // extendInfoMap["union_conf_list"] = get9c1d666eCe3e4aceBea5B208d80d57b2()
     // 银联卡配置对象
-    // extendInfoMap["bank_card_config"] = getD38dbb2fA005448eAefa2631e82a43bd()
+    // extendInfoMap["bank_card_config"] = getEd80633aEa7c4a5d928fD074dc506928()
     // 分账配置对象
-    // extendInfoMap["split_config"] = getD74f8d2cAb1345d7B05859cbc476ef6e()
+    // extendInfoMap["split_config"] = get1676b226Cda745048669B065d29e072c()
     // 微信直连配置对象
-    // extendInfoMap["wx_zl_conf_list"] = get5a0a3440F93241359adcC4c7bd515643()
+    // extendInfoMap["wx_zl_conf_list"] = getA4020a4f009f414f9cf5668882108c30()
     // 支付宝直连配置对象
-    // extendInfoMap["ali_zl_conf"] = getD624c523351a4f1f995f73e7862d4f5c()
+    // extendInfoMap["ali_zl_conf"] = get127ca5f5933b4b8e9876D7a515151d35()
     // 线上配置对象
-    // extendInfoMap["online_fee_conf_list"] = get5ed15ef0B2e847f8A438A8c88a7bab1f()
+    // extendInfoMap["online_fee_conf_list"] = getE483094bF909460c8a17De0b3f59b4c4()
     // 余额支付配置对象
-    // extendInfoMap["balance_pay_config"] = get78b6d2f909434f408f929dd15fee6672()
+    // extendInfoMap["balance_pay_config"] = get715836aeC6334963A7fb2ffc149cf4e8()
     // 补贴支付配置对象
-    // extendInfoMap["combine_pay_config"] = get019b2ffc8bb04a42Aa4f87623ed4ee78()
+    // extendInfoMap["combine_pay_config"] = get43f1b7b2Fb304ac6Bf74297a35a6d6d9()
     // 银行大额转账配置对象
-    // extendInfoMap["bank_big_amt_pay_config"] = getDdb760be91d245959c0c57e3795c2e75()
+    // extendInfoMap["bank_big_amt_pay_config"] = get5b7059499f8846c7Ad482d1d04be7ed1()
     // 全域资金管理配置对象（华通银行）
-    // extendInfoMap["out_order_funds_config"] = get029b9aa1Ef7c445eAee78f34392d75a1()
+    // extendInfoMap["out_order_funds_config"] = getD5931f96E86d48ad8f4e37a2020a3697()
     // 全域资金管理配置(XW银行)
-    // extendInfoMap["out_order_funds_new_net_config"] = get11de5eefC8bc4ddd9bc091896e59685a()
+    // extendInfoMap["out_order_funds_new_net_config"] = getC3f087d6779a41e2Bd7b3be55fd71d60()
     // 结算配置对象
-    // extendInfoMap["settle_config_list"] = getB3273ffb43614889855bF0effa4c544e()
+    // extendInfoMap["settle_config_list"] = get5b4da856D6d24c03Ad2085a10a50b664()
     // 取现配置对象
-    // extendInfoMap["cash_config_list"] = getAb8250102ee14d688a3c697ded75df88()
+    // extendInfoMap["cash_config_list"] = get3049a308Bf07410bAac6A8b4126c73d7()
     // 外扣配置对象
-    // extendInfoMap["out_fee_config"] = get3a66f24451584846865293177b71f238()
+    // extendInfoMap["out_fee_config"] = getD691f7c180444b7bB2c64a1547bd9208()
     // 允许开通支付宝预授权
     // extendInfoMap["alipay_pre_auth_flag"] = ""
     // 允许开通微信预授权
@@ -97,15 +97,15 @@ func getExtendInfos() map[string]interface{} {
     // 允许使用上级商户号发起AT交易
     // extendInfoMap["use_upper_mer_at_trans_flag"] = ""
     // 大额支付配置
-    // extendInfoMap["large_amt_pay_config_list"] = getD8c6d0c002ca46cfB9efD110095bd83a()
+    // extendInfoMap["large_amt_pay_config_list"] = get289f1fdaE59244d0B99c447fcd1b5fd1()
     // 全域资金管理配置(苏商)
-    // extendInfoMap["out_order_funds_su_shang_config"] = getD31e7929847346248e31C3f56fb221a4()
+    // extendInfoMap["out_order_funds_su_shang_config"] = get942bf7c5D69d489194e4218efa3bfcd3()
     // 托管支付开关
     // extendInfoMap["half_pay_host_flag"] = ""
     return extendInfoMap
 }
 
-func get916e568b03b4448b8442Bc59607f55a9() string {
+func get3914bf384f3e4c9591b8893e9fb4f9ee() string {
     dto := make(map[string]interface{})
     // 支付场景
     // dto["pay_scene"] = "test"
@@ -119,7 +119,7 @@ func get916e568b03b4448b8442Bc59607f55a9() string {
     return string(dtoByte)
 }
 
-func get91a6f3c897084daaA750D460c4223fdd() string {
+func get91cc2a27888c46de9614Dbb4516cc335() string {
     dto := make(map[string]interface{})
     // 支付场景
     // dto["pay_scene"] = "test"
@@ -135,7 +135,7 @@ func get91a6f3c897084daaA750D460c4223fdd() string {
     return string(dtoByte)
 }
 
-func get11f18154070b4ef3B79c6bd7442b51bd() string {
+func get9c1d666eCe3e4aceBea5B208d80d57b2() string {
     dto := make(map[string]interface{})
     // 借记卡手续费1000以上(%)
     // dto["debit_fee_rate_up"] = "test"
@@ -159,7 +159,7 @@ func get11f18154070b4ef3B79c6bd7442b51bd() string {
     return string(dtoByte)
 }
 
-func getD38dbb2fA005448eAefa2631e82a43bd() string {
+func getEd80633aEa7c4a5d928fD074dc506928() string {
     dto := make(map[string]interface{})
     // 借记卡手续费（%）
     // dto["debit_fee_rate"] = "test"
@@ -186,7 +186,7 @@ func getD38dbb2fA005448eAefa2631e82a43bd() string {
     return string(dtoByte)
 }
 
-func getD74f8d2cAb1345d7B05859cbc476ef6e() string {
+func get1676b226Cda745048669B065d29e072c() string {
     dto := make(map[string]interface{})
     // 手续费（%）
     // dto["fee_rate"] = "test"
@@ -199,7 +199,7 @@ func getD74f8d2cAb1345d7B05859cbc476ef6e() string {
     return string(dtoByte)
 }
 
-func get5a0a3440F93241359adcC4c7bd515643() string {
+func getA4020a4f009f414f9cf5668882108c30() string {
     dto := make(map[string]interface{})
     // 支付场景
     // dto["pay_scene"] = "test"
@@ -213,7 +213,7 @@ func get5a0a3440F93241359adcC4c7bd515643() string {
     return string(dtoByte)
 }
 
-func getD624c523351a4f1f995f73e7862d4f5c() string {
+func get127ca5f5933b4b8e9876D7a515151d35() string {
     dto := make(map[string]interface{})
     // 手续费（%）
     // dto["fee_rate"] = "test"
@@ -224,7 +224,7 @@ func getD624c523351a4f1f995f73e7862d4f5c() string {
     return string(dtoByte)
 }
 
-func get5ed15ef0B2e847f8A438A8c88a7bab1f() string {
+func getE483094bF909460c8a17De0b3f59b4c4() string {
     dto := make(map[string]interface{})
     // 业务类型
     // dto["bus_type"] = "test"
@@ -244,7 +244,7 @@ func get5ed15ef0B2e847f8A438A8c88a7bab1f() string {
     return string(dtoByte)
 }
 
-func get78b6d2f909434f408f929dd15fee6672() string {
+func get715836aeC6334963A7fb2ffc149cf4e8() string {
     dto := make(map[string]interface{})
     // 手续费（%）
     // dto["fee_rate"] = "test"
@@ -257,7 +257,7 @@ func get78b6d2f909434f408f929dd15fee6672() string {
     return string(dtoByte)
 }
 
-func get019b2ffc8bb04a42Aa4f87623ed4ee78() string {
+func get43f1b7b2Fb304ac6Bf74297a35a6d6d9() string {
     dto := make(map[string]interface{})
     // 手续费（%）
     // dto["fee_rate"] = "test"
@@ -270,7 +270,7 @@ func get019b2ffc8bb04a42Aa4f87623ed4ee78() string {
     return string(dtoByte)
 }
 
-func getDdb760be91d245959c0c57e3795c2e75() string {
+func get5b7059499f8846c7Ad482d1d04be7ed1() string {
     dto := make(map[string]interface{})
     // 手续费（%）
     // dto["fee_rate"] = "test"
@@ -283,7 +283,7 @@ func getDdb760be91d245959c0c57e3795c2e75() string {
     return string(dtoByte)
 }
 
-func get029b9aa1Ef7c445eAee78f34392d75a1() string {
+func getD5931f96E86d48ad8f4e37a2020a3697() string {
     dto := make(map[string]interface{})
     // 手续费（%）
     // dto["fee_rate"] = "test"
@@ -298,7 +298,7 @@ func get029b9aa1Ef7c445eAee78f34392d75a1() string {
     return string(dtoByte)
 }
 
-func get11de5eefC8bc4ddd9bc091896e59685a() string {
+func getC3f087d6779a41e2Bd7b3be55fd71d60() string {
     dto := make(map[string]interface{})
     // 手续费（%）
     // dto["fee_rate"] = "test"
@@ -315,7 +315,7 @@ func get11de5eefC8bc4ddd9bc091896e59685a() string {
     return string(dtoByte)
 }
 
-func getB3273ffb43614889855bF0effa4c544e() string {
+func get5b4da856D6d24c03Ad2085a10a50b664() string {
     dto := make(map[string]interface{})
     // 业务类型
     // dto["bus_type"] = "test"
@@ -331,7 +331,7 @@ func getB3273ffb43614889855bF0effa4c544e() string {
     return string(dtoByte)
 }
 
-func getAb8250102ee14d688a3c697ded75df88() string {
+func get3049a308Bf07410bAac6A8b4126c73d7() string {
     dto := make(map[string]interface{})
     // 业务类型
     // dto["bus_type"] = "test"
@@ -347,7 +347,7 @@ func getAb8250102ee14d688a3c697ded75df88() string {
     return string(dtoByte)
 }
 
-func get3a66f24451584846865293177b71f238() string {
+func getD691f7c180444b7bB2c64a1547bd9208() string {
     dto := make(map[string]interface{})
     // 支持结算手续费外扣
     // dto["settle_out_fee_flag"] = "test"
@@ -360,7 +360,7 @@ func get3a66f24451584846865293177b71f238() string {
     return string(dtoByte)
 }
 
-func getD8c6d0c002ca46cfB9efD110095bd83a() string {
+func get289f1fdaE59244d0B99c447fcd1b5fd1() string {
     dto := make(map[string]interface{})
     // 手续费（%）
     // dto["fee_rate"] = "test"
@@ -381,7 +381,7 @@ func getD8c6d0c002ca46cfB9efD110095bd83a() string {
     return string(dtoByte)
 }
 
-func getD31e7929847346248e31C3f56fb221a4() string {
+func get942bf7c5D69d489194e4218efa3bfcd3() string {
     dto := make(map[string]interface{})
     // 手续费（%）
     // dto["fee_rate"] = "test"

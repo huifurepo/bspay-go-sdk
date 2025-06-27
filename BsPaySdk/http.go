@@ -56,9 +56,17 @@ func DoUploadFile(url string, params map[string]interface{}, filedirname string,
 	body := &bytes.Buffer{}
 	writer := multipart.NewWriter(body)
 	var fileName string
-	if str, ok := params["picture"].(string); ok {
-		fileName = str
+
+	if val, exists := params["picture"]; exists {
+		// 检查值是否为字符串且非空
+		if str, ok := val.(string); ok && str != "" {
+			fileName = str
+		} else {
+			// 如果值不是字符串或是空字符串，则使用 filedirname 的基文件名
+			fileName = filepath.Base(filedirname)
+		}
 	} else {
+		// 如果键 "picture" 不存在，则使用 filedirname 的基文件名
 		fileName = filepath.Base(filedirname)
 	}
 	// 参数写入文件

@@ -14,6 +14,7 @@ type V2UserBusiModifyRequest struct {
     UpperHuifuId string `json:"upper_huifu_id" structs:"upper_huifu_id"` // 渠道商/商户汇付Id
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 汇付ID
     LjhData string `json:"ljh_data" structs:"ljh_data"` // 乐接活配置当合作平台为乐接活，必填
+    SignUserInfo string `json:"sign_user_info" structs:"sign_user_info"` // 签约人信息当电子回单配置开关为开通时必填
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

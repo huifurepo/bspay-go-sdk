@@ -24,9 +24,9 @@ func V2MerchantUrlForwardRequestDemo() {
         // 请求日期
         ReqDate:tool.GetCurrentDate(),
         // 渠道商号
-        UpperHuifuId:"6666000123123123",
+        UpperHuifuId:"6666000108290240",
         // 门店号
-        // StoreId:"test",
+        StoreId:"store128",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -58,6 +58,8 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["back_page_url"] = ""
     // 异步接收URL
     // extendInfoMap["async_receive_url"] = ""
+    // 模版编号
+    extendInfoMap["template_id"] = "155625"
     return extendInfoMap
 }
 

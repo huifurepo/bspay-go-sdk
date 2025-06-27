@@ -32,7 +32,7 @@ func V2TradeHostingPaymentPreorderRequestDemo() {
         // 商品描述
         GoodsDesc:"app跳支付宝消费",
         // app扩展参数集合
-        AppData:get3929b82cFd8a47008ecb589e2c69dcf7(),
+        AppData:get0943225725ee4bcf94be1a0a5ebac4b6(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -63,21 +63,21 @@ func getExtendInfos() map[string]interface{} {
     // 是否延迟交易
     extendInfoMap["delay_acct_flag"] = "N"
     // 分账对象
-    extendInfoMap["acct_split_bunch"] = getD7e2c888B0514b8fBf315dc4c03edce3()
+    extendInfoMap["acct_split_bunch"] = get93d78226F8594837B05a9c00420d35bc()
     // 交易失效时间
     // extendInfoMap["time_expire"] = ""
     // 业务信息
-    // extendInfoMap["biz_info"] = getAd8a5bcc31b14817A48c1bf5c51ca53a()
+    // extendInfoMap["biz_info"] = getAbb8777bBabb4bbdAf08C2a4e4496a5b()
     // 异步通知地址
     extendInfoMap["notify_url"] = "https://callback.service.com/xx"
     // 支付宝参数集合
-    // extendInfoMap["alipay_data"] = getBc1ce5960e7549a28341A27a488826af()
+    // extendInfoMap["alipay_data"] = getE8e4a90aD97644bf95f75a0f2507b92b()
     // 设备信息
-    // extendInfoMap["terminal_device_data"] = getF2e9a7f30aca42a08f236cd825a7398a()
+    // extendInfoMap["terminal_device_data"] = get5e608913B0ce494dBde24e18668dd086()
     return extendInfoMap
 }
 
-func getA05acc30794c41e38154471472af99b5() interface{} {
+func get3c45886d32954aa08b47580fede7240f() interface{} {
     dto := make(map[string]interface{})
     // 分账金额
     dto["div_amt"] = "0.08"
@@ -92,10 +92,10 @@ func getA05acc30794c41e38154471472af99b5() interface{} {
     return dtoList
 }
 
-func getD7e2c888B0514b8fBf315dc4c03edce3() string {
+func get93d78226F8594837B05a9c00420d35bc() string {
     dto := make(map[string]interface{})
     // 分账明细
-    dto["acct_infos"] = getA05acc30794c41e38154471472af99b5()
+    dto["acct_infos"] = get3c45886d32954aa08b47580fede7240f()
     // 百分比分账标志
     // dto["percentage_flag"] = ""
     // 是否净值分账
@@ -105,7 +105,7 @@ func getD7e2c888B0514b8fBf315dc4c03edce3() string {
     return string(dtoByte)
 }
 
-func get3929b82cFd8a47008ecb589e2c69dcf7() string {
+func get0943225725ee4bcf94be1a0a5ebac4b6() string {
     dto := make(map[string]interface{})
     // 小程序返回码
     dto["app_schema"] = "app跳转链接"
@@ -116,7 +116,7 @@ func get3929b82cFd8a47008ecb589e2c69dcf7() string {
     return string(dtoByte)
 }
 
-func get3459e01890374013B480D391e23fb4cd() interface{} {
+func getC8ef6ab65c9a41be853f056ee71e02cb() interface{} {
     dto := make(map[string]interface{})
     // 是否提供校验身份信息
     // dto["need_check_info"] = ""
@@ -128,7 +128,7 @@ func get3459e01890374013B480D391e23fb4cd() interface{} {
     return dto;
 }
 
-func get4b7a8d8dB702492dB8aaB7b2fed9b305() interface{} {
+func get8f55a66d284d47ce8451Ffe705e2c438() interface{} {
     dto := make(map[string]interface{})
     // 姓名
     // dto["name"] = ""
@@ -142,18 +142,18 @@ func get4b7a8d8dB702492dB8aaB7b2fed9b305() interface{} {
     return dto;
 }
 
-func getAd8a5bcc31b14817A48c1bf5c51ca53a() string {
+func getAbb8777bBabb4bbdAf08C2a4e4496a5b() string {
     dto := make(map[string]interface{})
     // 付款人验证（支付宝）
-    // dto["payer_check_ali"] = get3459e01890374013B480D391e23fb4cd()
+    // dto["payer_check_ali"] = getC8ef6ab65c9a41be853f056ee71e02cb()
     // 个人付款人信息
-    // dto["person_payer"] = get4b7a8d8dB702492dB8aaB7b2fed9b305()
+    // dto["person_payer"] = get8f55a66d284d47ce8451Ffe705e2c438()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
-func get44bb8f8aCc3247b3Abdb5603398c94cb() interface{} {
+func getF02c09f0E32a41f7899c72ddb9868bcd() interface{} {
     dto := make(map[string]interface{})
     // 卡类型
     // dto["card_type"] = ""
@@ -175,7 +175,7 @@ func get44bb8f8aCc3247b3Abdb5603398c94cb() interface{} {
     return dto;
 }
 
-func getFade890b54bd4a619dcfE68d9aeb4fd3() interface{} {
+func get0c5adae53aef44a9Aed82b1548ca2abc() interface{} {
     dto := make(map[string]interface{})
     // 商品的编号
     // dto["goods_id"] = "test"
@@ -198,14 +198,14 @@ func getFade890b54bd4a619dcfE68d9aeb4fd3() interface{} {
     return dtoList
 }
 
-func getBc1ce5960e7549a28341A27a488826af() string {
+func getE8e4a90aD97644bf95f75a0f2507b92b() string {
     dto := make(map[string]interface{})
     // 支付宝的店铺编号
     // dto["alipay_store_id"] = ""
     // 业务扩展参数
-    // dto["extend_params"] = get44bb8f8aCc3247b3Abdb5603398c94cb()
+    // dto["extend_params"] = getF02c09f0E32a41f7899c72ddb9868bcd()
     // 订单包含的商品列表信息
-    // dto["goods_detail"] = getFade890b54bd4a619dcfE68d9aeb4fd3()
+    // dto["goods_detail"] = get0c5adae53aef44a9Aed82b1548ca2abc()
     // 商户原始订单号
     // dto["merchant_order_no"] = ""
     // 商户操作员编号
@@ -227,7 +227,7 @@ func getBc1ce5960e7549a28341A27a488826af() string {
     return string(dtoByte)
 }
 
-func getF2e9a7f30aca42a08f236cd825a7398a() string {
+func get5e608913B0ce494dBde24e18668dd086() string {
     dto := make(map[string]interface{})
     // 汇付机具号
     // dto["devs_id"] = "test"

@@ -32,7 +32,7 @@ func V3TradePaymentMicropayRequestDemo() {
         // 支付授权码
         AuthCode:"131135212661863252",
         // 安全信息
-        RiskCheckData:getB3d2aa090df5472aAef30aeb924ce449(),
+        RiskCheckData:getE02463d1F3ac4fd185f6Bd24cf501ecb(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -67,21 +67,21 @@ func getExtendInfos() map[string]interface{} {
     // 渠道号
     // extendInfoMap["channel_no"] = ""
     // 补贴支付信息
-    // extendInfoMap["combinedpay_data"] = get5febf2895e58447188ca5473bb7f6305()
+    // extendInfoMap["combinedpay_data"] = getD189c8daF937403e94adB2dc377cd6f3()
     // 场景类型
     // extendInfoMap["pay_scene"] = ""
     // 分账对象
-    // extendInfoMap["acct_split_bunch"] = get98e9646aC3d64b1a887d32cab8c4a595()
+    // extendInfoMap["acct_split_bunch"] = get952a291c2c2d4e7fAd7fB8c75a17d553()
     // 传入分帐遇到优惠的处理规则
     // extendInfoMap["term_div_coupon_type"] = ""
     // 聚合反扫微信参数集合
-    // extendInfoMap["wx_data"] = get06986622B16c4d7c8f326a79db3de402()
+    // extendInfoMap["wx_data"] = get51a97cb269b946b9B82e5914fc3f6a27()
     // 支付宝扩展参数集合
-    // extendInfoMap["alipay_data"] = get2be5a39d44224aa0A33c4dc05a8ead66()
+    // extendInfoMap["alipay_data"] = getD45cb0c863e54be08f25361846e3ff85()
     // 银联参数集合
-    // extendInfoMap["unionpay_data"] = get8339e69c43e947c9989e7bf9b6118e65()
+    // extendInfoMap["unionpay_data"] = get7edfab7e6c614384Bb2f533e62768584()
     // 设备信息
-    // extendInfoMap["terminal_device_info"] = get131eea4bF7d94e3f94ef52a5c3c3af91()
+    // extendInfoMap["terminal_device_info"] = get09d5b65841d64f27B5bdD2683394cbd3()
     // 异步通知地址
     extendInfoMap["notify_url"] = "http://www.baidu.com"
     // 交易备注
@@ -89,11 +89,11 @@ func getExtendInfos() map[string]interface{} {
     // 账户号
     // extendInfoMap["acct_id"] = ""
     // 手续费补贴信息
-    // extendInfoMap["trans_fee_allowance_info"] = getFf9c1f9a77814781863741b3a9ff94d1()
+    // extendInfoMap["trans_fee_allowance_info"] = getB2dbe76d86d948b9Ac3a4a6f0b746d2e()
     return extendInfoMap
 }
 
-func get5febf2895e58447188ca5473bb7f6305() string {
+func getD189c8daF937403e94adB2dc377cd6f3() string {
     dto := make(map[string]interface{})
     // 补贴方汇付编号
     // dto["huifu_id"] = "test"
@@ -109,7 +109,7 @@ func get5febf2895e58447188ca5473bb7f6305() string {
     return string(dtoByte)
 }
 
-func get015eb18cCf624b1dA546Eb5050c0a1fd() interface{} {
+func getA56f49b9844246c9B55fBf2472320755() interface{} {
     dto := make(map[string]interface{})
     // 分账接收方ID
     // dto["huifu_id"] = "test"
@@ -124,10 +124,10 @@ func get015eb18cCf624b1dA546Eb5050c0a1fd() interface{} {
     return dtoList
 }
 
-func get98e9646aC3d64b1a887d32cab8c4a595() string {
+func get952a291c2c2d4e7fAd7fB8c75a17d553() string {
     dto := make(map[string]interface{})
     // 分账明细
-    // dto["acct_infos"] = get015eb18cCf624b1dA546Eb5050c0a1fd()
+    // dto["acct_infos"] = getA56f49b9844246c9B55fBf2472320755()
     // 百分比分账标志
     // dto["percentage_flag"] = ""
     // 是否净值分账
@@ -137,7 +137,7 @@ func get98e9646aC3d64b1a887d32cab8c4a595() string {
     return string(dtoByte)
 }
 
-func get0ebc49da62994543B8bf1aead7f5c9ad() interface{} {
+func get10b1cca5C03347feB177111ddd9d36a6() interface{} {
     dto := make(map[string]interface{})
     // 商品编码
     // dto["goods_id"] = "test"
@@ -154,10 +154,10 @@ func get0ebc49da62994543B8bf1aead7f5c9ad() interface{} {
     return dtoList
 }
 
-func get236c6dce72ba459cA2175bf44bf0f2c5() interface{} {
+func getA2c3e07bC8a14a008b0602fd5168e36f() interface{} {
     dto := make(map[string]interface{})
     // 单品列表
-    // dto["goods_detail"] = get0ebc49da62994543B8bf1aead7f5c9ad()
+    // dto["goods_detail"] = get10b1cca5C03347feB177111ddd9d36a6()
     // 订单原价
     // dto["cost_price"] = ""
     // 商品小票ID
@@ -166,7 +166,7 @@ func get236c6dce72ba459cA2175bf44bf0f2c5() interface{} {
     return dto;
 }
 
-func get6f9e0ab7F2ed4fec8e45C09c40738013() interface{} {
+func get73010fa6565b457c8744B5bb6e7a01bd() interface{} {
     dto := make(map[string]interface{})
     // 门店id
     // dto["id"] = ""
@@ -180,15 +180,15 @@ func get6f9e0ab7F2ed4fec8e45C09c40738013() interface{} {
     return dto;
 }
 
-func get4df9813eE2d74a35Ba7b547849fb364f() interface{} {
+func get5e84ee5d6ea649579fe80ca194a2e26a() interface{} {
     dto := make(map[string]interface{})
     // 门店信息
-    // dto["store_info"] = get6f9e0ab7F2ed4fec8e45C09c40738013()
+    // dto["store_info"] = get73010fa6565b457c8744B5bb6e7a01bd()
 
     return dto;
 }
 
-func get06986622B16c4d7c8f326a79db3de402() string {
+func get51a97cb269b946b9B82e5914fc3f6a27() string {
     dto := make(map[string]interface{})
     // 收款设备IP直联模式必填字段；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：192.168.2.2&lt;/font&gt;
     // dto["spbill_create_ip"] = "test"
@@ -201,9 +201,9 @@ func get06986622B16c4d7c8f326a79db3de402() string {
     // 附加数据
     // dto["attach"] = ""
     // 商品详情
-    // dto["detail"] = get236c6dce72ba459cA2175bf44bf0f2c5()
+    // dto["detail"] = getA2c3e07bC8a14a008b0602fd5168e36f()
     // 场景信息
-    // dto["scene_info"] = get4df9813eE2d74a35Ba7b547849fb364f()
+    // dto["scene_info"] = get5e84ee5d6ea649579fe80ca194a2e26a()
     // 单品优惠标识
     // dto["promotion_flag"] = ""
     // 电子发票入口开放标识
@@ -213,7 +213,7 @@ func get06986622B16c4d7c8f326a79db3de402() string {
     return string(dtoByte)
 }
 
-func getD19ec32a60b8463f890b8827e3a96ccf() interface{} {
+func get19fa5b18C0d94fc2B57977b3841c51a4() interface{} {
     dto := make(map[string]interface{})
     // 商品的编号
     // dto["goods_id"] = "test"
@@ -236,7 +236,7 @@ func getD19ec32a60b8463f890b8827e3a96ccf() interface{} {
     return dtoList
 }
 
-func getE25ed1dd69dd4dc7A612271c85cc69cf() interface{} {
+func getD81ce040C3eb4af0821e8f9d78eba159() interface{} {
     dto := make(map[string]interface{})
     // 卡类型
     // dto["card_type"] = ""
@@ -256,7 +256,7 @@ func getE25ed1dd69dd4dc7A612271c85cc69cf() interface{} {
     return dto;
 }
 
-func get2dbce9dfA62e46069b315a6ff07682bd() interface{} {
+func get63b7f4ecFfa2408f8bb475033858e953() interface{} {
     dto := make(map[string]interface{})
     // 姓名
     // dto["name"] = ""
@@ -276,20 +276,20 @@ func get2dbce9dfA62e46069b315a6ff07682bd() interface{} {
     return dto;
 }
 
-func get2be5a39d44224aa0A33c4dc05a8ead66() string {
+func getD45cb0c863e54be08f25361846e3ff85() string {
     dto := make(map[string]interface{})
     // 支付宝的店铺编号
     // dto["alipay_store_id"] = ""
     // 订单包含的商品列表信息
-    // dto["goods_detail"] = getD19ec32a60b8463f890b8827e3a96ccf()
+    // dto["goods_detail"] = get19fa5b18C0d94fc2B57977b3841c51a4()
     // 业务扩展参数
-    // dto["extend_params"] = getE25ed1dd69dd4dc7A612271c85cc69cf()
+    // dto["extend_params"] = getD81ce040C3eb4af0821e8f9d78eba159()
     // 商户操作员编号
     // dto["operator_id"] = ""
     // 商户门店编号
     // dto["store_id"] = ""
     // 外部指定买家
-    // dto["ext_user_info"] = get2dbce9dfA62e46069b315a6ff07682bd()
+    // dto["ext_user_info"] = get63b7f4ecFfa2408f8bb475033858e953()
     // 商户业务信息
     // dto["ali_business_params"] = ""
     // 订单描述
@@ -301,7 +301,7 @@ func get2be5a39d44224aa0A33c4dc05a8ead66() string {
     return string(dtoByte)
 }
 
-func get8339e69c43e947c9989e7bf9b6118e65() string {
+func get7edfab7e6c614384Bb2f533e62768584() string {
     dto := make(map[string]interface{})
     // 币种
     // dto["currency_code"] = ""
@@ -322,7 +322,7 @@ func get8339e69c43e947c9989e7bf9b6118e65() string {
     return string(dtoByte)
 }
 
-func getB3d2aa090df5472aAef30aeb924ce449() string {
+func getE02463d1F3ac4fd185f6Bd24cf501ecb() string {
     dto := make(map[string]interface{})
     // ip地址
     dto["ip_addr"] = "180.167.105.130"
@@ -337,7 +337,7 @@ func getB3d2aa090df5472aAef30aeb924ce449() string {
     return string(dtoByte)
 }
 
-func get131eea4bF7d94e3f94ef52a5c3c3af91() string {
+func get09d5b65841d64f27B5bdD2683394cbd3() string {
     dto := make(map[string]interface{})
     // 商户设备类型
     // dto["mer_device_type"] = "test"
@@ -384,7 +384,7 @@ func get131eea4bF7d94e3f94ef52a5c3c3af91() string {
     return string(dtoByte)
 }
 
-func getFf9c1f9a77814781863741b3a9ff94d1() string {
+func getB2dbe76d86d948b9Ac3a4a6f0b746d2e() string {
     dto := make(map[string]interface{})
     // 补贴手续费金额
     // dto["allowance_fee_amt"] = ""

@@ -25,9 +25,9 @@ func V2EfpWithdrawQueryRequestDemo() {
         ReqDate:tool.GetCurrentDate(),
         // 商户汇付id
         HuifuId:"6666000108422302",
-        // 原请求流水号
+        // 付款或提现的请求流水号
         OrgReqSeqId:"384866372653481984",
-        // 原请求日期
+        // 付款或提现的请求日期
         OrgReqDate:"20241203",
     }
     // 设置非必填字段
