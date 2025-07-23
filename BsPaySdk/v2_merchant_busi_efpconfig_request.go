@@ -39,6 +39,7 @@ type V2MerchantBusiEfpconfigRequest struct {
     YbCooperationProvePic string `json:"yb_cooperation_prove_pic" structs:"yb_cooperation_prove_pic"` // 易宝合作证明材料入账来源包含19:易宝时必填 文件类型F599；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
     EfpPaperAgreementFile string `json:"efp_paper_agreement_file" structs:"efp_paper_agreement_file"` // 全渠道资金纸质协议文件协议类型为纸质时必填，文件类型F605；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
     BdCooperationProvePic string `json:"bd_cooperation_prove_pic" structs:"bd_cooperation_prove_pic"` // 百度合作证明材料入账来源包含20:百度时必填 文件类型F616；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+    MainStoreHuifuId string `json:"main_store_huifu_id" structs:"main_store_huifu_id"` // 主店商户号是否店群为是时必填
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

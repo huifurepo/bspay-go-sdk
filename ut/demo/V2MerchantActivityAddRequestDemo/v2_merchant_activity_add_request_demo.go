@@ -25,13 +25,13 @@ func V2MerchantActivityAddRequestDemo() {
         ReqSeqId:tool.GetReqSeqId(),
         // 汇付客户Id
         HuifuId:"6666000103627938",
-        // 营业执照图片调用[图片上传接口](http://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)获取jfile文件id；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e529&lt;/font&gt;&lt;br/&gt;活动类型为支付宝谷雨活动时无需填写任何资料
+        // 营业执照图片调用[图片上传接口](http://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)获取jfile文件id；[示例图片](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/spin/imgs/%E8%90%A5%E4%B8%9A%E6%89%A7%E7%85%A7%E7%A4%BA%E4%BE%8B.png)参考&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e529&lt;/font&gt;&lt;br/&gt;活动类型为支付宝谷雨活动时无需填写任何资料
         BlPhoto:"42204258-967e-373c-88d2-1afa4c7bb8ef",
         // 店内环境图片参加教育食堂、非校园餐饮、非盈利、停车缴费行业时必传；调用[图片上传接口](http://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)获取jfile文件id；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e529&lt;/font&gt;&lt;br/&gt;活动类型为支付宝谷雨活动时无需填写任何资料
         DhPhoto:"42204258-967e-373c-88d2-1afa4c7bb8ef",
         // 手续费类型
         FeeType:"7",
-        // 整体门面图片（门头照）参加教育食堂行业、非校园餐饮、非盈利、线下教培、公办医院、商业医疗时必传；调用[图片上传接口](http://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)获取jfile文件id；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e529&lt;/font&gt;&lt;br/&gt;活动类型为支付宝谷雨活动时无需填写任何资料
+        // 整体门面图片（门头照）参加教育食堂行业、非校园餐饮、非盈利、线下教培、公办医院、商业医疗时必传；调用[图片上传接口](http://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)获取jfile文件id；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e529&lt;/font&gt;&lt;br/&gt;活动类型为支付宝谷雨活动时无需填写任何资料&lt;br/&gt;若为线下教培活动,[示例图片](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/spin/imgs/%E9%97%A8%E5%A4%B4%E7%85%A7%E7%A4%BA%E4%BE%8B.png)参考
         MmPhoto:"42204258-967e-373c-88d2-1afa4c7bb8ef",
         // 收银台照片参加教育食堂行业、线下教培、公办医院时必传；调用[图片上传接口](http://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)获取jfile文件id；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e529&lt;/font&gt;&lt;br/&gt;活动类型为支付宝谷雨活动时无需填写任何资料
         SytPhoto:"42204258-967e-373c-88d2-1afa4c7bb8ef",
@@ -101,7 +101,7 @@ func getExtendInfos() map[string]interface{} {
     // 优惠费率承诺函
     extendInfoMap["activity_rate_commit_photo"] = "42204258-967e-373c-88d2-1afa4c7bb8ef"
     // 商户同名银行账户信息
-    extendInfoMap["bank_account"] = getDb0dd69bF8894f4580daB947400610cc()
+    extendInfoMap["bank_account"] = getA9362d330e0241b090a8D3be2713bcbf()
     // 银行开户证明图片
     extendInfoMap["bank_account_prove_photo"] = ""
     // 机构银行合作授权函图
@@ -123,7 +123,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getDb0dd69bF8894f4580daB947400610cc() string {
+func getA9362d330e0241b090a8D3be2713bcbf() string {
     dto := make(map[string]interface{})
     // 账户名
     dto["card_name"] = "张三"

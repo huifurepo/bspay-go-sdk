@@ -19,6 +19,8 @@ func V2TradeCloudmisOrderDetailRequestDemo() {
 
     // 2.组装请求参数
     dgReq := BsPaySdk.V2TradeCloudmisOrderDetailRequest{
+        // 请求流水号
+        // ReqId:"test",
         // 原MIS请求商户号
         OrgHuifuId:"6666000141203565",
         // 原MIS请求终端号

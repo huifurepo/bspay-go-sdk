@@ -19,12 +19,14 @@ func V2TradeCloudmisDeviceInformationMisRequestDemo() {
 
     // 2.组装请求参数
     dgReq := BsPaySdk.V2TradeCloudmisDeviceInformationMisRequest{
+        // 请求流水号
+        ReqId:"20240313115926539uf7cqcmwxl30",
         // 终端设备号
         DeviceId:"310000011015000063677",
         // 商户号
         HuifuId:"6666000141203565",
         // 交易信息
-        JsonData:"{\"transAmount\":\"11\",\"interfaceType\":\"SALE\",\"bgRetUrl\":\"virgo://https://shop.91lpp.com/api/common/huifu/posCallback\",\"thirdOrderId\":\"20240313115926539uf7cqcmwxl30\" }",
+        JsonData:"{\"transAmount\":\"11\",\"interfaceType\":\"SALE\",\"thirdOrderId\":\"20240313115926539uf7cqcmwxl30\" }",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()

@@ -9,6 +9,7 @@ package BsPaySdk
 import "encoding/json"
 
 type V2TradeCloudmisOrderDetailRequest struct {
+    ReqId string `json:"req_id" structs:"req_id"` // 请求流水号
     OrgHuifuId string `json:"org_huifu_id" structs:"org_huifu_id"` // 原MIS请求商户号
     OrgDeviceId string `json:"org_device_id" structs:"org_device_id"` // 原MIS请求终端号
     OrgReqDate string `json:"org_req_date" structs:"org_req_date"` // 原MIS请求日期

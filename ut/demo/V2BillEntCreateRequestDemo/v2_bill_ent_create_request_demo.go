@@ -36,7 +36,7 @@ func V2BillEntCreateRequestDemo() {
         // 账单截止日期
         BillEndDate:"20990909",
         // 收款人信息
-        PayeeInfo:get7cb71210B6e945638ed7D26989882224(),
+        PayeeInfo:get0117bed87ef6433bAc7f831d09c77a76(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -63,13 +63,13 @@ func getExtendInfos() map[string]interface{} {
     // 账单说明
     extendInfoMap["bill_remark"] = "您本次 SaaS 服务周期为[开始日期]至[结束日期]。费用包括基础服务套餐[X]元，高级功能模块[X]元，总计[X]元。"
     // 汇总信息
-    // extendInfoMap["bill_summary_info"] = getB7fe106a1ade4660865e83374ad40fbf()
+    extendInfoMap["bill_summary_info"] = get00cfe2af4f494258A34084b55e2d10f9()
     // 更多信息
-    // extendInfoMap["bill_extend_info"] = get31ba075559984fd7B7d0C256e889b5c0()
+    extendInfoMap["bill_extend_info"] = get0d92fec96d1c42aaA519B4fe44b194f4()
     // 账单推送方式
     extendInfoMap["push_type"] = "EMAIL"
     // 抄送邮箱
-    extendInfoMap["copy_email"] = "xuemei.ren@huifu.com,guowen.jiang@huifu.com"
+    extendInfoMap["copy_email"] = "xxx@163.com,xxxx@163.com"
     // 备注信息
     extendInfoMap["remark"] = "I_remark"
     // 账单信息异步通知地址
@@ -79,29 +79,31 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getB7fe106a1ade4660865e83374ad40fbf() string {
+func get00cfe2af4f494258A34084b55e2d10f9() string {
     dto := make(map[string]interface{})
     // 字段名
-    // dto["extend_name"] = "test"
+    dto["extend_name"] = "账单金额"
     // 字段值
-    // dto["extend_value"] = "test"
+    dto["extend_value"] = "128.00"
 
-    dtoByte, _ := json.Marshal(dto)
+    dtoList := [1]interface{}{dto}
+    dtoByte, _ := json.Marshal(dtoList)
     return string(dtoByte)
 }
 
-func get31ba075559984fd7B7d0C256e889b5c0() string {
+func get0d92fec96d1c42aaA519B4fe44b194f4() string {
     dto := make(map[string]interface{})
     // 字段名
-    // dto["extend_name"] = "test"
+    dto["extend_name"] = "备注"
     // 字段值
-    // dto["extend_value"] = "test"
+    dto["extend_value"] = "额外额外"
 
-    dtoByte, _ := json.Marshal(dto)
+    dtoList := [1]interface{}{dto}
+    dtoByte, _ := json.Marshal(dtoList)
     return string(dtoByte)
 }
 
-func get7cb71210B6e945638ed7D26989882224() string {
+func get0117bed87ef6433bAc7f831d09c77a76() string {
     dto := make(map[string]interface{})
     // 收款联系人姓名
     dto["payee_name"] = "黄云"

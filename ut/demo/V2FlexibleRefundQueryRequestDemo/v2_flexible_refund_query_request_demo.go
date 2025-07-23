@@ -1,10 +1,10 @@
 /**
- * 托管交易查询 - 示例
+ * 灵工支付退款查询 - 示例
  *
  * @Author sdk-generator
  * @Description 汇付天下
  */
-package V2TradeHostingPaymentQueryorderinfoRequestDemo
+package V2FlexibleRefundQueryRequestDemo
 
 import (
     "encoding/json"
@@ -13,24 +13,22 @@ import (
 	"github.com/huifurepo/bspay-go-sdk/ut/tool"
 )
 
-func V2TradeHostingPaymentQueryorderinfoRequestDemo() {
+func V2FlexibleRefundQueryRequestDemo() {
     // 1. 数据初始化
 	dgSDK, _ := BsPaySdk.NewBsPay(true, "./config/config.json")
 
     // 2.组装请求参数
-    dgReq := BsPaySdk.V2TradeHostingPaymentQueryorderinfoRequest{
-        // 请求日期
-        ReqDate:tool.GetCurrentDate(),
+    dgReq := BsPaySdk.V2FlexibleRefundQueryRequest{
         // 请求流水号
         ReqSeqId:tool.GetReqSeqId(),
-        // 商户号
-        HuifuId:"6666000109133323",
-        // 原交易请求日期
-        OrgReqDate:"20231020",
-        // 原交易请求流水号与**party_order_id**二选一，必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：rQ2021121311173944&lt;/font&gt;
-        OrgReqSeqId:"202310201652361987182512",
-        // 用户账单上的商户订单号与**org_req_seq_id**二选一，必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：03232109190255105603561&lt;/font&gt;
-        // PartyOrderId:"test",
+        // 请求日期
+        ReqDate:tool.GetCurrentDate(),
+        // 退款请求流水号
+        OrgReqSeqId:"2025061871011243181811test001",
+        // 退款请求日期
+        OrgReqDate:"20250617",
+        // 汇付商户号
+        HuifuId:"6666000108903745",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -40,7 +38,7 @@ func V2TradeHostingPaymentQueryorderinfoRequestDemo() {
     fmt.Println("请求数据:", string(respStr))
 
     // 3. 发起API调用
-    resp, err := dgSDK.V2TradeHostingPaymentQueryorderinfoRequest(dgReq)
+    resp, err := dgSDK.V2FlexibleRefundQueryRequest(dgReq)
   	if err != nil {
 		fmt.Println("请求异常:", err)
 	}

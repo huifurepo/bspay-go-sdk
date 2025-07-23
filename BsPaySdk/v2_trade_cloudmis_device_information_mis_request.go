@@ -9,6 +9,7 @@ package BsPaySdk
 import "encoding/json"
 
 type V2TradeCloudmisDeviceInformationMisRequest struct {
+    ReqId string `json:"req_id" structs:"req_id"` // 请求流水号
     DeviceId string `json:"device_id" structs:"device_id"` // 终端设备号
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 商户号
     JsonData string `json:"json_data" structs:"json_data"` // 交易信息
