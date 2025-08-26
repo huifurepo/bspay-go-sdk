@@ -28,9 +28,9 @@ func V2TradeAcctpaymentPayRequestDemo() {
         // 支付金额
         OrdAmt:"0.01",
         // 分账对象
-        AcctSplitBunch:getD37742661e6048c3B305B86f6af02ff6(),
+        AcctSplitBunch:get887321ddC9244df89a700d1bbcc6fe17(),
         // 安全信息
-        RiskCheckData:get7e2f3a0329204bd7Af5b4b0e8e8e6e57(),
+        RiskCheckData:get6d96310288604dbfBe6a8eff149352ec(),
         // 资金类型资金类型。支付渠道为中信E管家时，资金类型必填（[详见说明](https://paas.huifu.com/open/doc/api/#/yuer/api_zxegjzllx)）
         // FundType:"test",
         // 手续费承担方标识余额支付手续费承担方标识；商户余额支付扣收规则为接口指定承担方时必填！枚举值：&lt;br/&gt;OUT：出款方；&lt;br/&gt;IN：分账接受方。&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：IN&lt;/font&gt;
@@ -79,13 +79,13 @@ func getExtendInfos() map[string]interface{} {
     // 落地公司商户号
     // extendInfoMap["bmember_id"] = ""
     // 乐接活请求参数集合
-    // extendInfoMap["ljh_data"] = get5de9d033D391477aB3266dcce6b8b3e4()
+    // extendInfoMap["ljh_data"] = get9dbad888434a466785f39d12cfb2ecbc()
     // 异步通知地址
     // extendInfoMap["notify_url"] = ""
     return extendInfoMap
 }
 
-func getF21d3168F3f74616B096Bccba329d0b9() interface{} {
+func getF90f4f31607e4aa5934d9d69fbb958d2() interface{} {
     dto := make(map[string]interface{})
     // 分账接收方ID
     dto["huifu_id"] = "6666000109133323"
@@ -100,10 +100,10 @@ func getF21d3168F3f74616B096Bccba329d0b9() interface{} {
     return dtoList
 }
 
-func getD37742661e6048c3B305B86f6af02ff6() string {
+func get887321ddC9244df89a700d1bbcc6fe17() string {
     dto := make(map[string]interface{})
     // 分账明细
-    dto["acct_infos"] = getF21d3168F3f74616B096Bccba329d0b9()
+    dto["acct_infos"] = getF90f4f31607e4aa5934d9d69fbb958d2()
     // 百分比分账标志
     // dto["percentage_flag"] = ""
     // 是否净值分账
@@ -113,7 +113,7 @@ func getD37742661e6048c3B305B86f6af02ff6() string {
     return string(dtoByte)
 }
 
-func get7e2f3a0329204bd7Af5b4b0e8e8e6e57() string {
+func get6d96310288604dbfBe6a8eff149352ec() string {
     dto := make(map[string]interface{})
     // 转账原因
     dto["transfer_type"] = "04"
@@ -132,7 +132,7 @@ func get7e2f3a0329204bd7Af5b4b0e8e8e6e57() string {
     return string(dtoByte)
 }
 
-func get5de9d033D391477aB3266dcce6b8b3e4() string {
+func get9dbad888434a466785f39d12cfb2ecbc() string {
     dto := make(map[string]interface{})
     // 税源地ID
     // dto["tax_area_id"] = ""

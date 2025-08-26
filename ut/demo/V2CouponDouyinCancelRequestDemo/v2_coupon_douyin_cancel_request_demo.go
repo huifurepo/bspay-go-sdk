@@ -27,7 +27,7 @@ func V2CouponDouyinCancelRequestDemo() {
         HuifuId:"6666000107767088",
         // 门店绑定流水号
         BindId:"88fd7c9b63e84a259dfe3eecb811fce8",
-        // 加密抖音券码
+        // 抖音券码
         EncryptedCode:"5584192259",
         // 核销标识
         VerifyId:"3435",

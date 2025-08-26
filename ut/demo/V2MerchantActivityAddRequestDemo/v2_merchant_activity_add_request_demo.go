@@ -101,7 +101,7 @@ func getExtendInfos() map[string]interface{} {
     // 优惠费率承诺函
     extendInfoMap["activity_rate_commit_photo"] = "42204258-967e-373c-88d2-1afa4c7bb8ef"
     // 商户同名银行账户信息
-    extendInfoMap["bank_account"] = getA9362d330e0241b090a8D3be2713bcbf()
+    extendInfoMap["bank_account"] = getE22c830eBd364d3bA2af2f753ab2a489()
     // 银行开户证明图片
     extendInfoMap["bank_account_prove_photo"] = ""
     // 机构银行合作授权函图
@@ -123,7 +123,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getA9362d330e0241b090a8D3be2713bcbf() string {
+func getE22c830eBd364d3bA2af2f753ab2a489() string {
     dto := make(map[string]interface{})
     // 账户名
     dto["card_name"] = "张三"

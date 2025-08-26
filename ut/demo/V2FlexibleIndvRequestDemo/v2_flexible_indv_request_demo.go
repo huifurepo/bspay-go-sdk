@@ -26,9 +26,9 @@ func V2FlexibleIndvRequestDemo() {
         // 渠道商/商户汇付Id
         UpperHuifuId:"6666000108900391",
         // 基本信息
-        BasicInfo:getCb18718f36334ed4859eC242d6402fc6(),
+        BasicInfo:getC5d70ad2Dabc4349A0cd524ed438f1df(),
         // 卡信息
-        CardInfo:get422a0b4910214f9f9356940fca9e771c(),
+        CardInfo:get71e41c34D4d04865Bc9eEd4922337ec7(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -53,11 +53,11 @@ func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
     // 取现配置列表
-    extendInfoMap["cash_config"] = get905315064b9044d3A4b8D77675b4815b()
+    extendInfoMap["cash_config"] = get7a944d27D6f84205B5e52b5fd821eb88()
     return extendInfoMap
 }
 
-func getCb18718f36334ed4859eC242d6402fc6() string {
+func getC5d70ad2Dabc4349A0cd524ed438f1df() string {
     dto := make(map[string]interface{})
     // 个人姓名
     dto["name"] = "张三"
@@ -84,7 +84,7 @@ func getCb18718f36334ed4859eC242d6402fc6() string {
     return string(dtoByte)
 }
 
-func get905315064b9044d3A4b8D77675b4815b() interface{} {
+func get7a944d27D6f84205B5e52b5fd821eb88() string {
     dto := make(map[string]interface{})
     // 提现手续费（固定/元）fix_amt与fee_rate至少填写一项， 需保留小数点后两位，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;注：当cash_type&#x3D;D1时为节假日取现手续费
     dto["fix_amt"] = ""
@@ -106,10 +106,11 @@ func get905315064b9044d3A4b8D77675b4815b() interface{} {
     dto["is_priority_receipt"] = ""
 
     dtoList := [1]interface{}{dto}
-    return dtoList
+    dtoByte, _ := json.Marshal(dtoList)
+    return string(dtoByte)
 }
 
-func get422a0b4910214f9f9356940fca9e771c() string {
+func get71e41c34D4d04865Bc9eEd4922337ec7() string {
     dto := make(map[string]interface{})
     // 卡号
     dto["card_no"] = "6217001210064762890"

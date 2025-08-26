@@ -25,6 +25,8 @@ func V2FlexibleIndvModifyRequestDemo() {
         ReqDate:tool.GetCurrentDate(),
         // 渠道商/商户汇付Id
         UpperHuifuId:"6666000108329682",
+        // 汇付ID
+        HuifuId:"6666000108894951",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -49,15 +51,15 @@ func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
     // 基本信息
-    // extendInfoMap["basic_info"] = get34a3e4b95be148d7B2547819e1b99346()
+    // extendInfoMap["basic_info"] = get85557b1d7f4945348f719444c35fef3e()
     // 取现配置列表
-    extendInfoMap["cash_config"] = getFe3a0d1d38ec4885B59603888696de3f()
+    extendInfoMap["cash_config"] = getFab986af2f5a46c293be27111b433af5()
     // 卡信息
-    extendInfoMap["card_info"] = getE8224b0485914e82A6f679fce70d1655()
+    extendInfoMap["card_info"] = get7e4fcf80B2eb4346Ae2709b1139d8a3f()
     return extendInfoMap
 }
 
-func get34a3e4b95be148d7B2547819e1b99346() string {
+func get85557b1d7f4945348f719444c35fef3e() string {
     dto := make(map[string]interface{})
     // 个人证件有效期类型
     // dto["cert_validity_type"] = ""
@@ -72,7 +74,7 @@ func get34a3e4b95be148d7B2547819e1b99346() string {
     return string(dtoByte)
 }
 
-func getFe3a0d1d38ec4885B59603888696de3f() string {
+func getFab986af2f5a46c293be27111b433af5() string {
     dto := make(map[string]interface{})
     // 提现手续费（固定/元）fix_amt与fee_rate至少填写一项， 需保留小数点后两位，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;注：当cash_type&#x3D;D1时为节假日取现手续费
     dto["fix_amt"] = ""
@@ -82,6 +84,8 @@ func getFe3a0d1d38ec4885B59603888696de3f() string {
     dto["weekday_fix_amt"] = ""
     // D1工作日取现手续费率单位%，需保留小数点后两位。取值范围[0.00，100.00]，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.05&lt;/font&gt;D1取现配置时选填，其他取现配置无效；cash_type取现类型为D1时，遇工作日按此费率结算 ，若未配置则默认按照节假日手续费计算
     dto["weekday_fee_rate"] = ""
+    // 开通状态
+    dto["switch_state"] = "1"
     // 业务类型
     dto["cash_type"] = "D0"
     // 是否交易手续费外扣
@@ -92,15 +96,13 @@ func getFe3a0d1d38ec4885B59603888696de3f() string {
     dto["out_fee_acct_type"] = ""
     // 是否优先到账
     dto["is_priority_receipt"] = ""
-    // 开通状态
-    dto["switch_state"] = "1"
 
     dtoList := [1]interface{}{dto}
     dtoByte, _ := json.Marshal(dtoList)
     return string(dtoByte)
 }
 
-func getE8224b0485914e82A6f679fce70d1655() string {
+func get7e4fcf80B2eb4346Ae2709b1139d8a3f() string {
     dto := make(map[string]interface{})
     // 卡号
     dto["card_no"] = "6228481269040908115"

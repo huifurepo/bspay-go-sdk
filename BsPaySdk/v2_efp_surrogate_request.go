@@ -21,7 +21,7 @@ type V2EfpSurrogateRequest struct {
     AreaId string `json:"area_id" structs:"area_id"` // 地区到账类型标识为E或P时必填
     MobileNo string `json:"mobile_no" structs:"mobile_no"` // 手机号对私必填，使用斗拱系统的公钥对手机号进行RSA加密得到秘文；  示例值：b9LE5RccVVLChrHgo9lvp……PhWhjKrWg2NPfbe0mkUDd
     CertType string `json:"cert_type" structs:"cert_type"` // 证件类型证件类型01：身份证  03：护照  06：港澳通行证  07：台湾通行证  09：外国人居留证  11：营业执照  12：组织机构代码证  14：统一社会信用代码  99：其他  示例值：14 到账类型标识为E或P时必填
-    CertNo string `json:"cert_no" structs:"cert_no"` // 证件号使用斗拱系统的公钥对证件号进行RSA加密得到秘文；  示例值：b9LE5RccVVLChrHgo9lvp……PhWhjKrWg2NPfbe0mkQ 到账类型标识为E或P时必填
+    CertNo string `json:"cert_no" structs:"cert_no"` // 证件号使用斗拱系统的公钥对证件号进行RSA加密得到秘文；  示例值：b9LE5RccVVLChrHgo9lvp……PhWhjKrWg2NPfbe0mkQ 到账类型标识为P时必填
     LicenceCode string `json:"licence_code" structs:"licence_code"` // 统一社会信用代码到账类型标识为E时必填
     AcctSplitBunch string `json:"acct_split_bunch" structs:"acct_split_bunch"` // 入账接收方对象json格式,到账类型标识为H时必填
 

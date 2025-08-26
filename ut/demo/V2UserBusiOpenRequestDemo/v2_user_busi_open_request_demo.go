@@ -28,7 +28,7 @@ func V2UserBusiOpenRequestDemo() {
         // 渠道商/商户汇付Id
         UpperHuifuId:"6666000003084836",
         // 乐接活配置当合作平台为乐接活，必填
-        // LjhData:get392ac4cc91ff4e4499df1b8129f53b63(),
+        // LjhData:get36b8319f87da47cc8d91E4d775f8aeb3(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -53,17 +53,17 @@ func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
     // 结算信息配置
-    extendInfoMap["settle_config"] = get4efc24c81c7b4a29Af5003ddb8e54f81()
+    extendInfoMap["settle_config"] = getE017819eBf0a415f95fc8f670eb8c553()
     // 结算卡信息
-    extendInfoMap["card_info"] = get13b02e818d1d4999A1b9Bb6b6d026539()
+    extendInfoMap["card_info"] = get33ac41cf345343d4A48e366a82a4b91f()
     // 取现配置列表
-    extendInfoMap["cash_config"] = get2f2cd701De284c2f8297A4a757c46872()
+    extendInfoMap["cash_config"] = getB34a2741A08b4478A91e1519a6b2e046()
     // 文件列表
-    extendInfoMap["file_list"] = get4bef8a345cd84606B08cB735b387281e()
+    extendInfoMap["file_list"] = getA177b6480abb4ab4A8e0Dc9415fc498b()
     // 延迟入账开关
     // extendInfoMap["delay_flag"] = ""
     // 斗拱e账户功能配置
-    // extendInfoMap["elec_acct_config"] = get10057f0084234bf7Be696035c59f6d8f()
+    // extendInfoMap["elec_acct_config"] = get8fae2bd6Dd394c7d836eD26090cac02d()
     // 灵活用工开关
     // extendInfoMap["open_tax_flag"] = ""
     // 异步请求地址
@@ -73,7 +73,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func get4efc24c81c7b4a29Af5003ddb8e54f81() string {
+func getE017819eBf0a415f95fc8f670eb8c553() string {
     dto := make(map[string]interface{})
     // 结算周期
     dto["settle_cycle"] = "D1"
@@ -110,11 +110,11 @@ func get4efc24c81c7b4a29Af5003ddb8e54f81() string {
     return string(dtoByte)
 }
 
-func get13b02e818d1d4999A1b9Bb6b6d026539() string {
+func get33ac41cf345343d4A48e366a82a4b91f() string {
     dto := make(map[string]interface{})
     // 卡类型
     dto["card_type"] = "0"
-    // 卡户名
+    // 卡户名持卡人姓名；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：张三&lt;/font&gt;&lt;br/&gt;当card_type&#x3D;4时，需要在file_list中额外上传材料；
     dto["card_name"] = "交通银行股份有限公司"
     // 卡号
     dto["card_no"] = "6217001210064762121"
@@ -145,7 +145,7 @@ func get13b02e818d1d4999A1b9Bb6b6d026539() string {
     return string(dtoByte)
 }
 
-func get2f2cd701De284c2f8297A4a757c46872() string {
+func getB34a2741A08b4478A91e1519a6b2e046() string {
     dto := make(map[string]interface{})
     // 提现手续费（固定/元）fix_amt与fee_rate至少填写一项， 需保留小数点后两位，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;注：当cash_type&#x3D;D1时为节假日取现手续费
     dto["fix_amt"] = "0.03"
@@ -171,7 +171,7 @@ func get2f2cd701De284c2f8297A4a757c46872() string {
     return string(dtoByte)
 }
 
-func get4bef8a345cd84606B08cB735b387281e() string {
+func getA177b6480abb4ab4A8e0Dc9415fc498b() string {
     dto := make(map[string]interface{})
     // 文件类型
     dto["file_type"] = "F02"
@@ -185,7 +185,7 @@ func get4bef8a345cd84606B08cB735b387281e() string {
     return string(dtoByte)
 }
 
-func get038155786dfc4801Abaf3c39fc590d48() interface{} {
+func getFa979352Cfc04d2981fcB4cd49b873eb() interface{} {
     dto := make(map[string]interface{})
     // 银行编码
     // dto["bank_code"] = "test"
@@ -216,7 +216,7 @@ func get038155786dfc4801Abaf3c39fc590d48() interface{} {
     return dtoList
 }
 
-func get10057f0084234bf7Be696035c59f6d8f() string {
+func get8fae2bd6Dd394c7d836eD26090cac02d() string {
     dto := make(map[string]interface{})
     // 电子账户开关
     // dto["switch_state"] = "test"
@@ -231,7 +231,7 @@ func get10057f0084234bf7Be696035c59f6d8f() string {
     // 签约成功标志
     // dto["sign_success_flag"] = "test"
     // 银行卡信息
-    // dto["elec_card_list"] = get038155786dfc4801Abaf3c39fc590d48()
+    // dto["elec_card_list"] = getFa979352Cfc04d2981fcB4cd49b873eb()
     // 用户类型
     // dto["user_type"] = ""
     // 中信签约短信流水号
@@ -241,7 +241,7 @@ func get10057f0084234bf7Be696035c59f6d8f() string {
     return string(dtoByte)
 }
 
-func get392ac4cc91ff4e4499df1b8129f53b63() string {
+func get36b8319f87da47cc8d91E4d775f8aeb3() string {
     dto := make(map[string]interface{})
     // 税源地id当合作平台为乐接活，必填
     // dto["tax_area_id"] = "test"

@@ -48,6 +48,8 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap := make(map[string]interface{})
     // 请求流水号
     extendInfoMap["req_seq_id"] = tool.GetReqSeqId()
+    // 账务日期
+    // extendInfoMap["acct_date"] = ""
     return extendInfoMap
 }
 

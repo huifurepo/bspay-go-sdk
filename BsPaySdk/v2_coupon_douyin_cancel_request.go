@@ -13,7 +13,7 @@ type V2CouponDouyinCancelRequest struct {
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 汇付商户号
     BindId string `json:"bind_id" structs:"bind_id"` // 门店绑定流水号
-    EncryptedCode string `json:"encrypted_code" structs:"encrypted_code"` // 加密抖音券码
+    EncryptedCode string `json:"encrypted_code" structs:"encrypted_code"` // 抖音券码
     VerifyId string `json:"verify_id" structs:"verify_id"` // 核销标识
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段

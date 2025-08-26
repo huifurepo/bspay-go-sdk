@@ -12,7 +12,6 @@ type V2MerchantDirectZftRegRequest struct {
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     ReqDate string `json:"req_date" structs:"req_date"` // 请求时间
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 汇付ID
-    AppId string `json:"app_id" structs:"app_id"` // 开发者的应用ID
     Name string `json:"name" structs:"name"` // 进件的二级商户名称
     MerchantType string `json:"merchant_type" structs:"merchant_type"` // 商家类型
     Mcc string `json:"mcc" structs:"mcc"` // 商户经营类目

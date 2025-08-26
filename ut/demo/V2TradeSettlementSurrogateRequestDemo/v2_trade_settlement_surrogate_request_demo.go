@@ -74,6 +74,8 @@ func V2TradeSettlementSurrogateRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
+    // 账户号
+    // extendInfoMap["acct_id"] = ""
     // 支行名
     extendInfoMap["subbranch_bank_name"] = "subbranchBankName"
     // 收款方三证合一码
