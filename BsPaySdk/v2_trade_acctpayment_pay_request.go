@@ -17,6 +17,7 @@ type V2TradeAcctpaymentPayRequest struct {
     RiskCheckData string `json:"risk_check_data" structs:"risk_check_data"` // 安全信息
     FundType string `json:"fund_type" structs:"fund_type"` // 资金类型资金类型。支付渠道为中信E管家时，资金类型必填（[详见说明](https://paas.huifu.com/open/doc/api/#/yuer/api_zxegjzllx)）
     TransFeeTakeFlag string `json:"trans_fee_take_flag" structs:"trans_fee_take_flag"` // 手续费承担方标识余额支付手续费承担方标识；商户余额支付扣收规则为接口指定承担方时必填！枚举值：&lt;br/&gt;OUT：出款方；&lt;br/&gt;IN：分账接受方。&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：IN&lt;/font&gt;
+    VerifyValue string `json:"verify_value" structs:"verify_value"` // 核验值verify_type不为空时必填。当verify_type&#x3D;SMS时，填写用户收到的短信验证码
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

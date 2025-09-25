@@ -63,13 +63,15 @@ func getExtendInfos() map[string]interface{} {
     // 异步通知地址
     extendInfoMap["notify_url"] = "https://api.huifu.com"
     // 设备信息域
-    extendInfoMap["trx_device_info"] = getTrxDeviceInfo()
+    extendInfoMap["trx_device_info"] = get3cdad4d518854dd2Bf7f01c72ccc95e0()
     // 风控信息
-    extendInfoMap["risk_info"] = getRiskInfo()
+    extendInfoMap["risk_info"] = getB0c9212aAf3346629c9aB1f11b8075e2()
+    // 代扣绑卡类型
+    // extendInfoMap["binding_card_type"] = ""
     return extendInfoMap
 }
 
-func getTrxDeviceInfo() string {
+func get3cdad4d518854dd2Bf7f01c72ccc95e0() interface{} {
     dto := make(map[string]interface{})
     // 银行预留手机号
     dto["trx_mobile_num"] = "13428722321"
@@ -90,11 +92,10 @@ func getTrxDeviceInfo() string {
     // 交易设备GPS
     dto["trx_device_gps"] = "gps"
 
-    dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
+    return dto;
 }
 
-func getRiskInfo() string {
+func getB0c9212aAf3346629c9aB1f11b8075e2() interface{} {
     dto := make(map[string]interface{})
     // IP类型
     dto["ip_type"] = "04"
@@ -106,8 +107,11 @@ func getRiskInfo() string {
     dto["device_type"] = ""
     // 银行预留手机号
     dto["mobile"] = ""
+    // 协议编号
+    // dto["agreement_no"] = ""
+    // 协议地址
+    // dto["agreement_url"] = ""
 
-    dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
+    return dto;
 }
 

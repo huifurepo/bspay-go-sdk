@@ -50,6 +50,8 @@ func V2TradeOnlinepaymentTransferFixedflagApplyRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
+    // 银行模式
+    // extendInfoMap["bank_mode"] = ""
     return extendInfoMap
 }
 

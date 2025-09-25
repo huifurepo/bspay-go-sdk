@@ -63,17 +63,17 @@ func getExtendInfos() map[string]interface{} {
     // 备注
     extendInfoMap["remark"] = "大额支付补入账验证"
     // 银行信息数据
-    extendInfoMap["bank_info_data"] = get69940cb5C5a44806851224ad4bee6c98()
+    extendInfoMap["bank_info_data"] = getB60d3b633db64945Aa3d7e2d7d75114e()
     // 延时标记
     // extendInfoMap["delay_acct_flag"] = ""
     // 分账对象
-    // extendInfoMap["acct_split_bunch"] = get50f05b5e5f6b41fc8cfa7b30b4fcf212()
+    // extendInfoMap["acct_split_bunch"] = getF5a7bd570f5b47e58d43Af05a3b46050()
     // 实际打款信息
-    // extendInfoMap["actual_remit_data"] = get17063808A8024a02A58aA0786ccadcc0()
+    // extendInfoMap["actual_remit_data"] = getC9fbe6ceA66f4533A4e8716e37ca1292()
     return extendInfoMap
 }
 
-func get69940cb5C5a44806851224ad4bee6c98() string {
+func getB60d3b633db64945Aa3d7e2d7d75114e() string {
     dto := make(map[string]interface{})
     // 银行编号
     dto["bank_code"] = "03080000"
@@ -84,7 +84,7 @@ func get69940cb5C5a44806851224ad4bee6c98() string {
     return string(dtoByte)
 }
 
-func get142421f44e274e9eAb00Dc45474aa16f() interface{} {
+func get7e4a26656c684722897041d65438a95a() interface{} {
     dto := make(map[string]interface{})
     // 支付金额
     // dto["div_amt"] = ""
@@ -95,16 +95,16 @@ func get142421f44e274e9eAb00Dc45474aa16f() interface{} {
     return dtoList
 }
 
-func get50f05b5e5f6b41fc8cfa7b30b4fcf212() string {
+func getF5a7bd570f5b47e58d43Af05a3b46050() string {
     dto := make(map[string]interface{})
     // 分账信息列表
-    // dto["acct_infos"] = get142421f44e274e9eAb00Dc45474aa16f()
+    // dto["acct_infos"] = get7e4a26656c684722897041d65438a95a()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
-func get17063808A8024a02A58aA0786ccadcc0() string {
+func getC9fbe6ceA66f4533A4e8716e37ca1292() string {
     dto := make(map[string]interface{})
     // 实际打款日期
     // dto["actual_remit_date"] = "test"

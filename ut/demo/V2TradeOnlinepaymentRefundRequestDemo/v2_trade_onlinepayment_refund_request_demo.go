@@ -28,9 +28,9 @@ func V2TradeOnlinepaymentRefundRequestDemo() {
         // 退款金额
         OrdAmt:"0.01",
         // 设备信息条件必填，当为银行大额支付时可不填，jsonObject格式
-        TerminalDeviceData:get0cb9901c063146159d7a806331eb313d(),
+        TerminalDeviceData:get35d4a53eD6c1411a9ced250654fb32bc(),
         // 安全信息条件必填，当为银行大额支付时可不填，jsonObject格式
-        RiskCheckData:getC912c5b3F45e4eb5A7cf3acae7215dc3(),
+        RiskCheckData:getF25a2614657744d4Bc59741b0034991d(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -61,19 +61,19 @@ func getExtendInfos() map[string]interface{} {
     // 原交易请求流水号
     extendInfoMap["org_req_seq_id"] = "295700155481522176"
     // 分账对象
-    // extendInfoMap["acct_split_bunch"] = get18a433263b5a4564Bb6b0413c84ff21d()
+    // extendInfoMap["acct_split_bunch"] = getB2063bd6B0444da8A946Df04df4862fd()
     // 备注
     // extendInfoMap["remark"] = ""
     // 异步通知地址
     extendInfoMap["notify_url"] = "http://www.baidu.com"
     // 补贴支付信息
-    // extendInfoMap["combinedpay_data"] = getB433aee155d6443eAe81F124df5ee516()
+    // extendInfoMap["combinedpay_data"] = getF6ac280047d84b54Af3cFc21f6942cf0()
     // 大额转账支付账户信息数据
-    // extendInfoMap["bank_info_data"] = getB3bf7acb5626425aB0bf32bd5fb389a7()
+    // extendInfoMap["bank_info_data"] = get289bf626B24d46cdA273Fdaa77310b55()
     return extendInfoMap
 }
 
-func get6973815f508e4f2392720a95415fbd76() interface{} {
+func get1e71bbb43d3d4de7A4a590b7e2ca4d2c() interface{} {
     dto := make(map[string]interface{})
     // 商户号
     // dto["huifu_id"] = "test"
@@ -86,16 +86,16 @@ func get6973815f508e4f2392720a95415fbd76() interface{} {
     return dtoList
 }
 
-func get18a433263b5a4564Bb6b0413c84ff21d() string {
+func getB2063bd6B0444da8A946Df04df4862fd() string {
     dto := make(map[string]interface{})
     // 分账信息列表
-    // dto["acct_infos"] = get6973815f508e4f2392720a95415fbd76()
+    // dto["acct_infos"] = get1e71bbb43d3d4de7A4a590b7e2ca4d2c()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
-func get0cb9901c063146159d7a806331eb313d() string {
+func get35d4a53eD6c1411a9ced250654fb32bc() string {
     dto := make(map[string]interface{})
     // 交易设备ip
     dto["device_ip"] = "172.31.31.145"
@@ -113,12 +113,14 @@ func get0cb9901c063146159d7a806331eb313d() string {
     dto["device_mac"] = "01"
     // 交易设备wifimac
     dto["device_wifi_mac"] = "06"
+    // 终端设备号
+    // dto["device_id"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
-func getC912c5b3F45e4eb5A7cf3acae7215dc3() string {
+func getF25a2614657744d4Bc59741b0034991d() string {
     dto := make(map[string]interface{})
     // 经度
     // dto["longitude"] = "test"
@@ -133,7 +135,7 @@ func getC912c5b3F45e4eb5A7cf3acae7215dc3() string {
     return string(dtoByte)
 }
 
-func getB433aee155d6443eAe81F124df5ee516() string {
+func getF6ac280047d84b54Af3cFc21f6942cf0() string {
     dto := make(map[string]interface{})
     // 补贴方汇付编号
     // dto["huifu_id"] = "test"
@@ -149,7 +151,7 @@ func getB433aee155d6443eAe81F124df5ee516() string {
     return string(dtoByte)
 }
 
-func getB3bf7acb5626425aB0bf32bd5fb389a7() string {
+func get289bf626B24d46cdA273Fdaa77310b55() string {
     dto := make(map[string]interface{})
     // 银行编号
     // dto["bank_code"] = ""

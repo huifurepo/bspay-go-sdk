@@ -28,7 +28,7 @@ func V2MerchantBusiModifyRequestDemo() {
         // *线上业务类型编码*开通快捷、网银、余额支付、分账必填；参见[线上业务类型编码及补充材料说明](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/kyc/KYC-%E7%BA%BF%E4%B8%8A%E4%B8%9A%E5%8A%A1%E7%B1%BB%E5%9E%8B%E7%BC%96%E7%A0%81%E5%8F%8A%E8%A1%A5%E5%85%85%E6%9D%90%E6%96%99%E8%AF%B4%E6%98%8E.xlsx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：H7999AL&lt;/font&gt;
         // OnlineBusiType:"test",
         // 签约人jsonObject格式；agreement_info中选择电子签约时必填；个人商户填本人信息。
-        // SignUserInfo:get481cce133bfe4925B2f7488cd9af15ea(),
+        // SignUserInfo:get042472a453d54a858684E582d1722365(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -55,7 +55,7 @@ func getExtendInfos() map[string]interface{} {
     // 微信支付宝商户简称
     extendInfoMap["short_name"] = ""
     // *协议信息实体*
-    extendInfoMap["agreement_info"] = get6121347a73db43b38f70C327d8a3042b()
+    extendInfoMap["agreement_info"] = getA0327e222079485a9ec5A964c54dc6b9()
     // 是否交易手续费外扣
     extendInfoMap["out_fee_flag"] = "2"
     // 交易手续费外扣汇付ID
@@ -77,25 +77,25 @@ func getExtendInfos() map[string]interface{} {
     // 商户业务类型
     // extendInfoMap["mer_bus_type"] = ""
     // 线上费率配置
-    // extendInfoMap["online_fee_conf_list"] = get82ad42dcC89d4cc5Abb56891ada03862()
+    // extendInfoMap["online_fee_conf_list"] = get78da8420303a4e009f1eDd991e3eb7f0()
     // 支付宝配置对象
-    extendInfoMap["ali_conf_list"] = get4c10cf4aBc5d4a158889Af80469f24ce()
+    extendInfoMap["ali_conf_list"] = getA0342496A01d4d3a8adb019e8f7d20bb()
     // 微信配置对象
-    extendInfoMap["wx_conf_list"] = get9d7afd7071d94016Bd29A0200a3dd11c()
+    extendInfoMap["wx_conf_list"] = get101216c6Bb984851A3dcFd7637206380()
     // 银联二维码配置对象
-    extendInfoMap["union_conf_list"] = getB7c7780c56f54d7eA0ddC78e7faf92d0()
+    extendInfoMap["union_conf_list"] = get67921d24C27f42ebAfd7Fe76abf78921()
     // 银行卡支付配置信息
-    extendInfoMap["bank_card_conf"] = get7c67d4274fd64af8Aab2E76cd8c336b6()
+    extendInfoMap["bank_card_conf"] = get3f088ae800734cb2A94b76d492b04c21()
     // *余额支付配置对象*
-    extendInfoMap["balance_pay_config"] = getAf2f49ca75e04830B0e33208518f3761()
+    extendInfoMap["balance_pay_config"] = getE26a356f921b41d9Bcc4E6733ba21f22()
     // 补贴支付
-    extendInfoMap["combine_pay_config"] = getBbeec74526b648828b151782d3d42201()
+    extendInfoMap["combine_pay_config"] = get2c417369D6ee4fe3Bce888a66c2811cf()
     // 线上手续费承担方配置
-    // extendInfoMap["online_pay_fee_conf_list"] = get39dca475E388493481fd5f3e72565ff3()
+    // extendInfoMap["online_pay_fee_conf_list"] = get3f13a8fc61334ec7B3f3615afa99c613()
     // 全域资金管理配置(华通银行)
-    // extendInfoMap["out_order_funds_config"] = get7d81b1b5Ab104e2199d7A85d9455b7fe()
+    // extendInfoMap["out_order_funds_config"] = get12d14779Ad7f40bf90e99f9eb42fc876()
     // 汇总结算配置实体
-    // extendInfoMap["collection_settle_config_list"] = get35ccae80A45b4ed4Aa4bC2a789a5d75a()
+    // extendInfoMap["collection_settle_config_list"] = getEec23adeBe1b4c42B93876b09ea7c997()
     // 异步消息接收地址
     extendInfoMap["async_return_url"] = "http://www.baidu55.com"
     // 业务开通结果异步消息接收地址
@@ -103,15 +103,15 @@ func getExtendInfos() map[string]interface{} {
     // 交易异步应答地址
     extendInfoMap["recon_resp_addr"] = "http://192.168.85.157:30031/sspm/testVirgo"
     // *运营媒介*
-    // extendInfoMap["online_media_info_list"] = get3d8a7d748b26495f83788946dac755fa()
+    // extendInfoMap["online_media_info_list"] = get89059dc9B2e8403bBf617db9a11ead27()
     // *补充文件信息*
-    // extendInfoMap["extended_material_list"] = get3565b3581d9546bf9624C09646528f11()
+    // extendInfoMap["extended_material_list"] = get3650830e3bcb442a9b318d6606798a65()
     // 商户开通强制延迟标记
     // extendInfoMap["forced_delay_flag"] = ""
     // 微信直连配置对象
-    // extendInfoMap["wx_zl_conf"] = getB9dbcd4334d04c74913eA5f58b11931d()
+    // extendInfoMap["wx_zl_conf"] = getD146a4f3140744dbA60235c50b2f857a()
     // 支付宝直连配置对象
-    // extendInfoMap["ali_zl_conf"] = get49ccd1fe51a645a8A956B70a25a5fd86()
+    // extendInfoMap["ali_zl_conf"] = get8dac8f09Dabb40059a07E4da1787e44b()
     // 开户费用值(元)
     // extendInfoMap["enter_fee"] = ""
     // 开户费用类型
@@ -123,25 +123,25 @@ func getExtendInfos() map[string]interface{} {
     // 是否支持撤销
     // extendInfoMap["support_revoke"] = ""
     // 分账配置信息
-    // extendInfoMap["split_conf_info"] = getA54c67b8514b42bb87c813df7651a81a()
+    // extendInfoMap["split_conf_info"] = get08924fe6Ae404bbcB06e5310a0535416()
     // 银联线上收银台
-    // extendInfoMap["uni_app_payment_config"] = get715aba0e4c8743849db5F94f5616a5cc()
+    // extendInfoMap["uni_app_payment_config"] = get146c8000F95942bd906a8bd7488b1e27()
     // 资金归集开通标记
     // extendInfoMap["fund_collection_flag"] = ""
     // 代发配置
-    // extendInfoMap["surrogate_config_list"] = get3f750bfb7fe84c2d97c4Ad100c7c3570()
+    // extendInfoMap["surrogate_config_list"] = get88ef1a3fFd3a41a9A0037ed1fcf23818()
     // 大额支付配置
-    // extendInfoMap["large_amt_pay_config"] = get0f3cba59909442259e55Fcc95c6bf717()
+    // extendInfoMap["large_amt_pay_config"] = get42cc549bE9b0488cB185B39799dce1cc()
     // 托管支付开关
     // extendInfoMap["half_pay_host_flag"] = ""
     // 代发复核配置
-    // extendInfoMap["agent_recheck_config"] = getCe7159bcCd8b4566Be61225d04027497()
+    // extendInfoMap["agent_recheck_config"] = getF1dc359c8b24446dA2d2382ed532a950()
     // 商户开通网银充值开关
     // extendInfoMap["online_recharge_flag"] = ""
     return extendInfoMap
 }
 
-func get6121347a73db43b38f70C327d8a3042b() string {
+func getA0327e222079485a9ec5A964c54dc6b9() string {
     dto := make(map[string]interface{})
     // *协议类型*
     dto["agreement_type"] = "0"
@@ -160,7 +160,7 @@ func get6121347a73db43b38f70C327d8a3042b() string {
     return string(dtoByte)
 }
 
-func get82ad42dcC89d4cc5Abb56891ada03862() string {
+func get78da8420303a4e009f1eDd991e3eb7f0() string {
     dto := make(map[string]interface{})
     // 业务类型
     // dto["fee_type"] = "test"
@@ -170,7 +170,7 @@ func get82ad42dcC89d4cc5Abb56891ada03862() string {
     return string(dtoByte)
 }
 
-func get344a3e89E4c94ec49a6957406a249ed9() string {
+func get0b377567Ab9f41abB8da62ee71902c57() string {
     dto := make(map[string]interface{})
     // 联系人身份证号码
     // dto["id_card_number"] = "test"
@@ -183,7 +183,7 @@ func get344a3e89E4c94ec49a6957406a249ed9() string {
     return string(dtoByte)
 }
 
-func getA6475accCe2a4fb59758B586f85d1ef6() string {
+func get294e5e8aF13d4e26A702A0bac1d77130() string {
     dto := make(map[string]interface{})
     // 证件持有人类型
     // dto["legal_type"] = ""
@@ -210,7 +210,7 @@ func getA6475accCe2a4fb59758B586f85d1ef6() string {
     return string(dtoByte)
 }
 
-func get6b3bab2895184e03Bb992795cc8d2923() string {
+func get66607632193c441d80ac2c69777b47bb() string {
     dto := make(map[string]interface{})
     // 是否金融机构
     // dto["finance_institution_flag"] = ""
@@ -223,15 +223,15 @@ func get6b3bab2895184e03Bb992795cc8d2923() string {
     // 特殊行业id
     // dto["special_category_id"] = ""
     // 联系人信息对象
-    // dto["contact_person_info"] = get344a3e89E4c94ec49a6957406a249ed9()
+    // dto["contact_person_info"] = get0b377567Ab9f41abB8da62ee71902c57()
     // 法人身份信息
-    // dto["legal_person_info"] = getA6475accCe2a4fb59758B586f85d1ef6()
+    // dto["legal_person_info"] = get294e5e8aF13d4e26A702A0bac1d77130()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
-func get4c10cf4aBc5d4a158889Af80469f24ce() string {
+func getA0342496A01d4d3a8adb019e8f7d20bb() string {
     dto := make(map[string]interface{})
     // 手续费（%）
     dto["fee_rate"] = "3.15"
@@ -248,14 +248,14 @@ func get4c10cf4aBc5d4a158889Af80469f24ce() string {
     // 是否需要实名认证
     // dto["is_check_real_name"] = ""
     // 实名认证信息
-    // dto["al_real_name_info"] = get6b3bab2895184e03Bb992795cc8d2923()
+    // dto["al_real_name_info"] = get66607632193c441d80ac2c69777b47bb()
 
     dtoList := [1]interface{}{dto}
     dtoByte, _ := json.Marshal(dtoList)
     return string(dtoByte)
 }
 
-func getD80ec06a4e764bfdBa223758a08c4999() interface{} {
+func getD46ef8e494f146b890deFfc6d27f1f5f() interface{} {
     dto := make(map[string]interface{})
     // 联系人姓名联系人类型contact_type&#x3D;SUPER时必填。示例值：张三
     // dto["name"] = "test"
@@ -285,7 +285,7 @@ func getD80ec06a4e764bfdBa223758a08c4999() interface{} {
     return dto;
 }
 
-func get9d7afd7071d94016Bd29A0200a3dd11c() string {
+func get101216c6Bb984851A3dcFd7637206380() string {
     dto := make(map[string]interface{})
     // 开关状态
     // dto["switch_state"] = "test"
@@ -304,14 +304,14 @@ func get9d7afd7071d94016Bd29A0200a3dd11c() string {
     // 是否需要实名认证
     // dto["is_check_real_name"] = ""
     // 实名认证信息
-    // dto["wx_real_name_info"] = getD80ec06a4e764bfdBa223758a08c4999()
+    // dto["wx_real_name_info"] = getD46ef8e494f146b890deFfc6d27f1f5f()
 
     dtoList := [1]interface{}{dto}
     dtoByte, _ := json.Marshal(dtoList)
     return string(dtoByte)
 }
 
-func getB7c7780c56f54d7eA0ddC78e7faf92d0() string {
+func get67921d24C27f42ebAfd7Fe76abf78921() string {
     dto := make(map[string]interface{})
     // 借记卡手续费（%）
     // dto["debit_fee_rate"] = "test"
@@ -329,7 +329,7 @@ func getB7c7780c56f54d7eA0ddC78e7faf92d0() string {
     return string(dtoByte)
 }
 
-func get7c67d4274fd64af8Aab2E76cd8c336b6() string {
+func get3f088ae800734cb2A94b76d492b04c21() string {
     dto := make(map[string]interface{})
     // 借记卡手续费（%）
     dto["debit_fee_rate"] = "3"
@@ -364,7 +364,7 @@ func get7c67d4274fd64af8Aab2E76cd8c336b6() string {
     return string(dtoByte)
 }
 
-func get630eac8aA0a346d9B550472bf19d54f5() interface{} {
+func getD42ad050Aed9474aAdddEde24b4af6d1() interface{} {
     dto := make(map[string]interface{})
     // *业务模式说明*
     // dto["busi_instruction"] = "test"
@@ -376,12 +376,12 @@ func get630eac8aA0a346d9B550472bf19d54f5() interface{} {
     return dto;
 }
 
-func getAf2f49ca75e04830B0e33208518f3761() string {
+func getE26a356f921b41d9Bcc4E6733ba21f22() string {
     dto := make(map[string]interface{})
     // *业务模式*
     // dto["balance_model"] = "test"
     // *业务情况说明*
-    // dto["description_info"] = get630eac8aA0a346d9B550472bf19d54f5()
+    // dto["description_info"] = getD42ad050Aed9474aAdddEde24b4af6d1()
     // 支付手续费(%)
     dto["fee_rate"] = "2"
     // 支付固定手续费(元)
@@ -401,7 +401,7 @@ func getAf2f49ca75e04830B0e33208518f3761() string {
     return string(dtoByte)
 }
 
-func getBbeec74526b648828b151782d3d42201() string {
+func get2c417369D6ee4fe3Bce888a66c2811cf() string {
     dto := make(map[string]interface{})
     // 功能开关
     dto["switch_state"] = "0"
@@ -420,7 +420,7 @@ func getBbeec74526b648828b151782d3d42201() string {
     return string(dtoByte)
 }
 
-func get39dca475E388493481fd5f3e72565ff3() string {
+func get3f13a8fc61334ec7B3f3615afa99c613() string {
     dto := make(map[string]interface{})
     // 业务类型
     // dto["pay_type"] = ""
@@ -430,7 +430,7 @@ func get39dca475E388493481fd5f3e72565ff3() string {
     return string(dtoByte)
 }
 
-func get337fa4d8035e417792bb3fff2c965fa0() interface{} {
+func get3cefb5643bb840088d834e4f1dd0e62e() interface{} {
     dto := make(map[string]interface{})
     // 结算账户名
     // dto["card_name"] = "test"
@@ -466,7 +466,7 @@ func get337fa4d8035e417792bb3fff2c965fa0() interface{} {
     return dto;
 }
 
-func get76b6f5ff1a95498eA84e9a5cbd8fe133() interface{} {
+func getFf6980ba2a014bacA23b6bebe0cefb83() interface{} {
     dto := make(map[string]interface{})
     // 开户手续费(元)
     // dto["fee_fix_amt"] = "test"
@@ -478,7 +478,7 @@ func get76b6f5ff1a95498eA84e9a5cbd8fe133() interface{} {
     return dto;
 }
 
-func get7d81b1b5Ab104e2199d7A85d9455b7fe() string {
+func get12d14779Ad7f40bf90e99f9eb42fc876() string {
     dto := make(map[string]interface{})
     // 功能开关
     // dto["switch_state"] = "test"
@@ -497,9 +497,9 @@ func get7d81b1b5Ab104e2199d7A85d9455b7fe() string {
     // 交易手续费外扣汇付ID
     // dto["out_fee_huifuid"] = ""
     // 全域资金开户使用的银行卡信息
-    // dto["out_order_acct_card"] = get337fa4d8035e417792bb3fff2c965fa0()
+    // dto["out_order_acct_card"] = get3cefb5643bb840088d834e4f1dd0e62e()
     // 全域资金开户手续费
-    // dto["out_order_acct_open_fees"] = get76b6f5ff1a95498eA84e9a5cbd8fe133()
+    // dto["out_order_acct_open_fees"] = getFf6980ba2a014bacA23b6bebe0cefb83()
     // 全域支付业务模式
     // dto["business_model"] = ""
 
@@ -507,7 +507,7 @@ func get7d81b1b5Ab104e2199d7A85d9455b7fe() string {
     return string(dtoByte)
 }
 
-func get35ccae80A45b4ed4Aa4bC2a789a5d75a() string {
+func getEec23adeBe1b4c42B93876b09ea7c997() string {
     dto := make(map[string]interface{})
     // 归集留存金(元)
     // dto["out_resv_amt"] = "test"
@@ -527,7 +527,7 @@ func get35ccae80A45b4ed4Aa4bC2a789a5d75a() string {
     return string(dtoByte)
 }
 
-func get3d8a7d748b26495f83788946dac755fa() string {
+func get89059dc9B2e8403bBf617db9a11ead27() string {
     dto := make(map[string]interface{})
     // *运营媒介类型*
     // dto["media_type"] = "test"
@@ -567,7 +567,7 @@ func get3d8a7d748b26495f83788946dac755fa() string {
     return string(dtoByte)
 }
 
-func get3565b3581d9546bf9624C09646528f11() string {
+func get3650830e3bcb442a9b318d6606798a65() string {
     dto := make(map[string]interface{})
     // *文件id*
     // dto["file_id"] = "test"
@@ -579,7 +579,7 @@ func get3565b3581d9546bf9624C09646528f11() string {
     return string(dtoByte)
 }
 
-func get481cce133bfe4925B2f7488cd9af15ea() string {
+func get042472a453d54a858684E582d1722365() string {
     dto := make(map[string]interface{})
     // 签约人类型
     // dto["type"] = "test"
@@ -594,7 +594,7 @@ func get481cce133bfe4925B2f7488cd9af15ea() string {
     return string(dtoByte)
 }
 
-func getF37afda41665454484213559cfa9b5fb() interface{} {
+func get4dd988e49a4b4fe4B8bf676ae8ba9d60() interface{} {
     dto := make(map[string]interface{})
     // 文件类型
     // dto["file_type"] = "test"
@@ -604,7 +604,7 @@ func getF37afda41665454484213559cfa9b5fb() interface{} {
     return dto;
 }
 
-func getBde5314d5fef4e239ea3Bcfc2c2a8b69() interface{} {
+func getCcd8310c3a1f4db7A3d33f9d31667537() interface{} {
     dto := make(map[string]interface{})
     // 联系人类型
     // dto["contact_type"] = "test"
@@ -619,7 +619,7 @@ func getBde5314d5fef4e239ea3Bcfc2c2a8b69() interface{} {
     // 联系人电子邮箱
     // dto["contact_email"] = "test"
     // 联系人资料联系人类型为经办人时必填F28-联系人身份证国徽面   F29-联系人身份证人像面F227-微信业务办理授权函&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：&lt;/font&gt;
-    // dto["contact_file_list"] = getF37afda41665454484213559cfa9b5fb()
+    // dto["contact_file_list"] = get4dd988e49a4b4fe4B8bf676ae8ba9d60()
     // 证件有效期类型
     // dto["contact_cert_validity_type"] = "test"
     // 证件有效期开始日期
@@ -630,7 +630,7 @@ func getBde5314d5fef4e239ea3Bcfc2c2a8b69() interface{} {
     return dto;
 }
 
-func getB7dbd856B29f4a1dB675A8a73145b38d() interface{} {
+func getA15d13410d3548a68dcbB66ca249b055() interface{} {
     dto := make(map[string]interface{})
     // 文件类型
     // dto["file_type"] = "test"
@@ -641,7 +641,7 @@ func getB7dbd856B29f4a1dB675A8a73145b38d() interface{} {
     return dtoList
 }
 
-func getB730892aD7dc4d3690d0F82d0acc366b() interface{} {
+func get11bbf80b2dfc46bfBf287f2e9d5d9a68() interface{} {
     dto := make(map[string]interface{})
     // 登记证书类型
     // dto["cert_type"] = "test"
@@ -658,14 +658,14 @@ func getB730892aD7dc4d3690d0F82d0acc366b() interface{} {
     // 证书有效期开始日期
     // dto["cert_begin_date"] = "test"
     // 文件列表
-    // dto["cert_file_list"] = getB7dbd856B29f4a1dB675A8a73145b38d()
+    // dto["cert_file_list"] = getA15d13410d3548a68dcbB66ca249b055()
     // 证书有效期截止日期
     // dto["cert_end_date"] = ""
 
     return dto;
 }
 
-func getE985d16f51984c20843b4f5ac83e9184() interface{} {
+func getAfc46d39B6c7424aBaf83df4009fa933() interface{} {
     dto := make(map[string]interface{})
     // 文件类型
     // dto["file_type"] = "test"
@@ -676,7 +676,7 @@ func getE985d16f51984c20843b4f5ac83e9184() interface{} {
     return dtoList
 }
 
-func get7fc3208a0d844a5cA3de5e71ada8a838() interface{} {
+func getA3c55d437cf44e0b96ba893ef2f14405() interface{} {
     dto := make(map[string]interface{})
     // 证件类型
     // dto["ubo_cert_type"] = "test"
@@ -691,7 +691,7 @@ func get7fc3208a0d844a5cA3de5e71ada8a838() interface{} {
     // 证件有效期开始日期
     // dto["ubo_cert_begin_date"] = "test"
     // 文件列表
-    // dto["ubo_file_list"] = getE985d16f51984c20843b4f5ac83e9184()
+    // dto["ubo_file_list"] = getAfc46d39B6c7424aBaf83df4009fa933()
     // 证件有效期截止日期
     // dto["ubo_cert_end_date"] = ""
 
@@ -699,17 +699,17 @@ func get7fc3208a0d844a5cA3de5e71ada8a838() interface{} {
     return dtoList
 }
 
-func get2dd579b49ef94813B4bc3d4790699125() interface{} {
+func get0aaaf7d7Ee0148559ed75eae3039d99d() interface{} {
     dto := make(map[string]interface{})
     // 经营者/法人是否为受益人
     // dto["ubo_type"] = "test"
     // 受益人信息列表jsonArray格式,当ubo_type为Y时可不填
-    // dto["ubo_info_list"] = get7fc3208a0d844a5cA3de5e71ada8a838()
+    // dto["ubo_info_list"] = getA3c55d437cf44e0b96ba893ef2f14405()
 
     return dto;
 }
 
-func getAbd9022dA936424a94c1D50a661847e1() interface{} {
+func getBbb2aebb8ca44ac68404D574dfcccecb() interface{} {
     dto := make(map[string]interface{})
     // 文件类型
     // dto["file_type"] = "test"
@@ -719,7 +719,7 @@ func getAbd9022dA936424a94c1D50a661847e1() interface{} {
     return dto;
 }
 
-func get88851f2bC10f47a2BbaaCc32fe00657c() interface{} {
+func get08c50d7811f348478e769ede82868f28() interface{} {
     dto := make(map[string]interface{})
     // 经营场景类型
     // dto["sales_scenes_type"] = "test"
@@ -748,7 +748,7 @@ func get88851f2bC10f47a2BbaaCc32fe00657c() interface{} {
     // 商家企业微信CorpID开通企业微信场景时填入；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：xxxxx&lt;/font&gt;
     // dto["sub_corp_id"] = "test"
     // 文件列表
-    // dto["sales_scenes_file_list"] = getAbd9022dA936424a94c1D50a661847e1()
+    // dto["sales_scenes_file_list"] = getBbb2aebb8ca44ac68404D574dfcccecb()
     // 文件列表
     // dto["fee_rate_file_list"] = ""
     // 门店名称
@@ -761,7 +761,7 @@ func get88851f2bC10f47a2BbaaCc32fe00657c() interface{} {
     return dto;
 }
 
-func get485894caF00e40bb99df846af75658bb() interface{} {
+func get2a47f9e0Dc75461bB91108a14bdfaf58() interface{} {
     dto := make(map[string]interface{})
     // 账户类型
     // dto["card_type"] = "test"
@@ -783,7 +783,7 @@ func get485894caF00e40bb99df846af75658bb() interface{} {
     return dto;
 }
 
-func getC16cd41c290b4f9aAe260bb5e5c33385() interface{} {
+func get1c6c7e5066594c1395672292527185d4() interface{} {
     dto := make(map[string]interface{})
     // 文件类型
     // dto["file_type"] = "test"
@@ -794,7 +794,7 @@ func getC16cd41c290b4f9aAe260bb5e5c33385() interface{} {
     return dtoList
 }
 
-func get53445ee8966a4d7e8b58927b1912102a() interface{} {
+func get386bb70c2b5745468257Fa3fe83ab105() interface{} {
     dto := make(map[string]interface{})
     // 申请服务
     // dto["service_code"] = "test"
@@ -807,36 +807,36 @@ func get53445ee8966a4d7e8b58927b1912102a() interface{} {
     // 操作类型ADD-新增， UPDATE-修改， 默认新增；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：ADD&lt;/font&gt;
     // dto["operate_type"] = "test"
     // 联系人信息jsonObject字符串,新增时必填
-    // dto["contact_info"] = getBde5314d5fef4e239ea3Bcfc2c2a8b69()
+    // dto["contact_info"] = getCcd8310c3a1f4db7A3d33f9d31667537()
     // 特殊主体登记证书jsonObject字符串，商户营业执照类型为政府机关/事业单位/其他组织时，传入相应信息。新增时需填入
-    // dto["certificate_info"] = getB730892aD7dc4d3690d0F82d0acc366b()
+    // dto["certificate_info"] = get11bbf80b2dfc46bfBf287f2e9d5d9a68()
     // 最终受益人信息jsonObject字符串，商户类型为企业时，微信侧必填。（如果基本信息里有的话，可以不传取 huifu_id 对应的信息）。新增时填入
-    // dto["ubo_info"] = get2dd579b49ef94813B4bc3d4790699125()
+    // dto["ubo_info"] = get0aaaf7d7Ee0148559ed75eae3039d99d()
     // 经营场景jsonObject字符串，新增时填入
-    // dto["sales_info"] = get88851f2bC10f47a2BbaaCc32fe00657c()
+    // dto["sales_info"] = get08c50d7811f348478e769ede82868f28()
     // 银行账户信息jsonObject字符串，该字段不填时，取商户在汇付系统录入的结算账号信息。新增或修改时填入，修改时必填
-    // dto["wx_card_info"] = get485894caF00e40bb99df846af75658bb()
+    // dto["wx_card_info"] = get2a47f9e0Dc75461bB91108a14bdfaf58()
     // 补充说明信息
     // dto["business_addition_msg"] = ""
     // 补充说明文件列表
-    // dto["addition_file_list"] = getC16cd41c290b4f9aAe260bb5e5c33385()
+    // dto["addition_file_list"] = get1c6c7e5066594c1395672292527185d4()
 
     dtoList := [1]interface{}{dto}
     return dtoList
 }
 
-func getB9dbcd4334d04c74913eA5f58b11931d() string {
+func getD146a4f3140744dbA60235c50b2f857a() string {
     dto := make(map[string]interface{})
     // 微信子商户号
     // dto["sub_mch_id"] = "test"
     // 配置集合
-    // dto["wx_zl_pay_conf_list"] = get53445ee8966a4d7e8b58927b1912102a()
+    // dto["wx_zl_pay_conf_list"] = get386bb70c2b5745468257Fa3fe83ab105()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
-func get7cf3c2108a054210A471B0347a15ce11() interface{} {
+func getBb519e5c085a4107B19aF6704c1d55d1() interface{} {
     dto := make(map[string]interface{})
     // 文件类型
     // dto["file_type"] = "test"
@@ -847,7 +847,7 @@ func get7cf3c2108a054210A471B0347a15ce11() interface{} {
     return dtoList
 }
 
-func get49ccd1fe51a645a8A956B70a25a5fd86() string {
+func get8dac8f09Dabb40059a07E4da1787e44b() string {
     dto := make(map[string]interface{})
     // 申请类型
     // dto["apply_type"] = "test"
@@ -856,7 +856,7 @@ func get49ccd1fe51a645a8A956B70a25a5fd86() string {
     // 服务费率仅支持渠道商。平台商户调用不支持该字段服务费率（%），0.38~3之间，精确到0.01。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.06&lt;/font&gt;
     // dto["fee_rate"] = "test"
     // 文件列表
-    // dto["file_list"] = get7cf3c2108a054210A471B0347a15ce11()
+    // dto["file_list"] = getBb519e5c085a4107B19aF6704c1d55d1()
     // 联系人姓名
     // dto["contact_name"] = ""
     // 联系人手机号
@@ -878,7 +878,7 @@ func get49ccd1fe51a645a8A956B70a25a5fd86() string {
     return string(dtoByte)
 }
 
-func get4ddf282836284c97Af2081a556607102() interface{} {
+func getB05ae6f7De94417cBdcc0f949024f59a() interface{} {
     dto := make(map[string]interface{})
     // 分账比例
     // dto["fee_rate"] = "test"
@@ -888,7 +888,7 @@ func get4ddf282836284c97Af2081a556607102() interface{} {
     return dto;
 }
 
-func get8bff25f0A02a46d0Bd320b7633818e4b() interface{} {
+func get76cc72854b75495eB0ac86933381d417() interface{} {
     dto := make(map[string]interface{})
     // *业务模式说明*
     // dto["busi_instruction"] = "test"
@@ -900,7 +900,7 @@ func get8bff25f0A02a46d0Bd320b7633818e4b() interface{} {
     return dto;
 }
 
-func getA54c67b8514b42bb87c813df7651a81a() string {
+func get08924fe6Ae404bbcB06e5310a0535416() string {
     dto := make(map[string]interface{})
     // 分账规则来源
     // dto["rule_origin"] = "test"
@@ -913,7 +913,7 @@ func getA54c67b8514b42bb87c813df7651a81a() string {
     // 分账模式
     // dto["scene"] = "test"
     // 分账明细
-    // dto["acct_split_bunch_list"] = get4ddf282836284c97Af2081a556607102()
+    // dto["acct_split_bunch_list"] = getB05ae6f7De94417cBdcc0f949024f59a()
     // 交易手续费外扣开关
     // dto["out_fee_flag"] = ""
     // 交易手续费外扣时的账户类型
@@ -925,13 +925,13 @@ func getA54c67b8514b42bb87c813df7651a81a() string {
     // 固定手续费
     // dto["per_amt"] = ""
     // 业务情况说明
-    // dto["split_ext_info"] = get8bff25f0A02a46d0Bd320b7633818e4b()
+    // dto["split_ext_info"] = get76cc72854b75495eB0ac86933381d417()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
-func get715aba0e4c8743849db5F94f5616a5cc() string {
+func get146c8000F95942bd906a8bd7488b1e27() string {
     dto := make(map[string]interface{})
     // 借记手续费（%）借记卡费率与贷记卡费率不能同时为空;保留2位小数，最大值100.00，最小值0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.02&lt;/font&gt;
     // dto["debit_fee_rate"] = "test"
@@ -952,7 +952,7 @@ func get715aba0e4c8743849db5F94f5616a5cc() string {
     return string(dtoByte)
 }
 
-func get3f750bfb7fe84c2d97c4Ad100c7c3570() string {
+func get88ef1a3fFd3a41a9A0037ed1fcf23818() string {
     dto := make(map[string]interface{})
     // 代发业务类型
     // dto["surrogate_type"] = "test"
@@ -982,7 +982,7 @@ func get3f750bfb7fe84c2d97c4Ad100c7c3570() string {
     return string(dtoByte)
 }
 
-func get1964d291Ab5048a483077985a4e2e871() interface{} {
+func get783cbe2e48c6442c9697D93fc0a1dd8c() interface{} {
     dto := make(map[string]interface{})
     // 大额支付业务模式
     // dto["business_model"] = "test"
@@ -1005,10 +1005,10 @@ func get1964d291Ab5048a483077985a4e2e871() interface{} {
     return dtoList
 }
 
-func get0f3cba59909442259e55Fcc95c6bf717() string {
+func get42cc549bE9b0488cB185B39799dce1cc() string {
     dto := make(map[string]interface{})
     // 大额支付配置列表
-    // dto["large_amt_pay_config_info_list"] = get1964d291Ab5048a483077985a4e2e871()
+    // dto["large_amt_pay_config_info_list"] = get783cbe2e48c6442c9697D93fc0a1dd8c()
     // 交易手续费外扣huifuId交易手续费外扣时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000108854952&lt;/font&gt;
     // dto["out_fee_huifu_id"] = "test"
     // 交易手续费外扣账户号交易手续费外扣时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：F00598602&lt;/font&gt;
@@ -1026,7 +1026,7 @@ func get0f3cba59909442259e55Fcc95c6bf717() string {
     return string(dtoByte)
 }
 
-func getCe7159bcCd8b4566Be61225d04027497() interface{} {
+func getF1dc359c8b24446dA2d2382ed532a950() interface{} {
     dto := make(map[string]interface{})
     // 代发复核开关
     // dto["agent_recheck_flag"] = ""

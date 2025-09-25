@@ -90,7 +90,7 @@ func V2MerchantBasicdataEntRequestDemo() {
         // 基本存款账户编号或核准号条件选填；当use_head_info_flag&#x3D;Y时不填 ；&lt;br/&gt;基本存款账户信息请填写基本存款账户编号；开户许可证请填写核准号。&lt;br/&gt;当注册地址或经营地址为如下地区时必填：江苏省、浙江省、湖南省、湖北省、云南省、贵州省、陕西省、河南省、吉林省、黑龙江省、福建省、海南省、重庆市、青海省、宁夏回族自治区；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：J2900123456789&lt;/font&gt;
         OpenLicenceNo:"",
         // 银行卡信息配置
-        CardInfo:getB2327a4a46a74af1B6da314607ca4387(),
+        CardInfo:get3c953820559e400183a4Ceb9a4332599(),
         // 卡正面**对私必填**。通过[图片上传接口](https://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)上传材料；文件类型：F13；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
         // SettleCardFrontPic:"test",
         // 持卡人身份证国徽面**对私必填**。通过[图片上传接口](https://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)上传材料；文件类型：F56；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
@@ -98,7 +98,7 @@ func V2MerchantBasicdataEntRequestDemo() {
         // 持卡人身份证人像面**对私必填**。通过[图片上传接口](https://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)上传材料；文件类型：F55；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
         // SettleCertFrontPic:"test",
         // 授权委托书**对私非法人、对公非同名结算必填**；通过[图片上传接口](https://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)上传材料；文件类型：F15；开通银行电子账户（中信E管家）需提供F520；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
-        // AuthEnturstPic:"test",
+        // AuthEntrustPic:"test",
         // 上级汇付Id如果head_office_flag&#x3D;0，则字段必填，如果head_office_flag&#x3D;1，上级汇付Id不可传&lt;br/&gt;如果headOfficeFlag&#x3D;0，useHeadInfoFlag&#x3D;Y,且head_huifu_id不为空则基本信息部分复用上级的基本信息。&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000123123123&lt;/font&gt;
         // HeadHuifuId:"test",
         // 商户ICP备案编号商户ICP备案编号或网站许可证号；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：沪ICP备06046402号-28 &lt;/font&gt;&lt;br/&gt;类型为PC网站时，且为企业商户，且开通快捷或网银，或大额转账，或余额支付或分账业务（20%（不含）-100%），或为个人商户开通分账业务（10%（不含）-100%），必填
@@ -149,7 +149,7 @@ func getExtendInfos() map[string]interface{} {
     // 法人手机号
     // extendInfoMap["legal_mobile_no"] = ""
     // 受益人列表
-    // extendInfoMap["beneficiary_info"] = getF13a0b43F23d4aab91a0E326ec89a351()
+    // extendInfoMap["beneficiary_info"] = get685bb3e09f6d41358fff789b2321b8f5()
     // 联系人姓名
     extendInfoMap["contact_name"] = "联系人"
     // 商户通知标识
@@ -157,9 +157,9 @@ func getExtendInfos() map[string]interface{} {
     // 客服电话
     extendInfoMap["service_phone"] = "021-121111221"
     // 结算业务配置
-    extendInfoMap["settle_config"] = getA908da42065845b8852550b11a12c8c0()
+    extendInfoMap["settle_config"] = get1f232226942747548f04836b59894c4f()
     // 取现业务配置
-    extendInfoMap["cash_config"] = get33768d6aA9394ce5A369A88b918d2ea8()
+    extendInfoMap["cash_config"] = getF82b8d02D66149df96e6A8982e03b200()
     // 商户身份
     // extendInfoMap["head_office_flag"] = ""
     // 使用上级资料信息
@@ -173,15 +173,15 @@ func getExtendInfos() map[string]interface{} {
     // 异步请求地址
     extendInfoMap["async_return_url"] = "virgo://http://192.168.85.157:30031/sspm/testVirgo"
     // 斗拱e账户功能配置
-    // extendInfoMap["elec_acct_config"] = get0882475c315d4249A27dFd4dc2d278a6()
+    // extendInfoMap["elec_acct_config"] = get36f9286b687f4deb8237521f1b1691e2()
     // 股东信息
-    // extendInfoMap["share_holder_info_list"] = getC12a6d98Fae14c13B3b1Eb20462fa0af()
+    // extendInfoMap["share_holder_info_list"] = get76c642a762224b489959Cf5921d41a22()
     // 扩展资料包
-    // extendInfoMap["extended_material_list"] = get008cc24b42ff4cd88c31663c087a4836()
+    // extendInfoMap["extended_material_list"] = get3457f985E17b41caBfd4Bb22603e2193()
     return extendInfoMap
 }
 
-func getF13a0b43F23d4aab91a0E326ec89a351() string {
+func get685bb3e09f6d41358fff789b2321b8f5() string {
     dto := make(map[string]interface{})
     // 受益人名称
     // dto["bo_name"] = "test"
@@ -205,7 +205,7 @@ func getF13a0b43F23d4aab91a0E326ec89a351() string {
     return string(dtoByte)
 }
 
-func getB2327a4a46a74af1B6da314607ca4387() string {
+func get3c953820559e400183a4Ceb9a4332599() string {
     dto := make(map[string]interface{})
     // 银行账户类型
     dto["card_type"] = "0"
@@ -215,8 +215,6 @@ func getB2327a4a46a74af1B6da314607ca4387() string {
     dto["card_no"] = "698043508"
     // 银行所在市
     // dto["area_id"] = "test"
-    // 银行编码当card_type&#x3D;0时必填；参考： [银行编码](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_yhbm)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：01020000&lt;/font&gt;；
-    // dto["bank_code"] = "test"
     // 联行号当card_type&#x3D;0时必填，参考：[银行支行编码](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_yhzhbm) 当card_type&#x3D;0时必填， 当card_type&#x3D;1或2时非必填 &lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：102290026507&lt;/font&gt;
     dto["branch_code"] = "305290002096"
     // 持卡人证件类型持卡人证件类型，参见《[自然人证件类型](https://paas.huifu.com/open/doc/api/#/api_ggcsbm?id&#x3D;%e8%87%aa%e7%84%b6%e4%ba%ba%e8%af%81%e4%bb%b6%e7%b1%bb%e5%9e%8b)》。&lt;br/&gt; 当card_type&#x3D;0时为空， 当card_type&#x3D;1或2时必填； &lt;font color&#x3D;&quot;green&quot;&gt;示例值：00&lt;/font&gt;&lt;br/&gt;持卡人证件类型04、11需要补充 F101【结算人】港澳台居民来往内地通行证&lt;br/&gt;持卡人证件类型13需要补充 F513【结算人】外国人居留证&lt;br/&gt;持卡人证件类型14、15需要补充 F514【结算人】港澳台居住证&lt;br/&gt;其它持卡人证件类型补充F102【结算人】其它证件材料&lt;br/&gt;补充材料填写在extended_material_list 扩展资料包中
@@ -240,7 +238,7 @@ func getB2327a4a46a74af1B6da314607ca4387() string {
     return string(dtoByte)
 }
 
-func getA908da42065845b8852550b11a12c8c0() string {
+func get1f232226942747548f04836b59894c4f() string {
     dto := make(map[string]interface{})
     // 结算周期
     dto["settle_cycle"] = "D1"
@@ -277,7 +275,7 @@ func getA908da42065845b8852550b11a12c8c0() string {
     return string(dtoByte)
 }
 
-func get33768d6aA9394ce5A369A88b918d2ea8() string {
+func getF82b8d02D66149df96e6A8982e03b200() string {
     dto := make(map[string]interface{})
     // 取现手续费（固定/元）fix_amt与fee_rate至少填写一项， 需保留小数点后两位，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;注：当cash_type&#x3D;D1时为节假日取现手续费；当cash_type&#x3D;T1时为工作日取现手续费
     dto["fix_amt"] = "1.00"
@@ -303,7 +301,7 @@ func get33768d6aA9394ce5A369A88b918d2ea8() string {
     return string(dtoByte)
 }
 
-func get622ded0e267647a8Ba6b9a7009c3ef51() interface{} {
+func get7f3fd5ddC7fe4d95B85e1e3dcad5215a() interface{} {
     dto := make(map[string]interface{})
     // 银行编码
     // dto["bank_code"] = "test"
@@ -328,7 +326,7 @@ func get622ded0e267647a8Ba6b9a7009c3ef51() interface{} {
     return dtoList
 }
 
-func get0882475c315d4249A27dFd4dc2d278a6() string {
+func get36f9286b687f4deb8237521f1b1691e2() string {
     dto := make(map[string]interface{})
     // 电子账户开关
     // dto["switch_state"] = "test"
@@ -343,7 +341,7 @@ func get0882475c315d4249A27dFd4dc2d278a6() string {
     // 签约成功标志
     // dto["sign_success_flag"] = "test"
     // 银行卡信息
-    // dto["elec_card_list"] = get622ded0e267647a8Ba6b9a7009c3ef51()
+    // dto["elec_card_list"] = get7f3fd5ddC7fe4d95B85e1e3dcad5215a()
     // 中信签约短信流水号
     // dto["elec_acct_sign_seq_id"] = ""
 
@@ -351,7 +349,7 @@ func get0882475c315d4249A27dFd4dc2d278a6() string {
     return string(dtoByte)
 }
 
-func getC12a6d98Fae14c13B3b1Eb20462fa0af() string {
+func get76c642a762224b489959Cf5921d41a22() string {
     dto := make(map[string]interface{})
     // 股东姓名
     // dto["name"] = "test"
@@ -371,7 +369,7 @@ func getC12a6d98Fae14c13B3b1Eb20462fa0af() string {
     return string(dtoByte)
 }
 
-func get008cc24b42ff4cd88c31663c087a4836() string {
+func get3457f985E17b41caBfd4Bb22603e2193() string {
     dto := make(map[string]interface{})
     // 文件id
     // dto["file_id"] = "test"

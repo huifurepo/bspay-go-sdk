@@ -30,9 +30,9 @@ func V2TradeOnlinepaymentUnionpayRequestDemo() {
         // 商品描述
         OrderDesc:"通用性商品1",
         // 安全信息
-        RiskCheckData:get78a697deDaac42289ed46a8efebf4302(),
+        RiskCheckData:get4f0e0a54526d4f8fAa1c47b75e6f20f1(),
         // 三方支付数据jsonObject；pay_scene为云闪付公众号与云闪付小程序时必填
-        // ThirdPayData:getFd56600b1aae4377A6464cbb9d5c443a(),
+        // ThirdPayData:get1f6db52aF76b4284Bbe9Cf520498a4be(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -66,8 +66,6 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["pay_card_type"] = ""
     // 订单失效时间
     extendInfoMap["time_expire"] = ""
-    // 分账对象
-    // extendInfoMap["acct_split_bunch"] = get5744b670118e4ce1B173928f87a25f67()
     // 前端跳转地址
     extendInfoMap["front_url"] = "https://www.service.com/getresp"
     // 异步通知地址
@@ -82,10 +80,14 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["delay_acct_flag"] = "Y"
     // 手续费扣款标志
     // extendInfoMap["fee_flag"] = ""
+    // 分账对象
+    // extendInfoMap["acct_split_bunch"] = getFad2159860044e5f89776fbabd8695a5()
+    // 设备信息数据
+    // extendInfoMap["terminal_device_data"] = get205d7b8fCaae49baAb2a4e66c4603bda()
     return extendInfoMap
 }
 
-func get08fb8ed1C11a40d1B38468f1226832df() interface{} {
+func get5869f1882aba4cf2A939673ad5d94bca() interface{} {
     dto := make(map[string]interface{})
     // 分账金额
     // dto["div_amt"] = ""
@@ -100,10 +102,10 @@ func get08fb8ed1C11a40d1B38468f1226832df() interface{} {
     return dtoList
 }
 
-func get5744b670118e4ce1B173928f87a25f67() string {
+func getFad2159860044e5f89776fbabd8695a5() string {
     dto := make(map[string]interface{})
     // 分账明细
-    // dto["acct_infos"] = get08fb8ed1C11a40d1B38468f1226832df()
+    // dto["acct_infos"] = get5869f1882aba4cf2A939673ad5d94bca()
     // 百分比分账标志
     // dto["percentage_flag"] = ""
     // 是否净值分账
@@ -113,7 +115,7 @@ func get5744b670118e4ce1B173928f87a25f67() string {
     return string(dtoByte)
 }
 
-func get78a697deDaac42289ed46a8efebf4302() string {
+func get4f0e0a54526d4f8fAa1c47b75e6f20f1() string {
     dto := make(map[string]interface{})
     // 基站地址
     dto["base_station"] = "7"
@@ -128,10 +130,19 @@ func get78a697deDaac42289ed46a8efebf4302() string {
     return string(dtoByte)
 }
 
-func getFd56600b1aae4377A6464cbb9d5c443a() string {
+func get1f6db52aF76b4284Bbe9Cf520498a4be() string {
     dto := make(map[string]interface{})
     // 小程序id
     // dto["app_id"] = ""
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func get205d7b8fCaae49baAb2a4e66c4603bda() string {
+    dto := make(map[string]interface{})
+    // 终端设备号
+    // dto["device_id"] = "test"
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

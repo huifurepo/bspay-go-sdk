@@ -32,7 +32,7 @@ func V2TradeHostingPaymentPreorderWxRequestDemo() {
         // 商品描述
         GoodsDesc:"app跳微信消费",
         // 微信小程序扩展参数集合
-        MiniappData:getMiniappDataRucan(),
+        MiniappData:get737ab298Ac7441a4B40d94f941a33d23(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -63,23 +63,23 @@ func getExtendInfos() map[string]interface{} {
     // 是否延迟交易
     extendInfoMap["delay_acct_flag"] = "Y"
     // 分账对象
-    extendInfoMap["acct_split_bunch"] = getAcctSplitBunchRucan()
+    extendInfoMap["acct_split_bunch"] = get71bc87bc65514310Bab5D0d4ff6d9ea8()
     // 交易失效时间
     // extendInfoMap["time_expire"] = ""
     // 业务信息
-    // extendInfoMap["biz_info"] = getBizInfo()
+    // extendInfoMap["biz_info"] = get08fd888f92c14b3e8aff0de211321c21()
     // 交易异步通知地址
     extendInfoMap["notify_url"] = "https://callback.service.com/xx"
     // 回调地址
     // extendInfoMap["callback_url"] = ""
     // 微信参数集合
-    // extendInfoMap["wx_data"] = getWxData()
+    // extendInfoMap["wx_data"] = getA43f30ebEacf493487a428b621ab6ec2()
     // 设备信息
-    // extendInfoMap["terminal_device_data"] = getTerminalDeviceData()
+    // extendInfoMap["terminal_device_data"] = get805346c769af45b6BdbbA3bf12da0139()
     return extendInfoMap
 }
 
-func getAcctInfosRucan() interface{} {
+func getBc44ff54B1ba4e1cB851Efe026a43136() interface{} {
     dto := make(map[string]interface{})
     // 分账金额
     dto["div_amt"] = "0.01"
@@ -94,10 +94,10 @@ func getAcctInfosRucan() interface{} {
     return dtoList
 }
 
-func getAcctSplitBunchRucan() string {
+func get71bc87bc65514310Bab5D0d4ff6d9ea8() string {
     dto := make(map[string]interface{})
     // 分账明细
-    dto["acct_infos"] = getAcctInfosRucan()
+    dto["acct_infos"] = getBc44ff54B1ba4e1cB851Efe026a43136()
     // 百分比分账标志
     // dto["percentage_flag"] = ""
     // 是否净值分账
@@ -107,7 +107,7 @@ func getAcctSplitBunchRucan() string {
     return string(dtoByte)
 }
 
-func getMiniappDataRucan() string {
+func get737ab298Ac7441a4B40d94f941a33d23() string {
     dto := make(map[string]interface{})
     // 是否生成scheme_code
     dto["need_scheme"] = "Y"
@@ -120,7 +120,7 @@ func getMiniappDataRucan() string {
     return string(dtoByte)
 }
 
-func getPayCheckWx() interface{} {
+func get7a353d7d71344cbb8cc93c3925a3fbfc() interface{} {
     dto := make(map[string]interface{})
     // 指定支付者
     // dto["limit_payer"] = ""
@@ -130,7 +130,7 @@ func getPayCheckWx() interface{} {
     return dto;
 }
 
-func getPersonPayer() interface{} {
+func getE0675c990cbf47798edd228757177ed9() interface{} {
     dto := make(map[string]interface{})
     // 姓名
     // dto["name"] = ""
@@ -142,18 +142,18 @@ func getPersonPayer() interface{} {
     return dto;
 }
 
-func getBizInfo() string {
+func get08fd888f92c14b3e8aff0de211321c21() string {
     dto := make(map[string]interface{})
     // 付款人验证（微信）
-    // dto["payer_check_wx"] = getPayCheckWx()
+    // dto["payer_check_wx"] = get7a353d7d71344cbb8cc93c3925a3fbfc()
     // 个人付款人信息
-    // dto["person_payer"] = getPersonPayer()
+    // dto["person_payer"] = getE0675c990cbf47798edd228757177ed9()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
-func getGoodsDetailWxRucan() interface{} {
+func getDc0d384a8f994a5b8c66B9250d8ea39f() interface{} {
     dto := make(map[string]interface{})
     // 商品编码
     // dto["goods_id"] = ""
@@ -170,10 +170,10 @@ func getGoodsDetailWxRucan() interface{} {
     return dtoList
 }
 
-func getDetail() interface{} {
+func get4d20343543214c0b991d47544dbdc644() interface{} {
     dto := make(map[string]interface{})
     // 单品列表
-    // dto["goods_detail"] = getGoodsDetailWxRucan()
+    // dto["goods_detail"] = getDc0d384a8f994a5b8c66B9250d8ea39f()
     // 订单原价(元)
     // dto["cost_price"] = ""
     // 商品小票ID
@@ -182,7 +182,7 @@ func getDetail() interface{} {
     return dto;
 }
 
-func getStoreInfo() interface{} {
+func getBc45c4071ff64ceeAcc9505af590f711() interface{} {
     dto := make(map[string]interface{})
     // 门店id
     // dto["id"] = ""
@@ -196,15 +196,15 @@ func getStoreInfo() interface{} {
     return dto;
 }
 
-func getSceneInfo() interface{} {
+func get0c82992fF3914502A4ab3787f61d22c4() interface{} {
     dto := make(map[string]interface{})
     // 门店信息
-    // dto["store_info"] = getStoreInfo()
+    // dto["store_info"] = getBc45c4071ff64ceeAcc9505af590f711()
 
     return dto;
 }
 
-func getWxData() string {
+func getA43f30ebEacf493487a428b621ab6ec2() string {
     dto := make(map[string]interface{})
     // 子商户应用ID
     // dto["sub_appid"] = ""
@@ -215,7 +215,7 @@ func getWxData() string {
     // 商品描述
     // dto["body"] = ""
     // 商品详情
-    // dto["detail"] = getDetail()
+    // dto["detail"] = get4d20343543214c0b991d47544dbdc644()
     // 设备号
     // dto["device_info"] = ""
     // 订单优惠标记
@@ -225,7 +225,7 @@ func getWxData() string {
     // 开发票入口开放标识
     // dto["receipt"] = ""
     // 场景信息
-    // dto["scene_info"] = getSceneInfo()
+    // dto["scene_info"] = get0c82992fF3914502A4ab3787f61d22c4()
     // 终端ip
     // dto["spbill_create_ip"] = ""
     // 单品优惠标识
@@ -239,7 +239,7 @@ func getWxData() string {
     return string(dtoByte)
 }
 
-func getTerminalDeviceData() string {
+func get805346c769af45b6BdbbA3bf12da0139() string {
     dto := make(map[string]interface{})
     // 汇付机具号
     // dto["devs_id"] = "test"

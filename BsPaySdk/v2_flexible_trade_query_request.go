@@ -11,10 +11,9 @@ import "encoding/json"
 type V2FlexibleTradeQueryRequest struct {
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
-    OrgReqSeqId string `json:"org_req_seq_id" structs:"org_req_seq_id"` // 原请求流水号原请求流水号与原请求全局流水号二选一必填，示例值：2021091708126665001
-    OrgReqDate string `json:"org_req_date" structs:"org_req_date"` // 原请求日期原请求流水号必填则原请求日期必填，格式：yyyyMMdd；示例值：20210917
+    OrgReqSeqId string `json:"org_req_seq_id" structs:"org_req_seq_id"` // 原请求流水号
+    OrgReqDate string `json:"org_req_date" structs:"org_req_date"` // 原请求日期
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 汇付商户号
-    OrgHfSeqId string `json:"org_hf_seq_id" structs:"org_hf_seq_id"` // 原交易全局流水号原请求流水号与原请求全局流水号二选一必填，  &lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值： 003100TOP1A230816150903P990ac139c0600000&lt;/font&gt;
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

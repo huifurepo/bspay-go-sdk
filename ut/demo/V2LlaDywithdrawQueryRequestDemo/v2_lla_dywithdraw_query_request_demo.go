@@ -1,10 +1,10 @@
 /**
- * 银行大额未入账流水列表查询 - 示例
+ * 提现记录查询 - 示例
  *
  * @Author sdk-generator
  * @Description 汇付天下
  */
-package V2TradeOnlinepaymentTransferBankblotterQueryRequestDemo
+package V2LlaDywithdrawQueryRequestDemo
 
 import (
     "encoding/json"
@@ -13,18 +13,28 @@ import (
 	"github.com/huifurepo/bspay-go-sdk/ut/tool"
 )
 
-func V2TradeOnlinepaymentTransferBankblotterQueryRequestDemo() {
+func V2LlaDywithdrawQueryRequestDemo() {
     // 1. 数据初始化
 	dgSDK, _ := BsPaySdk.NewBsPay(true, "./config/config.json")
 
     // 2.组装请求参数
-    dgReq := BsPaySdk.V2TradeOnlinepaymentTransferBankblotterQueryRequest{
+    dgReq := BsPaySdk.V2LlaDywithdrawQueryRequest{
         // 请求流水号
         ReqSeqId:tool.GetReqSeqId(),
         // 请求日期
         ReqDate:tool.GetCurrentDate(),
-        // 商户号
-        HuifuId:"6666000003100615",
+        // 代运营汇付id
+        AgencyHuifuId:"6666000108967194",
+        // 商家汇付id
+        MerchantHuifuId:"6666000108938576",
+        // 平台
+        PlatformType:"DYLK",
+        // 提现发起开始日期
+        StartDate:"20250820",
+        // 查询游标
+        Cursor:"0",
+        // 页大小
+        Size:"10",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -34,7 +44,7 @@ func V2TradeOnlinepaymentTransferBankblotterQueryRequestDemo() {
     fmt.Println("请求数据:", string(respStr))
 
     // 3. 发起API调用
-    resp, err := dgSDK.V2TradeOnlinepaymentTransferBankblotterQueryRequest(dgReq)
+    resp, err := dgSDK.V2LlaDywithdrawQueryRequest(dgReq)
   	if err != nil {
 		fmt.Println("请求异常:", err)
 	}
@@ -48,20 +58,6 @@ func V2TradeOnlinepaymentTransferBankblotterQueryRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
-    // 原请求流水号
-    extendInfoMap["org_req_seq_id"] = "2021091708126665001"
-    // 原请求日期
-    extendInfoMap["org_req_date"] = "20231215"
-    // 实际付款方银行卡号
-    // extendInfoMap["bank_card_no"] = ""
-    // 实际付款方姓名
-    extendInfoMap["certificate_name"] = "沈显龙"
-    // 实际付款日期
-    // extendInfoMap["trans_date"] = ""
-    // 交易金额
-    // extendInfoMap["trans_amt"] = ""
-    // 收款方账号
-    // extendInfoMap["payee_acct_no"] = ""
     return extendInfoMap
 }
 
