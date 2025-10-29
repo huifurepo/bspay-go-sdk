@@ -52,6 +52,8 @@ func V2TradeLgwxSurrogateQueryRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
+    // 合作平台
+    // extendInfoMap["lg_platform_type"] = ""
     return extendInfoMap
 }
 

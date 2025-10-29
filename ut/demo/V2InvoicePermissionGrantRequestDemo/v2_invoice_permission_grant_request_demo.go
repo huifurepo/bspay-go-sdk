@@ -25,8 +25,6 @@ func V2InvoicePermissionGrantRequestDemo() {
         ReqDate:tool.GetCurrentDate(),
         // 开票方汇付ID
         HuifuId:"6666000149801800",
-        // 开通类型
-        Status:"Y",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -50,6 +48,10 @@ func V2InvoicePermissionGrantRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
+    // 收费方式
+    // extendInfoMap["charge_type"] = ""
+    // 底价
+    // extendInfoMap["floor_price"] = ""
     return extendInfoMap
 }
 

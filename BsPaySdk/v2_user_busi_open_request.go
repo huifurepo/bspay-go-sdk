@@ -14,6 +14,7 @@ type V2UserBusiOpenRequest struct {
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
     UpperHuifuId string `json:"upper_huifu_id" structs:"upper_huifu_id"` // 渠道商/商户汇付Id
     LjhData string `json:"ljh_data" structs:"ljh_data"` // 乐接活配置当合作平台为乐接活，必填
+    HxyData string `json:"hxy_data" structs:"hxy_data"` // 汇薪云配置当合作平台为汇薪云，必填
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

@@ -15,7 +15,7 @@ type V2TradeOnlinepaymentUnionpayRequest struct {
     TransAmt string `json:"trans_amt" structs:"trans_amt"` // 订单金额
     OrderDesc string `json:"order_desc" structs:"order_desc"` // 商品描述
     RiskCheckData string `json:"risk_check_data" structs:"risk_check_data"` // 安全信息
-    ThirdPayData string `json:"third_pay_data" structs:"third_pay_data"` // 三方支付数据jsonObject；pay_scene为云闪付公众号与云闪付小程序时必填
+    ThirdPayData string `json:"third_pay_data" structs:"third_pay_data"` // 三方支付数据jsonObject&lt;br/&gt;pay_scene&#x3D;U_JSAPI或pay_scene&#x3D;U_MINIAPP时，必填
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

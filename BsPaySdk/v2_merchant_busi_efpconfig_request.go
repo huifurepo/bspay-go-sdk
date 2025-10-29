@@ -16,6 +16,7 @@ type V2MerchantBusiEfpconfigRequest struct {
     OutFeeHuifuid string `json:"out_fee_huifuid" structs:"out_fee_huifuid"` // 支付手续费外扣汇付ID支付手续费外扣标记为1时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000109812123&lt;/font&gt;
     OutOrderAcctCard string `json:"out_order_acct_card" structs:"out_order_acct_card"` // 全域资金开户使用的银行卡信息首次开通时必填 jsonObject格式
     OutOrderAcctOpenFees string `json:"out_order_acct_open_fees" structs:"out_order_acct_open_fees"` // 全域资金开户手续费首次开通时必填 jsonObject格式
+    BusinessModel string `json:"business_model" structs:"business_model"` // 业务模式acquiringMode:收单模式 switch_state为1时必填
     OutFundsGateId string `json:"out_funds_gate_id" structs:"out_funds_gate_id"` // 银行类型switch_state有值时需填写； ht1-华通银行，xw0-XW银行，ss0-苏商银行；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：ht1&lt;/font&gt;
     SignUserInfo string `json:"sign_user_info" structs:"sign_user_info"` // 签约人信息switch_state为1时必填 jsonObject格式
     AcctSource string `json:"acct_source" structs:"acct_source"` // 入账来源开通全域资金时需填写；01:抖音 02:美团 03:快手 04:拼多多 05:小红书 06:淘宝/天猫/飞猪 07:微信视频号/微信小店 08:京东 09:饿了么 11:得物 12:唯品会 13:携程 14:支付宝直连 15:微信直连 16:滴滴加油 17:团油 18:通联 19:易宝 20:百度 21:顺丰22:希音 多个逗号分隔；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：01,02,05&lt;/font&gt;；

@@ -36,7 +36,7 @@ func V2TradeLgwxSurrogateRequestDemo() {
         // 异步通知地址
         NotifyUrl:"virgo://http://www.gangcai.com",
         // 分账明细
-        AcctSplitBunch:get2cc87980007348a7A86e461ee467b2db(),
+        AcctSplitBunch:getF1feffe72adf427594625abfeb040860(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -62,10 +62,12 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap := make(map[string]interface{})
     // 出款方账户号
     extendInfoMap["acct_id"] = "C02418374"
+    // 合作平台
+    // extendInfoMap["lg_platform_type"] = ""
     return extendInfoMap
 }
 
-func get2cc87980007348a7A86e461ee467b2db() string {
+func getF1feffe72adf427594625abfeb040860() string {
     dto := make(map[string]interface{})
     // 用户号
     dto["huifu_id"] = "6666000107979716"

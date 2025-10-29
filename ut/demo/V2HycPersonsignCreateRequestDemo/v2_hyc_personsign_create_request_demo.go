@@ -28,7 +28,7 @@ func V2HycPersonsignCreateRequestDemo() {
         // 落地公司机构号
         MinorAgentId:"L20231113140106443",
         // 乐接活请求参数jsonObject格式 合作平台为乐接活时必传
-        // LjhData:getDa04d656159b4ec89e2b3b57e7164683(),
+        // LjhData:get994c979bC5cb4a098e051ddeb2fdcf26(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -61,7 +61,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getDa04d656159b4ec89e2b3b57e7164683() string {
+func get994c979bC5cb4a098e051ddeb2fdcf26() string {
     dto := make(map[string]interface{})
     // 合同模板id合作平台为乐接活时必填 数字格式
     // dto["contract_template_id"] = "test"

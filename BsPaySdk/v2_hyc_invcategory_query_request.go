@@ -12,6 +12,7 @@ type V2HycInvcategoryQueryRequest struct {
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
     MinorAgentId string `json:"minor_agent_id" structs:"minor_agent_id"` // 落地公司机构号
+    HuifuId string `json:"huifu_id" structs:"huifu_id"` // 商户号lg_platform_type为HXY或空时必填
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

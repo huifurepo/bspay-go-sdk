@@ -30,9 +30,9 @@ func V2TradeOnlinepaymentUnionpayRequestDemo() {
         // 商品描述
         OrderDesc:"通用性商品1",
         // 安全信息
-        RiskCheckData:get4f0e0a54526d4f8fAa1c47b75e6f20f1(),
-        // 三方支付数据jsonObject；pay_scene为云闪付公众号与云闪付小程序时必填
-        // ThirdPayData:get1f6db52aF76b4284Bbe9Cf520498a4be(),
+        RiskCheckData:get72948c317e164ae79d4a93cef8895c95(),
+        // 三方支付数据jsonObject&lt;br/&gt;pay_scene&#x3D;U_JSAPI或pay_scene&#x3D;U_MINIAPP时，必填
+        // ThirdPayData:getE6adb6f3591a41ec9c6137c27ca2398d(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -81,13 +81,13 @@ func getExtendInfos() map[string]interface{} {
     // 手续费扣款标志
     // extendInfoMap["fee_flag"] = ""
     // 分账对象
-    // extendInfoMap["acct_split_bunch"] = getFad2159860044e5f89776fbabd8695a5()
+    // extendInfoMap["acct_split_bunch"] = get938f9796E5bd4f85A4cf2ce4a306837d()
     // 设备信息数据
-    // extendInfoMap["terminal_device_data"] = get205d7b8fCaae49baAb2a4e66c4603bda()
+    // extendInfoMap["terminal_device_data"] = get86e6396a54f5492cB3b06678723bed4b()
     return extendInfoMap
 }
 
-func get5869f1882aba4cf2A939673ad5d94bca() interface{} {
+func get0aa0431065074e9f92016d99005ce03e() interface{} {
     dto := make(map[string]interface{})
     // 分账金额
     // dto["div_amt"] = ""
@@ -102,10 +102,10 @@ func get5869f1882aba4cf2A939673ad5d94bca() interface{} {
     return dtoList
 }
 
-func getFad2159860044e5f89776fbabd8695a5() string {
+func get938f9796E5bd4f85A4cf2ce4a306837d() string {
     dto := make(map[string]interface{})
     // 分账明细
-    // dto["acct_infos"] = get5869f1882aba4cf2A939673ad5d94bca()
+    // dto["acct_infos"] = get0aa0431065074e9f92016d99005ce03e()
     // 百分比分账标志
     // dto["percentage_flag"] = ""
     // 是否净值分账
@@ -115,7 +115,7 @@ func getFad2159860044e5f89776fbabd8695a5() string {
     return string(dtoByte)
 }
 
-func get4f0e0a54526d4f8fAa1c47b75e6f20f1() string {
+func get72948c317e164ae79d4a93cef8895c95() string {
     dto := make(map[string]interface{})
     // 基站地址
     dto["base_station"] = "7"
@@ -130,7 +130,7 @@ func get4f0e0a54526d4f8fAa1c47b75e6f20f1() string {
     return string(dtoByte)
 }
 
-func get1f6db52aF76b4284Bbe9Cf520498a4be() string {
+func getE6adb6f3591a41ec9c6137c27ca2398d() string {
     dto := make(map[string]interface{})
     // 小程序id
     // dto["app_id"] = ""
@@ -139,7 +139,7 @@ func get1f6db52aF76b4284Bbe9Cf520498a4be() string {
     return string(dtoByte)
 }
 
-func get205d7b8fCaae49baAb2a4e66c4603bda() string {
+func get86e6396a54f5492cB3b06678723bed4b() string {
     dto := make(map[string]interface{})
     // 终端设备号
     // dto["device_id"] = "test"

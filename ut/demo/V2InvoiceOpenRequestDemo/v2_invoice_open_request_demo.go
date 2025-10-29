@@ -46,11 +46,11 @@ func V2InvoiceOpenRequestDemo() {
         // 原发票号码openType&#x3D;1时必填；参见[发票右上角](https://paas.huifu.com/open/doc/api/#/fp/api_fp_yanglitu.md)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20685767&lt;/font&gt;
         OriIvcNumber:"150000020026",
         // 开票商品信息
-        GoodsInfos:get3bbe0bf336ab4412B2df9d01a1c7c2d0(),
+        GoodsInfos:get0836ea582ea54a2eBf31B03c514a80e0(),
         // 不动产销售特殊字段specialFlag为05时，必填；jsonArray格式
-        // EstateSales:get2db7b765B68148adBb26Fc16dd2cf1b1(),
+        // EstateSales:get61765e5d4e3547ea986fE0b02a336bd0(),
         // 不动产租赁特殊字段specialFlag为16时，必填；jsonArray格式
-        // EstateLease:get3e4fc4baEb77414eB701F6aeed431b96(),
+        // EstateLease:get5a5792e6625649409ab3956876eba831(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -99,7 +99,7 @@ func getExtendInfos() map[string]interface{} {
     // 红字信息表编号
     extendInfoMap["red_info_number"] = ""
     // 开票人信息
-    extendInfoMap["payer_info"] = getB81206516602427086e4A87dc9054c94()
+    extendInfoMap["payer_info"] = get5ff3cd19637443d4A6faEa720f02c952()
     // 开票结果异步通知地址
     extendInfoMap["callback_url"] = "virgo://http://192.168.85.157:30031/sspm/testVirgo"
     // 强制开票标识
@@ -107,7 +107,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func get3bbe0bf336ab4412B2df9d01a1c7c2d0() string {
+func get0836ea582ea54a2eBf31B03c514a80e0() string {
     dto := make(map[string]interface{})
     // 发票行性质
     dto["ivc_nature"] = "0"
@@ -115,7 +115,7 @@ func get3bbe0bf336ab4412B2df9d01a1c7c2d0() string {
     dto["goods_serial_num"] = ""
     // 商品id二选一必填，税收分类编码优先；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：&lt;/font&gt;
     dto["goods_id"] = ""
-    // 商品税收分类编码&lt;font color&#x3D;&quot;green&quot;&gt;示例值：&lt;/font&gt;
+    // 商品税收分类编码参考[商品编码](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/fp/%E7%94%B5%E5%AD%90%E5%8F%91%E7%A5%A8%E5%95%86%E5%93%81%E7%BC%96%E7%A0%81.xlsx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1010101090000000000&lt;/font&gt;
     dto["goods_code"] = "6010000000000000000"
     // 商品名称goodsCode不为空时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：&lt;/font&gt;
     dto["goods_name"] = "预付卡"
@@ -147,7 +147,7 @@ func get3bbe0bf336ab4412B2df9d01a1c7c2d0() string {
     return string(dtoByte)
 }
 
-func getB81206516602427086e4A87dc9054c94() string {
+func get5ff3cd19637443d4A6faEa720f02c952() string {
     dto := make(map[string]interface{})
     // 开票人
     dto["payer_name"] = "开票人"
@@ -160,7 +160,7 @@ func getB81206516602427086e4A87dc9054c94() string {
     return string(dtoByte)
 }
 
-func get2db7b765B68148adBb26Fc16dd2cf1b1() string {
+func get61765e5d4e3547ea986fE0b02a336bd0() string {
     dto := make(map[string]interface{})
     // 不动产地址
     // dto["addr"] = "test"
@@ -186,7 +186,7 @@ func get2db7b765B68148adBb26Fc16dd2cf1b1() string {
     return string(dtoByte)
 }
 
-func get3e4fc4baEb77414eB701F6aeed431b96() string {
+func get5a5792e6625649409ab3956876eba831() string {
     dto := make(map[string]interface{})
     // 不动产地址
     // dto["addr"] = "test"

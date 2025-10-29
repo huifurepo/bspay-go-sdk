@@ -25,6 +25,8 @@ func V2HycInvcategoryQueryRequestDemo() {
         ReqDate:tool.GetCurrentDate(),
         // 落地公司机构号
         MinorAgentId:"L20210316173416881",
+        // 商户号lg_platform_type为HXY或空时必填
+        // HuifuId:"test",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -48,6 +50,8 @@ func V2HycInvcategoryQueryRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
+    // 合作平台
+    // extendInfoMap["lg_platform_type"] = ""
     return extendInfoMap
 }
 
