@@ -25,6 +25,8 @@ func V2InvoicePermissionGrantRequestDemo() {
         ReqDate:tool.GetCurrentDate(),
         // 开票方汇付ID
         HuifuId:"6666000149801800",
+        // 开通类型
+        Status:"Y",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()

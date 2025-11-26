@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/huifurepo/bspay-go-sdk/ut/demo/V2TradeOnlinepaymentTransferBankblotterQueryRequestDemo"
+	"github.com/huifurepo/bspay-go-sdk/ut/demo/V2TradePaymentMicropayRequestDemo"
 )
 
 func main() {
-	V2TradeOnlinepaymentTransferBankblotterQueryRequestDemo.V2TradeOnlinepaymentTransferBankblotterQueryRequestDemo()
+	V2TradePaymentMicropayRequestDemo.V2TradePaymentMicropayRequestDemo()
 }

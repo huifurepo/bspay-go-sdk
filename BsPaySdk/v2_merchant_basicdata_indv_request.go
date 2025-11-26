@@ -26,7 +26,7 @@ type V2MerchantBasicdataIndvRequest struct {
     ContactMobileNo string `json:"contact_mobile_no" structs:"contact_mobile_no"` // 负责人手机号
     ContactEmail string `json:"contact_email" structs:"contact_email"` // 负责人电子邮箱
     CardInfo string `json:"card_info" structs:"card_info"` // 结算卡信息配置
-    SettleCardFrontPic string `json:"settle_card_front_pic" structs:"settle_card_front_pic"` // 结算卡正面
+    SettleCardFrontPic string `json:"settle_card_front_pic" structs:"settle_card_front_pic"` // 银行卡卡号面
     MerIcp string `json:"mer_icp" structs:"mer_icp"` // 商户ICP备案编号商户ICP备案编号或网站许可证号；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：沪ICP备06046402号-28 &lt;/font&gt;&lt;br/&gt;类型为PC网站时，且为企业商户，且开通快捷或网银，或大额转账，或余额支付或分账业务（20%（不含）-100%），或为个人商户开通分账业务（10%（不含）-100%），必填
     StoreHeaderPic string `json:"store_header_pic" structs:"store_header_pic"` // 店铺门头照文件类型：F22；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;&lt;br/&gt;微信/支付宝实名认证个人商户，门头照也使用此字段； &lt;br/&gt;门店场所：提交门店门口照片，要求招牌清晰可见; &lt;br/&gt;小微商户流动经营/便民服务：提交经营/服务现场照片
     StoreIndoorPic string `json:"store_indoor_pic" structs:"store_indoor_pic"` // 店铺内景/工作区域照文件类型：F24；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;&lt;br/&gt;微信/支付宝实名认证个人商户，内景照也使用此字段； &lt;br/&gt;门店场所：提交店内环境照片 &lt;br/&gt;小微商户流动经营/便民服务：可提交另一张经营/服务现场照片

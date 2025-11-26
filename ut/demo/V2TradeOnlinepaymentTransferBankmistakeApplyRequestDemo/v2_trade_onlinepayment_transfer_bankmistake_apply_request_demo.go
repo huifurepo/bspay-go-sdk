@@ -29,9 +29,9 @@ func V2TradeOnlinepaymentTransferBankmistakeApplyRequestDemo() {
         TransAmt:"0.01",
         // 订单类型
         OrderType:"REFUND",
-        // 原请求流水号order_flag&#x3D;Y时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：2022012514120615009&lt;/font&gt;
+        // 原请求流水号当bank_mode&#x3D;BFJ，order_flag&#x3D;Y时，必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：2022012514120615009&lt;/font&gt;
         OrgReqSeqId:"202308312345678931",
-        // 原请求日期格式:yyyyMMdd；order_flag&#x3D;Y时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20220125&lt;/font&gt;
+        // 原请求日期当bank_mode&#x3D;BFJ，order_flag&#x3D;Y时，必填，格式:yyyyMMdd；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20220125&lt;/font&gt;
         OrgReqDate:"20230831",
         // 异步通知地址
         NotifyUrl:"http://www.baidu.com",
@@ -60,20 +60,24 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap := make(map[string]interface{})
     // 下单标识
     // extendInfoMap["order_flag"] = ""
+    // 银行模式
+    // extendInfoMap["bank_mode"] = ""
+    // 原汇款订单号
+    // extendInfoMap["org_remittance_order_id"] = ""
     // 备注
     extendInfoMap["remark"] = "大额支付补入账验证"
     // 银行信息数据
-    extendInfoMap["bank_info_data"] = getB60d3b633db64945Aa3d7e2d7d75114e()
+    extendInfoMap["bank_info_data"] = getCc3485bd801d49f7A19455ba65bbbee5()
     // 延时标记
     // extendInfoMap["delay_acct_flag"] = ""
     // 分账对象
-    // extendInfoMap["acct_split_bunch"] = getF5a7bd570f5b47e58d43Af05a3b46050()
+    // extendInfoMap["acct_split_bunch"] = get8343a18fF467422b9e9c3cb76615a2bd()
     // 实际打款信息
-    // extendInfoMap["actual_remit_data"] = getC9fbe6ceA66f4533A4e8716e37ca1292()
+    // extendInfoMap["actual_remit_data"] = get0e2f635866394677B0d5B3a21c33cd34()
     return extendInfoMap
 }
 
-func getB60d3b633db64945Aa3d7e2d7d75114e() string {
+func getCc3485bd801d49f7A19455ba65bbbee5() string {
     dto := make(map[string]interface{})
     // 银行编号
     dto["bank_code"] = "03080000"
@@ -84,7 +88,7 @@ func getB60d3b633db64945Aa3d7e2d7d75114e() string {
     return string(dtoByte)
 }
 
-func get7e4a26656c684722897041d65438a95a() interface{} {
+func get506c558490c1479fA9af45d48e357290() interface{} {
     dto := make(map[string]interface{})
     // 支付金额
     // dto["div_amt"] = ""
@@ -95,16 +99,16 @@ func get7e4a26656c684722897041d65438a95a() interface{} {
     return dtoList
 }
 
-func getF5a7bd570f5b47e58d43Af05a3b46050() string {
+func get8343a18fF467422b9e9c3cb76615a2bd() string {
     dto := make(map[string]interface{})
     // 分账信息列表
-    // dto["acct_infos"] = get7e4a26656c684722897041d65438a95a()
+    // dto["acct_infos"] = get506c558490c1479fA9af45d48e357290()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
-func getC9fbe6ceA66f4533A4e8716e37ca1292() string {
+func get0e2f635866394677B0d5B3a21c33cd34() string {
     dto := make(map[string]interface{})
     // 实际打款日期
     // dto["actual_remit_date"] = "test"

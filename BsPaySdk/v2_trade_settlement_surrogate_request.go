@@ -23,7 +23,6 @@ type V2TradeSettlementSurrogateRequest struct {
     BankCardNoCrypt string `json:"bank_card_no_crypt" structs:"bank_card_no_crypt"` // 银行账号密文
     CertificateNoCrypt string `json:"certificate_no_crypt" structs:"certificate_no_crypt"` // 证件号密文
     CertificateType string `json:"certificate_type" structs:"certificate_type"` // 证件类型对私必填，类型&lt;br/&gt;01：身份证&lt;br/&gt;03：护照（国内）&lt;br/&gt;09：外国人居留证&lt;br/&gt;15：港澳台居住证&lt;br/&gt;16：回乡证&lt;br/&gt;17：台胞证&lt;br/&gt;
-    MobileNoCrypt string `json:"mobile_no_crypt" structs:"mobile_no_crypt"` // 手机号密文
     IntoAcctDateType string `json:"into_acct_date_type" structs:"into_acct_date_type"` // 到账日期类型
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
