@@ -32,7 +32,7 @@ func V2FlexibleTradeRequestDemo() {
         // 支付金额
         OrdAmt:"20",
         // 分账对象
-        AcctSplitBunch:get5ff7863bFba14fd185823535ee0a9e52(),
+        AcctSplitBunch:get2cfe14563b14475eBbdfD9392f16df9d(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -63,7 +63,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func get875acdbcEff4424dBa4551dffa06d840() interface{} {
+func get82ee536eE9db4db2A5151412ac55ccc9() interface{} {
     dto := make(map[string]interface{})
     // 分账金额
     dto["div_amt"] = "20.00"
@@ -75,10 +75,10 @@ func get875acdbcEff4424dBa4551dffa06d840() interface{} {
     return dto;
 }
 
-func get5ff7863bFba14fd185823535ee0a9e52() string {
+func get2cfe14563b14475eBbdfD9392f16df9d() string {
     dto := make(map[string]interface{})
     // 分账明细
-    dto["acct_info"] = get875acdbcEff4424dBa4551dffa06d840()
+    dto["acct_info"] = get82ee536eE9db4db2A5151412ac55ccc9()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

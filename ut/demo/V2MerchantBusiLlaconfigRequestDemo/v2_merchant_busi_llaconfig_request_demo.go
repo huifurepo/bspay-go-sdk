@@ -28,13 +28,13 @@ func V2MerchantBusiLlaconfigRequestDemo() {
         // 所属渠道商
         UpperHuifuId:"6666000109812120",
         // 代运营配置json字符串，业务角色为AGENCY:代运营时必填
-        // LlaAgencyConfig:getEfde4fc4C2bc4b65Bb9aFa44c01e4e03(),
+        // LlaAgencyConfig:get15beffc28d39428cA44fC4cbd476b5c3(),
         // 商家配置json字符串，业务角色为MERCHANT:商家时必填
-        LlaMerchantConfig:getC8f0b784B86845ff95598724e11c009b(),
+        LlaMerchantConfig:getD955cca1Bb5248be8fab9e7b96593480(),
         // 纸质协议文件协议类型为纸质且业务角色不为空时必填，文件类型F633；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
         // PaperAgreementFile:"test",
         // 签约人信息json字符串，协议类型为电子时必填
-        SignUserInfo:getFb3598d168734104Bb0d164b578aab34(),
+        SignUserInfo:get152fc503351e411cBb1433ff7dd3a4c7(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -71,7 +71,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getEfde4fc4C2bc4b65Bb9aFa44c01e4e03() string {
+func get15beffc28d39428cA44fC4cbd476b5c3() string {
     dto := make(map[string]interface{})
     // 代运营配置开关
     // dto["switch_state"] = "test"
@@ -92,7 +92,7 @@ func getEfde4fc4C2bc4b65Bb9aFa44c01e4e03() string {
     return string(dtoByte)
 }
 
-func getAaee4569633d42ba879536a3ee7acdc4() interface{} {
+func getEcdf2f447bdd4595A23cF5e5b837b2cf() interface{} {
     dto := make(map[string]interface{})
     // 抖音来客配置开关
     dto["switch_state"] = "1"
@@ -114,25 +114,27 @@ func getAaee4569633d42ba879536a3ee7acdc4() interface{} {
     return dto;
 }
 
-func getC8f0b784B86845ff95598724e11c009b() string {
+func getD955cca1Bb5248be8fab9e7b96593480() string {
     dto := make(map[string]interface{})
     // 商家配置开关
     dto["switch_state"] = "1"
     // 最大代扣比例(0,100]区间的整数,商家配置开关为开时必填&lt;font color&#x3D;&quot;green&quot;&gt;示例值：50&lt;/font&gt;
     dto["max_withhold_percent"] = "50"
-    // 抖音来客配置json对象,商家配置开关为开时必填
-    dto["lla_dylk_config"] = getAaee4569633d42ba879536a3ee7acdc4()
+    // 抖音来客配置json对象,商家配置开关为开时,抖音来客配置和美团外卖配置不能都为空
+    dto["lla_dylk_config"] = getEcdf2f447bdd4595A23cF5e5b837b2cf()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
-func getFb3598d168734104Bb0d164b578aab34() string {
+func get152fc503351e411cBb1433ff7dd3a4c7() string {
     dto := make(map[string]interface{})
     // 签约人类型
     dto["type"] = "LEGAL"
     // 签约人手机号
     dto["mobile_no"] = "18611111111"
+    // 签约人邮箱
+    // dto["email"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

@@ -34,9 +34,9 @@ func V2LlaWithholdRefundRequestDemo() {
         // 退款金额
         TransAmt:"25.00",
         // 设备信息
-        TerminalDeviceData:get401cdbafBf0248b9Bd22Fc29c064ec90(),
+        TerminalDeviceData:get8f8248504c3e44a38d548e3e9babc215(),
         // 安全信息
-        RiskCheckData:get5f9a6c9a2f274b58B08b898a909edb95(),
+        RiskCheckData:get650b403b46084c5fAd0d014ac712ecc4(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -67,7 +67,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func get401cdbafBf0248b9Bd22Fc29c064ec90() string {
+func get8f8248504c3e44a38d548e3e9babc215() string {
     dto := make(map[string]interface{})
     // 交易设备类型
     dto["device_type"] = "4"
@@ -78,7 +78,7 @@ func get401cdbafBf0248b9Bd22Fc29c064ec90() string {
     return string(dtoByte)
 }
 
-func get5f9a6c9a2f274b58B08b898a909edb95() string {
+func get650b403b46084c5fAd0d014ac712ecc4() string {
     dto := make(map[string]interface{})
     // 经度
     // dto["longitude"] = ""

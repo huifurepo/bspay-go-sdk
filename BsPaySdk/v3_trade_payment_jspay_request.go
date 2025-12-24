@@ -1,5 +1,5 @@
 /**
- * 应用场景
+ * 聚合正扫
  *
  * @Author sdk-generator
  * @Description 汇付天下

@@ -30,16 +30,16 @@ func V2MerchantBusiEfpconfigRequestDemo() {
         // 支付手续费外扣汇付ID支付手续费外扣标记为1时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000109812123&lt;/font&gt;
         OutFeeHuifuid:"",
         // 全域资金开户使用的银行卡信息首次开通时必填 jsonObject格式
-        OutOrderAcctCard:get5b8384af41c949a087dc041b1f43e416(),
+        OutOrderAcctCard:getBbdf0aaaC9024de885de77f32236a24b(),
         // 全域资金开户手续费首次开通时必填 jsonObject格式
-        OutOrderAcctOpenFees:getD53d1c3c72614602A54aA3127ca006f4(),
+        OutOrderAcctOpenFees:getC8760c77B61f4112Acd1E66dcb97a14a(),
         // 业务模式acquiringMode:收单模式 switch_state为1时必填
         BusinessModel:"acquiringMode",
         // 银行类型switch_state有值时需填写； ht1-华通银行，xw0-XW银行，ss0-苏商银行；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：ht1&lt;/font&gt;
         OutFundsGateId:"xw0",
         // 签约人信息switch_state为1时必填 jsonObject格式
-        SignUserInfo:getB0c2d37e3c094da782d9E728d2d25a6d(),
-        // 入账来源开通全域资金时需填写；01:抖音 02:美团 03:快手 04:拼多多 05:小红书 06:淘宝/天猫/飞猪 07:微信视频号/微信小店 08:京东 09:饿了么 11:得物 12:唯品会 13:携程 14:支付宝直连 15:微信直连 16:滴滴加油 17:团油 18:通联 19:易宝 20:百度 21:顺丰22:希音 多个逗号分隔；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：01,02,05&lt;/font&gt;；
+        SignUserInfo:get1efc2b7747644a5cB28e12d9a749fb34(),
+        // 入账来源开通全域资金时需填写；01:抖音 02:美团 03:快手 04:拼多多 05:小红书 06:淘宝/天猫/飞猪 07:微信视频号/微信小店 08:京东 09:饿了么 11:得物 12:唯品会 13:携程 14:支付宝直连 15:微信直连 16:滴滴加油 17:团油 18:通联 19:易宝 20:百度 21:顺丰22:希音23:高德 多个逗号分隔；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：01,02,05&lt;/font&gt;；
         AcctSource:"01",
         // 抖音合作证明材料入账来源包含01:抖音时必填 文件类型F535；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
         // DyCooperationProvePic:"test",
@@ -87,6 +87,8 @@ func V2MerchantBusiEfpconfigRequestDemo() {
         // SfCooperationProvePic:"test",
         // 希音合作证明材料入账来源包含22:希音时必填 文件类型F619；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
         // XyCooperationProvePic:"test",
+        // 高德合作证明材料入账来源包含23:高德时必填 文件类型F615；详见[文件类型说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_wjlx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+        // GdCooperationProvePic:"test",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -133,7 +135,7 @@ func getExtendInfos() map[string]interface{} {
     // 申请单日限额
     extendInfoMap["pay_every_day"] = ""
     // 全域资金分账规则
-    // extendInfoMap["efp_spb_config"] = getE51a678c64564cdaA4906cdce29b00db()
+    // extendInfoMap["efp_spb_config"] = getB407724e0e4644e08d520fcdd7932d21()
     // 客户ip地址
     // extendInfoMap["ip_address"] = ""
     // 是否线上场景
@@ -149,9 +151,9 @@ func getExtendInfos() map[string]interface{} {
     // 协议类型
     // extendInfoMap["agreement_type"] = ""
     // 全域资金取现手续费配置
-    // extendInfoMap["efp_encash_fee_config"] = get675abd59Bc414653870397ac8658856a()
+    // extendInfoMap["efp_encash_fee_config"] = getC51d3b223ba942a4A1e47deab78dc490()
     // 全域资金付款手续费配置
-    // extendInfoMap["efp_payment_fee_config"] = get6674d93b18814bcc858f0f1e23cb758e()
+    // extendInfoMap["efp_payment_fee_config"] = get8a168bac8d3b46078ad91c6c29da43e1()
     // 纸质协议开始日期
     // extendInfoMap["agree_begin_date"] = ""
     // 纸质协议结束日期
@@ -165,11 +167,11 @@ func getExtendInfos() map[string]interface{} {
     // 经营信息材料
     // extendInfoMap["management_file"] = ""
     // 全域资金分账手续费配置
-    // extendInfoMap["efp_spb_fee_config"] = get9ec48f90E352499a9addA378f6846dcd()
+    // extendInfoMap["efp_spb_fee_config"] = getC1edd560Bc6a4488998dAcedd6da2f89()
     return extendInfoMap
 }
 
-func get5b8384af41c949a087dc041b1f43e416() string {
+func getBbdf0aaaC9024de885de77f32236a24b() string {
     dto := make(map[string]interface{})
     // 结算账户名
     dto["card_name"] = "圆务铁白事"
@@ -206,7 +208,7 @@ func get5b8384af41c949a087dc041b1f43e416() string {
     return string(dtoByte)
 }
 
-func getD53d1c3c72614602A54aA3127ca006f4() string {
+func getC8760c77B61f4112Acd1E66dcb97a14a() string {
     dto := make(map[string]interface{})
     // 开户固定手续费(元)
     dto["fee_fix_amt"] = "0"
@@ -219,7 +221,7 @@ func getD53d1c3c72614602A54aA3127ca006f4() string {
     return string(dtoByte)
 }
 
-func getB0c2d37e3c094da782d9E728d2d25a6d() string {
+func get1efc2b7747644a5cB28e12d9a749fb34() string {
     dto := make(map[string]interface{})
     // 签约人类型
     dto["type"] = "LEGAL"
@@ -229,12 +231,14 @@ func getB0c2d37e3c094da782d9E728d2d25a6d() string {
     // dto["name"] = "test"
     // 签约人身份证签约人类型为OTHER时必填 &lt;font color&#x3D;&quot;green&quot;&gt;示例值：321012313213222133&lt;/font&gt;
     // dto["cert_no"] = "test"
+    // 签约人邮箱
+    // dto["email"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
-func getBb6718bbAd03446bB717002c3721ae4e() string {
+func getEbe7a585672047a8B0f392fec60c44a0() string {
     dto := make(map[string]interface{})
     // 分账接收方汇付ID
     // dto["huifu_id"] = "test"
@@ -248,7 +252,7 @@ func getBb6718bbAd03446bB717002c3721ae4e() string {
     return string(dtoByte)
 }
 
-func getE51a678c64564cdaA4906cdce29b00db() string {
+func getB407724e0e4644e08d520fcdd7932d21() string {
     dto := make(map[string]interface{})
     // 分账规则来源
     // dto["rule_origin"] = "test"
@@ -261,13 +265,13 @@ func getE51a678c64564cdaA4906cdce29b00db() string {
     // 全域资金分账手续费外扣账户类型交易手续费外扣标记为1时必填 01-基本户05-充值户 09-营销户；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：01&lt;/font&gt;；
     // dto["out_fee_acct_type"] = "test"
     // 分账规则明细规则来源为01时必填 jsonArray格式 最多7条
-    // dto["rule_detail"] = getBb6718bbAd03446bB717002c3721ae4e()
+    // dto["rule_detail"] = getEbe7a585672047a8B0f392fec60c44a0()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
-func get675abd59Bc414653870397ac8658856a() string {
+func getC51d3b223ba942a4A1e47deab78dc490() string {
     dto := make(map[string]interface{})
     // 全域资金取现手续费百分比
     // dto["fee_rate"] = "test"
@@ -286,7 +290,7 @@ func get675abd59Bc414653870397ac8658856a() string {
     return string(dtoByte)
 }
 
-func get6674d93b18814bcc858f0f1e23cb758e() string {
+func get8a168bac8d3b46078ad91c6c29da43e1() string {
     dto := make(map[string]interface{})
     // 全域资金付款手续费百分比
     // dto["fee_rate"] = "test"
@@ -305,7 +309,7 @@ func get6674d93b18814bcc858f0f1e23cb758e() string {
     return string(dtoByte)
 }
 
-func get9ec48f90E352499a9addA378f6846dcd() string {
+func getC1edd560Bc6a4488998dAcedd6da2f89() string {
     dto := make(map[string]interface{})
     // 全域资金分账配置开关
     // dto["switch_state"] = "test"

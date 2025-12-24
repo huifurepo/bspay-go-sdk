@@ -1,10 +1,10 @@
 /**
- * 取现 - 示例
+ * 账单数据短信通知 - 示例
  *
  * @Author sdk-generator
  * @Description 汇付天下
  */
-package V2TradeSettlementEncashmentRequestDemo
+package V3BillpayOrderBatchSmsRequestDemo
 
 import (
     "encoding/json"
@@ -13,24 +13,20 @@ import (
 	"github.com/huifurepo/bspay-go-sdk/ut/tool"
 )
 
-func V2TradeSettlementEncashmentRequestDemo() {
+func V3BillpayOrderBatchSmsRequestDemo() {
     // 1. 数据初始化
 	dgSDK, _ := BsPaySdk.NewBsPay(true, "./config/config.json")
 
     // 2.组装请求参数
-    dgReq := BsPaySdk.V2TradeSettlementEncashmentRequest{
-        // 请求日期
-        ReqDate:tool.GetCurrentDate(),
+    dgReq := BsPaySdk.V3BillpayOrderBatchSmsRequest{
         // 请求流水号
         ReqSeqId:tool.GetReqSeqId(),
-        // 取现金额
-        CashAmt:"0.01",
-        // 取现方ID号
-        HuifuId:"6666000021291985",
-        // 到账日期类型
-        IntoAcctDateType:"T0",
-        // 取现卡序列号
-        TokenNo:"10004053462",
+        // 请求时间
+        ReqDate:tool.GetCurrentDate(),
+        // 商户号
+        HuifuId:"6666000107755175",
+        // 账单编号
+        BillNo:"BN2025102780101834",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -40,7 +36,7 @@ func V2TradeSettlementEncashmentRequestDemo() {
     fmt.Println("请求数据:", string(respStr))
 
     // 3. 发起API调用
-    resp, err := dgSDK.V2TradeSettlementEncashmentRequest(dgReq)
+    resp, err := dgSDK.V3BillpayOrderBatchSmsRequest(dgReq)
   	if err != nil {
 		fmt.Println("请求异常:", err)
 	}
@@ -54,16 +50,6 @@ func V2TradeSettlementEncashmentRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
-    // 账户号
-    // extendInfoMap["acct_id"] = ""
-    // 取现渠道
-    extendInfoMap["enchashment_channel"] = "00"
-    // 中信e账通手续费承担方
-    // extendInfoMap["fee_type"] = ""
-    // 备注
-    // extendInfoMap["remark"] = ""
-    // 异步通知地址
-    extendInfoMap["notify_url"] = "http://www.gangcai.com"
     return extendInfoMap
 }
 

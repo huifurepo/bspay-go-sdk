@@ -38,7 +38,7 @@ type V2FlexibleEntRequest struct {
     ContactEmail string `json:"contact_email" structs:"contact_email"` // 联系人电子邮箱
     LoginName string `json:"login_name" structs:"login_name"` // 管理员账号
     CardInfo string `json:"card_info" structs:"card_info"` // 银行卡信息配置
-    SignUserInfo string `json:"sign_user_info" structs:"sign_user_info"` // 签约人
+    SignUserInfo string `json:"sign_user_info" structs:"sign_user_info"` // 签约人jsonObject格式；协议类型&#x3D;电子合同时，必填；
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }
