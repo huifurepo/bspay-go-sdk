@@ -30,11 +30,11 @@ func V2TradeHostingPaymentHtrefundRequestDemo() {
         // 原交易请求日期
         OrgReqDate:"20240229",
         // 安全信息线上交易退款必填，参见线上退款接口；jsonObject字符串
-        RiskCheckData:get195595a868964f2bB023E9566fcd0297(),
+        RiskCheckData:get062a3a29990c4c65Ba27F5e7e44ad959(),
         // 设备信息线上交易退款必填，参见线上退款接口；jsonObject字符串
-        TerminalDeviceData:get8d8843c250f94e9b80a253d37ec6f80a(),
+        TerminalDeviceData:get45dd2bc3914b4494B9778347817905cb(),
         // 大额转账支付账户信息数据jsonObject格式；银行大额转账支付交易退款申请时必填
-        // BankInfoData:getAa3a4591240343e2Bad5D6a0764f06dc(),
+        // BankInfoData:getBaef9718F002418eB6cd783789b24044(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -65,7 +65,7 @@ func getExtendInfos() map[string]interface{} {
     // 原交易请求流水号
     extendInfoMap["org_req_seq_id"] = "202207099803123123199941"
     // 分账对象
-    extendInfoMap["acct_split_bunch"] = get4a68d378Cb6e41dfA9405a589b476160()
+    extendInfoMap["acct_split_bunch"] = get9fb20b0c028c43e29a9e05180b3fe3d9()
     // 备注
     // extendInfoMap["remark"] = ""
     // 异步通知地址
@@ -73,7 +73,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func get33a52525B1614d3bBc18Ff7d935b2bca() interface{} {
+func getD6950095Dd8c4fe194d2Afcb74dfeef2() interface{} {
     dto := make(map[string]interface{})
     // 分账金额
     dto["div_amt"] = "0.12"
@@ -84,16 +84,16 @@ func get33a52525B1614d3bBc18Ff7d935b2bca() interface{} {
     return dtoList
 }
 
-func get4a68d378Cb6e41dfA9405a589b476160() string {
+func get9fb20b0c028c43e29a9e05180b3fe3d9() string {
     dto := make(map[string]interface{})
     // 分账明细
-    dto["acct_infos"] = get33a52525B1614d3bBc18Ff7d935b2bca()
+    dto["acct_infos"] = getD6950095Dd8c4fe194d2Afcb74dfeef2()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
-func get195595a868964f2bB023E9566fcd0297() string {
+func get062a3a29990c4c65Ba27F5e7e44ad959() string {
     dto := make(map[string]interface{})
     // ip地址
     // dto["ip_addr"] = ""
@@ -108,7 +108,7 @@ func get195595a868964f2bB023E9566fcd0297() string {
     return string(dtoByte)
 }
 
-func get8d8843c250f94e9b80a253d37ec6f80a() string {
+func get45dd2bc3914b4494B9778347817905cb() string {
     dto := make(map[string]interface{})
     // 设备类型
     dto["device_type"] = "4"
@@ -131,7 +131,7 @@ func get8d8843c250f94e9b80a253d37ec6f80a() string {
     return string(dtoByte)
 }
 
-func getAa3a4591240343e2Bad5D6a0764f06dc() string {
+func getBaef9718F002418eB6cd783789b24044() string {
     dto := make(map[string]interface{})
     // 省份付款方为对公账户时必填，参见省市地区码；示例值：0013
     // dto["province"] = "test"

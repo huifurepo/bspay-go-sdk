@@ -32,7 +32,7 @@ func V2TradePreauthRequestDemo() {
         // 支付授权码
         AuthCode:"280426995846228615",
         // 安全信息
-        RiskCheckData:get88a48f6c221e4ff5B8006bf8874c4dd3(),
+        RiskCheckData:get072323b577db489aAbe28a984765c755(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -71,9 +71,9 @@ func getExtendInfos() map[string]interface{} {
     // 传入分帐遇到优惠的处理规则
     extendInfoMap["term_div_coupon_type"] = "1"
     // 支付宝扩展参数集合
-    extendInfoMap["alipay_data"] = get386c6c5f282c46f1A7232adc003f8634()
+    extendInfoMap["alipay_data"] = get527f42f43fb44cd989bfEb5777724789()
     // 微信扩展参数集合
-    extendInfoMap["wx_data"] = get7dd691ab53b04a40Bc4085a152d039a5()
+    extendInfoMap["wx_data"] = get4a37db47Bac14ea8Bae74044392e4787()
     // 商户扩展域
     extendInfoMap["mer_priv"] = "{\"callType\":\"01\",\"lc\":\"12345678901234567890123456789012123\",\"softVersion\":\"6.5.3\"}"
     // 备注
@@ -87,7 +87,7 @@ func getExtendInfos() map[string]interface{} {
     // 输入密码提示
     // extendInfoMap["password_trade"] = ""
     // 设备信息
-    extendInfoMap["terminal_device_data"] = get99f5455594464feeAa6a9f39230613f8()
+    extendInfoMap["terminal_device_data"] = get3b9ac7662b374e8fA3c2Ae7552e65384()
     // 异步通知地址
     extendInfoMap["notify_url"] = "http://www.baidu.com"
     // 账户号
@@ -95,7 +95,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getFc5a9d0c6088469684325146af94fd15() interface{} {
+func get59cefc6c4a8f4876Ab3f6e88cdf0adfb() interface{} {
     dto := make(map[string]interface{})
     // 卡类型
     dto["card_type"] = ""
@@ -113,7 +113,7 @@ func getFc5a9d0c6088469684325146af94fd15() interface{} {
     return dto;
 }
 
-func get334aa3af21e2449b9ef567aef6e832f3() interface{} {
+func getEa61a181Bca240f2Ab1f6c561575b036() interface{} {
     dto := make(map[string]interface{})
     // 商品的编号
     dto["goods_id"] = "12345678901234567890123456789012"
@@ -136,14 +136,14 @@ func get334aa3af21e2449b9ef567aef6e832f3() interface{} {
     return dtoList
 }
 
-func get386c6c5f282c46f1A7232adc003f8634() string {
+func get527f42f43fb44cd989bfEb5777724789() string {
     dto := make(map[string]interface{})
     // 支付宝的店铺编号
     dto["alipay_store_id"] = ""
     // 业务扩展参数
-    dto["extend_params"] = getFc5a9d0c6088469684325146af94fd15()
+    dto["extend_params"] = get59cefc6c4a8f4876Ab3f6e88cdf0adfb()
     // 订单包含的商品列表信息
-    dto["goods_detail"] = get334aa3af21e2449b9ef567aef6e832f3()
+    dto["goods_detail"] = getEa61a181Bca240f2Ab1f6c561575b036()
     // 商户操作员编号
     dto["operator_id"] = "1234567890123456789012345678"
     // 商户门店编号
@@ -153,7 +153,7 @@ func get386c6c5f282c46f1A7232adc003f8634() string {
     return string(dtoByte)
 }
 
-func get1475c6ac101f41fcBb3e7240e5b8b639() interface{} {
+func getA8112ffd77934b62A480767186e116fa() interface{} {
     dto := make(map[string]interface{})
     // 商品编码
     dto["goods_id"] = "1232131"
@@ -170,10 +170,10 @@ func get1475c6ac101f41fcBb3e7240e5b8b639() interface{} {
     return dtoList
 }
 
-func get0a4d393026664aa68b07Be0921a28479() interface{} {
+func getCee31279C17b4ef7Acb9Ce293b3b9964() interface{} {
     dto := make(map[string]interface{})
     // 单品列表
-    dto["goods_detail"] = get1475c6ac101f41fcBb3e7240e5b8b639()
+    dto["goods_detail"] = getA8112ffd77934b62A480767186e116fa()
     // 订单原价
     dto["cost_price"] = "1"
     // 商品小票ID
@@ -182,7 +182,7 @@ func get0a4d393026664aa68b07Be0921a28479() interface{} {
     return dto;
 }
 
-func get77b20125Baf94a3dA333C5fdeb7033d0() interface{} {
+func get6e575e922d3e4ff9990aAbca0b4738d5() interface{} {
     dto := make(map[string]interface{})
     // 门店详细地址
     dto["address"] = "汇付天下桂林路"
@@ -196,26 +196,26 @@ func get77b20125Baf94a3dA333C5fdeb7033d0() interface{} {
     return dto;
 }
 
-func get3f7b8679D63e470a90c9F1bda7adaa66() interface{} {
+func getF69c5b2e6abd46a1A1be16c464fd79ce() interface{} {
     dto := make(map[string]interface{})
     // 门店信息
-    dto["store_info"] = get77b20125Baf94a3dA333C5fdeb7033d0()
+    dto["store_info"] = get6e575e922d3e4ff9990aAbca0b4738d5()
 
     return dto;
 }
 
-func get7dd691ab53b04a40Bc4085a152d039a5() string {
+func get4a37db47Bac14ea8Bae74044392e4787() string {
     dto := make(map[string]interface{})
     // 附加数据
     dto["attach"] = ""
     // 商品详情
-    dto["detail"] = get0a4d393026664aa68b07Be0921a28479()
+    dto["detail"] = getCee31279C17b4ef7Acb9Ce293b3b9964()
     // 设备号
     dto["device_info"] = ""
     // 订单优惠标记
     dto["goods_tag"] = "12321312"
     // 场景信息
-    dto["scene_info"] = get3f7b8679D63e470a90c9F1bda7adaa66()
+    dto["scene_info"] = getF69c5b2e6abd46a1A1be16c464fd79ce()
     // 子商户公众账号ID
     dto["sub_appid"] = "wx48abf94e085e98e1"
 
@@ -223,7 +223,7 @@ func get7dd691ab53b04a40Bc4085a152d039a5() string {
     return string(dtoByte)
 }
 
-func get88a48f6c221e4ff5B8006bf8874c4dd3() string {
+func get072323b577db489aAbe28a984765c755() string {
     dto := make(map[string]interface{})
     // 基站地址
     dto["base_station"] = "192.168.1.1"
@@ -238,7 +238,7 @@ func get88a48f6c221e4ff5B8006bf8874c4dd3() string {
     return string(dtoByte)
 }
 
-func get99f5455594464feeAa6a9f39230613f8() string {
+func get3b9ac7662b374e8fA3c2Ae7552e65384() string {
     dto := make(map[string]interface{})
     // 商户终端版本号
     dto["app_version"] = ""

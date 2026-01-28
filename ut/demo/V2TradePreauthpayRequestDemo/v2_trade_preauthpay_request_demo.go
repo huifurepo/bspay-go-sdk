@@ -32,7 +32,7 @@ func V2TradePreauthpayRequestDemo() {
         // 商品描述
         GoodsDesc:"1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567",
         // 安全信息
-        RiskCheckData:get4144db46B82147ec88aeE3e50491fe02(),
+        RiskCheckData:get82649f29E7ed468bB63dCac763d0c52e(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -73,13 +73,13 @@ func getExtendInfos() map[string]interface{} {
     // 扩展域
     // extendInfoMap["mer_priv"] = ""
     // 设备信息
-    extendInfoMap["terminal_device_data"] = get4a4f4c37D30a405fB03aB630cd659632()
+    extendInfoMap["terminal_device_data"] = get4c12547917694abaBa1cBb866c7d5361()
     // 异步通知地址
     extendInfoMap["notify_url"] = "http://www.baidu.com"
     return extendInfoMap
 }
 
-func get4144db46B82147ec88aeE3e50491fe02() string {
+func get82649f29E7ed468bB63dCac763d0c52e() string {
     dto := make(map[string]interface{})
     // 基站地址
     dto["base_station"] = "192.168.1.1"
@@ -94,7 +94,7 @@ func get4144db46B82147ec88aeE3e50491fe02() string {
     return string(dtoByte)
 }
 
-func get4a4f4c37D30a405fB03aB630cd659632() string {
+func get4c12547917694abaBa1cBb866c7d5361() string {
     dto := make(map[string]interface{})
     // 商户终端序列号
     dto["app_version"] = ""

@@ -15,6 +15,11 @@ const BASE_API_TEST_URL_V2 = "https://spin-test.cloudpnr.com"
 // 以下为接口uri
 
 /**
+ * 拆单支付订单查询
+ */
+const V2_TRADE_HOSTING_PAYMENT_SPLITPAY_QUERY = "/v2/trade/hosting/payment/splitpay/query"
+
+/**
  * 账单数据状态变更
  */
 const V3_BILLPAY_ORDER_CHANGESTAT = "/v3/billpay/order/changeStat"
@@ -305,7 +310,7 @@ const V3_TRADE_PAYMENT_SCANPAY_REFUNDQUERY = "/v3/trade/payment/scanpay/refundqu
 const V3_TRADE_PAYMENT_SCANPAY_QUERY = "/v3/trade/payment/scanpay/query"
 
 /**
- * 聚合正扫
+ * 应用场景
  */
 const V3_TRADE_PAYMENT_JSPAY = "/v3/trade/payment/jspay"
 

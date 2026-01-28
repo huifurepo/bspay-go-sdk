@@ -11,6 +11,7 @@ import "encoding/json"
 type V2HycContractQueryRequest struct {
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
+    ContractId string `json:"contract_id" structs:"contract_id"` // 合同编号
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }
