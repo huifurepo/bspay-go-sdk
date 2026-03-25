@@ -13,7 +13,7 @@ type V2FlexibleTradeRequest struct {
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
     OutHuifuId string `json:"out_huifu_id" structs:"out_huifu_id"` // 出款方商户号
     StageOperationType string `json:"stage_operation_type" structs:"stage_operation_type"` // 交易阶段操作类型
-    PhaseHfSeqId string `json:"phase_hf_seq_id" structs:"phase_hf_seq_id"` // 前段交易流水号** 当交易阶段操作类型为02时，该字段必填。填写的是交易阶段操作类型为01时交易已完成的交易全局流水号。 &lt;font color&#x3D;&quot;green&quot;&gt;示例值：20250620112533115566896&lt;/font&gt;
+    PhaseHfSeqId string `json:"phase_hf_seq_id" structs:"phase_hf_seq_id"` // 前段交易流水号当交易阶段操作类型为02时，该字段必填。填写的是交易阶段操作类型为01时交易已完成的交易全局流水号。 &lt;font color&#x3D;&quot;green&quot;&gt;示例值：20250620112533115566896&lt;/font&gt;
     OrdAmt string `json:"ord_amt" structs:"ord_amt"` // 支付金额
     AcctSplitBunch string `json:"acct_split_bunch" structs:"acct_split_bunch"` // 分账对象
 

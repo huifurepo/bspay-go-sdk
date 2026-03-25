@@ -37,7 +37,7 @@ func V2UserBasicdataIndvRequestDemo() {
         // CertNationality:"test",
         // 手机号
         MobileNo:"13764462205",
-        // 地址开通中信E管家必填
+        // 地址开通中信E管家必填；开通电子回单必填
         // Address:"test",
     }
     // 设置非必填字段
@@ -73,7 +73,7 @@ func getExtendInfos() map[string]interface{} {
     // 拓展方字段
     extendInfoMap["expand_id"] = ""
     // 文件列表
-    extendInfoMap["file_list"] = getDb2bd6a770dd4fbc80f23305842efb38()
+    extendInfoMap["file_list"] = get5f0a1885Bba7488a89ad02827ab6eb69()
     // 所属行业
     // extendInfoMap["mcc"] = ""
     // 省
@@ -85,7 +85,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getDb2bd6a770dd4fbc80f23305842efb38() string {
+func get5f0a1885Bba7488a89ad02827ab6eb69() string {
     dto := make(map[string]interface{})
     // 文件类型
     dto["file_type"] = "F04"

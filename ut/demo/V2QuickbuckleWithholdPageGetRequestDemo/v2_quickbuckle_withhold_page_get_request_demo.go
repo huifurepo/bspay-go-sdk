@@ -63,15 +63,17 @@ func getExtendInfos() map[string]interface{} {
     // 异步通知地址
     extendInfoMap["notify_url"] = "https://api.huifu.com"
     // 设备信息域
-    extendInfoMap["trx_device_info"] = get3cdad4d518854dd2Bf7f01c72ccc95e0()
+    extendInfoMap["trx_device_info"] = getDda298ab4e7d44b09aaa74fc71081ab1()
     // 风控信息
-    extendInfoMap["risk_info"] = getB0c9212aAf3346629c9aB1f11b8075e2()
+    extendInfoMap["risk_info"] = get15634bc4444549ae9bf8958a4f58e303()
     // 代扣绑卡类型
     // extendInfoMap["binding_card_type"] = ""
+    // 绑卡方式
+    // extendInfoMap["bind_card_method"] = ""
     return extendInfoMap
 }
 
-func get3cdad4d518854dd2Bf7f01c72ccc95e0() interface{} {
+func getDda298ab4e7d44b09aaa74fc71081ab1() interface{} {
     dto := make(map[string]interface{})
     // 银行预留手机号
     dto["trx_mobile_num"] = "13428722321"
@@ -95,7 +97,7 @@ func get3cdad4d518854dd2Bf7f01c72ccc95e0() interface{} {
     return dto;
 }
 
-func getB0c9212aAf3346629c9aB1f11b8075e2() interface{} {
+func get15634bc4444549ae9bf8958a4f58e303() interface{} {
     dto := make(map[string]interface{})
     // IP类型
     dto["ip_type"] = "04"

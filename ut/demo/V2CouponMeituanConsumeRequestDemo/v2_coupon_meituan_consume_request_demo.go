@@ -28,7 +28,7 @@ func V2CouponMeituanConsumeRequestDemo() {
         // 门店绑定流水号
         BindId:"9c2d91f68ba045a998df46ffe395a9ca",
         // 核销券
-        ReceiptCodeInfos:get68087d8eDdd149ef940aF4ddd4dffe4c(),
+        ReceiptCodeInfos:get05c912cb3ba647c6BafeD05d61cb0591(),
         // 登录账号
         AppShopAccount:"123",
         // 登录用户名
@@ -65,7 +65,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func get68087d8eDdd149ef940aF4ddd4dffe4c() string {
+func get05c912cb3ba647c6BafeD05d61cb0591() string {
     dto := make(map[string]interface{})
     // 券码
     dto["receipt_code"] = "5729740654"

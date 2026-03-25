@@ -1,4 +1,4 @@
 */.gitignore
-
+.idea/
 go.sum
 **/*.exe

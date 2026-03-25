@@ -28,9 +28,9 @@ func V2TradeOnlinepaymentRefundRequestDemo() {
         // 退款金额
         OrdAmt:"0.01",
         // 设备信息条件必填，当为银行大额支付时可不填，jsonObject格式
-        TerminalDeviceData:get35d4a53eD6c1411a9ced250654fb32bc(),
+        TerminalDeviceData:get75ed576a25334009B39c9a32ba35a82c(),
         // 安全信息条件必填，当为银行大额支付时可不填，jsonObject格式
-        RiskCheckData:getF25a2614657744d4Bc59741b0034991d(),
+        RiskCheckData:getE9afd6ee9b9d4d3792ecD7fece10e129(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -61,19 +61,25 @@ func getExtendInfos() map[string]interface{} {
     // 原交易请求流水号
     extendInfoMap["org_req_seq_id"] = "295700155481522176"
     // 分账对象
-    // extendInfoMap["acct_split_bunch"] = getB2063bd6B0444da8A946Df04df4862fd()
+    // extendInfoMap["acct_split_bunch"] = getAdb4ca3e488f4d15Bce4257e00e08036()
     // 备注
     // extendInfoMap["remark"] = ""
     // 异步通知地址
     extendInfoMap["notify_url"] = "http://www.baidu.com"
     // 补贴支付信息
-    // extendInfoMap["combinedpay_data"] = getF6ac280047d84b54Af3cFc21f6942cf0()
+    // extendInfoMap["combinedpay_data"] = get270ca5b037324d64B30165369e52c256()
     // 大额转账支付账户信息数据
-    // extendInfoMap["bank_info_data"] = get289bf626B24d46cdA273Fdaa77310b55()
+    // extendInfoMap["bank_info_data"] = getF6a68fdf9cbc4bc3Ba31B8362ac62484()
+    // 是否垫资
+    // extendInfoMap["loan_flag"] = ""
+    // 垫资承担者
+    // extendInfoMap["loan_undertaker"] = ""
+    // 垫资账户类型
+    // extendInfoMap["loan_acct_type"] = ""
     return extendInfoMap
 }
 
-func get1e71bbb43d3d4de7A4a590b7e2ca4d2c() interface{} {
+func get089d1506323646b3Be73F47b7c92e50e() interface{} {
     dto := make(map[string]interface{})
     // 商户号
     // dto["huifu_id"] = "test"
@@ -81,21 +87,23 @@ func get1e71bbb43d3d4de7A4a590b7e2ca4d2c() interface{} {
     // dto["div_amt"] = ""
     // 账户号
     // dto["acct_id"] = ""
+    // 垫资金额
+    // dto["part_loan_amt"] = ""
 
     dtoList := [1]interface{}{dto}
     return dtoList
 }
 
-func getB2063bd6B0444da8A946Df04df4862fd() string {
+func getAdb4ca3e488f4d15Bce4257e00e08036() string {
     dto := make(map[string]interface{})
     // 分账信息列表
-    // dto["acct_infos"] = get1e71bbb43d3d4de7A4a590b7e2ca4d2c()
+    // dto["acct_infos"] = get089d1506323646b3Be73F47b7c92e50e()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
-func get35d4a53eD6c1411a9ced250654fb32bc() string {
+func get75ed576a25334009B39c9a32ba35a82c() string {
     dto := make(map[string]interface{})
     // 交易设备ip
     dto["device_ip"] = "172.31.31.145"
@@ -120,7 +128,7 @@ func get35d4a53eD6c1411a9ced250654fb32bc() string {
     return string(dtoByte)
 }
 
-func getF25a2614657744d4Bc59741b0034991d() string {
+func getE9afd6ee9b9d4d3792ecD7fece10e129() string {
     dto := make(map[string]interface{})
     // 经度
     // dto["longitude"] = "test"
@@ -135,7 +143,7 @@ func getF25a2614657744d4Bc59741b0034991d() string {
     return string(dtoByte)
 }
 
-func getF6ac280047d84b54Af3cFc21f6942cf0() string {
+func get270ca5b037324d64B30165369e52c256() string {
     dto := make(map[string]interface{})
     // 补贴方汇付编号
     // dto["huifu_id"] = "test"
@@ -151,10 +159,16 @@ func getF6ac280047d84b54Af3cFc21f6942cf0() string {
     return string(dtoByte)
 }
 
-func get289bf626B24d46cdA273Fdaa77310b55() string {
+func getF6a68fdf9cbc4bc3Ba31B8362ac62484() string {
     dto := make(map[string]interface{})
+    // 省份
+    // dto["province"] = ""
+    // 地区
+    // dto["area"] = ""
     // 银行编号
     // dto["bank_code"] = ""
+    // 联行号
+    // dto["correspondent_code"] = ""
     // 付款方账户类型
     // dto["card_acct_type"] = ""
 

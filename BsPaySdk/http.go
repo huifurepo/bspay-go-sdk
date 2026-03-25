@@ -156,11 +156,27 @@ func HandleResponse(resp *http.Response, msc *MerchSysConfig, needVerfySign bool
 	}
 
 	// 验签
-	contentString, _ := FormatSignSrcText(respDataMap["data"].(map[string]interface{}))
-	sign, _ := RsaSignVerify(respDataMap["sign"].(string), contentString, msc)
-	if !sign {
-		BspayPrintln("check signature error")
-		return nil, errors.New("check signature error")
+	// contentString, _ := FormatSignSrcText(respDataMap["data"].(map[string]interface{}))
+	// sign, _ := RsaSignVerify(respDataMap["sign"].(string), contentString, msc)
+	// if !sign {
+	// 	BspayPrintln("check signature error")
+	// 	return nil, errors.New("check signature error")
+	// }
+	//重构验签，修复特殊场景下的验签问题
+	var rawMap map[string]json.RawMessage
+	if err := json.Unmarshal(body, &rawMap); err == nil {
+		if rawData, ok := rawMap["data"]; ok {
+			contentString := string(rawData)
+			// 处理特殊字符转义（和之前逻辑一致）
+			contentString = strings.ReplaceAll(contentString, "\\u003c", "<")
+			contentString = strings.ReplaceAll(contentString, "\\u003e", ">")
+			contentString = strings.ReplaceAll(contentString, "\\u0026", "&")
+			sign, _ := RsaSignVerify(respDataMap["sign"].(string), contentString, msc)
+			if !sign {
+				BspayPrintln("check signature error")
+				return nil, errors.New("check signature error")
+			}
+		}
 	}
 
 	return respDataMap, nil

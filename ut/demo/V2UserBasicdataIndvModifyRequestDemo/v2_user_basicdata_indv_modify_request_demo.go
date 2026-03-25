@@ -59,7 +59,7 @@ func getExtendInfos() map[string]interface{} {
     // 手机号
     extendInfoMap["mobile_no"] = "15556622000"
     // 文件列表
-    // extendInfoMap["file_list"] = getB751a3d0C54d4718808cFd8fbde4bf08()
+    // extendInfoMap["file_list"] = getC86296f592884b19A7f0B93a9dcb9ebd()
     // 地址
     // extendInfoMap["address"] = ""
     // 所属行业
@@ -73,7 +73,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getB751a3d0C54d4718808cFd8fbde4bf08() string {
+func getC86296f592884b19A7f0B93a9dcb9ebd() string {
     dto := make(map[string]interface{})
     // 文件类型
     // dto["file_type"] = "test"

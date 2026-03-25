@@ -28,7 +28,7 @@ func V2MerchantBasicdataModifyRequestDemo() {
         // 汇付客户Id
         HuifuId:"6666000107932702",
         // 签约人jsonObject格式；agreement_info中选择电子签约时必填；个人商户填本人信息。
-        // SignUserInfo:get7b55b7d7391d43908eed85e6b73af3fd(),
+        // SignUserInfo:getF93356fa50804a7089af566ba56a3dc4(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -112,32 +112,32 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["district_id"] = "310105"
     // 经营详细地址
     extendInfoMap["detail_addr"] = "徐州市徐汇区宜山路7497号"
-    // 联系人姓名
+    // 管理员姓名
     extendInfoMap["contact_name"] = "我是联系人"
-    // 联系人电子邮箱
+    // 管理员电子邮箱
     extendInfoMap["contact_email"] = "mei.zhang@huifu.com"
     // 客服电话
     extendInfoMap["service_phone"] = "15556622368"
     // 小票名称
     extendInfoMap["receipt_name"] = "小票上的名称"
     // *结算卡信息配置*
-    extendInfoMap["card_info"] = get7b629edd5720480eA2d1527ccceead1a()
+    extendInfoMap["card_info"] = get9754f69361594d7cA7183e2a2d643952()
     // 结算协议图片文件
     // extendInfoMap["settle_agree_pic"] = ""
     // 基本存款账户编号或核准号
     // extendInfoMap["open_licence_no"] = ""
     // 取现信息配置
-    extendInfoMap["cash_config"] = getB4c12b9e620844179e02A63a50bae972()
+    extendInfoMap["cash_config"] = get33b3e8e4046d4b4cB4a658b1b858a51b()
     // 结算规则配置
-    extendInfoMap["settle_config"] = getA2194d6e98dd4dce9d79C15b8a52a54c()
+    extendInfoMap["settle_config"] = get4b4de66dFf204d5b87c2Adaaa96ff3bc()
     // 商户主页URL
     // extendInfoMap["mer_url"] = ""
     // 商户ICP备案编号
     // extendInfoMap["mer_icp"] = ""
     // 受益人列表
-    // extendInfoMap["beneficiary_info"] = get92d7aa547c6c4e40Bfba92b33a3e6691()
+    // extendInfoMap["beneficiary_info"] = get842237a235434ce7Acbc0244d2254885()
     // 协议信息
-    // extendInfoMap["agreement_info"] = getAd408404B0764f60896838dca28e34d6()
+    // extendInfoMap["agreement_info"] = get97aa5b4c67c942d2A4d662ab46bdd513()
     // 营业执照图片
     // extendInfoMap["license_pic"] = ""
     // 授权委托书
@@ -151,13 +151,13 @@ func getExtendInfos() map[string]interface{} {
     // 店铺收银台/公司前台照
     // extendInfoMap["store_cashier_desk_pic"] = ""
     // 扩展资料包
-    // extendInfoMap["extended_material_list"] = get0e652d5c278b4b6289416af49f5827aa()
+    // extendInfoMap["extended_material_list"] = getDa29ac4f984c4c318061F8fd931028cb()
     // 异步通知地址
     extendInfoMap["async_return_url"] = "archer://C_SSPM_NSPOSM_BUSIRESULT"
     // 斗拱e账户功能配置
-    // extendInfoMap["elec_acct_config"] = get0c477a60A33445bf8a96464788abe8e9()
+    // extendInfoMap["elec_acct_config"] = getF0bdfe330c314b3f95b8Fd7595462b72()
     // 股东信息
-    // extendInfoMap["share_holder_info_list"] = get48c5d1f8330f4e8b880aBefad36b0aaf()
+    // extendInfoMap["share_holder_info_list"] = get72cf5f09Ed4243bc8f72Cc73336f2ec0()
     // 外部商户号
     // extendInfoMap["ext_mer_id"] = ""
     // 备注
@@ -165,7 +165,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func get7b629edd5720480eA2d1527ccceead1a() string {
+func get9754f69361594d7cA7183e2a2d643952() string {
     dto := make(map[string]interface{})
     // 结算账户类型
     dto["card_type"] = "1"
@@ -220,7 +220,7 @@ func get7b629edd5720480eA2d1527ccceead1a() string {
     return string(dtoByte)
 }
 
-func getB4c12b9e620844179e02A63a50bae972() string {
+func get33b3e8e4046d4b4cB4a658b1b858a51b() string {
     dto := make(map[string]interface{})
     // 状态
     dto["switch_state"] = "1"
@@ -248,7 +248,7 @@ func getB4c12b9e620844179e02A63a50bae972() string {
     return string(dtoByte)
 }
 
-func getA2194d6e98dd4dce9d79C15b8a52a54c() string {
+func get4b4de66dFf204d5b87c2Adaaa96ff3bc() string {
     dto := make(map[string]interface{})
     // 结算开关
     dto["settle_status"] = "1"
@@ -287,7 +287,7 @@ func getA2194d6e98dd4dce9d79C15b8a52a54c() string {
     return string(dtoByte)
 }
 
-func get92d7aa547c6c4e40Bfba92b33a3e6691() string {
+func get842237a235434ce7Acbc0244d2254885() string {
     dto := make(map[string]interface{})
     // 受益人名称
     // dto["bo_name"] = "test"
@@ -315,7 +315,7 @@ func get92d7aa547c6c4e40Bfba92b33a3e6691() string {
     return string(dtoByte)
 }
 
-func get7b55b7d7391d43908eed85e6b73af3fd() string {
+func getF93356fa50804a7089af566ba56a3dc4() string {
     dto := make(map[string]interface{})
     // 签约人类型
     // dto["type"] = "test"
@@ -330,7 +330,7 @@ func get7b55b7d7391d43908eed85e6b73af3fd() string {
     return string(dtoByte)
 }
 
-func getAd408404B0764f60896838dca28e34d6() string {
+func get97aa5b4c67c942d2A4d662ab46bdd513() string {
     dto := make(map[string]interface{})
     // 协议类型
     // dto["agreement_type"] = "test"
@@ -347,7 +347,7 @@ func getAd408404B0764f60896838dca28e34d6() string {
     return string(dtoByte)
 }
 
-func get0e652d5c278b4b6289416af49f5827aa() string {
+func getDa29ac4f984c4c318061F8fd931028cb() string {
     dto := make(map[string]interface{})
     // 文件id
     // dto["file_id"] = "test"
@@ -359,7 +359,7 @@ func get0e652d5c278b4b6289416af49f5827aa() string {
     return string(dtoByte)
 }
 
-func get284f0185740d4dd3Bf1409a33a5e2f61() interface{} {
+func getCca2ddb24bca4087Ad1dD3f6198940b2() interface{} {
     dto := make(map[string]interface{})
     // 银行编码
     // dto["bank_code"] = "test"
@@ -390,7 +390,7 @@ func get284f0185740d4dd3Bf1409a33a5e2f61() interface{} {
     return dtoList
 }
 
-func get0c477a60A33445bf8a96464788abe8e9() string {
+func getF0bdfe330c314b3f95b8Fd7595462b72() string {
     dto := make(map[string]interface{})
     // 电子账户开关
     // dto["switch_state"] = "test"
@@ -403,7 +403,7 @@ func get0c477a60A33445bf8a96464788abe8e9() string {
     // 角色类型
     // dto["role_type"] = "test"
     // 银行卡信息
-    // dto["elec_card_list"] = get284f0185740d4dd3Bf1409a33a5e2f61()
+    // dto["elec_card_list"] = getCca2ddb24bca4087Ad1dD3f6198940b2()
     // 中信签约短信流水号
     // dto["elec_acct_sign_seq_id"] = ""
     // 签约成功标志
@@ -413,7 +413,7 @@ func get0c477a60A33445bf8a96464788abe8e9() string {
     return string(dtoByte)
 }
 
-func get48c5d1f8330f4e8b880aBefad36b0aaf() string {
+func get72cf5f09Ed4243bc8f72Cc73336f2ec0() string {
     dto := make(map[string]interface{})
     // 股东姓名
     // dto["name"] = "test"

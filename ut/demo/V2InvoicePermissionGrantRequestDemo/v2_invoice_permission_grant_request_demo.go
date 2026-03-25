@@ -1,5 +1,5 @@
 /**
- * 电子发票业务开通 - 示例
+ * 电子发票业务配置 - 示例
  *
  * @Author sdk-generator
  * @Description 汇付天下

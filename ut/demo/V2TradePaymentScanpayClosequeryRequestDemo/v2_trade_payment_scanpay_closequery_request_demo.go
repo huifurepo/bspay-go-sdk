@@ -54,6 +54,8 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["org_req_seq_id"] = "20240129555522220211711612931"
     // 原交易返回的全局流水号
     // extendInfoMap["org_hf_seq_id"] = ""
+    // 是否合单交易关单查询
+    // extendInfoMap["merge_flag"] = ""
     return extendInfoMap
 }
 

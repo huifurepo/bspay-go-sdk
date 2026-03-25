@@ -26,9 +26,9 @@ func V2FlexibleIndvRequestDemo() {
         // 渠道商/商户汇付Id
         UpperHuifuId:"6666000108900391",
         // 基本信息
-        BasicInfo:get629fab27E82346a2860242a3c0b0d61a(),
+        BasicInfo:get2e76dd15D0e042bd9c15Cb157d92ed17(),
         // 卡信息
-        CardInfo:get30ec05a8D26c45c39e9aA02b3b1711b6(),
+        CardInfo:getC1cc575cA6164b41A6c37fb8e366cda2(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -53,11 +53,11 @@ func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
     // 取现配置列表
-    extendInfoMap["cash_config"] = get2367ebbb376546c292f24ed51433e1fe()
+    extendInfoMap["cash_config"] = get72c6a66a68b64b7d99ec12d66ea56878()
     return extendInfoMap
 }
 
-func get629fab27E82346a2860242a3c0b0d61a() string {
+func get2e76dd15D0e042bd9c15Cb157d92ed17() string {
     dto := make(map[string]interface{})
     // 个人姓名
     dto["name"] = "张三"
@@ -73,10 +73,6 @@ func get629fab27E82346a2860242a3c0b0d61a() string {
     dto["cert_end_date"] = "20320101"
     // 电子邮箱
     dto["email"] = ""
-    // 管理员账号
-    dto["login_name"] = "LG20250619148194131"
-    // 是否发送短信标识
-    dto["sms_send_flag"] = ""
     // 拓展方字段
     dto["expand_id"] = ""
 
@@ -84,7 +80,7 @@ func get629fab27E82346a2860242a3c0b0d61a() string {
     return string(dtoByte)
 }
 
-func get2367ebbb376546c292f24ed51433e1fe() string {
+func get72c6a66a68b64b7d99ec12d66ea56878() string {
     dto := make(map[string]interface{})
     // 提现手续费（固定/元）fix_amt与fee_rate至少填写一项， 需保留小数点后两位，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;注：当cash_type&#x3D;D1时为节假日取现手续费
     dto["fix_amt"] = ""
@@ -110,7 +106,7 @@ func get2367ebbb376546c292f24ed51433e1fe() string {
     return string(dtoByte)
 }
 
-func get30ec05a8D26c45c39e9aA02b3b1711b6() string {
+func getC1cc575cA6164b41A6c37fb8e366cda2() string {
     dto := make(map[string]interface{})
     // 卡号
     dto["card_no"] = "6217001210064762890"

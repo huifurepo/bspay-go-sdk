@@ -15,6 +15,26 @@ const BASE_API_TEST_URL_V2 = "https://spin-test.cloudpnr.com"
 // 以下为接口uri
 
 /**
+ * 账单计划变更
+ */
+const V3_BILLPAY_PLAN_MODIFY = "/v3/billpay/plan/modify"
+
+/**
+ * 查询账单计划下已生成账单数据
+ */
+const V3_BILLPAY_PLAN_BILL_LIST = "/v3/billpay/plan/bill/list"
+
+/**
+ * 查询账单计划详情
+ */
+const V3_BILLPAY_PLAN_DETAIL = "/v3/billpay/plan/detail"
+
+/**
+ * 创建账单计划
+ */
+const V3_BILLPAY_PLAN_ADD = "/v3/billpay/plan/add"
+
+/**
  * 拆单支付订单查询
  */
 const V2_TRADE_HOSTING_PAYMENT_SPLITPAY_QUERY = "/v2/trade/hosting/payment/splitpay/query"
@@ -625,7 +645,7 @@ const V2_USER_LIST_QUERY = "/v2/user/list/query"
 const V2_INVOICE_PERMISSION_QUERY = "/v2/invoice/permission/query"
 
 /**
- * 电子发票业务开通
+ * 电子发票业务配置
  */
 const V2_INVOICE_PERMISSION_GRANT = "/v2/invoice/permission/grant"
 

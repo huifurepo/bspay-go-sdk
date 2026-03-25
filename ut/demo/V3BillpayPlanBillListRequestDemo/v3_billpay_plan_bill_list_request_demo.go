@@ -1,10 +1,10 @@
 /**
- * 银行大额支付固定转账标识申请接口 - 示例
+ * 查询账单计划下已生成账单数据 - 示例
  *
  * @Author sdk-generator
  * @Description 汇付天下
  */
-package V2TradeOnlinepaymentTransferFixedflagApplyRequestDemo
+package V3BillpayPlanBillListRequestDemo
 
 import (
     "encoding/json"
@@ -13,20 +13,22 @@ import (
 	"github.com/huifurepo/bspay-go-sdk/ut/tool"
 )
 
-func V2TradeOnlinepaymentTransferFixedflagApplyRequestDemo() {
+func V3BillpayPlanBillListRequestDemo() {
     // 1. 数据初始化
 	dgSDK, _ := BsPaySdk.NewBsPay(true, "./config/config.json")
 
     // 2.组装请求参数
-    dgReq := BsPaySdk.V2TradeOnlinepaymentTransferFixedflagApplyRequest{
-        // 商户号
-        HuifuId:"6666000109133323",
-        // 请求日期
-        ReqDate:tool.GetCurrentDate(),
-        // 请求流水号
+    dgReq := BsPaySdk.V3BillpayPlanBillListRequest{
+        // 客户请求流水号
         ReqSeqId:tool.GetReqSeqId(),
-        // 唯一标识号
-        UniqueNo:"250605162707157",
+        // 客户请求日期
+        ReqDate:tool.GetCurrentDate(),
+        // 汇付商户号
+        HuifuId:"6666000123123123",
+        // 账单计划编号
+        PlanNo:"BP202412270001",
+        // 页码
+        PageNum:"1",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -36,7 +38,7 @@ func V2TradeOnlinepaymentTransferFixedflagApplyRequestDemo() {
     fmt.Println("请求数据:", string(respStr))
 
     // 3. 发起API调用
-    resp, err := dgSDK.V2TradeOnlinepaymentTransferFixedflagApplyRequest(dgReq)
+    resp, err := dgSDK.V3BillpayPlanBillListRequest(dgReq)
   	if err != nil {
 		fmt.Println("请求异常:", err)
 	}
@@ -50,10 +52,6 @@ func V2TradeOnlinepaymentTransferFixedflagApplyRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
-    // 用户客户号
-    // extendInfoMap["user_huifu_id"] = ""
-    // 银行模式
-    // extendInfoMap["bank_mode"] = ""
     return extendInfoMap
 }
 

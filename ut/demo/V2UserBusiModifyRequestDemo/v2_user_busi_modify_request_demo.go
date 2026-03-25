@@ -26,11 +26,11 @@ func V2UserBusiModifyRequestDemo() {
         // 汇付ID
         HuifuId:"6666000104896342",
         // 乐接活配置当合作平台为乐接活，必填
-        // LjhData:getF16764f14f514214A6c992f6ef88cb6a(),
+        // LjhData:get57de4d6c2ed44eb4Be5b8641ba9c3742(),
         // 签约人信息当电子回单配置开关为开通时必填
-        // SignUserInfo:getA9829568830041feA38402dde40b1502(),
+        // SignUserInfo:get655039998a084aa0Be82Dca1e8a1cfa1(),
         // 汇薪云配置当合作平台为汇薪云时，该参数必填
-        // HxyData:get02efe9fb7936437cB41e42619fde080a(),
+        // HxyData:getA50a6afe9ed74498B87e7922ef2dd009(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -54,30 +54,30 @@ func V2UserBusiModifyRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
-    // 结算信息配置
-    extendInfoMap["settle_config"] = get0b95204f18f94c0a9b1bCdc7bfea9041()
+    // 结算信息配置列表
+    extendInfoMap["settle_config_list"] = get6b2a94f17c14439cAeadF4502a88aa02()
     // 结算卡信息
-    extendInfoMap["card_info"] = getB2ebaf4083b248fbA09bC68c336ff46b()
+    extendInfoMap["card_info"] = getB1b3bed05f9a4d04Ae3f87ffd5abe411()
     // 取现配置列表
-    extendInfoMap["cash_config"] = get8867c4fe3d174764AfcbFde3d8ac3f5e()
+    extendInfoMap["cash_config"] = get1ac2c82f0a584e13Aa3bA5fa34a62fa9()
     // 文件列表
-    extendInfoMap["file_list"] = get9a122eaa98ba429cAfba93f15ac521e8()
+    extendInfoMap["file_list"] = get3a1b5bcbD79f4d859545621ad5837955()
     // 延迟入账开关
     // extendInfoMap["delay_flag"] = ""
     // 异步请求地址
     extendInfoMap["async_return_url"] = "//http://service.example.com/to/path"
     // 斗拱e账户功能配置
-    // extendInfoMap["elec_acct_config"] = getAabe2c69761e46b6B9af3ef4f139b965()
+    // extendInfoMap["elec_acct_config"] = get45855817154048939c1f64e638ed62be()
     // 灵活用工开关
     // extendInfoMap["open_tax_flag"] = ""
     // 合作平台
     // extendInfoMap["lg_platform_type"] = ""
     // 电子回单配置
-    // extendInfoMap["elec_receipt_config"] = get12066244652442cbB9a312a36ad47cd5()
+    // extendInfoMap["elec_receipt_config"] = get753046220c44472eB9c47fad3d4701e1()
     return extendInfoMap
 }
 
-func get0b95204f18f94c0a9b1bCdc7bfea9041() string {
+func get6b2a94f17c14439cAeadF4502a88aa02() string {
     dto := make(map[string]interface{})
     // 开通状态
     dto["settle_status"] = "1"
@@ -112,11 +112,12 @@ func get0b95204f18f94c0a9b1bCdc7bfea9041() string {
     // 工作日结算手续费固定金额
     // dto["workday_constant_amt"] = ""
 
-    dtoByte, _ := json.Marshal(dto)
+    dtoList := [1]interface{}{dto}
+    dtoByte, _ := json.Marshal(dtoList)
     return string(dtoByte)
 }
 
-func getB2ebaf4083b248fbA09bC68c336ff46b() string {
+func getB1b3bed05f9a4d04Ae3f87ffd5abe411() string {
     dto := make(map[string]interface{})
     // 卡类型
     dto["card_type"] = "0"
@@ -149,7 +150,7 @@ func getB2ebaf4083b248fbA09bC68c336ff46b() string {
     return string(dtoByte)
 }
 
-func get8867c4fe3d174764AfcbFde3d8ac3f5e() string {
+func get1ac2c82f0a584e13Aa3bA5fa34a62fa9() string {
     dto := make(map[string]interface{})
     // 开通状态
     dto["switch_state"] = "1"
@@ -177,7 +178,7 @@ func get8867c4fe3d174764AfcbFde3d8ac3f5e() string {
     return string(dtoByte)
 }
 
-func get9a122eaa98ba429cAfba93f15ac521e8() string {
+func get3a1b5bcbD79f4d859545621ad5837955() string {
     dto := make(map[string]interface{})
     // 文件类型
     dto["file_type"] = "F02"
@@ -191,7 +192,7 @@ func get9a122eaa98ba429cAfba93f15ac521e8() string {
     return string(dtoByte)
 }
 
-func get41c793b0A31e44729fb0E0962cfbc890() interface{} {
+func get92f00ce094844f6888f32fdfb398e7da() interface{} {
     dto := make(map[string]interface{})
     // 银行所在省
     // dto["prov_id"] = "test"
@@ -222,7 +223,7 @@ func get41c793b0A31e44729fb0E0962cfbc890() interface{} {
     return dtoList
 }
 
-func getAabe2c69761e46b6B9af3ef4f139b965() string {
+func get45855817154048939c1f64e638ed62be() string {
     dto := make(map[string]interface{})
     // 电子账户开关
     // dto["switch_state"] = "test"
@@ -237,7 +238,7 @@ func getAabe2c69761e46b6B9af3ef4f139b965() string {
     // 电子账户开通状态
     // dto["bank_status"] = "test"
     // 银行卡信息
-    // dto["elec_card_list"] = get41c793b0A31e44729fb0E0962cfbc890()
+    // dto["elec_card_list"] = get92f00ce094844f6888f32fdfb398e7da()
     // 银行信息
     // dto["bank_message"] = ""
     // 中信签约短信流水号
@@ -249,7 +250,7 @@ func getAabe2c69761e46b6B9af3ef4f139b965() string {
     return string(dtoByte)
 }
 
-func getF16764f14f514214A6c992f6ef88cb6a() string {
+func get57de4d6c2ed44eb4Be5b8641ba9c3742() string {
     dto := make(map[string]interface{})
     // 税源地id当合作平台为乐接活，必填
     // dto["tax_area_id"] = "test"
@@ -258,7 +259,7 @@ func getF16764f14f514214A6c992f6ef88cb6a() string {
     return string(dtoByte)
 }
 
-func get12066244652442cbB9a312a36ad47cd5() interface{} {
+func get753046220c44472eB9c47fad3d4701e1() interface{} {
     dto := make(map[string]interface{})
     // 电子回单开关
     // dto["switch_state"] = "test"
@@ -266,7 +267,7 @@ func get12066244652442cbB9a312a36ad47cd5() interface{} {
     return dto;
 }
 
-func getA9829568830041feA38402dde40b1502() interface{} {
+func get655039998a084aa0Be82Dca1e8a1cfa1() interface{} {
     dto := make(map[string]interface{})
     // 签约人类型
     // dto["type"] = "test"
@@ -280,7 +281,7 @@ func getA9829568830041feA38402dde40b1502() interface{} {
     return dto;
 }
 
-func get02efe9fb7936437cB41e42619fde080a() interface{} {
+func getA50a6afe9ed74498B87e7922ef2dd009() interface{} {
     dto := make(map[string]interface{})
     // 落地公司机构号当合作平台为汇薪云时，该参数必填。如果仅有一个可不填
     // dto["minor_agent_id"] = "test"

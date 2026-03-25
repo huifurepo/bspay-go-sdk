@@ -55,9 +55,9 @@ func V2UserBasicdataEntRequestDemo() {
         LegalCertEndDate:"20300801",
         // 法人国籍法人的证件类型为外国人居留证时，必填，参见《[国籍编码](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/area/%E5%9B%BD%E7%B1%8D.xlsx)》&lt;font color&#x3D;&quot;green&quot;&gt;示例值：CHN&lt;/font&gt;
         // LegalCertNationality:"test",
-        // 联系人姓名
+        // 管理员姓名
         ContactName:"小的",
-        // 联系人手机号
+        // 管理员手机号
         ContactMobile:"13764462211",
         // 管理员账号如需短信通知则必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：Lg20220222013747&lt;/font&gt;
         LoginName:"Lg2022022201374721361",
@@ -86,7 +86,7 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap := make(map[string]interface{})
     // 经营简称
     extendInfoMap["short_name"] = "企业商户"
-    // 联系人电子邮箱
+    // 管理员电子邮箱
     extendInfoMap["contact_email"] = "jeff.peng@huifu.com"
     // 操作员
     extendInfoMap["operator_id"] = ""
@@ -95,7 +95,7 @@ func getExtendInfos() map[string]interface{} {
     // 扩展方字段
     extendInfoMap["expand_id"] = ""
     // 文件列表
-    // extendInfoMap["file_list"] = getF4bde40271004009B265Ae9d23bf5967()
+    // extendInfoMap["file_list"] = get46c99a78A2384cbcB68aD9873e8acd6c()
     // 公司类型
     // extendInfoMap["ent_type"] = ""
     // 所属行业
@@ -103,7 +103,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getF4bde40271004009B265Ae9d23bf5967() string {
+func get46c99a78A2384cbcB68aD9873e8acd6c() string {
     dto := make(map[string]interface{})
     // 文件类型
     // dto["file_type"] = "test"

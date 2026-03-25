@@ -39,8 +39,8 @@ type V2MerchantBasicdataEntRequest struct {
     LegalAddr string `json:"legal_addr" structs:"legal_addr"` // 法人证件地址
     LegalCertBackPic string `json:"legal_cert_back_pic" structs:"legal_cert_back_pic"` // 法人身份证国徽面
     LegalCertFrontPic string `json:"legal_cert_front_pic" structs:"legal_cert_front_pic"` // 法人身份证人像面
-    ContactMobileNo string `json:"contact_mobile_no" structs:"contact_mobile_no"` // 联系人手机号
-    ContactEmail string `json:"contact_email" structs:"contact_email"` // 联系人电子邮箱
+    ContactMobileNo string `json:"contact_mobile_no" structs:"contact_mobile_no"` // 管理员手机号
+    ContactEmail string `json:"contact_email" structs:"contact_email"` // 管理员电子邮箱
     LoginName string `json:"login_name" structs:"login_name"` // 管理员账号
     RegAcctPic string `json:"reg_acct_pic" structs:"reg_acct_pic"` // 开户许可证企业商户需要，结算账号为对公账户必填；通过[图片上传接口](https://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)上传材料；文件类型：F08；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
     OpenLicenceNo string `json:"open_licence_no" structs:"open_licence_no"` // 基本存款账户编号或核准号条件选填；当use_head_info_flag&#x3D;Y时不填 ；&lt;br/&gt;基本存款账户信息请填写基本存款账户编号；开户许可证请填写核准号。&lt;br/&gt;当注册地址或经营地址为如下地区时必填：江苏省、浙江省、湖南省、湖北省、云南省、贵州省、陕西省、河南省、吉林省、黑龙江省、福建省、海南省、重庆市、青海省、宁夏回族自治区；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：J2900123456789&lt;/font&gt;
