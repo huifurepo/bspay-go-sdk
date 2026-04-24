@@ -49,15 +49,15 @@ func getExtendInfos() map[string]interface{} {
     // 异步通知地址
     extendInfoMap["async_return_url"] = "http://192.168.85.157:30031/sspm/testVirgo"
     // 花呗分期费率
-    extendInfoMap["hb_fq_fee_list"] = get05b26244F3754368911e63e76d5d79a8()
+    extendInfoMap["hb_fq_fee_list"] = get865775a727804856Ad741adce92a4684()
     // 白条分期配置对象
-    // extendInfoMap["jdbt_data"] = get5ed415516215448cAa71B459248bb501()
+    // extendInfoMap["jdbt_data"] = getC075c7bdC59c4fddA4c6F2e94f027c3e()
     // 银联聚分期配置对象
-    // extendInfoMap["yljfq_data"] = get3d393069Ef9f439fA8845a37ee62815b()
+    // extendInfoMap["yljfq_data"] = get0c1a7c7fC85348999562B33cf515424e()
     return extendInfoMap
 }
 
-func get05b26244F3754368911e63e76d5d79a8() string {
+func get865775a727804856Ad741adce92a4684() string {
     dto := make(map[string]interface{})
     // 商户汇付Id
     dto["huifu_id"] = "6666000003156435"
@@ -97,7 +97,7 @@ func get05b26244F3754368911e63e76d5d79a8() string {
     return string(dtoByte)
 }
 
-func getBf2960d0062d419582e82c814aaee6b9() interface{} {
+func getF0d72829Ff5f4749A6c3C2f5093c1414() interface{} {
     dto := make(map[string]interface{})
     // 支付场景
     // dto["pay_scene"] = "test"
@@ -120,7 +120,7 @@ func getBf2960d0062d419582e82c814aaee6b9() interface{} {
     return dtoList
 }
 
-func get5ed415516215448cAa71B459248bb501() string {
+func getC075c7bdC59c4fddA4c6F2e94f027c3e() string {
     dto := make(map[string]interface{})
     // 商户汇付Id
     // dto["huifu_id"] = "test"
@@ -131,7 +131,7 @@ func get5ed415516215448cAa71B459248bb501() string {
     // 挂网协议地址3-挂网协议必填；示例值：https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/dg_gwxy/PaymentServiceAgreement_xxxx.html
     // dto["agreement_url"] = "test"
     // 京东白条费率数据
-    // dto["jdbt_fee_data"] = getBf2960d0062d419582e82c814aaee6b9()
+    // dto["jdbt_fee_data"] = getF0d72829Ff5f4749A6c3C2f5093c1414()
     // 签约人姓名
     // dto["name"] = ""
     // 签约人身份证号
@@ -143,7 +143,7 @@ func get5ed415516215448cAa71B459248bb501() string {
     return string(dtoByte)
 }
 
-func getA022abb7Afe746bb8a807f05ed2d6608() interface{} {
+func getC507fa5a1214468194f1Fe6fd88be99c() interface{} {
     dto := make(map[string]interface{})
     // 支付场景
     // dto["pay_scene"] = "test"
@@ -166,7 +166,7 @@ func getA022abb7Afe746bb8a807f05ed2d6608() interface{} {
     return dtoList
 }
 
-func getC4eed850Ec61447c977420b8d9e86d56() interface{} {
+func getEe28a633804a4e1184fbA80ea67c0887() interface{} {
     dto := make(map[string]interface{})
     // 文件id
     // dto["file_id"] = "test"
@@ -177,7 +177,7 @@ func getC4eed850Ec61447c977420b8d9e86d56() interface{} {
     return dtoList
 }
 
-func get3d393069Ef9f439fA8845a37ee62815b() string {
+func get0c1a7c7fC85348999562B33cf515424e() string {
     dto := make(map[string]interface{})
     // 商户汇付Id
     // dto["huifu_id"] = "test"
@@ -186,13 +186,13 @@ func get3d393069Ef9f439fA8845a37ee62815b() string {
     // 签约人手机号
     // dto["mobile_no"] = "test"
     // 银联聚分期费率数据
-    // dto["yljfq_fee_data"] = getA022abb7Afe746bb8a807f05ed2d6608()
+    // dto["yljfq_fee_data"] = getC507fa5a1214468194f1Fe6fd88be99c()
     // 签约人姓名
     // dto["name"] = ""
     // 签约人身份证号
     // dto["cert_no"] = ""
     // 补充业务信息
-    // dto["file_list"] = getC4eed850Ec61447c977420b8d9e86d56()
+    // dto["file_list"] = getEe28a633804a4e1184fbA80ea67c0887()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

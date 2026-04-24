@@ -32,11 +32,11 @@ func V2TradeOnlinepaymentWappayRequestDemo() {
         // 银行卡号instalments_num不为空时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6228480031509440000&lt;/font&gt;
         BankCardNo:"6222021102043040313",
         // 网联扩展数据
-        ExtendPayData:getE236f3e2A5774278813b68f967f8db3e(),
+        ExtendPayData:getDd504898Bffb4bf5Ba99Ab55df780d13(),
         // 安全信息
-        RiskCheckData:getEd6bb3aaBe474bba91da630a1272ee02(),
+        RiskCheckData:get03c1fe26A83c44299a9a2d581f3ba773(),
         // 设备信息
-        TerminalDeviceData:get642463d25eb543ffB49d07c169d8229b(),
+        TerminalDeviceData:get78c55c2e9da34443A934709dcdacd225(),
         // 页面跳转地址
         FrontUrl:"http://www.baidu.com",
         // 异步通知地址
@@ -69,7 +69,7 @@ func getExtendInfos() map[string]interface{} {
     // 交易有效期
     extendInfoMap["time_expire"] = "20220406210038"
     // 分账对象
-    extendInfoMap["acct_split_bunch"] = getFc676215E3594ef1Ba9e03f35781872f()
+    extendInfoMap["acct_split_bunch"] = get7a50e06eB3364f25B5a9Ee4d0df9907c()
     // 备注
     extendInfoMap["remark"] = ""
     // 页面失败跳转地址
@@ -77,7 +77,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func getE236f3e2A5774278813b68f967f8db3e() string {
+func getDd504898Bffb4bf5Ba99Ab55df780d13() string {
     dto := make(map[string]interface{})
     // 商品简称
     dto["goods_short_name"] = "一般商品"
@@ -90,7 +90,7 @@ func getE236f3e2A5774278813b68f967f8db3e() string {
     return string(dtoByte)
 }
 
-func get26c547a0B0894cfaAc8509ea166da9ae() interface{} {
+func get1fd045ed92e142e0Bf58B57e6f2f99c0() interface{} {
     dto := make(map[string]interface{})
     // 支付金额
     // dto["div_amt"] = ""
@@ -105,10 +105,10 @@ func get26c547a0B0894cfaAc8509ea166da9ae() interface{} {
     return dtoList
 }
 
-func getFc676215E3594ef1Ba9e03f35781872f() string {
+func get7a50e06eB3364f25B5a9Ee4d0df9907c() string {
     dto := make(map[string]interface{})
     // 分账信息列表
-    dto["acct_infos"] = get26c547a0B0894cfaAc8509ea166da9ae()
+    dto["acct_infos"] = get1fd045ed92e142e0Bf58B57e6f2f99c0()
     // 百分比分账标志
     // dto["percentage_flag"] = ""
     // 是否净值分账
@@ -118,7 +118,7 @@ func getFc676215E3594ef1Ba9e03f35781872f() string {
     return string(dtoByte)
 }
 
-func getEd6bb3aaBe474bba91da630a1272ee02() string {
+func get03c1fe26A83c44299a9a2d581f3ba773() string {
     dto := make(map[string]interface{})
     // ip地址
     dto["ip_addr"] = "111"
@@ -133,7 +133,7 @@ func getEd6bb3aaBe474bba91da630a1272ee02() string {
     return string(dtoByte)
 }
 
-func get642463d25eb543ffB49d07c169d8229b() string {
+func get78c55c2e9da34443A934709dcdacd225() string {
     dto := make(map[string]interface{})
     // 交易设备ip
     dto["device_ip"] = "127.0.0.1"

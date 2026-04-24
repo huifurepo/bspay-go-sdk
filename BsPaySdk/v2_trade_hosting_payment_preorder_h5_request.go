@@ -15,7 +15,7 @@ type V2TradeHostingPaymentPreorderH5Request struct {
     TransAmt string `json:"trans_amt" structs:"trans_amt"` // 交易金额
     GoodsDesc string `json:"goods_desc" structs:"goods_desc"` // 商品描述
     PreOrderType string `json:"pre_order_type" structs:"pre_order_type"` // 预下单类型
-    HostingData string `json:"hosting_data" structs:"hosting_data"` // 半支付托管扩展参数集合
+    HostingData string `json:"hosting_data" structs:"hosting_data"` // 统一收银台扩展参数集合
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

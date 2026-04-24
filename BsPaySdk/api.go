@@ -380,7 +380,7 @@ const V2_EFP_WITHDRAW_QUERY = "/v2/efp/withdraw/query"
 const V2_EFP_SURROGATE = "/v2/efp/surrogate"
 
 /**
- * 托管交易关单
+ * 统一收银台交易关单
  */
 const V2_TRADE_HOSTING_PAYMENT_CLOSE = "/v2/trade/hosting/payment/close"
 
@@ -775,17 +775,17 @@ const V2_MERCHANT_BUSI_EFPCONFIG = "/v2/merchant/busi/efpconfig"
 const V2_TRADE_ONLINEPAYMENT_TRANSFER_BANKBLOTTER_QUERY = "/v2/trade/onlinepayment/transfer/bankblotter/query"
 
 /**
- * 托管交易退款查询
+ * 统一收银台交易退款查询
  */
 const V2_TRADE_HOSTING_PAYMENT_QUERYREFUNDINFO = "/v2/trade/hosting/payment/queryRefundInfo"
 
 /**
- * 托管交易退款
+ * 统一收银台交易退款
  */
 const V2_TRADE_HOSTING_PAYMENT_HTREFUND = "/v2/trade/hosting/payment/htRefund"
 
 /**
- * 托管交易查询
+ * 统一收银台交易查询
  */
 const V2_TRADE_HOSTING_PAYMENT_QUERYORDERINFO = "/v2/trade/hosting/payment/queryorderinfo"
 

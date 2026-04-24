@@ -1,5 +1,5 @@
 /**
- * 托管交易退款 - 示例
+ * 统一收银台交易退款 - 示例
  *
  * @Author sdk-generator
  * @Description 汇付天下
@@ -30,11 +30,11 @@ func V2TradeHostingPaymentHtrefundRequestDemo() {
         // 原交易请求日期
         OrgReqDate:"20240229",
         // 安全信息线上交易退款必填，参见线上退款接口；jsonObject字符串
-        RiskCheckData:getD4cd573b43424f3e9983Ead4f24a05f1(),
+        RiskCheckData:get7f70e439E8f340f3Aac98f26d2971bd4(),
         // 设备信息线上交易退款必填，参见线上退款接口；jsonObject字符串
-        TerminalDeviceData:get5eab0ab7309b4319934991997b4e02a7(),
+        TerminalDeviceData:getF76c79c938b7435085942a78867054da(),
         // 大额转账支付账户信息数据jsonObject格式；银行大额转账支付交易退款申请时必填
-        // BankInfoData:get4884ae34D72f4674Bba3Ecf6bd9b6249(),
+        // BankInfoData:get7ce83f339ef6473e8e203eeb203e15fd(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -65,7 +65,7 @@ func getExtendInfos() map[string]interface{} {
     // 原交易请求流水号
     extendInfoMap["org_req_seq_id"] = "202207099803123123199941"
     // 分账对象
-    extendInfoMap["acct_split_bunch"] = getAf13d5ba8edf4124Bca861e10b605ae0()
+    extendInfoMap["acct_split_bunch"] = get9439c978Ac09445589fc798a88275b20()
     // 备注
     // extendInfoMap["remark"] = ""
     // 是否垫资退款
@@ -77,11 +77,11 @@ func getExtendInfos() map[string]interface{} {
     // 异步通知地址
     extendInfoMap["notify_url"] = "http://www.baidu.com"
     // 抖音拓展参数集合
-    // extendInfoMap["dy_data"] = get7c0cf89bD0ab4d89969195b6b74d6ebd()
+    // extendInfoMap["dy_data"] = getB307963107c54ada8bad0a0c4e1d9cd8()
     return extendInfoMap
 }
 
-func get562e286f9afe4c608dee36bfbfe12c6e() interface{} {
+func get27ca349c55d04639B266C96deda3910d() interface{} {
     dto := make(map[string]interface{})
     // 分账金额
     dto["div_amt"] = "0.12"
@@ -94,16 +94,16 @@ func get562e286f9afe4c608dee36bfbfe12c6e() interface{} {
     return dtoList
 }
 
-func getAf13d5ba8edf4124Bca861e10b605ae0() string {
+func get9439c978Ac09445589fc798a88275b20() string {
     dto := make(map[string]interface{})
     // 分账明细
-    dto["acct_infos"] = get562e286f9afe4c608dee36bfbfe12c6e()
+    dto["acct_infos"] = get27ca349c55d04639B266C96deda3910d()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
-func getD4cd573b43424f3e9983Ead4f24a05f1() string {
+func get7f70e439E8f340f3Aac98f26d2971bd4() string {
     dto := make(map[string]interface{})
     // ip地址
     // dto["ip_addr"] = ""
@@ -118,7 +118,7 @@ func getD4cd573b43424f3e9983Ead4f24a05f1() string {
     return string(dtoByte)
 }
 
-func get5eab0ab7309b4319934991997b4e02a7() string {
+func getF76c79c938b7435085942a78867054da() string {
     dto := make(map[string]interface{})
     // 设备类型
     dto["device_type"] = "4"
@@ -141,7 +141,7 @@ func get5eab0ab7309b4319934991997b4e02a7() string {
     return string(dtoByte)
 }
 
-func get4884ae34D72f4674Bba3Ecf6bd9b6249() string {
+func get7ce83f339ef6473e8e203eeb203e15fd() string {
     dto := make(map[string]interface{})
     // 省份付款方为对公账户时必填，参见省市地区码；示例值：0013
     // dto["province"] = "test"
@@ -158,7 +158,7 @@ func get4884ae34D72f4674Bba3Ecf6bd9b6249() string {
     return string(dtoByte)
 }
 
-func get7c0cf89bD0ab4d89969195b6b74d6ebd() string {
+func getB307963107c54ada8bad0a0c4e1d9cd8() string {
     dto := make(map[string]interface{})
     // 退款原因
     // dto["refund_desc"] = ""

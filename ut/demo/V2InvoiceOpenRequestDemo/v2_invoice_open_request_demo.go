@@ -46,11 +46,11 @@ func V2InvoiceOpenRequestDemo() {
         // 原发票号码openType&#x3D;1时必填；参见[发票右上角](https://paas.huifu.com/open/doc/api/#/fp/api_fp_yanglitu.md)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20685767&lt;/font&gt;
         OriIvcNumber:"150000020026",
         // 开票商品信息
-        GoodsInfos:get0bb8a84aD18741808dfaC418a6f7fb13(),
+        GoodsInfos:getB9c374b774e24c38A0d30007765b1429(),
         // 不动产销售特殊字段specialFlag为05时，必填；jsonArray格式
-        // EstateSales:getDfe47e85A31c40f495b197799cdf3f49(),
+        // EstateSales:get90e3d2919f5b43cf8a960778d05c49dc(),
         // 不动产租赁特殊字段specialFlag为16时，必填；jsonArray格式
-        // EstateLease:get66c667e4A22b4c89A5466ae4d3523ec9(),
+        // EstateLease:getBdd8824aF9234864B2feEc68ba379845(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -99,15 +99,17 @@ func getExtendInfos() map[string]interface{} {
     // 红字信息表编号
     extendInfoMap["red_info_number"] = ""
     // 开票人信息
-    extendInfoMap["payer_info"] = getCbaf37c51ae9459581cfBe03d4721011()
+    extendInfoMap["payer_info"] = get2ca77396F23843d2Bd0540fb69ceedbb()
     // 开票结果异步通知地址
     extendInfoMap["callback_url"] = "virgo://http://192.168.85.157:30031/sspm/testVirgo"
     // 强制开票标识
     extendInfoMap["buyer_info_confirm"] = ""
+    // 交易订单号
+    // extendInfoMap["order_id"] = ""
     return extendInfoMap
 }
 
-func get0bb8a84aD18741808dfaC418a6f7fb13() string {
+func getB9c374b774e24c38A0d30007765b1429() string {
     dto := make(map[string]interface{})
     // 发票行性质
     dto["ivc_nature"] = "0"
@@ -147,7 +149,7 @@ func get0bb8a84aD18741808dfaC418a6f7fb13() string {
     return string(dtoByte)
 }
 
-func getCbaf37c51ae9459581cfBe03d4721011() string {
+func get2ca77396F23843d2Bd0540fb69ceedbb() string {
     dto := make(map[string]interface{})
     // 开票人
     dto["payer_name"] = "开票人"
@@ -160,7 +162,7 @@ func getCbaf37c51ae9459581cfBe03d4721011() string {
     return string(dtoByte)
 }
 
-func getDfe47e85A31c40f495b197799cdf3f49() string {
+func get90e3d2919f5b43cf8a960778d05c49dc() string {
     dto := make(map[string]interface{})
     // 不动产地址
     // dto["addr"] = "test"
@@ -186,7 +188,7 @@ func getDfe47e85A31c40f495b197799cdf3f49() string {
     return string(dtoByte)
 }
 
-func get66c667e4A22b4c89A5466ae4d3523ec9() string {
+func getBdd8824aF9234864B2feEc68ba379845() string {
     dto := make(map[string]interface{})
     // 不动产地址
     // dto["addr"] = "test"

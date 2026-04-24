@@ -1,5 +1,5 @@
 /**
- * 托管交易查询
+ * 统一收银台交易查询
  *
  * @Author sdk-generator
  * @Description 汇付天下

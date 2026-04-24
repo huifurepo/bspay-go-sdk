@@ -1,5 +1,5 @@
 /**
- * 托管交易关单
+ * 统一收银台交易关单
  *
  * @Author sdk-generator
  * @Description 汇付天下

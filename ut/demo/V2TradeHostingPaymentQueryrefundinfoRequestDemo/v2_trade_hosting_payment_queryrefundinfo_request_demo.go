@@ -1,5 +1,5 @@
 /**
- * 托管交易退款查询 - 示例
+ * 统一收银台交易退款查询 - 示例
  *
  * @Author sdk-generator
  * @Description 汇付天下
