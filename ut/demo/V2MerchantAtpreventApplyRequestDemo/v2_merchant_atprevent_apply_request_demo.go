@@ -48,12 +48,38 @@ func V2MerchantAtpreventApplyRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
-    // 微信开通数
-    extendInfoMap["wx_open_count"] = "0"
-    // 支付宝开通数
-    extendInfoMap["ali_open_count"] = "1"
     // 异步通知地址
     extendInfoMap["async_url"] = "http://service.example.com/to/path"
+    // 微信开通明细
+    extendInfoMap["wx_open_list"] = get4ee5a21dCd974031Aaff86bc6a77ad6e()
+    // 支付宝开通明细
+    extendInfoMap["ali_open_list"] = getAf3f6e6aB58f47f99761E0107d9733be()
     return extendInfoMap
+}
+
+func get4ee5a21dCd974031Aaff86bc6a77ad6e() interface{} {
+    dto := make(map[string]interface{})
+    // 渠道号
+    dto["pay_channel_id"] = "10000001"
+    // 线上开通数
+    dto["online_open_count"] = "1"
+    // 线下开通数
+    dto["offline_open_count"] = "1"
+
+    dtoList := [1]interface{}{dto}
+    return dtoList
+}
+
+func getAf3f6e6aB58f47f99761E0107d9733be() interface{} {
+    dto := make(map[string]interface{})
+    // 渠道号
+    dto["pay_channel_id"] = "10000001"
+    // 线上开通数
+    dto["online_open_count"] = "1"
+    // 线下开通数
+    dto["offline_open_count"] = "1"
+
+    dtoList := [1]interface{}{dto}
+    return dtoList
 }
 

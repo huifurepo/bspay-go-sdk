@@ -1,10 +1,10 @@
 /**
- * 统一进件页面版查询 - 示例
+ * 开票员删除 - 示例
  *
  * @Author sdk-generator
  * @Description 汇付天下
  */
-package V2MerchantBusiStatusQueryRequestDemo
+package V2InvoiceClerkDeleteRequestDemo
 
 import (
     "encoding/json"
@@ -13,18 +13,20 @@ import (
 	"github.com/huifurepo/bspay-go-sdk/ut/tool"
 )
 
-func V2MerchantBusiStatusQueryRequestDemo() {
+func V2InvoiceClerkDeleteRequestDemo() {
     // 1. 数据初始化
 	dgSDK, _ := BsPaySdk.NewBsPay(true, "./config/config.json")
 
     // 2.组装请求参数
-    dgReq := BsPaySdk.V2MerchantBusiStatusQueryRequest{
+    dgReq := BsPaySdk.V2InvoiceClerkDeleteRequest{
         // 请求流水号
         ReqSeqId:tool.GetReqSeqId(),
-        // 请求日期
+        // 请求时间
         ReqDate:tool.GetCurrentDate(),
-        // 门店号
-        StoreId:"yu653454308",
+        // 汇付商户号
+        HuifuId:"6666000149801800",
+        // 登录账号
+        LoginAccount:"31011520010",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -34,7 +36,7 @@ func V2MerchantBusiStatusQueryRequestDemo() {
     fmt.Println("请求数据:", string(respStr))
 
     // 3. 发起API调用
-    resp, err := dgSDK.V2MerchantBusiStatusQueryRequest(dgReq)
+    resp, err := dgSDK.V2InvoiceClerkDeleteRequest(dgReq)
   	if err != nil {
 		fmt.Println("请求异常:", err)
 	}
@@ -48,8 +50,6 @@ func V2MerchantBusiStatusQueryRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
-    // 渠道商号
-    // extendInfoMap["upper_huifu_id"] = ""
     return extendInfoMap
 }
 
