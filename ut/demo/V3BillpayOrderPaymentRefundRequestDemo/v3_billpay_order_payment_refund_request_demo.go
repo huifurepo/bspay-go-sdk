@@ -20,17 +20,17 @@ func V3BillpayOrderPaymentRefundRequestDemo() {
     // 2.组装请求参数
     dgReq := BsPaySdk.V3BillpayOrderPaymentRefundRequest{
         // 请求流水号
-        // ReqSeqId:tool.GetReqSeqId(),
+        ReqSeqId:tool.GetReqSeqId(),
         // 请求时间
-        // ReqDate:tool.GetCurrentDate(),
+        ReqDate:tool.GetCurrentDate(),
         // 商户号
-        // HuifuId:"test",
+        HuifuId:"6666000108432796",
         // 账单编号
-        // BillNo:"test",
+        BillNo:"BN2026052236198530",
         // 退款金额
-        // RefAmt:"test",
+        RefAmt:"100.00",
         // 大额转账支付账户信息数据jsonObject格式；银行大额转账支付交易的退款申请,付款方账户类型为对公时必填
-        // BankInfoData:get1d68b0833d9146359c7eAb5f4dbf001b(),
+        BankInfoData:get39a3f6ccD87e496fB6ac4a9211667d6f(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -55,24 +55,24 @@ func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
     // 退款原因
-    // extendInfoMap["reason"] = ""
+    extendInfoMap["reason"] = "退货"
     // 异步通知地址
     // extendInfoMap["notify_url"] = ""
     return extendInfoMap
 }
 
-func get1d68b0833d9146359c7eAb5f4dbf001b() string {
+func get39a3f6ccD87e496fB6ac4a9211667d6f() string {
     dto := make(map[string]interface{})
-    // 省份付款方为对公账户时必填,参见[代发省市地区码](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/area/%E6%96%97%E6%8B%B1%E4%BB%A3%E5%8F%91%E7%9C%81%E4%BB%BD%E5%9C%B0%E5%8C%BA%E7%BC%96%E7%A0%81.xlsx#代发省市地区码);&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0013&lt;/font&gt;
-    // dto["province"] = "test"
-    // 地区付款方为对公账户时必填，,参见[代发省市地区码](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/area/%E6%96%97%E6%8B%B1%E4%BB%A3%E5%8F%91%E7%9C%81%E4%BB%BD%E5%9C%B0%E5%8C%BA%E7%BC%96%E7%A0%81.xlsx#代发省市地区码)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1301&lt;/font&gt;
-    // dto["area"] = "test"
-    // 银行编号付款方为对公账户时必填,参见[银行编码](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_yhbm#银行编码);&lt;font color&#x3D;&quot;green&quot;&gt;示例值：01040000&lt;/font&gt;
-    // dto["bank_code"] = "test"
-    // 联行号付款方为对公账户时必填,参见[银行支行编码](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_yhzhbm#银行支行编码);&lt;font color&#x3D;&quot;green&quot;&gt;示例值：102290026507&lt;/font&gt;
-    // dto["correspondent_code"] = "test"
+    // 省份
+    dto["province"] = "0013"
+    // 地区
+    dto["area"] = "1301"
+    // 银行编号
+    dto["bank_code"] = "01040000"
+    // 联行号
+    dto["correspondent_code"] = "102290026507"
     // 付款方账户类型
-    // dto["card_acct_type"] = ""
+    dto["card_acct_type"] = "E"
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)

@@ -34,11 +34,11 @@ func V3BillpayPlanAddRequestDemo() {
         // 补发当前周期账单标志枚举:Y-是、N-否；指定账单日时，必填；若填写是，则立即生成当前系统时间所在周期的账单； 滚动账单日时，此字段无效
         ReissueBillFlag:"Y",
         // 代扣信息jsonObject格式；账单计划需自动代扣时必填
-        WithholdInfoData:get49450184739c47e6Bab527b61aa24f1a(),
+        WithholdInfoData:getE99cbc55Ce184380A307475a77220ad4(),
         // 用户资料信息列表
-        UserDocInfoList:get919c625f5db74bca802a9a31f9647a55(),
+        UserDocInfoList:getFe462f13Ed914741B68b51220c62772f(),
         // 账单收费项信息列表
-        PaymentInfoList:get64292bd749be4204A99cA4e9c977a623(),
+        PaymentInfoList:get429cef58C12b49b7B98dAa9a14b2a395(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -67,7 +67,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func get49450184739c47e6Bab527b61aa24f1a() string {
+func getE99cbc55Ce184380A307475a77220ad4() string {
     dto := make(map[string]interface{})
     // 卡令牌
     dto["token_no"] = "CT202412270001"
@@ -78,7 +78,7 @@ func get49450184739c47e6Bab527b61aa24f1a() string {
     return string(dtoByte)
 }
 
-func get919c625f5db74bca802a9a31f9647a55() string {
+func getFe462f13Ed914741B68b51220c62772f() string {
     dto := make(map[string]interface{})
     // 账单表单字段属性ID
     dto["key_no"] = "userName"
@@ -90,7 +90,7 @@ func get919c625f5db74bca802a9a31f9647a55() string {
     return string(dtoByte)
 }
 
-func get64292bd749be4204A99cA4e9c977a623() string {
+func get429cef58C12b49b7B98dAa9a14b2a395() string {
     dto := make(map[string]interface{})
     // 账单表单字段属性ID
     dto["key_no"] = "propertyFee"

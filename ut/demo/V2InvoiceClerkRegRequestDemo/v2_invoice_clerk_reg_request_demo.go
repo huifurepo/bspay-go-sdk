@@ -58,6 +58,8 @@ func V2InvoiceClerkRegRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
+    // 是否设置默认开票员
+    // extendInfoMap["is_default_set"] = ""
     return extendInfoMap
 }
 
