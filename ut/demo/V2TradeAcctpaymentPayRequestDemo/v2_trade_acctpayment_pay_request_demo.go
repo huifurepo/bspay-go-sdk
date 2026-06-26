@@ -28,9 +28,9 @@ func V2TradeAcctpaymentPayRequestDemo() {
         // 支付金额
         OrdAmt:"0.01",
         // 分账对象
-        AcctSplitBunch:get9d0bec22F44249219196A84b6c917fe9(),
+        AcctSplitBunch:get9c29fa2e73524f6680262d660bfa5335(),
         // 安全信息
-        RiskCheckData:get21c1ce39685d47d0Abd2F5d0467e7471(),
+        RiskCheckData:getE947651a90b340abA9110bb2ffa7106b(),
         // 资金类型资金类型。支付渠道为中信E管家时，资金类型必填（[详见说明](https://paas.huifu.com/open/doc/api/#/yuer/api_zxegjzllx)）
         // FundType:"test",
         // 手续费承担方标识余额支付手续费承担方标识；商户余额支付扣收规则为接口指定承担方时必填！枚举值：&lt;br/&gt;OUT：出款方；&lt;br/&gt;IN：分账接受方。&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：IN&lt;/font&gt;
@@ -72,22 +72,12 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["out_acct_id"] = ""
     // 支付渠道
     // extendInfoMap["acct_channel"] = ""
-    // 灵活用工标志
-    // extendInfoMap["hyc_flag"] = ""
-    // 灵活用工平台
-    // extendInfoMap["lg_platform_type"] = ""
-    // 落地公司商户号
-    // extendInfoMap["bmember_id"] = ""
-    // 乐接活请求参数集合
-    // extendInfoMap["ljh_data"] = get0684ecf9C4b64c0d88de7d9a0f6077a7()
-    // 异步通知地址
-    // extendInfoMap["notify_url"] = ""
     // 余额支付安全核验方式
     // extendInfoMap["verify_type"] = ""
     return extendInfoMap
 }
 
-func get14a36f48897b45ef815dDb697428ce53() interface{} {
+func getFae5f7e17de84c098c5dF86a5d97af14() interface{} {
     dto := make(map[string]interface{})
     // 分账接收方ID
     dto["huifu_id"] = "6666000109133323"
@@ -102,10 +92,10 @@ func get14a36f48897b45ef815dDb697428ce53() interface{} {
     return dtoList
 }
 
-func get9d0bec22F44249219196A84b6c917fe9() string {
+func get9c29fa2e73524f6680262d660bfa5335() string {
     dto := make(map[string]interface{})
     // 分账明细
-    dto["acct_infos"] = get14a36f48897b45ef815dDb697428ce53()
+    dto["acct_infos"] = getFae5f7e17de84c098c5dF86a5d97af14()
     // 百分比分账标志
     // dto["percentage_flag"] = ""
     // 是否净值分账
@@ -115,7 +105,7 @@ func get9d0bec22F44249219196A84b6c917fe9() string {
     return string(dtoByte)
 }
 
-func get21c1ce39685d47d0Abd2F5d0467e7471() string {
+func getE947651a90b340abA9110bb2ffa7106b() string {
     dto := make(map[string]interface{})
     // 转账原因
     dto["transfer_type"] = "04"
@@ -129,17 +119,6 @@ func get21c1ce39685d47d0Abd2F5d0467e7471() string {
     // dto["base_station"] = ""
     // IP地址
     // dto["ip_addr"] = ""
-
-    dtoByte, _ := json.Marshal(dto)
-    return string(dtoByte)
-}
-
-func get0684ecf9C4b64c0d88de7d9a0f6077a7() string {
-    dto := make(map[string]interface{})
-    // 税源地ID
-    // dto["tax_area_id"] = ""
-    // 任务模板ID
-    // dto["template_id"] = ""
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
