@@ -46,11 +46,11 @@ func V2InvoiceOpenRequestDemo() {
         // 原发票号码openType&#x3D;1时必填；参见[发票右上角](https://paas.huifu.com/open/doc/api/#/fp/api_fp_yanglitu.md)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20685767&lt;/font&gt;
         OriIvcNumber:"150000020026",
         // 开票商品信息
-        GoodsInfos:getFb62b0617dcc4ca2A09aD5ff39bf9d16(),
+        GoodsInfos:get238d9ce57f54438c982c71b0975e320f(),
         // 不动产销售特殊字段specialFlag为05时，必填；jsonArray格式
-        // EstateSales:getF28c6ad5B3b34ebeBf0bC65eec0d4588(),
+        // EstateSales:get4ca5ce26399544ab942e2f8d2572bcfa(),
         // 不动产租赁特殊字段specialFlag为16时，必填；jsonArray格式
-        // EstateLease:getE4a098258ab442e5B31360deeb7f145a(),
+        // EstateLease:get8f873e58D87e4b07A467C0f82ffc3b62(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -99,17 +99,17 @@ func getExtendInfos() map[string]interface{} {
     // 红字信息表编号
     extendInfoMap["red_info_number"] = ""
     // 开票人信息
-    extendInfoMap["payer_info"] = getD3495fcdF9f44754Ba04D7c6c321de3d()
+    extendInfoMap["payer_info"] = get67b8016609744dc680744d137112211a()
     // 开票结果异步通知地址
     extendInfoMap["callback_url"] = "virgo://http://192.168.85.157:30031/sspm/testVirgo"
     // 强制开票标识
     extendInfoMap["buyer_info_confirm"] = ""
-    // 交易订单号
-    // extendInfoMap["order_id"] = ""
+    // 交易订单信息
+    extendInfoMap["order_info"] = get6831958258194474Bd67Cc04b725652a()
     return extendInfoMap
 }
 
-func getFb62b0617dcc4ca2A09aD5ff39bf9d16() string {
+func get238d9ce57f54438c982c71b0975e320f() string {
     dto := make(map[string]interface{})
     // 发票行性质
     dto["ivc_nature"] = "0"
@@ -149,7 +149,7 @@ func getFb62b0617dcc4ca2A09aD5ff39bf9d16() string {
     return string(dtoByte)
 }
 
-func getD3495fcdF9f44754Ba04D7c6c321de3d() string {
+func get67b8016609744dc680744d137112211a() string {
     dto := make(map[string]interface{})
     // 收款人
     dto["payee"] = "收款人"
@@ -162,7 +162,7 @@ func getD3495fcdF9f44754Ba04D7c6c321de3d() string {
     return string(dtoByte)
 }
 
-func getF28c6ad5B3b34ebeBf0bC65eec0d4588() string {
+func get4ca5ce26399544ab942e2f8d2572bcfa() string {
     dto := make(map[string]interface{})
     // 不动产地址
     // dto["addr"] = "test"
@@ -188,7 +188,7 @@ func getF28c6ad5B3b34ebeBf0bC65eec0d4588() string {
     return string(dtoByte)
 }
 
-func getE4a098258ab442e5B31360deeb7f145a() string {
+func get8f873e58D87e4b07A467C0f82ffc3b62() string {
     dto := make(map[string]interface{})
     // 不动产地址
     // dto["addr"] = "test"
@@ -208,5 +208,15 @@ func getE4a098258ab442e5B31360deeb7f145a() string {
     dtoList := [1]interface{}{dto}
     dtoByte, _ := json.Marshal(dtoList)
     return string(dtoByte)
+}
+
+func get6831958258194474Bd67Cc04b725652a() interface{} {
+    dto := make(map[string]interface{})
+    // 交易订单号
+    dto["order_id"] = "002900TOP4A260519173506P786ac13683b000015"
+    // 交易订单日期
+    dto["order_date"] = "20260701"
+
+    return dto;
 }
 

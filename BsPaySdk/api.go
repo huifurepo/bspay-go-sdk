@@ -15,6 +15,21 @@ const BASE_API_TEST_URL_V2 = "https://spin-test.cloudpnr.com"
 // 以下为接口uri
 
 /**
+ * 电子合同申请列表查询
+ */
+const V2_INVOICE_QUERYECMSAPPLYLIST = "/v2/invoice/queryEcmsApplyList"
+
+/**
+ * 电子合同拒签
+ */
+const V2_INVOICE_REJECTSIGN = "/v2/invoice/rejectSign"
+
+/**
+ * 电子合同重发
+ */
+const V2_INVOICE_CONTRACTREPEAT = "/v2/invoice/contractRepeat"
+
+/**
  * 开票商品查询
  */
 const V2_INVOICE_MANAGE_GOODS_QUERYLIST = "/v2/invoice/manage/goods/queryList"

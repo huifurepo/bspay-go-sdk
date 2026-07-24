@@ -84,6 +84,10 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["time_expire"] = ""
     // 手续费扣款标志
     // extendInfoMap["fee_flag"] = ""
+    // 页面跳转地址
+    // extendInfoMap["front_url"] = ""
+    // 付款卡对公对私标识
+    // extendInfoMap["pay_card_acct_type"] = ""
     return extendInfoMap
 }
 

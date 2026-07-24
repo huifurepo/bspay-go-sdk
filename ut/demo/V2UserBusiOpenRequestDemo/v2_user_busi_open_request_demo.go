@@ -28,7 +28,7 @@ func V2UserBusiOpenRequestDemo() {
         // 渠道商/商户汇付Id
         UpperHuifuId:"6666000003084836",
         // 签约人信息当电子回单配置开关为开通时必填
-        // SignUserInfo:getD9434806776c414c980610d4834bbc57(),
+        // SignUserInfo:get622f45a116f5471994d5550a71e252b4(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -53,31 +53,31 @@ func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
     // 结算信息配置列表
-    extendInfoMap["settle_config_list"] = getD8f10685C8cc4038870dDa548b56e127()
+    extendInfoMap["settle_config_list"] = getDa40c90bAee54bedA08758d08449da0d()
     // 结算卡信息
-    extendInfoMap["card_info"] = getE443ecc3650941c0B5aaA560f59c5bbd()
+    extendInfoMap["card_info"] = get36b69c2dA9174d0885cf231d48977856()
     // 取现配置列表
-    extendInfoMap["cash_config"] = getCb3494c684d8496388668eb0b37e9810()
+    extendInfoMap["cash_config"] = get5579261d4c9d4036Aa7dB17613d46b1b()
     // 文件列表
-    extendInfoMap["file_list"] = get501479431b18490cA52e1e3321b989e8()
+    extendInfoMap["file_list"] = getFe49b7fcD7b24fb68b262d1091436da8()
     // 延迟入账开关
     // extendInfoMap["delay_flag"] = ""
     // 斗拱e账户功能配置
-    // extendInfoMap["elec_acct_config"] = get4ba63d225df24a13A7ed75eb7c61e4ff()
+    // extendInfoMap["elec_acct_config"] = getF96070d43bc9484684c034342e7e20cb()
     // 异步请求地址
     extendInfoMap["async_return_url"] = ""
     // 电子回单配置
-    // extendInfoMap["elec_receipt_config"] = get0dc7becd6681441b8220Cd0acd21d21e()
+    // extendInfoMap["elec_receipt_config"] = get9b5ef6849e38403a96850070b9665a0f()
     return extendInfoMap
 }
 
-func getD8f10685C8cc4038870dDa548b56e127() string {
+func getDa40c90bAee54bedA08758d08449da0d() string {
     dto := make(map[string]interface{})
     // 结算周期
     dto["settle_cycle"] = "D1"
     // 结算手续费外扣时的汇付ID外扣手续费承担方的汇付ID。外扣时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000123123123&lt;/font&gt;
     dto["out_settle_huifuid"] = ""
-    // 结算手续费外扣时的账户类型外扣手续费账户类型； 01：基本户（为空时默认值）， 05：充值户；外扣时必填；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：01&lt;/font&gt;
+    // 结算手续费外扣时的账户类型外扣手续费账户类型； 01：基本户（为空时默认值），02-现金户， 05：充值户；外扣时必填；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：01&lt;/font&gt;
     dto["out_settle_acct_type"] = ""
     // 结算批次号settle_pattern为P0时必填；[参见结算批次说明](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_jspc)
     dto["settle_batch_no"] = "300"
@@ -109,7 +109,7 @@ func getD8f10685C8cc4038870dDa548b56e127() string {
     return string(dtoByte)
 }
 
-func getE443ecc3650941c0B5aaA560f59c5bbd() string {
+func get36b69c2dA9174d0885cf231d48977856() string {
     dto := make(map[string]interface{})
     // 卡类型
     dto["card_type"] = "0"
@@ -142,7 +142,7 @@ func getE443ecc3650941c0B5aaA560f59c5bbd() string {
     return string(dtoByte)
 }
 
-func getCb3494c684d8496388668eb0b37e9810() string {
+func get5579261d4c9d4036Aa7dB17613d46b1b() string {
     dto := make(map[string]interface{})
     // 提现手续费（固定/元）fix_amt与fee_rate至少填写一项， 需保留小数点后两位，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;注：当cash_type&#x3D;D1时为节假日取现手续费
     dto["fix_amt"] = "0.03"
@@ -168,7 +168,7 @@ func getCb3494c684d8496388668eb0b37e9810() string {
     return string(dtoByte)
 }
 
-func get501479431b18490cA52e1e3321b989e8() string {
+func getFe49b7fcD7b24fb68b262d1091436da8() string {
     dto := make(map[string]interface{})
     // 文件类型
     dto["file_type"] = "F02"
@@ -182,7 +182,7 @@ func get501479431b18490cA52e1e3321b989e8() string {
     return string(dtoByte)
 }
 
-func get00e737bb56d94b658201781ba34026fc() interface{} {
+func get8bea096014704c45Ad6b54ca48e44b1d() interface{} {
     dto := make(map[string]interface{})
     // 银行所在省
     // dto["prov_id"] = "test"
@@ -213,7 +213,7 @@ func get00e737bb56d94b658201781ba34026fc() interface{} {
     return dtoList
 }
 
-func get4ba63d225df24a13A7ed75eb7c61e4ff() string {
+func getF96070d43bc9484684c034342e7e20cb() string {
     dto := make(map[string]interface{})
     // 电子账户开关
     // dto["switch_state"] = "test"
@@ -228,7 +228,7 @@ func get4ba63d225df24a13A7ed75eb7c61e4ff() string {
     // 签约成功标志
     // dto["sign_success_flag"] = "test"
     // 银行卡信息
-    // dto["elec_card_list"] = get00e737bb56d94b658201781ba34026fc()
+    // dto["elec_card_list"] = get8bea096014704c45Ad6b54ca48e44b1d()
     // 用户类型
     // dto["user_type"] = ""
     // 中信签约短信流水号
@@ -238,7 +238,7 @@ func get4ba63d225df24a13A7ed75eb7c61e4ff() string {
     return string(dtoByte)
 }
 
-func get0dc7becd6681441b8220Cd0acd21d21e() interface{} {
+func get9b5ef6849e38403a96850070b9665a0f() interface{} {
     dto := make(map[string]interface{})
     // 电子回单开关
     // dto["switch_state"] = "test"
@@ -246,7 +246,7 @@ func get0dc7becd6681441b8220Cd0acd21d21e() interface{} {
     return dto;
 }
 
-func getD9434806776c414c980610d4834bbc57() interface{} {
+func get622f45a116f5471994d5550a71e252b4() interface{} {
     dto := make(map[string]interface{})
     // 签约人类型
     // dto["type"] = "test"

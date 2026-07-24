@@ -52,7 +52,7 @@ func V2MerchantBasicdataIndvRequestDemo() {
         // 负责人电子邮箱
         ContactEmail:"jeff.peng@huifu.com",
         // 结算卡信息配置
-        CardInfo:getE4d510160efc42e5Afa4Fa4639ca2682(),
+        CardInfo:get72d79b61E2bc44b39344F8d71b71bca1(),
         // 银行卡卡号面
         // SettleCardFrontPic:"test",
         // 商户ICP备案编号商户ICP备案编号或网站许可证号；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：沪ICP备06046402号-28 &lt;/font&gt;&lt;br/&gt;类型为PC网站时，且为企业商户，且开通快捷或网银，或大额转账，或余额支付或分账业务（20%（不含）-100%），或为个人商户开通分账业务（10%（不含）-100%），必填
@@ -99,9 +99,9 @@ func getExtendInfos() map[string]interface{} {
     // 负责人职业
     // extendInfoMap["occupation"] = ""
     // 结算规则配置
-    extendInfoMap["settle_config"] = get3fc1e14c47074d97Bc16B6dd843a9ab5()
+    extendInfoMap["settle_config"] = getE17fa3a0C2cf4b76940a1ac951160b0b()
     // 取现信息配置
-    extendInfoMap["cash_config"] = getF035da8cD9dd4dd3B5feA4907768259f()
+    extendInfoMap["cash_config"] = get7911b5ff93534d07A3831d95b7008315()
     // 商户通知标识
     extendInfoMap["sms_send_flag"] = "1"
     // 管理员账号
@@ -117,15 +117,15 @@ func getExtendInfos() map[string]interface{} {
     // 商户身份
     // extendInfoMap["head_office_flag"] = ""
     // 斗拱e账户功能配置
-    // extendInfoMap["elec_acct_config"] = getF815cc1a9cdc46a5B1aa6a3ddfc3828a()
+    // extendInfoMap["elec_acct_config"] = get99120d1452a145828bb9B65ba12771f5()
     // 扩展资料包
-    // extendInfoMap["extended_material_list"] = get4057cf2720ef4e7bA5fd9c1ebf0679f0()
+    // extendInfoMap["extended_material_list"] = get77cfc5f9C9c6437eB56967deec2d8b49()
     // 产品大类
     // extendInfoMap["activated_products"] = ""
     return extendInfoMap
 }
 
-func getE4d510160efc42e5Afa4Fa4639ca2682() string {
+func get72d79b61E2bc44b39344F8d71b71bca1() string {
     dto := make(map[string]interface{})
     // 卡户名
     dto["card_name"] = "张天德"
@@ -156,7 +156,7 @@ func getE4d510160efc42e5Afa4Fa4639ca2682() string {
     return string(dtoByte)
 }
 
-func get3fc1e14c47074d97Bc16B6dd843a9ab5() string {
+func getE17fa3a0C2cf4b76940a1ac951160b0b() string {
     dto := make(map[string]interface{})
     // 结算周期
     dto["settle_cycle"] = "D1"
@@ -193,7 +193,7 @@ func get3fc1e14c47074d97Bc16B6dd843a9ab5() string {
     return string(dtoByte)
 }
 
-func getF035da8cD9dd4dd3B5feA4907768259f() string {
+func get7911b5ff93534d07A3831d95b7008315() string {
     dto := make(map[string]interface{})
     // 取现类型
     dto["cash_type"] = "D1"
@@ -219,7 +219,7 @@ func getF035da8cD9dd4dd3B5feA4907768259f() string {
     return string(dtoByte)
 }
 
-func get7a27faf4Cfb843348d049994078a7028() interface{} {
+func get7e86449e4ded4f76991eEed03bd4ec62() interface{} {
     dto := make(map[string]interface{})
     // 银行编码
     // dto["bank_code"] = "test"
@@ -250,7 +250,7 @@ func get7a27faf4Cfb843348d049994078a7028() interface{} {
     return dtoList
 }
 
-func getF815cc1a9cdc46a5B1aa6a3ddfc3828a() string {
+func get99120d1452a145828bb9B65ba12771f5() string {
     dto := make(map[string]interface{})
     // 电子账户开关
     // dto["switch_state"] = "test"
@@ -265,7 +265,7 @@ func getF815cc1a9cdc46a5B1aa6a3ddfc3828a() string {
     // 签约成功标志
     // dto["sign_success_flag"] = "test"
     // 银行卡信息
-    // dto["elec_card_list"] = get7a27faf4Cfb843348d049994078a7028()
+    // dto["elec_card_list"] = get7e86449e4ded4f76991eEed03bd4ec62()
     // 中信签约短信流水号
     // dto["elec_acct_sign_seq_id"] = ""
 
@@ -273,7 +273,7 @@ func getF815cc1a9cdc46a5B1aa6a3ddfc3828a() string {
     return string(dtoByte)
 }
 
-func get4057cf2720ef4e7bA5fd9c1ebf0679f0() string {
+func get77cfc5f9C9c6437eB56967deec2d8b49() string {
     dto := make(map[string]interface{})
     // 文件id
     // dto["file_id"] = "test"

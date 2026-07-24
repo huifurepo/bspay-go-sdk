@@ -101,7 +101,7 @@ func getExtendInfos() map[string]interface{} {
     // 优惠费率承诺函
     extendInfoMap["activity_rate_commit_photo"] = "42204258-967e-373c-88d2-1afa4c7bb8ef"
     // 商户同名银行账户信息
-    extendInfoMap["bank_account"] = get3dde7d021f8b47e2Babf09e3b7c013e7()
+    extendInfoMap["bank_account"] = get71cc56ac4ffd491aA8d8479c14843976()
     // 银行开户证明图片
     extendInfoMap["bank_account_prove_photo"] = ""
     // 机构银行合作授权函图
@@ -120,10 +120,12 @@ func getExtendInfos() map[string]interface{} {
     // extendInfoMap["expiration_rate"] = ""
     // 学校号
     // extendInfoMap["school_id"] = ""
+    // 活动到期后最低收取手续费（元）
+    // extendInfoMap["low_amt"] = ""
     return extendInfoMap
 }
 
-func get3dde7d021f8b47e2Babf09e3b7c013e7() string {
+func get71cc56ac4ffd491aA8d8479c14843976() string {
     dto := make(map[string]interface{})
     // 账户名
     dto["card_name"] = "张三"

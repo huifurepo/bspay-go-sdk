@@ -52,6 +52,8 @@ func V2LinkappStoreBindRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
+    // 三方平台商户号
+    // extendInfoMap["bid"] = ""
     return extendInfoMap
 }
 

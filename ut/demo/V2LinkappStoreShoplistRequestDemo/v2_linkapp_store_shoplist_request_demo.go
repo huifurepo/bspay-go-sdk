@@ -50,6 +50,8 @@ func V2LinkappStoreShoplistRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
+    // 三方平台商户号
+    extendInfoMap["bid"] = "7376156418275837952"
     return extendInfoMap
 }
 

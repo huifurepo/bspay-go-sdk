@@ -26,7 +26,7 @@ func V2UserBusiModifyRequestDemo() {
         // 汇付ID
         HuifuId:"6666000104896342",
         // 签约人信息当电子回单配置开关为开通时必填
-        // SignUserInfo:getDf5aaad20f3d46ad8ffdB2439324784c(),
+        // SignUserInfo:get2e1270419cfb40b0Ba4fD948ef3a9968(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -51,25 +51,25 @@ func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
     // 结算信息配置列表
-    extendInfoMap["settle_config_list"] = get22bfd04a14eb49c7A86fBa1833db7aa4()
+    extendInfoMap["settle_config_list"] = getA7f66f2e0e394c5882313f5208e032a5()
     // 结算卡信息
-    extendInfoMap["card_info"] = get76a7642cB1a948808a396b33fb13212a()
+    extendInfoMap["card_info"] = getF4883c3dB7314b778165E28796dc6f4d()
     // 取现配置列表
-    extendInfoMap["cash_config"] = getC0e0bd43Cc244bdeAdd76e1f3157fca2()
+    extendInfoMap["cash_config"] = get128e3e7925124c9c930d57076ce7f4ce()
     // 文件列表
-    extendInfoMap["file_list"] = get4f95b602711840af99ccD51837cfae71()
+    extendInfoMap["file_list"] = get37cdca109dc249448beb43e95a691723()
     // 延迟入账开关
     // extendInfoMap["delay_flag"] = ""
     // 异步请求地址
     extendInfoMap["async_return_url"] = "//http://service.example.com/to/path"
     // 斗拱e账户功能配置
-    // extendInfoMap["elec_acct_config"] = getC83c745f0e3f49b5A4501f4d98914987()
+    // extendInfoMap["elec_acct_config"] = getD29be399B1114340Ac978f6fa914ec0e()
     // 电子回单配置
-    // extendInfoMap["elec_receipt_config"] = get6f4d79f0Fae54cf7A4cbD9497685bbf2()
+    // extendInfoMap["elec_receipt_config"] = get68e887d1D10948c8B652A65fd3af9413()
     return extendInfoMap
 }
 
-func get22bfd04a14eb49c7A86fBa1833db7aa4() string {
+func getA7f66f2e0e394c5882313f5208e032a5() string {
     dto := make(map[string]interface{})
     // 开通状态
     dto["settle_status"] = "1"
@@ -109,7 +109,7 @@ func get22bfd04a14eb49c7A86fBa1833db7aa4() string {
     return string(dtoByte)
 }
 
-func get76a7642cB1a948808a396b33fb13212a() string {
+func getF4883c3dB7314b778165E28796dc6f4d() string {
     dto := make(map[string]interface{})
     // 卡类型
     dto["card_type"] = "0"
@@ -142,7 +142,7 @@ func get76a7642cB1a948808a396b33fb13212a() string {
     return string(dtoByte)
 }
 
-func getC0e0bd43Cc244bdeAdd76e1f3157fca2() string {
+func get128e3e7925124c9c930d57076ce7f4ce() string {
     dto := make(map[string]interface{})
     // 开通状态
     dto["switch_state"] = "1"
@@ -170,7 +170,7 @@ func getC0e0bd43Cc244bdeAdd76e1f3157fca2() string {
     return string(dtoByte)
 }
 
-func get4f95b602711840af99ccD51837cfae71() string {
+func get37cdca109dc249448beb43e95a691723() string {
     dto := make(map[string]interface{})
     // 文件类型
     dto["file_type"] = "F02"
@@ -184,7 +184,7 @@ func get4f95b602711840af99ccD51837cfae71() string {
     return string(dtoByte)
 }
 
-func get5b36977c459144efA157Cdcc7b02b6a6() interface{} {
+func get50ee0d3f414b4014A320C26840bbab60() interface{} {
     dto := make(map[string]interface{})
     // 银行所在省
     // dto["prov_id"] = "test"
@@ -215,7 +215,7 @@ func get5b36977c459144efA157Cdcc7b02b6a6() interface{} {
     return dtoList
 }
 
-func getC83c745f0e3f49b5A4501f4d98914987() string {
+func getD29be399B1114340Ac978f6fa914ec0e() string {
     dto := make(map[string]interface{})
     // 电子账户开关
     // dto["switch_state"] = "test"
@@ -230,7 +230,7 @@ func getC83c745f0e3f49b5A4501f4d98914987() string {
     // 电子账户开通状态
     // dto["bank_status"] = "test"
     // 银行卡信息
-    // dto["elec_card_list"] = get5b36977c459144efA157Cdcc7b02b6a6()
+    // dto["elec_card_list"] = get50ee0d3f414b4014A320C26840bbab60()
     // 银行信息
     // dto["bank_message"] = ""
     // 中信签约短信流水号
@@ -242,7 +242,7 @@ func getC83c745f0e3f49b5A4501f4d98914987() string {
     return string(dtoByte)
 }
 
-func get6f4d79f0Fae54cf7A4cbD9497685bbf2() interface{} {
+func get68e887d1D10948c8B652A65fd3af9413() interface{} {
     dto := make(map[string]interface{})
     // 电子回单开关
     // dto["switch_state"] = "test"
@@ -250,7 +250,7 @@ func get6f4d79f0Fae54cf7A4cbD9497685bbf2() interface{} {
     return dto;
 }
 
-func getDf5aaad20f3d46ad8ffdB2439324784c() interface{} {
+func get2e1270419cfb40b0Ba4fD948ef3a9968() interface{} {
     dto := make(map[string]interface{})
     // 签约人类型
     // dto["type"] = "test"
