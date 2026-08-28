@@ -14,6 +14,28 @@ import (
 )
 
 /**
+统一加签，根据 signType 动态选择加签方式
+signType 为 SM2 时走国密，其他均走 RSA
+*/
+func Sign(content string, msc *MerchSysConfig) (string, error) {
+	if msc.SignType == SIGN_TYPE_SM2 {
+		return Sm2Sign(content, msc)
+	}
+	return RsaSign(content, msc)
+}
+
+/**
+统一验签，根据 signType 动态选择验签方式
+signType 为 SM2 时走国密，其他均走 RSA
+*/
+func SignVerify(signValue string, content string, msc *MerchSysConfig) (bool, error) {
+	if msc.SignType == SIGN_TYPE_SM2 {
+		return Sm2SignVerify(content, signValue, msc)
+	}
+	return RsaSignVerify(signValue, content, msc)
+}
+
+/**
 * post 请求
  */
 func DoPostReq(url string, params map[string]interface{}, msc *MerchSysConfig) (*http.Response, error) {
@@ -25,7 +47,7 @@ func DoPostReq(url string, params map[string]interface{}, msc *MerchSysConfig) (
 	}
 	paramText, _ := FormatSignSrcText(signMap)
 
-	sign, _ := RsaSign(paramText, msc)
+	sign, _ := Sign(paramText, msc)
 
 	respData := make(map[string]interface{})
 	respData["sign"] = sign
@@ -38,6 +60,10 @@ func DoPostReq(url string, params map[string]interface{}, msc *MerchSysConfig) (
 	BspayPrintln("request data: " + respDataText)
 	request, _ := http.NewRequest("POST", url, strings.NewReader(respDataText))
 	request.Header.Add("Content-Type", "application/json")
+	// 国密模式下，添加 signType header
+	if msc.SignType == SIGN_TYPE_SM2 {
+		request.Header.Add("signType", SIGN_TYPE_SM2)
+	}
 
 	return http.DefaultClient.Do(request)
 }
@@ -171,7 +197,7 @@ func HandleResponse(resp *http.Response, msc *MerchSysConfig, needVerfySign bool
 			contentString = strings.ReplaceAll(contentString, "\\u003c", "<")
 			contentString = strings.ReplaceAll(contentString, "\\u003e", ">")
 			contentString = strings.ReplaceAll(contentString, "\\u0026", "&")
-			sign, _ := RsaSignVerify(respDataMap["sign"].(string), contentString, msc)
+			sign, _ := SignVerify(respDataMap["sign"].(string), contentString, msc)
 			if !sign {
 				BspayPrintln("check signature error")
 				return nil, errors.New("check signature error")

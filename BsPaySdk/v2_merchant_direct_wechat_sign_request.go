@@ -15,11 +15,8 @@ type V2MerchantDirectWechatSignRequest struct {
     UpperHuifuId string `json:"upper_huifu_id" structs:"upper_huifu_id"` // 渠道商汇付Id
     AppId string `json:"app_id" structs:"app_id"` // 开发者的应用ID
     MchId string `json:"mch_id" structs:"mch_id"` // 商户号
-    Owner string `json:"owner" structs:"owner"` // 经营者/法人是否为受益人
     ContactInfo string `json:"contact_info" structs:"contact_info"` // 超级管理员信息
     SalesScenesType string `json:"sales_scenes_type" structs:"sales_scenes_type"` // 经营场景类型
-    SalesInfo string `json:"sales_info" structs:"sales_info"` // 经营场景
-    SettlementInfo string `json:"settlement_info" structs:"settlement_info"` // 结算信息
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

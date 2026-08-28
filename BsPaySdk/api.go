@@ -1190,7 +1190,7 @@ const V2_MERCHANT_COMPLAINT_REPLY = "/v2/merchant/complaint/reply"
 const V2_MERCHANT_COMPLAINT_COMPLETE = "/v2/merchant/complaint/complete"
 
 /**
- * 支付宝直连-申请当面付代签约
+ * 支付宝直连-商户入驻
  */
 const V2_MERCHANT_DIRECT_ALIPAY_FACETOFACESIGN_APPLY = "/v2/merchant/direct/alipay/facetofacesign/apply"
 
@@ -1200,7 +1200,7 @@ const V2_MERCHANT_DIRECT_ALIPAY_FACETOFACESIGN_APPLY = "/v2/merchant/direct/alip
 const V2_MERCHANT_DIRECT_ALIPAY_APPAUTHTOKEN_EXCHANGE = "/v2/merchant/direct/alipay/appauthtoken/exchange"
 
 /**
- * 支付宝直连-查询申请状态
+ * 支付宝直连-查询申请单状态
  */
 const V2_MERCHANT_DIRECT_ALIPAY_APPLYORDERSTATUS_QUERY = "/v2/merchant/direct/alipay/applyorderstatus/query"
 

@@ -25,6 +25,8 @@ func V2InvoiceQueryecmsapplylistRequestDemo() {
         ReqSeqId:tool.GetReqSeqId(),
         // 汇付商户号
         HuifuId:"6666000103334211",
+        // 协议类型
+        AgreementType:"ELECT",
         // 当前页
         PageNum:"1",
         // 分页大小
@@ -62,8 +64,6 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["order_id"] = "2025052118403054"
     // 商户名称
     // extendInfoMap["mer_name"] = ""
-    // 协议类型
-    extendInfoMap["agreement_type"] = "ELECT"
     // 产品号
     // extendInfoMap["product_id"] = ""
     return extendInfoMap

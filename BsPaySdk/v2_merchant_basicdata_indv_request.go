@@ -11,7 +11,7 @@ import "encoding/json"
 type V2MerchantBasicdataIndvRequest struct {
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
-    UpperHuifuId string `json:"upper_huifu_id" structs:"upper_huifu_id"` // 直属渠道号
+    UpperHuifuId string `json:"upper_huifu_id" structs:"upper_huifu_id"` // 直属渠道号该商户进件完成后归属的渠道商huifu_id；&lt;br/&gt;sys_id主体为渠道商时填写； &lt;br/&gt;sys_id主体为总部商户时选填；&lt;br/&gt; &lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000123123123&lt;/font&gt;
     RegName string `json:"reg_name" structs:"reg_name"` // 商户名
     Mcc string `json:"mcc" structs:"mcc"` // 所属行业
     SceneType string `json:"scene_type" structs:"scene_type"` // 场景类型
@@ -28,9 +28,9 @@ type V2MerchantBasicdataIndvRequest struct {
     CardInfo string `json:"card_info" structs:"card_info"` // 结算卡信息配置
     SettleCardFrontPic string `json:"settle_card_front_pic" structs:"settle_card_front_pic"` // 银行卡卡号面
     MerIcp string `json:"mer_icp" structs:"mer_icp"` // 商户ICP备案编号商户ICP备案编号或网站许可证号；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：沪ICP备06046402号-28 &lt;/font&gt;&lt;br/&gt;类型为PC网站时，且为企业商户，且开通快捷或网银，或大额转账，或余额支付或分账业务（20%（不含）-100%），或为个人商户开通分账业务（10%（不含）-100%），必填
-    StoreHeaderPic string `json:"store_header_pic" structs:"store_header_pic"` // 店铺门头照文件类型：F22；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;&lt;br/&gt;微信/支付宝实名认证个人商户，门头照也使用此字段； &lt;br/&gt;门店场所：提交门店门口照片，要求招牌清晰可见; &lt;br/&gt;小微商户流动经营/便民服务：提交经营/服务现场照片
-    StoreIndoorPic string `json:"store_indoor_pic" structs:"store_indoor_pic"` // 店铺内景/工作区域照文件类型：F24；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;&lt;br/&gt;微信/支付宝实名认证个人商户，内景照也使用此字段； &lt;br/&gt;门店场所：提交店内环境照片 &lt;br/&gt;小微商户流动经营/便民服务：可提交另一张经营/服务现场照片
-    StoreCashierDeskPic string `json:"store_cashier_desk_pic" structs:"store_cashier_desk_pic"` // 店铺收银台/公司前台照商户线下场景需要提供；文件类型：F105；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
+    StoreHeaderPic string `json:"store_header_pic" structs:"store_header_pic"` // 店铺门头照scene_type字段含有线下场景时必填；文件类型：F22；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;&lt;br/&gt;微信/支付宝实名认证个人商户，门头照也使用此字段； &lt;br/&gt;门店场所：提交门店门口照片，要求招牌清晰可见; &lt;br/&gt;小微商户流动经营/便民服务：提交经营/服务现场照片
+    StoreIndoorPic string `json:"store_indoor_pic" structs:"store_indoor_pic"` // 店铺内景/工作区域照scene_type字段含有线下场景时必填；文件类型：F24；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;&lt;br/&gt;微信/支付宝实名认证个人商户，内景照也使用此字段； &lt;br/&gt;门店场所：提交店内环境照片 &lt;br/&gt;小微商户流动经营/便民服务：可提交另一张经营/服务现场照片
+    StoreCashierDeskPic string `json:"store_cashier_desk_pic" structs:"store_cashier_desk_pic"` // 店铺收银台/公司前台照scene_type字段含有线下场景时必填；文件类型：F105；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
     HeadHuifuId string `json:"head_huifu_id" structs:"head_huifu_id"` // 上级商户汇付ID如果head_office_flag&#x3D;0，则字段必填&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000123123123&lt;/font&gt;
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段

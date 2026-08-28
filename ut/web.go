@@ -41,6 +41,15 @@ func GoSDKHandler(w http.ResponseWriter, r *http.Request) {
 	if queryVal.Get("rsaPublicKey") != "" {
 		sdk1.Msc.RsaHuifuPublicKey = queryVal.Get("rsaPublicKey")
 	}
+	if queryVal.Get("signType") != "" {
+		sdk1.Msc.SignType = queryVal.Get("signType")
+	}
+	if queryVal.Get("sm2PrivateKey") != "" {
+		sdk1.Msc.Sm2MerchPrivateKey = queryVal.Get("sm2PrivateKey")
+	}
+	if queryVal.Get("sm2PublicKey") != "" {
+		sdk1.Msc.Sm2HuifuPublicKey = queryVal.Get("sm2PublicKey")
+	}
 
 	buf := new(bytes.Buffer)
 	buf.ReadFrom(r.Body)

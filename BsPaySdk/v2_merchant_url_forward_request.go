@@ -11,7 +11,7 @@ import "encoding/json"
 type V2MerchantUrlForwardRequest struct {
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
-    UpperHuifuId string `json:"upper_huifu_id" structs:"upper_huifu_id"` // 渠道商号
+    UpperHuifuId string `json:"upper_huifu_id" structs:"upper_huifu_id"` // 渠道商号汇付分配的渠道商号，该商户进件完成后将隶属该渠道商/代理商&lt;br/&gt;sys_id主体为渠道商时填写； &lt;br/&gt;sys_id主体为总部商户时选填；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000123123123&lt;/font&gt;
     StoreId string `json:"store_id" structs:"store_id"` // 门店号
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段

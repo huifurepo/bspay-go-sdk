@@ -91,11 +91,11 @@ func getExtendInfos() map[string]interface{} {
     // 操作员
     extendInfoMap["operator_id"] = ""
     // 是否发送短信标识
-    extendInfoMap["sms_send_flag"] = "1"
+    extendInfoMap["sms_send_flag"] = "Y"
     // 扩展方字段
     extendInfoMap["expand_id"] = ""
     // 文件列表
-    // extendInfoMap["file_list"] = get46c99a78A2384cbcB68aD9873e8acd6c()
+    // extendInfoMap["file_list"] = getEa57237822214ca58bdb2d23030e8a65()
     // 公司类型
     // extendInfoMap["ent_type"] = ""
     // 所属行业
@@ -103,7 +103,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func get46c99a78A2384cbcB68aD9873e8acd6c() string {
+func getEa57237822214ca58bdb2d23030e8a65() string {
     dto := make(map[string]interface{})
     // 文件类型
     // dto["file_type"] = "test"

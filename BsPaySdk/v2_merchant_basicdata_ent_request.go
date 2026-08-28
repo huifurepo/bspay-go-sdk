@@ -11,7 +11,7 @@ import "encoding/json"
 type V2MerchantBasicdataEntRequest struct {
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
-    UpperHuifuId string `json:"upper_huifu_id" structs:"upper_huifu_id"` // 渠道商号
+    UpperHuifuId string `json:"upper_huifu_id" structs:"upper_huifu_id"` // 渠道商号该商户进件完成后归属的渠道商huifu_id；&lt;br/&gt;sys_id主体为渠道商时填写； &lt;br/&gt;sys_id主体为总部商户时选填；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000123123123&lt;/font&gt;
     RegName string `json:"reg_name" structs:"reg_name"` // 商户名称
     ShortName string `json:"short_name" structs:"short_name"` // 商户简称
     ReceiptName string `json:"receipt_name" structs:"receipt_name"` // 小票名称
@@ -50,9 +50,9 @@ type V2MerchantBasicdataEntRequest struct {
     AuthEntrustPic string `json:"auth_entrust_pic" structs:"auth_entrust_pic"` // 授权委托书**对私非法人、对公非同名结算必填**；通过[图片上传接口](https://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)上传材料；文件类型：F15；开通银行电子账户（中信E管家）需提供F520；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
     HeadHuifuId string `json:"head_huifu_id" structs:"head_huifu_id"` // 上级汇付Id如果head_office_flag&#x3D;0，则字段必填，如果head_office_flag&#x3D;1，上级汇付Id不可传&lt;br/&gt;如果headOfficeFlag&#x3D;0，useHeadInfoFlag&#x3D;Y,且head_huifu_id不为空则基本信息部分复用上级的基本信息。&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000123123123&lt;/font&gt;
     MerIcp string `json:"mer_icp" structs:"mer_icp"` // 商户ICP备案编号商户ICP备案编号或网站许可证号；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：沪ICP备06046402号-28 &lt;/font&gt;&lt;br/&gt;类型为PC网站时，且为企业商户，且开通快捷或网银，或大额转账，或余额支付或分账业务（20%（不含）-100%），或为个人商户开通分账业务（10%（不含）-100%），必填
-    StoreHeaderPic string `json:"store_header_pic" structs:"store_header_pic"` // 店铺门头照
-    StoreIndoorPic string `json:"store_indoor_pic" structs:"store_indoor_pic"` // 店铺内景/工作区域照
-    StoreCashierDeskPic string `json:"store_cashier_desk_pic" structs:"store_cashier_desk_pic"` // 店铺收银台/公司前台照
+    StoreHeaderPic string `json:"store_header_pic" structs:"store_header_pic"` // 店铺门头照scene_type字段含有线下场景时必填；通过[图片上传接口](https://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)上传材料；文件类型：F22；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;&lt;br/&gt;微信/支付宝实名认证个人商户，门头照也使用此字段； &lt;br/&gt;门店场所：提交门店门口照片，要求招牌清晰可见; &lt;br/&gt;小微商户流动经营/便民服务：提交经营/服务现场照片
+    StoreIndoorPic string `json:"store_indoor_pic" structs:"store_indoor_pic"` // 店铺内景/工作区域照scene_type字段含有线下场景时必填；通过[图片上传接口](https://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)上传材料；文件类型：F24；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;&lt;br/&gt;微信/支付宝实名认证个人商户，内景照也使用此字段； &lt;br/&gt;门店场所：提交店内环境照片 &lt;br/&gt;小微商户流动经营/便民服务：可提交另一张经营/服务现场照片
+    StoreCashierDeskPic string `json:"store_cashier_desk_pic" structs:"store_cashier_desk_pic"` // 店铺收银台/公司前台照scene_type字段含有线下场景时必填；通过[图片上传接口](https://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)上传材料；文件类型：F105；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;&lt;br/&gt;微信/支付宝实名认证个人商户，内景照也使用此字段；
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

@@ -1,5 +1,5 @@
 /**
- * 支付宝直连-查询申请状态
+ * 支付宝直连-查询申请单状态
  *
  * @Author sdk-generator
  * @Description 汇付天下

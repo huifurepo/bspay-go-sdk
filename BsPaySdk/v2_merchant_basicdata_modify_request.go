@@ -11,7 +11,7 @@ import "encoding/json"
 type V2MerchantBasicdataModifyRequest struct {
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
-    UpperHuifuId string `json:"upper_huifu_id" structs:"upper_huifu_id"` // 直属渠道号
+    UpperHuifuId string `json:"upper_huifu_id" structs:"upper_huifu_id"` // 直属渠道号该商户进件完成后归属的渠道商huifu_id；；&lt;br/&gt;sys_id主体为渠道商时填写； &lt;br/&gt;sys_id主体为总部商户时选填；&lt;br/&gt; &lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000123123123&lt;/font&gt;
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 汇付客户Id
     SignUserInfo string `json:"sign_user_info" structs:"sign_user_info"` // 签约人jsonObject格式；agreement_info中选择电子签约时必填；个人商户填本人信息。
 

@@ -96,12 +96,23 @@ func ReadMerchConfig(configPath string) (*MerchSysConfig, error) {
 		return nil, errors.New("read merch config file failed")
 	}
 
-	// 检查 4个 必要配置
-	if tmpMsc.ProductId == "" || tmpMsc.SysId == "" ||
-		tmpMsc.RsaHuifuPublicKey == "" || tmpMsc.RsaMerchPrivateKey == "" {
-
+	// 检查必要配置
+	if tmpMsc.ProductId == "" || tmpMsc.SysId == "" {
 		BspayPrintln("read merch config file failed ---> path: " + configPath)
 		return nil, errors.New("read merch config file failed")
+	}
+
+	// 根据 signType 校验对应密钥配置
+	if tmpMsc.SignType == SIGN_TYPE_SM2 {
+		if tmpMsc.Sm2MerchPrivateKey == "" || tmpMsc.Sm2HuifuPublicKey == "" {
+			BspayPrintln("read merch config file failed ---> path: " + configPath)
+			return nil, errors.New("read merch config file failed")
+		}
+	} else {
+		if tmpMsc.RsaMerchPrivateKey == "" || tmpMsc.RsaHuifuPublicKey == "" {
+			BspayPrintln("read merch config file failed ---> path: " + configPath)
+			return nil, errors.New("read merch config file failed")
+		}
 	}
 
 	return &tmpMsc, nil

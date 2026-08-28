@@ -1,5 +1,5 @@
 /**
- * 支付宝直连-申请当面付代签约 - 示例
+ * 支付宝直连-商户入驻 - 示例
  *
  * @Author sdk-generator
  * @Description 汇付天下
@@ -41,8 +41,6 @@ func V2MerchantDirectAlipayFacetofacesignApplyRequestDemo() {
         Account:"288000000345345",
         // 服务费率（%）0.38~3之间，精确到0.01。当签约且授权sign_and_auth&#x3D;Y时，必填。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.38&lt;/font&gt;
         Rate:"0.38",
-        // 文件列表
-        FileList:getFileList(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -80,10 +78,16 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["license_begin_date"] = "20200429"
     // 营业执照有效期截止日期
     extendInfoMap["license_end_date"] = "29200429"
+    // 文件列表
+    extendInfoMap["file_list"] = getA348ea633b4746ec8340Ba0a9555acf0()
+    // 开通产品
+    // extendInfoMap["product_code"] = ""
+    // 小程序appid
+    // extendInfoMap["mini_app_id"] = ""
     return extendInfoMap
 }
 
-func getFileList() string {
+func getA348ea633b4746ec8340Ba0a9555acf0() string {
     dto := make(map[string]interface{})
     // 文件类型
     dto["file_type"] = "F50"

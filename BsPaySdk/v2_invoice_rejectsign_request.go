@@ -12,6 +12,7 @@ type V2InvoiceRejectsignRequest struct {
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 汇付商户号
+    AgreementId string `json:"agreement_id" structs:"agreement_id"` // 协议编号
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

@@ -54,8 +54,12 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["page_num"] = "1"
     // 账户号
     // extendInfoMap["acct_id"] = ""
+    // 流水号ID
+    // extendInfoMap["last_end_log_id"] = ""
     // 账户类型
     extendInfoMap["acct_type"] = "01"
+    // 汇付全局流水号
+    extendInfoMap["hf_seq_id"] = "00470topo1A211015160805P090ac132fef00000"
     return extendInfoMap
 }
 

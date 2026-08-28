@@ -1,5 +1,5 @@
 /**
- * 支付宝直连-申请当面付代签约
+ * 支付宝直连-商户入驻
  *
  * @Author sdk-generator
  * @Description 汇付天下
@@ -20,7 +20,6 @@ type V2MerchantDirectAlipayFacetofacesignApplyRequest struct {
     ContactEmail string `json:"contact_email" structs:"contact_email"` // 联系人电子邮箱
     Account string `json:"account" structs:"account"` // 商户账号
     Rate string `json:"rate" structs:"rate"` // 服务费率（%）0.38~3之间，精确到0.01。当签约且授权sign_and_auth&#x3D;Y时，必填。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.38&lt;/font&gt;
-    FileList string `json:"file_list" structs:"file_list"` // 文件列表
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

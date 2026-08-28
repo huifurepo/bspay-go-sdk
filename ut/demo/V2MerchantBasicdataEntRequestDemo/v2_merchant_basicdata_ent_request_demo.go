@@ -23,7 +23,7 @@ func V2MerchantBasicdataEntRequestDemo() {
         ReqSeqId:tool.GetReqSeqId(),
         // 请求日期
         ReqDate:tool.GetCurrentDate(),
-        // 渠道商号
+        // 渠道商号该商户进件完成后归属的渠道商huifu_id；&lt;br/&gt;sys_id主体为渠道商时填写； &lt;br/&gt;sys_id主体为总部商户时选填；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000123123123&lt;/font&gt;
         UpperHuifuId:"6666000003080000",
         // 商户名称
         RegName:"集成企业商户8664",
@@ -88,7 +88,7 @@ func V2MerchantBasicdataEntRequestDemo() {
         // 开户许可证企业商户需要，结算账号为对公账户必填；通过[图片上传接口](https://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)上传材料；文件类型：F08；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
         // RegAcctPic:"test",
         // 银行卡信息配置
-        CardInfo:getB6c8191d56bf4223Bbfe3536fa9f810c(),
+        CardInfo:get035c9bb2D3fc4520B996Ad0470d58e44(),
         // 银行卡卡号面**对私必填**。通过[图片上传接口](https://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)上传材料；文件类型：F13；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
         // SettleCardFrontPic:"test",
         // 持卡人身份证国徽面**对私必填**。通过[图片上传接口](https://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)上传材料；文件类型：F56；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;
@@ -101,11 +101,11 @@ func V2MerchantBasicdataEntRequestDemo() {
         // HeadHuifuId:"test",
         // 商户ICP备案编号商户ICP备案编号或网站许可证号；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：沪ICP备06046402号-28 &lt;/font&gt;&lt;br/&gt;类型为PC网站时，且为企业商户，且开通快捷或网银，或大额转账，或余额支付或分账业务（20%（不含）-100%），或为个人商户开通分账业务（10%（不含）-100%），必填
         MerIcp:"",
-        // 店铺门头照
+        // 店铺门头照scene_type字段含有线下场景时必填；通过[图片上传接口](https://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)上传材料；文件类型：F22；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;&lt;br/&gt;微信/支付宝实名认证个人商户，门头照也使用此字段； &lt;br/&gt;门店场所：提交门店门口照片，要求招牌清晰可见; &lt;br/&gt;小微商户流动经营/便民服务：提交经营/服务现场照片
         // StoreHeaderPic:"test",
-        // 店铺内景/工作区域照
+        // 店铺内景/工作区域照scene_type字段含有线下场景时必填；通过[图片上传接口](https://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)上传材料；文件类型：F24；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;&lt;br/&gt;微信/支付宝实名认证个人商户，内景照也使用此字段； &lt;br/&gt;门店场所：提交店内环境照片 &lt;br/&gt;小微商户流动经营/便民服务：可提交另一张经营/服务现场照片
         // StoreIndoorPic:"test",
-        // 店铺收银台/公司前台照
+        // 店铺收银台/公司前台照scene_type字段含有线下场景时必填；通过[图片上传接口](https://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_shtpsc)上传材料；文件类型：F105；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：57cc7f00-600a-33ab-b614-6221bbf2e530&lt;/font&gt;&lt;br/&gt;微信/支付宝实名认证个人商户，内景照也使用此字段；
         // StoreCashierDeskPic:"test",
     }
     // 设置非必填字段
@@ -147,7 +147,7 @@ func getExtendInfos() map[string]interface{} {
     // 法人手机号
     // extendInfoMap["legal_mobile_no"] = ""
     // 受益人列表
-    // extendInfoMap["beneficiary_info"] = getC1644d2b11944dfb8100Cb1ac9e7d33a()
+    // extendInfoMap["beneficiary_info"] = getCc5b297f81b64844876a8c38c6868793()
     // 管理员姓名
     extendInfoMap["contact_name"] = "联系人"
     // 商户通知标识
@@ -155,9 +155,9 @@ func getExtendInfos() map[string]interface{} {
     // 客服电话
     extendInfoMap["service_phone"] = "021-121111221"
     // 结算业务配置
-    extendInfoMap["settle_config"] = getC1627f558b904fa2Ac500f516e633526()
+    extendInfoMap["settle_config"] = get58ef14464b824fcd8b3c59e2a43da26c()
     // 取现业务配置
-    extendInfoMap["cash_config"] = getA5e53ac6888a44128d02Aee99b2117cb()
+    extendInfoMap["cash_config"] = getAe5129763ae34d0dA3938e0a3b116c8a()
     // 商户身份
     // extendInfoMap["head_office_flag"] = ""
     // 使用上级资料信息
@@ -171,17 +171,21 @@ func getExtendInfos() map[string]interface{} {
     // 异步请求地址
     extendInfoMap["async_return_url"] = "virgo://http://192.168.85.157:30031/sspm/testVirgo"
     // 斗拱e账户功能配置
-    // extendInfoMap["elec_acct_config"] = getC5a79280839a49d9Bf20F5975976b09e()
+    // extendInfoMap["elec_acct_config"] = get8da8993582704617A052Ea0ace11852a()
     // 股东信息
-    // extendInfoMap["share_holder_info_list"] = get43fbd42303ce452e81a8Ac53e16c89ec()
+    // extendInfoMap["share_holder_info_list"] = get0f38d3bc2759451c975676903feb5b45()
     // 扩展资料包
-    // extendInfoMap["extended_material_list"] = get614ebbfb5bed45028c976cbda3cf9308()
+    // extendInfoMap["extended_material_list"] = getAb824070C16d481e9b43Df36b1af82be()
     // 产品大类
     // extendInfoMap["activated_products"] = ""
+    // 对公卡信息
+    // extendInfoMap["material_card_info"] = get5e89c62fBcbd46b291c76c2ce3f93ea7()
+    // 总部客群
+    // extendInfoMap["head_type"] = ""
     return extendInfoMap
 }
 
-func getC1644d2b11944dfb8100Cb1ac9e7d33a() string {
+func getCc5b297f81b64844876a8c38c6868793() string {
     dto := make(map[string]interface{})
     // 受益人名称
     // dto["bo_name"] = "test"
@@ -205,7 +209,7 @@ func getC1644d2b11944dfb8100Cb1ac9e7d33a() string {
     return string(dtoByte)
 }
 
-func getB6c8191d56bf4223Bbfe3536fa9f810c() string {
+func get035c9bb2D3fc4520B996Ad0470d58e44() string {
     dto := make(map[string]interface{})
     // 银行账户类型
     dto["card_type"] = "0"
@@ -238,7 +242,7 @@ func getB6c8191d56bf4223Bbfe3536fa9f810c() string {
     return string(dtoByte)
 }
 
-func getC1627f558b904fa2Ac500f516e633526() string {
+func get58ef14464b824fcd8b3c59e2a43da26c() string {
     dto := make(map[string]interface{})
     // 结算周期
     dto["settle_cycle"] = "D1"
@@ -275,7 +279,7 @@ func getC1627f558b904fa2Ac500f516e633526() string {
     return string(dtoByte)
 }
 
-func getA5e53ac6888a44128d02Aee99b2117cb() string {
+func getAe5129763ae34d0dA3938e0a3b116c8a() string {
     dto := make(map[string]interface{})
     // 取现手续费（固定/元）fix_amt与fee_rate至少填写一项， 需保留小数点后两位，不收费请填写0.00；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1.00&lt;/font&gt;注：当cash_type&#x3D;D1时为节假日取现手续费；当cash_type&#x3D;T1时为工作日取现手续费
     dto["fix_amt"] = "1.00"
@@ -301,7 +305,7 @@ func getA5e53ac6888a44128d02Aee99b2117cb() string {
     return string(dtoByte)
 }
 
-func get3abb0239Eefa47618fb2142021ef8917() interface{} {
+func get6792c38d5bfd449e94463fefe3f19715() interface{} {
     dto := make(map[string]interface{})
     // 银行编码
     // dto["bank_code"] = "test"
@@ -326,7 +330,7 @@ func get3abb0239Eefa47618fb2142021ef8917() interface{} {
     return dtoList
 }
 
-func getC5a79280839a49d9Bf20F5975976b09e() string {
+func get8da8993582704617A052Ea0ace11852a() string {
     dto := make(map[string]interface{})
     // 电子账户开关
     // dto["switch_state"] = "test"
@@ -341,7 +345,7 @@ func getC5a79280839a49d9Bf20F5975976b09e() string {
     // 签约成功标志
     // dto["sign_success_flag"] = "test"
     // 银行卡信息
-    // dto["elec_card_list"] = get3abb0239Eefa47618fb2142021ef8917()
+    // dto["elec_card_list"] = get6792c38d5bfd449e94463fefe3f19715()
     // 中信签约短信流水号
     // dto["elec_acct_sign_seq_id"] = ""
 
@@ -349,7 +353,7 @@ func getC5a79280839a49d9Bf20F5975976b09e() string {
     return string(dtoByte)
 }
 
-func get43fbd42303ce452e81a8Ac53e16c89ec() string {
+func get0f38d3bc2759451c975676903feb5b45() string {
     dto := make(map[string]interface{})
     // 股东姓名
     // dto["name"] = "test"
@@ -363,13 +367,15 @@ func get43fbd42303ce452e81a8Ac53e16c89ec() string {
     // dto["cert_begin_date"] = "test"
     // 股东证件有效期到期日
     // dto["cert_end_date"] = ""
+    // 股东手机号
+    // dto["mobile_no"] = ""
 
     dtoList := [1]interface{}{dto}
     dtoByte, _ := json.Marshal(dtoList)
     return string(dtoByte)
 }
 
-func get614ebbfb5bed45028c976cbda3cf9308() string {
+func getAb824070C16d481e9b43Df36b1af82be() string {
     dto := make(map[string]interface{})
     // 文件id
     // dto["file_id"] = "test"
@@ -379,5 +385,23 @@ func get614ebbfb5bed45028c976cbda3cf9308() string {
     dtoList := [1]interface{}{dto}
     dtoByte, _ := json.Marshal(dtoList)
     return string(dtoByte)
+}
+
+func get5e89c62fBcbd46b291c76c2ce3f93ea7() interface{} {
+    dto := make(map[string]interface{})
+    // 对公银行账号
+    // dto["card_no"] = "test"
+    // 银行所在市
+    // dto["area_id"] = "test"
+    // 支行联行号
+    // dto["branch_code"] = "test"
+    // 银行账户类型
+    // dto["card_type"] = ""
+    // 银行账户名称
+    // dto["card_name"] = ""
+    // 银行所在省
+    // dto["prov_id"] = ""
+
+    return dto;
 }
 

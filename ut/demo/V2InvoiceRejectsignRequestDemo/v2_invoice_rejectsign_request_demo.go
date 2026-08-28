@@ -25,6 +25,8 @@ func V2InvoiceRejectsignRequestDemo() {
         ReqSeqId:tool.GetReqSeqId(),
         // 汇付商户号
         HuifuId:"6666000103334211",
+        // 协议编号
+        AgreementId:"130516670601443792",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -48,8 +50,6 @@ func V2InvoiceRejectsignRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
-    // 协议编号
-    extendInfoMap["agreement_id"] = "130516670601443792"
     return extendInfoMap
 }
 

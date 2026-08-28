@@ -12,6 +12,7 @@ type V2InvoiceQueryecmsapplylistRequest struct {
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 汇付商户号
+    AgreementType string `json:"agreement_type" structs:"agreement_type"` // 协议类型
     PageNum string `json:"page_num" structs:"page_num"` // 当前页
     PageSize string `json:"page_size" structs:"page_size"` // 分页大小
 

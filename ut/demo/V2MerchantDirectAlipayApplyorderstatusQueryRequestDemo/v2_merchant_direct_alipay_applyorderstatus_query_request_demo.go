@@ -1,5 +1,5 @@
 /**
- * 支付宝直连-查询申请状态 - 示例
+ * 支付宝直连-查询申请单状态 - 示例
  *
  * @Author sdk-generator
  * @Description 汇付天下
@@ -24,9 +24,9 @@ func V2MerchantDirectAlipayApplyorderstatusQueryRequestDemo() {
         // 请求日期
         ReqDate:tool.GetCurrentDate(),
         // 商户汇付Id
-        HuifuId:"6666000003079710",
+        // HuifuId:"test",
         // 开发者的应用ID
-        AppId:"2019091967580486",
+        // AppId:"test",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -51,9 +51,9 @@ func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
     // 事务编号
-    extendInfoMap["batch_no"] = "3123123"
+    // extendInfoMap["batch_no"] = ""
     // 应用授权令牌
-    extendInfoMap["app_auth_token"] = "201912BBecafff3696694c6d889503949a6adD18"
+    // extendInfoMap["app_auth_token"] = ""
     return extendInfoMap
 }
 

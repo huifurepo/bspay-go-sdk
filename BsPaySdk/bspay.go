@@ -6,6 +6,12 @@
  */
 package BsPaySdk
 
+// 签名类型常量
+const (
+	SIGN_TYPE_SM2 = "SM2"
+	SIGN_TYPE_RSA = "RSA"
+)
+
 type BsPay struct {
 	IsProdMode bool   // true 生产，false 测试
 	FileDir    string // config 配置文件路径
