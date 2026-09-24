@@ -72,16 +72,16 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["contact"] = "王姗"
     // 联系人身份证号
     extendInfoMap["id_card_no"] = "210123198702122747"
-    // 业务到期年限
-    extendInfoMap["valid_period"] = "1"
-    // 自动续约
-    extendInfoMap["auto_renewal"] = "Y"
-    // 商户入驻结果异步通知地址
-    extendInfoMap["callback_url"] = "http: //service.example.com/to/path"
     // 开票模式
     extendInfoMap["issue_mode"] = "LE_QI_LINK"
     // 区域代码
     // extendInfoMap["area_code"] = ""
+    // 协议附件
+    // extendInfoMap["net_url"] = ""
+    // 签约商户名称
+    // extendInfoMap["mer_name"] = ""
+    // 生效日期
+    // extendInfoMap["start_date"] = ""
     return extendInfoMap
 }
 

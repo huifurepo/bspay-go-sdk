@@ -89,13 +89,13 @@ func getExtendInfos() map[string]interface{} {
     // 注册地址(详细信息)
     extendInfoMap["reg_detail"] = "上海市宜山路"
     // 文件列表
-    extendInfoMap["file_list"] = getA4993046Fe4b4f64817870b32dc1185f()
+    extendInfoMap["file_list"] = getAf630ca86694412995eb845930fc3607()
     // 所属行业
     // extendInfoMap["mcc"] = ""
     return extendInfoMap
 }
 
-func getA4993046Fe4b4f64817870b32dc1185f() string {
+func getAf630ca86694412995eb845930fc3607() string {
     dto := make(map[string]interface{})
     // 文件类型
     dto["file_type"] = "F01"

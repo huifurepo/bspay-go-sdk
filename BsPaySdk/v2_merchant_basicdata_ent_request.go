@@ -25,7 +25,7 @@ type V2MerchantBasicdataEntRequest struct {
     LicenseBeginDate string `json:"license_begin_date" structs:"license_begin_date"` // 证照有效期开始日期
     LicenseEndDate string `json:"license_end_date" structs:"license_end_date"` // 证照有效期截止日期格式：yyyyMMdd。&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20220125&lt;/font&gt;&lt;br/&gt;  当license_validity_type&#x3D;0时必填；当license_validity_type&#x3D;1时为空；当use_head_info_flag&#x3D;Y时不填
     FoundDate string `json:"found_date" structs:"found_date"` // 成立时间
-    RegCapital string `json:"reg_capital" structs:"reg_capital"` // 注册资本保留两位小数；条件选填，国营企业、私营企业、外资企业、事业单位、其他、集体经济必填，政府机构、个体工商户可为空；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：100.00&lt;/font&gt;
+    RegCapital string `json:"reg_capital" structs:"reg_capital"` // 注册资本保留两位小数；条件必填，国营企业、私营企业、外资企业、事业单位、其他、集体经济必填，政府机构、个体工商户可为空；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：100.00&lt;/font&gt;
     RegDistrictId string `json:"reg_district_id" structs:"reg_district_id"` // 注册区
     RegDetail string `json:"reg_detail" structs:"reg_detail"` // 注册详细地址
     DistrictId string `json:"district_id" structs:"district_id"` // 经营区

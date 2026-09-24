@@ -73,7 +73,7 @@ func getExtendInfos() map[string]interface{} {
     // 拓展方字段
     extendInfoMap["expand_id"] = ""
     // 文件列表
-    extendInfoMap["file_list"] = get365f3cb2D654499290f67abce7f11fcf()
+    extendInfoMap["file_list"] = getE0dde9e7D5a54431Ac1c9947d57b9ead()
     // 所属行业
     // extendInfoMap["mcc"] = ""
     // 省
@@ -85,7 +85,7 @@ func getExtendInfos() map[string]interface{} {
     return extendInfoMap
 }
 
-func get365f3cb2D654499290f67abce7f11fcf() string {
+func getE0dde9e7D5a54431Ac1c9947d57b9ead() string {
     dto := make(map[string]interface{})
     // 文件类型
     dto["file_type"] = "F04"
