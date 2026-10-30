@@ -34,7 +34,7 @@ func V2TradePayscorePayPayscorepayRequestDemo() {
         // 商品描述
         GoodsDesc:"bp充电",
         // 安全信息
-        RiskCheckData:get52d96afbF87746fd9cb2Beb3e46d7bd5(),
+        RiskCheckData:getB48d154197b84a529bd3Feda38ffa3b2(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -59,21 +59,19 @@ func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
     // 聚合反扫微信参数集合
-    // extendInfoMap["wx_data"] = get2678bcc52a4848679dc2413aa3da407f()
+    // extendInfoMap["wx_data"] = get5c00a5ea3cd34dc5Ae9fF5167eb94f47()
     // 是否延迟交易
     // extendInfoMap["delay_acct_flag"] = ""
     // 分账对象
-    // extendInfoMap["acct_split_bunch"] = get19a634c3D0034464Bcc050d33458448f()
+    // extendInfoMap["acct_split_bunch"] = getF21a5d75D6d54707884529421294c092()
     // 设备信息
-    // extendInfoMap["terminal_device_info"] = get471b78176649480eAacf4528fabca41b()
+    // extendInfoMap["terminal_device_info"] = get3d5fd6849934424685bc1ff795152fa4()
     // 交易备注
     // extendInfoMap["remark"] = ""
-    // 商户回调地址
-    // extendInfoMap["notify_url"] = ""
     return extendInfoMap
 }
 
-func get2678bcc52a4848679dc2413aa3da407f() string {
+func get5c00a5ea3cd34dc5Ae9fF5167eb94f47() string {
     dto := make(map[string]interface{})
     // 子商户用户标识
     // dto["sub_openid"] = "test"
@@ -88,7 +86,7 @@ func get2678bcc52a4848679dc2413aa3da407f() string {
     return string(dtoByte)
 }
 
-func getE3905e1c9bd4475c81bcEa7a29aa75f8() interface{} {
+func get7f0b850248ce424c94c3F8b305f0c42a() interface{} {
     dto := make(map[string]interface{})
     // 分账金额
     // dto["div_amt"] = "test"
@@ -99,16 +97,16 @@ func getE3905e1c9bd4475c81bcEa7a29aa75f8() interface{} {
     return dtoList
 }
 
-func get19a634c3D0034464Bcc050d33458448f() string {
+func getF21a5d75D6d54707884529421294c092() string {
     dto := make(map[string]interface{})
     // 分账明细
-    // dto["acct_infos"] = getE3905e1c9bd4475c81bcEa7a29aa75f8()
+    // dto["acct_infos"] = get7f0b850248ce424c94c3F8b305f0c42a()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
-func get52d96afbF87746fd9cb2Beb3e46d7bd5() string {
+func getB48d154197b84a529bd3Feda38ffa3b2() string {
     dto := make(map[string]interface{})
     // ip地址
     dto["ip_address"] = "127.0.0.1"
@@ -123,7 +121,7 @@ func get52d96afbF87746fd9cb2Beb3e46d7bd5() string {
     return string(dtoByte)
 }
 
-func get471b78176649480eAacf4528fabca41b() string {
+func get3d5fd6849934424685bc1ff795152fa4() string {
     dto := make(map[string]interface{})
     // 设备类型
     // dto["device_type"] = ""

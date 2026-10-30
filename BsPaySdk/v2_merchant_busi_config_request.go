@@ -11,7 +11,7 @@ import "encoding/json"
 type V2MerchantBusiConfigRequest struct {
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
-    HuifuId string `json:"huifu_id" structs:"huifu_id"` // 汇付客户Id
+    HuifuId string `json:"huifu_id" structs:"huifu_id"` // 汇付商户号
     FeeType string `json:"fee_type" structs:"fee_type"` // 业务开通类型
     WxWoaAppId string `json:"wx_woa_app_id" structs:"wx_woa_app_id"` // 公众号支付Appid条件必填，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：wx3767c5bd01df5061&lt;/font&gt; ；wx_woa_app_id 、wx_woa_path、micro_sub_appid和 wx_applet_app_id四者不能同时为空
     WxWoaPath string `json:"wx_woa_path" structs:"wx_woa_path"` // 微信公众号授权目录条件必填，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：https://paas.huifu.com/shouyintai/demo/h5/&lt;/font&gt;；wx_woa_app_id 、wx_woa_path、micro_sub_appid和 wx_applet_app_id四者不能同时为空

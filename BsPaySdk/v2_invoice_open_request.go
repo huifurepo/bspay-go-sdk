@@ -13,6 +13,7 @@ type V2InvoiceOpenRequest struct {
     ReqDate string `json:"req_date" structs:"req_date"` // 请求时间
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 汇付商户号huifu_id与ext_mer_id二选一必填，汇付商户号优先；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000109812123&lt;/font&gt;
     ExtMerId string `json:"ext_mer_id" structs:"ext_mer_id"` // 外部商户号&lt;font color&#x3D;&quot;green&quot;&gt;示例值：&lt;/font&gt;
+    IvcModeCode string `json:"ivc_mode_code" structs:"ivc_mode_code"` // 开票方式乐企联用模式下非斗拱交易必填 枚举： TRADE-交易即开票  PAY-支付即开票
     ChannelId string `json:"channel_id" structs:"channel_id"` // 渠道号汇付商户号为空时，必传；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000109812124&lt;/font&gt;
     IvcType string `json:"ivc_type" structs:"ivc_type"` // 发票类型
     OpenType string `json:"open_type" structs:"open_type"` // 开票类型
@@ -25,6 +26,7 @@ type V2InvoiceOpenRequest struct {
     GoodsInfos string `json:"goods_infos" structs:"goods_infos"` // 开票商品信息
     EstateSales string `json:"estate_sales" structs:"estate_sales"` // 不动产销售特殊字段specialFlag为05时，必填；jsonArray格式
     EstateLease string `json:"estate_lease" structs:"estate_lease"` // 不动产租赁特殊字段specialFlag为16时，必填；jsonArray格式
+    OrderInfo string `json:"order_info" structs:"order_info"` // 交易订单信息jsonObject格式，订单信息（乐企联用，AT联用模式必填）
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

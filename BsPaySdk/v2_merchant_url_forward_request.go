@@ -13,6 +13,7 @@ type V2MerchantUrlForwardRequest struct {
     ReqDate string `json:"req_date" structs:"req_date"` // 请求日期
     UpperHuifuId string `json:"upper_huifu_id" structs:"upper_huifu_id"` // 渠道商号汇付分配的渠道商号，该商户进件完成后将隶属该渠道商/代理商&lt;br/&gt;sys_id主体为渠道商时填写； &lt;br/&gt;sys_id主体为总部商户时选填；&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000123123123&lt;/font&gt;
     StoreId string `json:"store_id" structs:"store_id"` // 门店号
+    HeadHuifuId string `json:"head_huifu_id" structs:"head_huifu_id"` // 上级汇付Id如果head_office_flag&#x3D;0，则字段必填，如果head_office_flag&#x3D;1，上级汇付Id不可传
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

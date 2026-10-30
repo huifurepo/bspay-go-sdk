@@ -23,7 +23,7 @@ func V2MerchantBusiConfigRequestDemo() {
         ReqSeqId:tool.GetReqSeqId(),
         // 请求日期
         ReqDate:tool.GetCurrentDate(),
-        // 汇付客户Id
+        // 汇付商户号
         HuifuId:"6666000108854952",
         // 业务开通类型
         FeeType:"02",

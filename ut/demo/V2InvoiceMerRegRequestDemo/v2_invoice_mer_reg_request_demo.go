@@ -25,25 +25,25 @@ func V2InvoiceMerRegRequestDemo() {
         ReqDate:tool.GetCurrentDate(),
         // 开票方汇付ID
         HuifuId:"6666000149801800",
-        // 纳税人识别号
+        // 纳税人识别号支付宝和微信乐企模式非必填，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：91510108MA7CQPFFO6&lt;/font&gt;
         TaxPayerId:"91310000795605184T",
-        // 销方名称
+        // 销方名称支付宝和微信乐企模式非必填，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：汇付数电测试&lt;/font&gt;
         TaxPayerName:"汇付网络技术（上海）有限公司",
-        // 公司电话
+        // 公司电话支付宝和微信乐企模式非必填，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：021-33323999&lt;/font&gt;
         TelNo:"021-33323999",
-        // 公司地址
+        // 公司地址支付宝和微信乐企模式非必填，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：徐汇宜山路700号C5栋&lt;/font&gt;
         RegAddress:"徐汇宜山路700号C5栋021-33323999",
-        // 开户银行
+        // 开户银行支付宝和微信乐企模式非必填，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：民生银行徐汇支行&lt;/font&gt;
         BankName:"民生银行徐汇支行",
-        // 开户账户
+        // 开户账户支付宝和微信乐企模式非必填，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0206014180001609&lt;/font&gt;
         AccountNo:"0206014180001609",
-        // 联系人手机号
+        // 联系人手机号支付宝和微信乐企模式非必填，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：18011212123&lt;/font&gt;
         ContactPhoneNo:"17621100776",
         // 开票方式
         OpenMode:"2",
-        // 所属省
+        // 所属省支付宝和微信乐企模式非必填，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：310000&lt;/font&gt;，参见[地区编码](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_dqbm)
         ProvId:"310000",
-        // 所属市
+        // 所属市支付宝和微信乐企模式非必填，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：310100&lt;/font&gt;，参见[地区编码](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_dqbm)
         CityId:"310100",
     }
     // 设置非必填字段

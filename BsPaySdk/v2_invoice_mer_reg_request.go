@@ -12,16 +12,16 @@ type V2InvoiceMerRegRequest struct {
     ReqSeqId string `json:"req_seq_id" structs:"req_seq_id"` // 请求流水号
     ReqDate string `json:"req_date" structs:"req_date"` // 请求时间
     HuifuId string `json:"huifu_id" structs:"huifu_id"` // 开票方汇付ID
-    TaxPayerId string `json:"tax_payer_id" structs:"tax_payer_id"` // 纳税人识别号
-    TaxPayerName string `json:"tax_payer_name" structs:"tax_payer_name"` // 销方名称
-    TelNo string `json:"tel_no" structs:"tel_no"` // 公司电话
-    RegAddress string `json:"reg_address" structs:"reg_address"` // 公司地址
-    BankName string `json:"bank_name" structs:"bank_name"` // 开户银行
-    AccountNo string `json:"account_no" structs:"account_no"` // 开户账户
-    ContactPhoneNo string `json:"contact_phone_no" structs:"contact_phone_no"` // 联系人手机号
+    TaxPayerId string `json:"tax_payer_id" structs:"tax_payer_id"` // 纳税人识别号支付宝和微信乐企模式非必填，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：91510108MA7CQPFFO6&lt;/font&gt;
+    TaxPayerName string `json:"tax_payer_name" structs:"tax_payer_name"` // 销方名称支付宝和微信乐企模式非必填，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：汇付数电测试&lt;/font&gt;
+    TelNo string `json:"tel_no" structs:"tel_no"` // 公司电话支付宝和微信乐企模式非必填，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：021-33323999&lt;/font&gt;
+    RegAddress string `json:"reg_address" structs:"reg_address"` // 公司地址支付宝和微信乐企模式非必填，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：徐汇宜山路700号C5栋&lt;/font&gt;
+    BankName string `json:"bank_name" structs:"bank_name"` // 开户银行支付宝和微信乐企模式非必填，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：民生银行徐汇支行&lt;/font&gt;
+    AccountNo string `json:"account_no" structs:"account_no"` // 开户账户支付宝和微信乐企模式非必填，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0206014180001609&lt;/font&gt;
+    ContactPhoneNo string `json:"contact_phone_no" structs:"contact_phone_no"` // 联系人手机号支付宝和微信乐企模式非必填，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：18011212123&lt;/font&gt;
     OpenMode string `json:"open_mode" structs:"open_mode"` // 开票方式
-    ProvId string `json:"prov_id" structs:"prov_id"` // 所属省
-    CityId string `json:"city_id" structs:"city_id"` // 所属市
+    ProvId string `json:"prov_id" structs:"prov_id"` // 所属省支付宝和微信乐企模式非必填，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：310000&lt;/font&gt;，参见[地区编码](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_dqbm)
+    CityId string `json:"city_id" structs:"city_id"` // 所属市支付宝和微信乐企模式非必填，&lt;font color&#x3D;&quot;green&quot;&gt;示例值：310100&lt;/font&gt;，参见[地区编码](https://paas.huifu.com/open/doc/api/#/csfl/api_csfl_dqbm)
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

@@ -25,10 +25,8 @@ func V2MerchantBusiAliRealnameApplyRequestDemo() {
         ReqDate:tool.GetCurrentDate(),
         // 汇付ID
         HuifuId:"6666000105418240",
-        // 主体信息
-        AuthIdentityInfo:getAuthIdentityInfo(),
         // 联系人信息
-        ContactPersonInfo:getContactPersonInfo(),
+        ContactPersonInfo:getCad99be040984802A2d78e1a215bccee(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -56,14 +54,16 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["pay_channel_id"] = "10000001"
     // 业务开通类型
     extendInfoMap["pay_scene"] = "1"
+    // 主体信息
+    extendInfoMap["auth_identity_info"] = getF1cb10c324624018984dF83d6bcf19c3()
     // 法人身份信息
-    extendInfoMap["legal_person_info"] = getLegalPersonInfo()
+    extendInfoMap["legal_person_info"] = getF053471c77d24b0eB58d65ff7f75fefe()
     // 受益人信息
-    extendInfoMap["ubo_info"] = getUboInfo()
+    extendInfoMap["ubo_info"] = getE539caea7196498aA7fe688411696e67()
     return extendInfoMap
 }
 
-func getCertificateInfo() string {
+func get5a14daf1576a4040A33eEf2779559f62() string {
     dto := make(map[string]interface{})
     // 登记证书类型**证照类型为登记证书时(certificate_type&#x3D;REGISTER_CERT)必填**。枚举：&lt;br/&gt;统一社会信用代码证书(CERTIFICATE_TYPE_2389)&lt;br/&gt;慈善组织公开募捐资格证书(CERTIFICATE_TYPE_2397)&lt;br/&gt;社会团体法人登记证书(CERTIFICATE_TYPE_2394)&lt;br/&gt;民办非企业单位登记证书(CERTIFICATE_TYPE_2395)&lt;br/&gt;基金会法人登记证书(CERTIFICATE_TYPE_2396)&lt;br/&gt;农民专业合作社法人营业执照(CERTIFICATE_TYPE_2398)&lt;br/&gt;宗教活动场所登记证(CERTIFICATE_TYPE_2399)&lt;br/&gt;其他证书/批文/证明(CERTIFICATE_TYPE_2400)&lt;br/&gt;&lt;font color&#x3D;&quot;green&quot;&gt;示例值：CERTIFICATE_TYPE_2389&lt;/font&gt;
     dto["cert_type"] = "CERTIFICATE_TYPE_2389"
@@ -86,7 +86,7 @@ func getCertificateInfo() string {
     return string(dtoByte)
 }
 
-func getSupportCredentials() string {
+func getAb3d2d9110ce4232Bf1bFd4a82f346cb() string {
     dto := make(map[string]interface{})
     // 小微经营类型
     dto["micro_biz_type"] = "MICRO_TYPE_STORE"
@@ -115,7 +115,7 @@ func getSupportCredentials() string {
     return string(dtoByte)
 }
 
-func getQualificationInfoList() string {
+func get2250a07b4aed4b06831326ac1c71421f() string {
     dto := make(map[string]interface{})
     // 行业类目id
     dto["mcc_code"] = "2015050700000000"
@@ -127,7 +127,7 @@ func getQualificationInfoList() string {
     return string(dtoByte)
 }
 
-func getAuthIdentityInfo() string {
+func getF1cb10c324624018984dF83d6bcf19c3() string {
     dto := make(map[string]interface{})
     // 主体类型
     dto["business_type"] = "2"
@@ -140,19 +140,19 @@ func getAuthIdentityInfo() string {
     // 证照类型
     dto["certificate_type"] = "BUSINESS_CERT"
     // 登记证书信息
-    dto["certificate_info"] = getCertificateInfo()
+    dto["certificate_info"] = get5a14daf1576a4040A33eEf2779559f62()
     // 单位证明函照片
     dto["company_prove_copy"] = "71da066c-5d15-3658-a86d-4e85ee67808a"
     // 辅助证明材料信息
-    dto["support_credentials"] = getSupportCredentials()
+    dto["support_credentials"] = getAb3d2d9110ce4232Bf1bFd4a82f346cb()
     // 经营许可证
-    dto["qualification_info_list"] = getQualificationInfoList()
+    dto["qualification_info_list"] = get2250a07b4aed4b06831326ac1c71421f()
 
     dtoByte, _ := json.Marshal(dto)
     return string(dtoByte)
 }
 
-func getLegalPersonInfo() string {
+func getF053471c77d24b0eB58d65ff7f75fefe() string {
     dto := make(map[string]interface{})
     // 证件持有人类型
     dto["legal_type"] = "SUPER"
@@ -179,7 +179,7 @@ func getLegalPersonInfo() string {
     return string(dtoByte)
 }
 
-func getContactPersonInfo() string {
+func getCad99be040984802A2d78e1a215bccee() string {
     dto := make(map[string]interface{})
     // 联系人身份证号码
     dto["id_card_number"] = "120103198507275017"
@@ -192,7 +192,7 @@ func getContactPersonInfo() string {
     return string(dtoByte)
 }
 
-func getUboInfo() string {
+func getE539caea7196498aA7fe688411696e67() string {
     dto := make(map[string]interface{})
     // 证件姓名
     dto["ubo_id_doc_name"] = "消化"

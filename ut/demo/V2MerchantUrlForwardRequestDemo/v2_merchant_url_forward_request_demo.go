@@ -27,6 +27,8 @@ func V2MerchantUrlForwardRequestDemo() {
         UpperHuifuId:"6666000108290240",
         // 门店号
         StoreId:"store128",
+        // 上级汇付Id如果head_office_flag&#x3D;0，则字段必填，如果head_office_flag&#x3D;1，上级汇付Id不可传
+        // HeadHuifuId:"test",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -62,8 +64,6 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["template_id"] = "155625"
     // 商户身份
     // extendInfoMap["head_office_flag"] = ""
-    // 上级汇付Id
-    // extendInfoMap["head_huifu_id"] = ""
     // 使用上级微信、支付宝商户号发起交易
     // extendInfoMap["use_chains_flag"] = ""
     // 小微经营类型

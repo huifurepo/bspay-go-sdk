@@ -29,7 +29,8 @@ type V2UserBasicdataEntRequest struct {
     LegalCertNationality string `json:"legal_cert_nationality" structs:"legal_cert_nationality"` // 法人国籍法人的证件类型为外国人居留证时，必填，参见《[国籍编码](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/area/%E5%9B%BD%E7%B1%8D.xlsx)》&lt;font color&#x3D;&quot;green&quot;&gt;示例值：CHN&lt;/font&gt;
     ContactName string `json:"contact_name" structs:"contact_name"` // 管理员姓名
     ContactMobile string `json:"contact_mobile" structs:"contact_mobile"` // 管理员手机号
-    LoginName string `json:"login_name" structs:"login_name"` // 管理员账号如需短信通知则必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：Lg20220222013747&lt;/font&gt;
+    LoginName string `json:"login_name" structs:"login_name"` // 管理员账号如需短信通知则必填；升级LV3必填&lt;font color&#x3D;&quot;green&quot;&gt;示例值：Lg20220222013747&lt;/font&gt;
+    EntType string `json:"ent_type" structs:"ent_type"` // 公司类型
 
 	ExtendInfos map[string]interface{} `json:"extend_infos" structs:"extend_infos"` // 扩展字段
 }

@@ -74,6 +74,8 @@ func getExtendInfos() map[string]interface{} {
     extendInfoMap["add_tax_spec_manage"] = ""
     // 说明
     extendInfoMap["ivc_remark"] = "ivc_remark"
+    // 加油枪号
+    // extendInfoMap["gun_number"] = ""
     return extendInfoMap
 }
 

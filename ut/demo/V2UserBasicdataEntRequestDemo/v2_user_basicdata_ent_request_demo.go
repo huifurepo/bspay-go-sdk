@@ -59,8 +59,10 @@ func V2UserBasicdataEntRequestDemo() {
         ContactName:"小的",
         // 管理员手机号
         ContactMobile:"13764462211",
-        // 管理员账号如需短信通知则必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：Lg20220222013747&lt;/font&gt;
+        // 管理员账号如需短信通知则必填；升级LV3必填&lt;font color&#x3D;&quot;green&quot;&gt;示例值：Lg20220222013747&lt;/font&gt;
         LoginName:"Lg2022022201374721361",
+        // 公司类型
+        // EntType:"test",
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -95,15 +97,13 @@ func getExtendInfos() map[string]interface{} {
     // 扩展方字段
     extendInfoMap["expand_id"] = ""
     // 文件列表
-    // extendInfoMap["file_list"] = get3133b4feD98248caAbf94f93f127425c()
-    // 公司类型
-    // extendInfoMap["ent_type"] = ""
+    // extendInfoMap["file_list"] = get6cbfdfc6D1034fddA78eB9e2bba998ed()
     // 所属行业
     // extendInfoMap["mcc"] = ""
     return extendInfoMap
 }
 
-func get3133b4feD98248caAbf94f93f127425c() string {
+func get6cbfdfc6D1034fddA78eB9e2bba998ed() string {
     dto := make(map[string]interface{})
     // 文件类型
     // dto["file_type"] = "test"

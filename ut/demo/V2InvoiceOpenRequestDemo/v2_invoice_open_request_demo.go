@@ -27,6 +27,8 @@ func V2InvoiceOpenRequestDemo() {
         HuifuId:"6666000107430944",
         // 外部商户号&lt;font color&#x3D;&quot;green&quot;&gt;示例值：&lt;/font&gt;
         ExtMerId:"",
+        // 开票方式乐企联用模式下非斗拱交易必填 枚举： TRADE-交易即开票  PAY-支付即开票
+        // IvcModeCode:"test",
         // 渠道号汇付商户号为空时，必传；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：6666000109812124&lt;/font&gt;
         // ChannelId:"test",
         // 发票类型
@@ -46,11 +48,13 @@ func V2InvoiceOpenRequestDemo() {
         // 原发票号码openType&#x3D;1时必填；参见[发票右上角](https://paas.huifu.com/open/doc/api/#/fp/api_fp_yanglitu.md)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：20685767&lt;/font&gt;
         OriIvcNumber:"150000020026",
         // 开票商品信息
-        GoodsInfos:getC6a36685B0564080A1f00db79747ed42(),
+        GoodsInfos:getE39d35ceD1c946049c4a78abe4385b46(),
         // 不动产销售特殊字段specialFlag为05时，必填；jsonArray格式
-        // EstateSales:get825c74feC48446519d3aB46871b242af(),
+        // EstateSales:get3e2cef346688416b829072c10a9ceadd(),
         // 不动产租赁特殊字段specialFlag为16时，必填；jsonArray格式
-        // EstateLease:get68aea0a200b84510B95fEbf67bf4e1aa(),
+        // EstateLease:get47f6d2af90b840db984f379ab6303717(),
+        // 交易订单信息jsonObject格式，订单信息（乐企联用，AT联用模式必填）
+        // OrderInfo:get9f17cfb9260e4d8c9db3Ee08ada0cc13(),
     }
     // 设置非必填字段
 	dgReq.ExtendInfos = getExtendInfos()
@@ -74,6 +78,10 @@ func V2InvoiceOpenRequestDemo() {
 func getExtendInfos() map[string]interface{} {
     // 设置非必填字段
     extendInfoMap := make(map[string]interface{})
+    // 开票模式
+    // extendInfoMap["issue_mode"] = ""
+    // 子商户号
+    // extendInfoMap["sub_mer_id"] = ""
     // 税控盘编号
     extendInfoMap["tax_device_id"] = "661919694739"
     // 购方单位识别号
@@ -97,13 +105,11 @@ func getExtendInfos() map[string]interface{} {
     // 红字信息表编号
     extendInfoMap["red_info_number"] = ""
     // 开票人信息
-    extendInfoMap["payer_info"] = get5849a9a316d84bf7966d897f8a655ad6()
+    extendInfoMap["payer_info"] = getCa65c4309ca442c0A892037585b8e873()
     // 开票结果异步通知地址
     extendInfoMap["callback_url"] = "virgo://http://192.168.85.157:30031/sspm/testVirgo"
     // 强制开票标识
     extendInfoMap["buyer_info_confirm"] = ""
-    // 交易订单信息
-    extendInfoMap["order_info"] = getBde9fd3e10a8499dB6e786ba643edb13()
     // 购方自然人标识
     // extendInfoMap["buyer_nature_person_type"] = ""
     // 购方自然人证件类型
@@ -115,11 +121,23 @@ func getExtendInfos() map[string]interface{} {
     // 减按征税类型代码
     // extendInfoMap["reduced_tax_type"] = ""
     // 二手车信息
-    // extendInfoMap["used_car"] = getB4eb2b8bF10841598176D92e1e6279a9()
+    // extendInfoMap["used_car"] = get4095e83b0a9b46eeB3305641800925eb()
     return extendInfoMap
 }
 
-func getC6a36685B0564080A1f00db79747ed42() string {
+func get6e4b3c323c4d4fa6Ae98414ce70f646a() interface{} {
+    dto := make(map[string]interface{})
+    // 加油站名称
+    // dto["station"] = "test"
+    // 油枪号
+    // dto["gun_number"] = "test"
+    // 加油时间
+    // dto["oil_time"] = "test"
+
+    return dto;
+}
+
+func getE39d35ceD1c946049c4a78abe4385b46() string {
     dto := make(map[string]interface{})
     // 发票行性质
     dto["ivc_nature"] = "0"
@@ -129,14 +147,16 @@ func getC6a36685B0564080A1f00db79747ed42() string {
     dto["goods_id"] = ""
     // 商品税收分类编码参考[商品编码](https://cloudpnrcdn.oss-cn-shanghai.aliyuncs.com/opps/api/prod/download_file/fp/%E7%94%B5%E5%AD%90%E5%8F%91%E7%A5%A8%E5%95%86%E5%93%81%E7%BC%96%E7%A0%81.xlsx)；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：1010101090000000000&lt;/font&gt;
     dto["goods_code"] = "6010000000000000000"
-    // 商品名称goodsCode不为空时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：&lt;/font&gt;
+    // 商品名称goods_code不为空时必填；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：&lt;/font&gt;
     dto["goods_name"] = "预付卡"
-    // 税率goodsCode不为空时必填，最多三位小数；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.130&lt;/font&gt;
+    // 税率goods_code不为空时必填，最多三位小数；&lt;font color&#x3D;&quot;green&quot;&gt;示例值：0.130&lt;/font&gt;
     dto["tax_rate"] = "0.03"
     // 含税标识
     dto["is_price_con_tax"] = "1"
     // 金额(元)
     dto["trans_amt"] = "70.00"
+    // 成品油信息乐企联用、AT乐企联用模式下成品油票种必传
+    // dto["oil_info"] = get6e4b3c323c4d4fa6Ae98414ce70f646a()
     // 规格型号
     dto["goods_model"] = ""
     // 计量单位
@@ -159,7 +179,7 @@ func getC6a36685B0564080A1f00db79747ed42() string {
     return string(dtoByte)
 }
 
-func get5849a9a316d84bf7966d897f8a655ad6() string {
+func getCa65c4309ca442c0A892037585b8e873() string {
     dto := make(map[string]interface{})
     // 收款人
     dto["payee"] = "收款人"
@@ -172,7 +192,7 @@ func get5849a9a316d84bf7966d897f8a655ad6() string {
     return string(dtoByte)
 }
 
-func get825c74feC48446519d3aB46871b242af() string {
+func get3e2cef346688416b829072c10a9ceadd() string {
     dto := make(map[string]interface{})
     // 不动产地址
     // dto["addr"] = "test"
@@ -198,7 +218,7 @@ func get825c74feC48446519d3aB46871b242af() string {
     return string(dtoByte)
 }
 
-func get68aea0a200b84510B95fEbf67bf4e1aa() string {
+func get47f6d2af90b840db984f379ab6303717() string {
     dto := make(map[string]interface{})
     // 不动产地址
     // dto["addr"] = "test"
@@ -220,17 +240,40 @@ func get68aea0a200b84510B95fEbf67bf4e1aa() string {
     return string(dtoByte)
 }
 
-func getBde9fd3e10a8499dB6e786ba643edb13() interface{} {
+func getAbba899f2acf4386A7b6B14265184add() string {
     dto := make(map[string]interface{})
-    // 交易订单号
-    dto["order_id"] = "002900TOP4A260519173506P786ac13683b000015"
-    // 交易订单日期
-    dto["order_date"] = "20260701"
+    // 支付方式
+    // dto["pay_way"] = ""
+    // 支付金额
+    // dto["trade_amt"] = ""
+    // 支付通道订单号
+    // dto["trade_no"] = ""
+    // 支付时间
+    // dto["trade_time"] = ""
 
-    return dto;
+    dtoList := [1]interface{}{dto}
+    dtoByte, _ := json.Marshal(dtoList)
+    return string(dtoByte)
 }
 
-func getAb411c71069e4df49eb94d27ccdbb9d6() interface{} {
+func get9f17cfb9260e4d8c9db3Ee08ada0cc13() string {
+    dto := make(map[string]interface{})
+    // 交易订单号
+    // dto["order_id"] = "test"
+    // 交易金额示例值：1.00 单位元，is_dg_trans &#x3D; N，必填
+    // dto["amt"] = "test"
+    // 支付方式jsonArray格式，支付信息明细，is_dg_trans&#x3D;N时必填
+    // dto["pay_infos"] = getAbba899f2acf4386A7b6B14265184add()
+    // 交易订单日期
+    // dto["order_date"] = ""
+    // 是否斗拱交易
+    // dto["is_dg_trans"] = ""
+
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
+}
+
+func get3cec4f3f754c4e91Ae1e5c32d003cd8c() string {
     dto := make(map[string]interface{})
     // 车牌号码
     // dto["plate_number"] = ""
@@ -240,12 +283,16 @@ func getAb411c71069e4df49eb94d27ccdbb9d6() interface{} {
     // dto["factory_plate_model"] = ""
     // 车辆类型代码
     // dto["car_type"] = ""
+    // 转入地车辆管理所名称
+    // dto["into_vehicle_manage_name"] = ""
+    // 车架号
+    // dto["vehicle_identification_number"] = ""
 
-    dtoList := [1]interface{}{dto}
-    return dtoList
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
 }
 
-func getB4eb2b8bF10841598176D92e1e6279a9() interface{} {
+func get4095e83b0a9b46eeB3305641800925eb() string {
     dto := make(map[string]interface{})
     // 二手车销售统一发票正向开票标识
     // dto["direction_type"] = ""
@@ -270,8 +317,9 @@ func getB4eb2b8bF10841598176D92e1e6279a9() interface{} {
     // 卖方电话/自然人电话
     // dto["car_nature_ent_tell"] = ""
     // 车辆费基本信息集合
-    // dto["car_base_list"] = getAb411c71069e4df49eb94d27ccdbb9d6()
+    // dto["car_base_list"] = get3cec4f3f754c4e91Ae1e5c32d003cd8c()
 
-    return dto;
+    dtoByte, _ := json.Marshal(dto)
+    return string(dtoByte)
 }
 
